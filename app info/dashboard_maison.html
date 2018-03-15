@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Virifocus </title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="dashboard_maison.css"/>
+    <link rel="icon" type="image/png" href="image/logo.png" />
+    <script src="jQuery.js"></script>
+
+</head>
+<body class="fond">
+            <div id="site">
+                <div class="case1">
+                    <div class="case11"></div>
+                    <div class="case12">
+                        <a href="dashboard_maison.html">
+                            <div class="case1212"><br><br>Home</div></a></div>
+                    <div class="case13">
+                        <a href="htmlgrid2.html">
+                            <div class="case1313"><br><br>Compte</div></a></div>
+                    <div class="case14">
+                        <a href="htmlgrid3.html">
+                            <div class="case1414"><br><br>Paramètres</div></a></div>
+                    <div class="case15">
+                        <a href="htmlgrid4.html">
+                            <div class="case1515"><br><br>Aide</div></a></div>
+                    <div class="case16"></div>
+                </div>
+
+
+
+
+                <div class="case2">
+                    <div class="case21">
+                        <div class="photomaison"></div>
+                        <div class="nommaison">Casa de Papel</div>
+                    </div>
+                    <div class="case22">
+                        <div class="case221">Home Mode</div>
+                        <div class="case222">
+                            <div class="case2221"></div>
+                            <div id="case2222" onclick="mode_eco()">Eco</div>
+                            <div id="case2223" onclick="mode_moyen()">Moyen</div>
+                            <div id="case2224" onclick="mode_max()">Max</div>
+                            <div class="case2225"></div>
+                        </div>
+                        <div class="case223">Sécurité</div>
+                        <div class="case224">
+                            <div class="case2241"></div>
+                            <div class="case2242">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label><br>ON/OFF</div>
+                            <div class="case2243"></div>
+                        </div>
+                        <div class="case225">Utilisateur<br>Connecté</div>
+                        <div class="case226">
+                            <div class="case2261"></div>
+                            <div class="case2262"></div>
+                            <div class="case2263"></div>
+                        </div>
+                        <div class="case227"></div>
+                    </div>
+                </div>
+                    
+
+
+
+                <div class="case3">
+                    <div class="case31">
+                        <div class="case311">
+                            <div class="case3111">
+                                <div class="case31111">Eau</div>
+                                <div class="case31112">175L</div>
+                            </div>
+                            <div class="case3112">
+                                <div class="case31121">Température</div>
+                                <div class="case31122">23°C</div>
+                            </div>
+                            <div class="case3113">
+                                <div class="case31131">Consommation<br>Energétique</div>
+                                <div class="case31132">750kW</div>
+                            </div>
+                        </div>
+                        <div class="case312"></div>
+                    </div>
+                    <div class="case32">
+                        <div class="case321">
+                            <div class="case3211">cuisine</div>
+                            <div class="case3212">
+                                <div class="case32121">a</div>
+                                <div class="case32121">b</div>
+                                <div class="case32121">c</div>
+                                <div class="case32121">d</div>
+                                <div class="case32121">e</div>
+                                <div class="case32121">f</div>
+                            </div>
+                            
+                            <div class="boutton2">
+                                <button class="ajoutercapteur" onclick="change()">+</button>
+                            </div>
+                            
+                        </div>
+                        <div class="case322">salon</div>
+                        <div class="case323">chambre 1</div>
+                        <div class="case321">d</div>
+                        <div class="case322">a</div>
+                        <div class="case323">d</div>
+                        <div class="case321">a</div>
+
+                        <div class="boutton1">
+                            <button class="ajouterpiece"> + ajouter pièce </button>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div id="fenetre"> 
+            <button id="close" onclick="fermer()"> x </button>
+            fenetre pop-up 
+        </div>
+</body>
+<script src="dashboard_maison.js"></script>
+</html>
+
