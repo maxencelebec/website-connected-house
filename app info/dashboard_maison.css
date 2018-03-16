@@ -239,11 +239,12 @@ a{
 .case31{
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 12fr 1fr 12fr;
+    background-color: #333333;
 }
 .case311{
     display: grid;
-    grid-auto-rows: 65px;
+    grid-auto-rows: 65.3px;
     background-color: #333333;
     font-size: 18px;
 }
@@ -332,6 +333,25 @@ a{
 }
 .case3113:hover{
     background-color: #486454;
+}
+
+.zone{
+    background-color: #333333;
+    display: grid;
+    grid-auto-rows: 66px;
+    border-top: #2cc872 solid 3px;
+    border-bottom: #2cc872 solid 3px;
+}
+.triangle1{
+    grid-row: 1/2;
+    background-color: lightgrey ;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    animation: move 6s forwards;
+    position: relative;
+}
+@keyframes move {
+    0% {top: 0px;}
+    100% {top: 124px;}
 }
 
 
