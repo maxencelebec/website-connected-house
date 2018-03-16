@@ -78,19 +78,19 @@ a{
 }
 .case1212:hover{
     background-color: #486454;
-    border-left: #2cc872 solid 4px;
+
 }
 .case1313:hover{
     background-color: #486454;
-    border-left: #2cc872 solid 4px;
+
 }
 .case1414:hover{
     background-color: #486454;
-    border-left: #2cc872 solid 4px;
+
 }
 .case1515:hover{
     background-color: #486454;
-    border-left: #2cc872 solid 4px;
+ 
 }
 
 
@@ -222,6 +222,7 @@ a{
     box-shadow: 0px 5px 20px #212122;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    transition: 0.3s;
 }
 
 
@@ -249,13 +250,14 @@ a{
     font-size: 18px;
 }
 /*humidité*/
-.case3111{
+#case3111{
     border-bottom: #2cc872 solid 3px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     transition: 0.3s;
     border-top: #2cc872 solid 3px;
+    cursor: pointer;
 }
 .case31111{
     align-items: center;
@@ -275,12 +277,13 @@ a{
 }
 
 /*temperature*/
-.case3112{
+#case3112{
     border-bottom: #2cc872 solid 3px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     transition: 0.3s;
+    cursor: pointer;
 }
 .case31121{
     color:white;
@@ -300,13 +303,14 @@ a{
 }
 
 /*consommation*/
-.case3113{
+#case3113{
     
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     transition: 0.3s;
     border-bottom: #2cc872 solid 3px;
+    cursor: pointer;
 }
 .case31131{
     color:white;
@@ -325,35 +329,39 @@ a{
     justify-content: center;
 }
 
-.case3111:hover{
+#case3111:hover{
     background-color: #486454;
 }
-.case3112:hover{
+#case3112:hover{
     background-color: #486454;
 }
-.case3113:hover{
+#case3113:hover{
     background-color: #486454;
 }
 
 .zone{
     background-color: #333333;
     display: grid;
-    grid-auto-rows: 66px;
+    grid-auto-rows: 63px;
     border-top: #2cc872 solid 3px;
     border-bottom: #2cc872 solid 3px;
 }
-.triangle1{
+#triangle1{
     grid-row: 1/2;
     background-color: lightgrey ;
     clip-path: polygon(0 50%, 100% 0, 100% 100%);
-    animation: move 6s forwards;
+    transition: 10s;
     position: relative;
+    /*animation: onmove 3s infinite linear forwards;
+    position: relative;
+    */
 }
-@keyframes move {
+/*@keyframes onmove {
     0% {top: 0px;}
-    100% {top: 124px;}
+    50% {top: 124px;}
+    100% {top: 0px;}
 }
-
+*/
 
 .case312{
     display: grid;
@@ -551,8 +559,6 @@ input:checked + .slider:before {
 }
 .ajoutercapteur:hover{
     transform:scale(1.1);
-    color: gold;
-    border: gold solid 3px;
 }
 .ajoutercapteur:active{
     transform: scale(1.03);
