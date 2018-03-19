@@ -371,8 +371,6 @@ a{
 
 
 .case312{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
     background-color: lightgrey/*#838383*/;
 }
 
