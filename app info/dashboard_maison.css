@@ -148,7 +148,7 @@ a{
     padding-left: 35px;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 15px;
+    font-size: 13px;
     background-image: url("image/eco_mode.png");
     background-size: cover;
     background-position: center;
@@ -160,9 +160,13 @@ a{
     box-shadow: 0px 4px 20px #212122;
     align-items: center;
     display: flex;
-    justify-content: center;
+    padding-left: 25px;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 11.5px;
+    background-image: url("image/moyen_mode.png");
+    background-size: cover;
+    background-position: center;
 }
 #case2224{
     background-color: #40495e;
@@ -170,9 +174,13 @@ a{
     box-shadow: 0px 4px 20px #212122;
     align-items: center;
     display: flex;
-    justify-content: center;
+    padding-left: 32px;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 13px;
+    background-image: url("image/max_mode.png");
+    background-size: cover;
+    background-position: center;
 }
 #case2222:hover{
     border:#2cc872 solid 2px;
