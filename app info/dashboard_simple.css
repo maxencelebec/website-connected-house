@@ -20,7 +20,7 @@ body
 }
 
 /*menu*/
-.case1{
+.header{
     display: grid;
     grid-auto-rows: 18px;
     grid-row: 1/4;
@@ -29,65 +29,64 @@ body
     border-right: white solid 2px;
 
 }
-.case11{
-}
-.case12{
+
+.home{
     grid-row: 2/6;
     background-color: #486454;
-    border-left: #2cc872 solid 4px;
+    border-left: #2cc872 solid 3px;
 }
-.case13{
+.compte{
     grid-row: 6/10;
 }
-.case14{
+.parametres{
     grid-row: 10/14;
 }
-.case15{
+.aide{
     grid-row: 14/18;
 }
 
-.case16{
-    grid-row: 18/31;
+.virifocus{
+    grid-row: 19/32;
     background-image: url("image/virifocus.png");
     background-size: cover;
     background-position: center;
 }
 
 
-.case1212{
+.home_lien{
     transition: 0.3s;
     background-image: url("image/home2.png");
     background-size: cover;
     background-position: center;
 }
-.case1313{
+.compte_lien{
     transition: 0.3s;
     background-image: url("image/compte.png");
     background-size: cover;
     background-position: center;
 }
-.case1414{
+.parametres_lien{
     transition: 0.3s;
     background-image: url("image/parametre.png");
     background-size: cover;
     background-position: center;
 }
-.case1515{
+.aide_lien{
     transition: 0.3s;
     background-image: url("image/aide.png");
     background-size: cover;
     background-position: center;
 }
 
-.case1313:hover{
+.compte_lien:hover{
     background-color: #486454;
     
 }
-.case1414:hover{
+.parametres_lien:hover{
     background-color: #486454;
     
 }
-.case1515:hover{
+.aide_lien:hover{
     background-color: #486454;
     
 }   
@@ -96,15 +95,15 @@ body
 
 
 
-.case2{
+.main{
     display: grid;
     grid-template-columns: 1fr 300fr 2fr;
 }
-.case22{
+.informations{
     display: grid;
     grid-auto-rows: 10px;
 }
-.case221{
+.maison_1{
     background-color: #333333;
     grid-row: 2/48;
     display: grid;
@@ -112,16 +111,16 @@ body
     display: grid;
     grid-template-columns: 1fr 13fr 1fr 16fr 1fr;
 }
-.case2212{
+.maison_conso{
     display: grid;
     grid-auto-rows: 10px;
 }
-.case22121{
+.maison{
     grid-row: 2/9;
     font-size: 35px;
     text-align: center;
 }
-.case22122{
+.conso{
     background-color: #343c44;
     grid-row: 10/45;
     border-radius: 15px;
@@ -129,11 +128,11 @@ body
 }
 
 
-.case2214{
+.donnees{
     display: grid;
     grid-auto-rows: 10px;
 }
-.case22141{
+.temp_mode_secu{
     grid-row: 3/13;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -164,7 +163,7 @@ body
     box-shadow: 2px 2px 10px #212122;
     border: #2cc872 solid 2px;
     transition: 0.1s;
-    cursor: pointer;
+    cursor: pointer;    
 }
 .securite:hover{
     transform: scale(1.02);
@@ -179,7 +178,7 @@ body
     text-align: center;
     font-size: 20px;
 }
-.case22143{
+.qui_autresoptions{
     grid-row: 27/43;
     display: grid;
     grid-template-columns: 21fr 10fr;
@@ -215,7 +214,7 @@ body
     color:#2cc872;
 }
 
-.case222{
+.ajoutmaison{
     background-color: #333333;
     grid-row: 50/58;
     display: grid;

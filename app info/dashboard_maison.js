@@ -33,13 +33,5 @@ function mode_max(){
 	document.getElementById("case2224").style.border="#2cc872 solid 2px";
 }
 
-function eau(){
-	document.getElementById("triangle1").style.gridRow="1/2";
-}
-function temperature(){
-	document.getElementById("triangle1").style.gridRow="2/3";
-}
-function consommation(){
-	document.getElementById("triangle1").style.gridRow="3/4";
-}
+
 

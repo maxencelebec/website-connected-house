@@ -8,13 +8,8 @@ body
 
 .fond {
     display: grid;
-    grid-template-columns: 2fr 28fr auto;
-}
-
-#menu{
-    display: grid;
     grid-template-columns: 2fr 28fr;
-    grid-auto-rows: 201px;
+    grid-auto-rows: 196px;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
     transition: 0.5s;
@@ -28,41 +23,18 @@ body
 
 /*menu*/
 
-.case1{
+.header{
+    grid-row: 1/4;
     display: grid;
     grid-auto-rows: 18px;
-    grid-row: 1/4;
     background-color: #333333;
     text-align: center;
+    font-family: Segoe UI Light, Georgia;
     border-right: white solid 2px;
 }
 
-.case11{
-}
-
-.case12{
-}
-
-.case13{
-    grid-row: 6/10;
-}
-
-.case14{
-    grid-row: 10/14;
-}
-.case15{
-    grid-row: 14/18;
-}
-
-.case16{
-    grid-row: 18/31;
-    background-image: url("image/virifocus.png");
-    background-size: cover;
-    background-position: center;
-}
-
-
-.case1212{
+.home{
+    grid-row:2/6;
     transition: 0.3s;
     background-image: url("image/home2.png");
     opacity: 0.2;
@@ -70,7 +42,8 @@ body
     background-position: center;
 }
 
-.case1313{
+.compte{
+    grid-row: 6/10;
     transition: 0.3s;
     background-image: url("image/compte.png");
     opacity: 0.2;
@@ -78,21 +51,30 @@ body
     background-position: center;
 }
 
-.case1414{
+.parametres{
+    grid-row: 10/14;
     transition: 0.3s;
     background-image: url("image/parametre.png");
     opacity: 0.2;
     background-size: cover;
     background-position: center;
 }
-
-.case1515{
+.aide{
+    grid-row: 14/18;
     transition: 0.3s;
     background-image: url("image/aide.png");
     opacity: 0.2;
     background-size: cover;
     background-position: center;
 }
+
+.virifocus{
+    grid-row: 19/32;
+    background-image: url("image/virifocus.png");
+    background-size: cover;
+    background-position: center;
+}
+
 
 /*Menu*/
 

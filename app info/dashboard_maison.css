@@ -20,7 +20,7 @@ a{
 }
 
 /*menu*/
-.case1{
+.header{
     display: grid;
     grid-auto-rows: 18px;
     grid-row: 1/4;
@@ -29,68 +29,63 @@ a{
     border-right: white solid 2px;
 
 }
-.case11{
-}
-.case12{
+
+.home{
     grid-row: 2/6;
 }
-.case13{
+.compte{
     grid-row: 6/10;
 }
-.case14{
+.parametres{
     grid-row: 10/14;
 }
-.case15{
+.aide{
     grid-row: 14/18;
 }
 
-.case16{
-    grid-row: 18/31;
+.virifocus{
+    grid-row: 19/32;
     background-image: url("image/virifocus.png");
     background-size: cover;
     background-position: center;
 }
 
 
-.case1212{
+.home_lien{
     transition: 0.3s;
     background-image: url("image/home2.png");
     background-size: cover;
     background-position: center;
 }
-.case1313{
+.compte_lien{
     transition: 0.3s;
     background-image: url("image/compte.png");
     background-size: cover;
     background-position: center;
 }
-.case1414{
+.parametres_lien{
     transition: 0.3s;
     background-image: url("image/parametre.png");
     background-size: cover;
     background-position: center;
 }
-.case1515{
+.aide_lien{
     transition: 0.3s;
     background-image: url("image/aide.png");
     background-size: cover;
     background-position: center;
 }
-.case1212:hover{
+.home_lien:hover{
     background-color: #486454;
-
 }
-.case1313:hover{
+.compte_lien:hover{
     background-color: #486454;
-
 }
-.case1414:hover{
+.parametres_lien:hover{
     background-color: #486454;
-
 }
-.case1515:hover{
+.aide_lien:hover{
     background-color: #486454;
- 
 }
 
 
@@ -352,16 +347,16 @@ a{
     clip-path: polygon(0 50%, 100% 0, 100% 100%);
     transition: 10s;
     position: relative;
-    /*animation: onmove 3s infinite linear forwards;
+    animation: onmove 3s infinite linear forwards;
     position: relative;
-    */
+    
 }
-/*@keyframes onmove {
+@keyframes onmove {
     0% {top: 0px;}
     50% {top: 124px;}
     100% {top: 0px;}
 }
-*/
+
 
 .case312{
     display: grid;
