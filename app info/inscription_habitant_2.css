@@ -1,0 +1,147 @@
+body
+{
+    padding:0;
+    margin:0;
+    width:auto;
+    font-family: Segoe UI Light, Georgia;
+}
+
+.fond {
+    display: grid;
+    grid-template-columns: 2fr 28fr auto;
+}
+
+#menu{
+    display: grid;
+    grid-template-columns: 2fr 28fr;
+    grid-auto-rows: 201px;
+    font-family: Segoe UI Light, Georgia;
+    text-decoration:none;
+    transition: 0.5s;
+    color: white;
+}
+
+.lien{
+    text-decoration:none;
+    color:black;
+}
+
+/*menu*/
+
+.case1{
+    display: grid;
+    grid-auto-rows: 18px;
+    grid-row: 1/4;
+    background-color: #333333;
+    text-align: center;
+    border-right: white solid 2px;
+}
+
+.case11{
+}
+
+.case12{
+}
+
+.case13{
+    grid-row: 6/10;
+}
+
+.case14{
+    grid-row: 10/14;
+}
+.case15{
+    grid-row: 14/18;
+}
+
+.case16{
+    grid-row: 18/31;
+    background-image: url("image/virifocus.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.case1212{
+    transition: 0.3s;
+    background-image: url("image/home2.png");
+    opacity: 0.2;
+    background-size: cover;
+    background-position: center;
+}
+
+.case1313{
+    transition: 0.3s;
+    background-image: url("image/compte.png");
+    opacity: 0.2;
+    background-size: cover;
+    background-position: center;
+}
+
+.case1414{
+    transition: 0.3s;
+    background-image: url("image/parametre.png");
+    opacity: 0.2;
+    background-size: cover;
+    background-position: center;
+}
+
+.case1515{
+    transition: 0.3s;
+    background-image: url("image/aide.png");
+    opacity: 0.2;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Menu*/
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: 20%;
+    justify-content: center;
+    text-align: center;
+}
+
+.option1 {
+    grid-row: 2;
+}
+
+.option2 {
+    grid-row: 2;
+}
+
+.option3 {
+    grid-row: 2;
+}
+
+.titre {
+    grid-column: 1/4;
+    grid-row: 1;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.option_image {
+    width: 25%;
+    display: block ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.option1_text {
+    font-size: 20px;
+    margin-top: 3%;
+}
+
+.option2_text {
+    font-size: 20px;
+    margin-top: 3%;
+}
+
+.option3_text {
+    font-size: 20px;
+    margin-top: 3%;
+}
