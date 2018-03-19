@@ -145,9 +145,13 @@ a{
     box-shadow: 0px 4px 20px #212122;
     align-items: center;
     display: flex;
-    justify-content: center;
+    padding-left: 35px;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 15px;
+    background-image: url("image/eco_mode.png");
+    background-size: cover;
+    background-position: center;
 
 }
 #case2223{
