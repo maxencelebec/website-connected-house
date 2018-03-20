@@ -8,53 +8,70 @@ body
     font-family: Segoe UI Light, Georgia;
 }
 
-#site{
-    display: grid;
-    grid-template-columns: 2fr 28fr;
-    grid-auto-rows: 196px;
-    font-family: Segoe UI Light, Georgia;
-    text-decoration:none;
-    transition: 0.5s;
-    color: white;
+#Partie_Droite {
+    margin-top: auto ;
+    margin-bottom: auto ;
 }
 
-.lien{
+.lien_co{
     text-decoration:none;
-    color:black;
+    position : absolute;
+    color:white;
+    display: block ;
+    margin-left: 67% ;
+    margin-right: auto ;
+    top : 51%;
+}
+
+.lien_in{
+    text-decoration:none;
+    position : absolute;
+    color:white;
+    display: block ;
+    margin-left: 67% ;
+    margin-right: auto ;
+    top : 55%;
 }
 
 #image{
-    position : absolute;
-    height: 240px;
-    width: 520px;
-    left : 60%;
-    top: 0%;
+    width: 25%;
+    display: block ;
+    margin-left: 65% ;
+    margin-right: auto ;
 }
 
 .txtIdentifiant{
     position : absolute;
     font-size : 110%;
-    left : 70% ;
+    display: block ;
+    margin-left: 67% ;
+    margin-right: auto ;
     top : 25%;
 }
 
 .cadreID{
     position : absolute;
-	left : 70%;
+    display: block ;
+    margin-left: 67% ;
+    margin-right: auto ;
 	top : 30%;
 }
 
 .txtMdp{
 	position : absolute;
 	font-size : 110%;
-	left: 70%;
-	top : 45%;
+    display: block ;
+    margin-left: 67% ;
+    margin-right: auto ;
+	top : 40%;
 }
 
 .cadreMdp{
 	position : absolute;
-	left : 70%;
-	top : 50%;
+    display: block ;
+    margin-left: 67% ;
+    margin-right: auto ;
+	top : 45%;
 }
 
 
