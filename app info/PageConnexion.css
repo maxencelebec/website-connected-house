@@ -1,5 +1,30 @@
-#fond{
-	background-image: linear-gradient(to bottom right, #696969, #f0ffff, #90ee90);
-    width: 1480px;
-    height: 720px;
+body {
+	background-color : #333333;
+	color : white;
+	font-family: Segoe UI Light, Georgia;
 }
+
+#image{
+	position : absolute;
+	height: 240px;
+	width: 520px;
+	left : 60%;
+	top: 0%;
+}
+
+.txtIdentifiant{
+	position : absolute;
+	font-size : 110%;
+	left : 70% ;
+	top : 25%;
+}
+
+.cadreID{
+	
+}
+
+.txtMdp{
+	
+}
+
+
