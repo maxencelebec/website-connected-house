@@ -39,11 +39,27 @@ body
 }
 
 .cadreID{
-
+    position : absolute;
+	left : 70%;
+	top : 30%;
 }
 
 .txtMdp{
-
+	position : absolute;
+	font-size : 110%;
+	left: 70%;
+	top : 45%;
 }
+
+.cadreMdp{
+	position : absolute;
+	left : 70%;
+	top : 50%;
+}
+
+
+
+
+
 
 
