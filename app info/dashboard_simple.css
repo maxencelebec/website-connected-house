@@ -98,6 +98,8 @@ body
 .main{
     display: grid;
     grid-template-columns: 1fr 300fr 2fr;
+    overflow: auto;
+    grid-row: 1/4;
 }
 .informations{
     display: grid;
