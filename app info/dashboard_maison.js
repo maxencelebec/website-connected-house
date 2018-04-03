@@ -18,20 +18,22 @@ function fermer(){
 }
 
 function mode_eco(){
-	document.getElementById("case2222").style.border="#2cc872 solid 2px";
-	document.getElementById("case2223").style.border="#2cc872 solid 0px";
-	document.getElementById("case2224").style.border="#2cc872 solid 0px";	
+	document.getElementById("eco_mode").style.boxShadow= "0 0 0 2px #2cc872";
+	document.getElementById("moyen_mode").style.boxShadow= "0px 4px 20px #212122";
+	document.getElementById("max_mode").style.boxShadow= "0px 4px 20px #212122";	
+
 }
 function mode_moyen(){
-	document.getElementById("case2222").style.border="#2cc872 solid 0px";
-	document.getElementById("case2223").style.border="#2cc872 solid 2px";
-	document.getElementById("case2224").style.border="#2cc872 solid 0px";
+	document.getElementById("eco_mode").style.boxShadow= "0px 4px 20px #212122";
+	document.getElementById("moyen_mode").style.boxShadow= "0 0 0 2px #2cc872";
+	document.getElementById("max_mode").style.boxShadow= "0px 4px 20px #212122";
 }
 function mode_max(){
-	document.getElementById("case2222").style.border="#2cc872 solid 0px";
-	document.getElementById("case2223").style.border="#2cc872 solid 0px";
-	document.getElementById("case2224").style.border="#2cc872 solid 2px";
+	document.getElementById("eco_mode").style.boxShadow= "0px 4px 20px #212122";
+	document.getElementById("moyen_mode").style.boxShadow= "0px 4px 20px #212122";
+	document.getElementById("max_mode").style.boxShadow= "0 0 0 2px #2cc872";
 }
+
 
 
 

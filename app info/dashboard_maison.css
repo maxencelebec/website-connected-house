@@ -91,12 +91,12 @@ a{
 
 
 
-.case2{
+.main1{
     grid-row: 1/4;
     display: grid;
     grid-auto-rows: 196px;
 }
-.case21{
+.photo_nom{
     background-color: white;
     grid-row: 1/2; 
     display: grid;
@@ -116,7 +116,7 @@ a{
     color :white;
 }
 
-.case22{
+.cadre_info_fixe{
     grid-row: 2/4;
     display: grid;
     grid-auto-rows: 10px;
@@ -125,21 +125,22 @@ a{
     color:black;
 }
 /*home mode titre*/
-.case221{
+.home_mode_titre{
     grid-row: 1/4;
     font-size: 20px;
 }
 
 /*home mode bouttons*/
-.case222{
+.home_mode{
     grid-row: 4/9;
     display: grid;
-    grid-template-columns: 1fr 10fr 10fr 10fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     color: #2cc872;
-    grid-column-gap: 3px;
-
+    grid-column-gap: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
-#case2222{
+#eco_mode{
     background-color: #40495e;
     border-radius: 10px;
     box-shadow: 0px 4px 20px #212122;
@@ -152,15 +153,14 @@ a{
     background-image: url("image/eco_mode.png");
     background-size: cover;
     background-position: center;
-
 }
-#case2223{
+#moyen_mode{
     background-color: #40495e;
     border-radius: 10px;
     box-shadow: 0px 4px 20px #212122;
     align-items: center;
     display: flex;
-    padding-left: 25px;
+    padding-left: 42%;
     cursor: pointer;
     transition: 0.3s;
     font-size: 11.5px;
@@ -168,7 +168,7 @@ a{
     background-size: cover;
     background-position: center;
 }
-#case2224{
+#max_mode{
     background-color: #40495e;
     border-radius: 10px;
     box-shadow: 0px 4px 20px #212122;
@@ -182,50 +182,50 @@ a{
     background-size: cover;
     background-position: center;
 }
-#case2222:hover{
-    border:#2cc872 solid 2px;
+#eco_mode:hover{
+    box-shadow: 0 0 0 2px #2cc872;
 }
-#case2223:hover{
-    border:#2cc872 solid 2px;
+#moyen_mode:hover{
+    box-shadow: 0 0 0 2px #2cc872;
 }
-#case2224:hover{
-    border:#2cc872 solid 2px;
+#max_mode:hover{
+    box-shadow: 0 0 0 2px #2cc872;
 }
 
-.case223{
+.securite_titre{
     grid-row: 9/13;
     font-size: 20px;
     padding-top: 5px;
 }
-.case224{
+.securite{
     display: grid;
-    grid-template-columns: 1fr 20fr 1fr;
     grid-row: 13/21;
 }
-.case2242{
+.boutton_onoff{
     background-color: #40495e;
     color:#2cc872;
     border: #2cc872 solid 3px; /*#ae4c43*/
     border-radius: 10px;
     box-shadow: 0px 5px 20px #212122;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 
 
-.case225{
+.utilisateur_titre{
     grid-row: 21/27;
     font-size: 18px;
     padding-top: 3px;
 }
-.case226{
+.utilisateur{
     display: grid;
-    grid-template-columns: 1fr 20fr 1fr;
     grid-row: 27/37;
-}
-.case2262{
     background-color: #40495e;
     color:#e48177;
     border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
     box-shadow: 0px 5px 20px #212122;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -238,26 +238,26 @@ a{
 
 
 
-.case3{
+.main2{
     overflow: auto;
     grid-row: 1/4;
     display: grid;
     grid-auto-rows:196px;
 }
-.case31{
+.informations{
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 12fr 1fr 12fr;
     background-color: #333333;
 }
-.case311{
+.informations_valeur{
     display: grid;
     grid-auto-rows: 65.3px;
     background-color: #333333;
     font-size: 18px;
 }
 /*humidité*/
-#case3111{
+#eau{
     border-bottom: #2cc872 solid 3px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -284,7 +284,7 @@ a{
 }
 
 /*temperature*/
-#case3112{
+#temperature{
     border-bottom: #2cc872 solid 3px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -310,7 +310,7 @@ a{
 }
 
 /*consommation*/
-#case3113{
+#consommation{
     
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -336,17 +336,17 @@ a{
     justify-content: center;
 }
 
-#case3111:hover{
+#eau:hover{
     background-color: #486454;
 }
-#case3112:hover{
+#temperature:hover{
     background-color: #486454;
 }
-#case3113:hover{
+#consommation:hover{
     background-color: #486454;
 }
 
-.zone{
+.informations_graphe{
     background-color: #333333;
     display: grid;
     grid-auto-rows: 63px;
@@ -370,12 +370,12 @@ a{
 }
 
 
-.case312{
+.fond_triangle{
     background-color: lightgrey/*#838383*/;
 }
 
 
-.case32{
+.control_pieces{
     grid-row: 2/20;
     display: grid;
     background-color: white;
@@ -385,13 +385,13 @@ a{
     border-top: lightgrey solid 5px;
     border-bottom: lightgrey solid 3px;
 }
-.case321{
+.cuisine{
     display: grid;
     grid-template-columns: 2fr 5fr 1fr;
     border-bottom: lightgrey solid 3px;
 }
 
-.case3212{
+.cuisine_capteurs{
     display: grid;
     overflow: auto;
     grid-auto-rows: 97px;
