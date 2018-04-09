@@ -1,0 +1,39 @@
+
+.boutton{
+	position: absolute;
+	width: 6.5%;
+	height: 4.6%;
+	bottom: 2px;
+}
+.boutton_footer{
+	background-color: #40495E;
+    border:none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #40495E;
+    opacity: 0.5;	
+}
+.boutton_footer:hover{
+	background-color: #40495E;
+	opacity: 1;
+}
+
+#footer{
+	color: white;
+	position: absolute;
+    background-color: #40495E;
+    width:100%;
+    height: 5%;
+    border-radius: 1%;
+    transition: 0.5s;
+    bottom: 0;	
+    visibility: hidden;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+}
+

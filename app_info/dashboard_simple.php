@@ -65,7 +65,9 @@
                     <div class="case23"></div>
                 </div>
 
-
+                <?php
+                    include "footer.php";
+                ?>
 
             </div>
 

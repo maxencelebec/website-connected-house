@@ -97,10 +97,12 @@
                     </div>
                 </div>
 
+                <?php
+                    include "footer.php";
+                ?>
 
             </div>
 
-        </div>
         <div id="fenetre"> 
             <button id="close" onclick="fermer()"> x </button>
             fenetre pop-up 
