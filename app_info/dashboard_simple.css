@@ -19,7 +19,10 @@ body
     color:white;
 }
 
-
+.home{
+    background-color: #486454;
+    border-left: #2cc872 solid 3px;
+}
 
 .main{
     display: grid;

@@ -12,7 +12,7 @@
             <div id="site">
                 
                 <?php
-                    include "header.php"
+                    include "header.php";
                 ?>
 
                 <div class="main1">

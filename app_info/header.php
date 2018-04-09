@@ -2,7 +2,6 @@
     <link rel="stylesheet" href="header.css"/>
 
     <div class="header">
-         <div class="case11"></div>
         <div class="home">
              <a class="lien" href="dashboard_simple.php" >
                 <div class="home_lien"><br><br>Home</div></a></div>
