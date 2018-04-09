@@ -8,14 +8,7 @@
 <body>
 
 	<?php
-		echo " Valeur de a: ";
-		$c=5;
-		$a=0;
-		while ($c<15){
-			$c++;
-			$a++;
-		}
-		echo "$a";
+		echo " Bonjour Maxence ";
 	?>
 
 </body>

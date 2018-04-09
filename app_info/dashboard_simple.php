@@ -12,22 +12,9 @@
 
             <div id="site">
 
-
-                <div class="header">
-                    <div class="home">
-                        <a class="lien" href="dashboard_simple.html" >
-                            <div class="home_lien"><br><br>Home</div></a></div>
-                    <div class="compte">
-                        <a class="lien" href="htmlgrid2.html">
-                            <div class="compte_lien"><br><br>Compte</div></a></div>
-                    <div class="parametres">
-                        <a class="lien" href="htmlgrid3.html">
-                            <div class="parametres_lien"><br><br>Paramètres</div></a></div>
-                    <div class="aide">
-                        <a class="lien" href="htmlgrid4.html">
-                            <div class="aide_lien"><br><br>Aide</div></a></div>
-                    <div class="virifocus"></div>
-                </div>
+                <?php
+                    include "header.php"
+                ?>
 
                 <div class="main">
                     <div class="case21"></div>
@@ -56,7 +43,7 @@
                                 <div class="qui_autresoptions">
                                     <div class="quiestalamaison">Qui est à la maison ?</div>
                                     <div class="autresoptions">
-                                        <a class="lien2" href="dashboard_maison.html">
+                                        <a class="lien2" href="dashboard_maison.php">
                                             <div class="autresoptions1">Autres Options<br>...</div>
                                         </a>
                                     </div>
