@@ -183,13 +183,13 @@ a{
     background-position: center;
 }
 #eco_mode:hover{
-    box-shadow: 0 0 0 2px #2cc872;
+    box-shadow: 0 0 0 3px #2cc872;
 }
 #moyen_mode:hover{
-    box-shadow: 0 0 0 2px #2cc872;
+    box-shadow: 0 0 0 3px #2cc872;
 }
 #max_mode:hover{
-    box-shadow: 0 0 0 2px #2cc872;
+    box-shadow: 0 0 0 3px #2cc872;
 }
 
 .securite_titre{
