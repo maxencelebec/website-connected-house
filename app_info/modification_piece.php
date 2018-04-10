@@ -9,8 +9,14 @@
 
 
 
-<body>
-numéro identifiant ; nom ; type capteur
+<body class="corps">
+
+	<?php
+		include "header.php";
+    ?>
+
+
+	<div> numéro identifiant / nom / type capteur</div>
 
 
 
