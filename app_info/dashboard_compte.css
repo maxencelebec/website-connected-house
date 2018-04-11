@@ -7,79 +7,15 @@ body
 
 #site{
     display: grid;
-    grid-template-columns: 2fr 5fr 23fr;
+    grid-template-columns: 2fr 28fr;
     grid-auto-rows: 196px;
-    background-color: grey;
+    background-color: white;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
     transition: 0.5s;
 }
-a{
-    text-decoration:none;
-    color:white;
-}
 
-/*menu*/
-.header{
-    display: grid;
-    grid-auto-rows: 18px;
-    grid-row: 1/4;
-    background-color: #333333;
-    text-align: center; 
-    border-right: white solid 2px;
-}
 .home{
-    grid-row: 2/6;
-}
-.compte{
-    grid-row: 6/10;
-}
-.parametres{
-    grid-row: 10/14;
-}
-.aide{
-    grid-row: 14/18;
-}
-.virifocus{
-    grid-row: 19/32;
-    background-image: url("image/virifocus.png");
-    background-size: cover;
-    background-position: center;
-}
-.home_lien{
-    transition: 0.3s;
-    background-image: url("image/home2.png");
-    background-size: cover;
-    background-position: center;
-}
-.compte_lien{
-    transition: 0.3s;
-    background-image: url("image/compte.png");
-    background-size: cover;
-    background-position: center;
-}
-.parametres_lien{
-    transition: 0.3s;
-    background-image: url("image/parametre.png");
-    background-size: cover;
-    background-position: center;
-}
-.aide_lien{
-    transition: 0.3s;
-    background-image: url("image/aide.png");
-    background-size: cover;
-    background-position: center;
-}
-.home_lien:hover{
     background-color: #486454;
+    border-left: #2cc872 solid 3px;
 }
-.compte_lien:hover{
-    background-color: #486454;
-}
-.parametres_lien:hover{
-    background-color: #486454;
-}
-.aide_lien:hover{
-    background-color: #486454;
-}
-/*/menu*/
