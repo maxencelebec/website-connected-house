@@ -6,7 +6,7 @@
              <a class="lien" href="dashboard_simple.php" >
                 <div class="home_lien"><br><br>Home</div></a></div>
         <div class="compte">
-               <a class="lien" href="htmlgrid2.html">
+               <a class="lien" href="dashboard_compte.php">
                  <div class="compte_lien"><br><br>Compte</div></a></div>
         <div class="parametres">
                <a class="lien" href="htmlgrid3.html">
