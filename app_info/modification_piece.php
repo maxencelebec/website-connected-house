@@ -14,10 +14,14 @@
 	<?php
 		include "header.php";
     ?>
+     
+	<div class="centre">
 
-
-	<div> numéro identifiant / nom / type capteur</div>
-
+	     <div> numéro identifiant / nom / type capteur</div>
+	     <?php echo "coucou"; ?>
+	     <div> re coucou </div>
+		 
+    </div>
 
 
 </body>
