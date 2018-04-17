@@ -16,11 +16,21 @@
     ?>
      
 	<div class="centre">
-
-	     <div> numéro identifiant / nom / type capteur</div>
-	     <?php echo "coucou"; ?>
-	     <div> re coucou </div>
-		 
+	
+        <div class= "nom_piece">  
+		<?php
+		    $selected_room = "Cuisine";
+		    echo "$selected_room";
+		?>
+		</div>
+		
+	    <div> numéro identifiant / nom / type capteur</div>
+	    <?php
+		    $mot = "coucou";
+		    echo 'bonsoir et ' . $mot . ' re';
+		?>
+	    <div> re coucou </div>
+		
     </div>
 
 

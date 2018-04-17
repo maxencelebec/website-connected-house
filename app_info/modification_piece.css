@@ -1,5 +1,4 @@
-.corps
-{
+.corps{
 	display: grid;
     padding:0;
     margin:0;
@@ -18,4 +17,8 @@
 
 .centre{
 	
+}
+
+.nom_piece{
+	font-size:50px;
 }
