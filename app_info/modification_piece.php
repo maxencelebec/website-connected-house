@@ -24,6 +24,18 @@
 		?>
 		</div>
 		
+		</br>
+		
+		<div class= "taille">
+		<?php
+		    $superficie= 15;
+			echo 'Superfie de la pièce : ' . $superficie . ' m²';
+		?>
+		</div>
+		
+		<img class="image" src="image/cuisine.jpg"/>
+		
+		<!-- ça c'est juste des tests pour moi -->
 	    <div> numéro identifiant / nom / type capteur</div>
 	    <?php
 		    $mot = "coucou";

@@ -16,9 +16,21 @@
 }
 
 .centre{
-	
+
 }
 
 .nom_piece{
 	font-size:50px;
+}
+
+.taille{
+
+}
+
+.image{
+	position:absolute;
+	top:20px;
+	left:500px;
+	width:50%;
+	height:50%;
 }
