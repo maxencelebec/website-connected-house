@@ -9,13 +9,42 @@ body
     display: grid;
     grid-template-columns: 2fr 28fr;
     grid-auto-rows: 196px;
-    background-color: white;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
-    transition: 0.5s;
 }
 
-.home{
+/* Actualisation header */
+.lien{
+    text-decoration:none;
+    color:white;
+}
+
+.compte{
     background-color: #486454;
     border-left: #2cc872 solid 3px;
+}
+
+/* Menu du dashboard_compte*/
+.menu_compte{
+	display: grid;
+	grid-auto-rows: 18px;
+    grid-row: 2/4;
+    background-color: gray;
+    text-align: right; 
+}
+
+.profile{
+	grid-row: 1/4;
+}
+
+.compte_menu_compte{
+	grid-row: 4/7;
+}
+
+.confidentialite{
+	grid-row: 7/10;
+}
+
+.notification{
+	grid-row: 10/13;
 }

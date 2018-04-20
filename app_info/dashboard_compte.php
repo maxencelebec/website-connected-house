@@ -11,18 +11,18 @@
 			
 			<?php
 				include "header.php";
+			?>
+			
+				<div class="menu_compte">
+					<div class="vue_ensemble">Profile</div>
+					<div class="compte_menu_compte">Compte</div>
+					<div class="confidentialite">Confidentialit&eacute; </div>
+					<div class="notifications">Notifications</div>
+				</div>
+			
+			<?php
 				include "footer.php";
 			?>
 			
-			<div class="nom">Nom</div>
-			<div class="prenom">Prénom</div>
-			<div class="age">Âge</div>
-			<div class="numerofixe">Numéro de téléphone</div>
-			<div class="numeroportable">Numéro du portable</div>
-			<div class="addressemail">Addresse mail</div>
-			<div class="addresse">Addresse</div>
-			<div class="codepostal">Code Postal</div>
-			<div class="ville">Ville</div>
-			<div class="pays">Pays</div>
             </div>
 </body>
