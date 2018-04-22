@@ -20,17 +20,42 @@
 }
 
 .nom_piece{
-	font-size:50px;
+	font-size:75px;
+	font-weight:bold;
+	margin-left:20px;
 }
 
 .taille{
-
+    font-size:30px;
+	margin-left:20px;
 }
 
 .image{
 	position:absolute;
-	top:20px;
-	left:500px;
-	width:50%;
-	height:50%;
+	top:50px;
+	left:800px;
+	width:45%;
+	height:45%;
 }
+
+.infoCapteurs{
+	margin-left:20px;
+	font-size:25px;
+}
+
+.ON{
+	color:green;
+	font-weight:bold;
+}
+
+.OFF{
+	color:red;
+	font-weight:bold;
+}
+
+
+
+
+
+
+
