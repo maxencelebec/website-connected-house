@@ -1,24 +1,30 @@
 .header{
+	
     display: grid;
     grid-auto-rows: 18px;
     grid-row: 1/4;
     background-color: #333333;
     text-align: center; 
     border-right: white solid 2px;
-
+    font-family: Segoe UI Light;
+    
 }
 
 .home{
     grid-row: 2/6;
+    color:white;
 }
 .compte{
     grid-row: 6/10;
+    color:white;
 }
 .parametres{
     grid-row: 10/14;
+    color:white;
 }
 .aide{
     grid-row: 14/18;
+    color:white;
 }
 
 .virifocus{
@@ -26,6 +32,7 @@
     background-image: url("image/virifocus.png");
     background-size: cover;
     background-position: center;
+    color:white;
 }
 
 
@@ -34,24 +41,28 @@
     background-image: url("image/home2.png");
     background-size: cover;
     background-position: center;
+    color:white;
 }
 .compte_lien{
     transition: 0.3s;
     background-image: url("image/compte.png");
     background-size: cover;
     background-position: center;
+    color:white;
 }
 .parametres_lien{
     transition: 0.3s;
     background-image: url("image/parametre.png");
     background-size: cover;
     background-position: center;
+    color:white;
 }
 .aide_lien{
     transition: 0.3s;
     background-image: url("image/aide.png");
     background-size: cover;
     background-position: center;
+    color:white;
 }
 .home_lien:hover{
     background-color: #486454;
