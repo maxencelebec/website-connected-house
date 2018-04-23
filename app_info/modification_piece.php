@@ -109,18 +109,47 @@
 			?>		    
 		</table>
 		
-		</br>
-		
-		
-		<!-- ça c'est juste des tests pour moi -->
-	    <div> numéro identifiant / nom / type capteur</div>
-	    <?php
-		    $mot = "coucou";
-		    echo 'bonsoir et ' . $mot . ' re';
-		?>
-	    <div> re coucou </div>
+	    <div>
+		    <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			
+			<form>
+			    <label for="Type de capteur"> Choisisser le type de votre capteur </label>
+				<select name="Type de capteur">
+				    <option value="feu"> Feu </option>
+					<option value="eau"> Eau </option>
+					<option value="plante"> Plante </option>
+					<option value="sol"> Sol </option>
+					<option value="elec"> Electrique </option>
+					<option value="normal"> Normal </option>
+					<option value="combat"> Combat </option>
+					<option value="glace"> Glace </option>
+					<option value="roche"> Roche </option>
+					<option value="psy"> Psy </option>
+					<option value="spectre"> Spectre </option>
+					<option value="tenebre"> Ténèbre </option>
+					<option value="poison"> Poison </option>
+					<option value="insecte"> Insecte </option>
+					<option value="vol"> Vol </option>
+					<option value="acier"> Acier </option>
+					<option value="dragon"> Dragon </option>
+					<option value="fee"> Fée </option>
+			    </select>
+			</form>
+			
+			<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>                        <!-- Je sais c'est dégueulasse -->
+			
+			<form>
+			    Nommer votre capteur <input type="text" name="nomCapteur" size="25" maxlength="15" style="text-align: center" /> 
+			</form>
+			
+			<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			
+			<form>
+			    Entrer l'ID du capteur <input type="text" name="IDcapteur" size="25" maxlength="20" style="text-align: center" />
+			</form>
+			
+		</div>
 		
     </div>
-
 
 </body>
