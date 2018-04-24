@@ -33,7 +33,7 @@
 .image{
 	position:absolute;
 	top:50px;
-	left:800px;
+	left:750px;
 	width:45%;
 	height:45%;
 }
@@ -53,7 +53,14 @@
 	font-weight:bold;
 }
 
+.ajout{
+	margin-left:20px;
+	font-size:25px;
+}
 
+form{
+    display:inline;	
+}
 
 
 

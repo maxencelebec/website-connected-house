@@ -1,5 +1,4 @@
-    
-    <link rel="stylesheet" href="header.css"/>
+	<link rel="stylesheet" href="header.css"/>
 
     <div class="header">
         <div class="home">
@@ -12,7 +11,9 @@
                <a class="lien" href="htmlgrid3.html">
                 <div class="parametres_lien"><br><br>Paramètres</div></a></div>
         <div class="aide">
-              <a class="lien" href="htmlgrid4.html">
+              <a class="lien" href="help.php">
                    <div class="aide_lien"><br><br>Aide</div></a></div>
         <div class="virifocus"></div>
     </div>
+    
+    
