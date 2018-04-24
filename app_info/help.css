@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-
 body
 {
     padding:0;
@@ -13,7 +11,7 @@ body
 .fond{
 	
     display: grid;
-    grid-template-columns: auto 28fr;
+    grid-template-columns: 2fr 28fr;
     grid-auto-rows: 196px;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
@@ -26,9 +24,13 @@ body
     color:black;
 }
 
+.aide{
+    background-color: #486454;
+    border-left: #2cc872 solid 3px;
+}
 .option_help {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 25% 25% 25%;
     text-align: center;
 }
