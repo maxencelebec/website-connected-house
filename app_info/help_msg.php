@@ -8,10 +8,10 @@
 
 <body class="help_msgs">
 
-<header > 
+
 
 <?php include "header.php";?>
-</header>
+
 
 
 <div class="container">
@@ -45,7 +45,9 @@
     </form>
 </div> 
 
-<footer><?php include "footer.php";?></footer>
+<?php 
+include "footer.php"
+?>
 
 </body>
 

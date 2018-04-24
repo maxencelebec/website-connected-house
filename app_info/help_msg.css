@@ -1,9 +1,21 @@
+body
+{
+    padding:0;
+    margin:0;
+    width:auto;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
 @charset "utf-8";
 
 .help_msgs{
 	
 	display:grid;
-	grid-template-columns:2fr 27fr;
+	grid-template-columns:2fr 28fr;
 	font-family: Segoe UI Light;
 }
 footer{

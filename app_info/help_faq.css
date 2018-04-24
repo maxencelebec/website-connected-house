@@ -1,3 +1,24 @@
+body
+{
+    padding:0;
+    margin:0;
+    width:auto;
+}
+
+#site{
+    display: grid;
+    grid-template-columns: 2fr 5fr 23fr;
+    grid-auto-rows: 196px;
+    background-color: grey;
+    font-family: Segoe UI Light, Georgia;
+    text-decoration:none;
+    transition: 0.5s;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+
 .help_faq{
 	overflow:hidden;
 	
