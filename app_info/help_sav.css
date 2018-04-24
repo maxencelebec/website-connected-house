@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+
+.help_msgs{
+	
+	display:grid;
+	grid-template-columns:2fr 26fr;
+	font-family: Segoe UI Light;
+	
+	padding:0;
+	margin:0;
+	width:auto;
+}
+footer{
+	grid-column:1;
+}
+
+
+.container{
+	grid-column:2;
+	display: grid;
+	grid-templates-columns:40% 60%;
+	grid-templates-rows: 50% 50%;
+	background-color:#333333;
+	color:#2cc872;
+	
+}
+
+
+
+.container .bebe{
+	grid-column:1;
+	grid-row:1;
+	max-width:15%;
+	max-length:15%;
+	position:absolute;
+	backgroud-color:#eeeeee;
+	top:20%;
+	right:20%;
+	left:20%;
+
+}
+
+.container .infobox{
+	grid-column:1;
+	grid-row:2;
+	text-align:center;
+    background-size: 35%;
+    
+    background-position: center;
+    
+}
+
+.container form{
+	
+	grid-column:2;
+	grid-row:1/3;
+	
+	
+	display:grid;
+	grid-template-rows:repeat(4,auto);
+	margin-right: 5%;
+	border:#2cc872 solid 1px;
+    border-radius: 5px;
+	max-width:85%;
+	
+	margin:5%;
+	
+	
+}
+
+#submit{
+	display: block;
+	
+	text-decoration:none;
+    color:white;
+    background-color:#333333;
+    font-family: Segoe UI Light;
+    cursor:pointer;
+    font-size:1em;
+    border:#2cc872 solid 1px;
+    border-radius: 5px;
+    padding:5px;
+    margin:5%;
+    max-width:55%;
+    max-height:75%;
+    margin-left: 25%;
+    margin-right: 1%;
+	
+}
+
+#maison{
+	display: block;
+	border:#2cc872 solid 1px;
+	background-color:#333333;
+	font-family: Segoe UI Light;
+	color:white;
+	border-radius: 5px;
+	margin:10%;
+	
+}
+
+#capteur{
+	display: block;
+	border:#2cc872 solid 1px;
+	background-color:#333333;
+	font-family: Segoe UI Light;
+	color:white;
+	border-radius: 5px;
+	margin:10%;
+	
+}
+
+#msg{
+	display: block;
+	resize:none;
+	border:#2cc872 solid 1px;
+	background-color:#333333;
+	font-family: Segoe UI Light;
+	color:white;
+	border-radius: 5px;
+	margin:10%;
+	
+}
+
+#device{
+	display: block;
+	resize:none;
+	border:#2cc872 solid 1px;
+	background-color:#333333;
+	font-family: Segoe UI Light;
+	color:white;
+	border-radius: 5px;
+	margin:10%;
+	
+}
+
+.container form label{
+	
+	transform:translate(10%,50%);
+	
+}
+#submit:hover{
+	
+	transform:scale(1.1);
+	background-color:#2cc872;
+}
+
+
+
