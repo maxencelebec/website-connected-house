@@ -30,6 +30,11 @@
 	margin-left:20px;
 }
 
+.boutonModif{
+    text-decoration:none;
+	color:white;
+}
+
 .image{
 	position:absolute;
 	top:50px;

@@ -13,6 +13,7 @@
 
 	<?php
 		include "header.php";
+		include "footer.php";
     ?>
      
 	<div class="centre">
@@ -31,6 +32,12 @@
 		        $superficie= 15;
 			    echo 'Superficie : ' . $superficie . ' m²';
 		    ?>
+			
+			<span class="boutonModif">                                           <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			    <a href="inscription_piece"> Modifier </a>
+			</span>
+
 		</div>
 		
 		<img class="image" src="image/cuisine.jpg"/>
@@ -110,7 +117,7 @@
 		</table>
 		
 	    <div>
-		    <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+		    <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp; </span>
 			
 			<form>
 			    <label for="Type de capteur"> Choisisser le type de votre capteur </label>

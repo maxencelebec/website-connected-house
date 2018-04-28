@@ -1,0 +1,26 @@
+.corps {
+	display: grid;
+    padding:0;
+    margin:0;
+    width:auto;
+    background-color : #333333;
+    color : white;
+    font-family: Segoe UI Light, Georgia;
+	grid-template-columns: 2fr 28fr;
+	grid-auto-rows: 196px;
+}
+
+.titre1 {
+    font-size:50px;
+	font-weight:bold;
+	margin-left:5px;
+}
+
+.titre2 {
+	font-size:30px;
+	margin-left:5px;
+}
+
+.para1 {
+	margin-left:5px;
+}
