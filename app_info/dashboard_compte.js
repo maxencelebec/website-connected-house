@@ -13,9 +13,22 @@ function openTab(evt, tabName) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace("active", "");
     }
-	
-    // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(tabName).style.display = "grid";
+
+    // Search the tab matching the attribute and display it
+	document.getElementById(tabName).style.display = "grid";
     evt.currentTarget.className += " active";
-	
 }
+
+
+document.getElementById("tablink1").addEventListener("click", function(){
+	openTab(event, "profile");
+}); 
+document.getElementById("tablink2").addEventListener("click", function(){
+	openTab(event, "compte");
+}); 
+document.getElementById("tablink3").addEventListener("click", function(){
+	openTab(event, "confidentialite");
+}); 
+document.getElementById("tablink4").addEventListener("click", function(){
+	openTab(event, "notifications");
+}); 
