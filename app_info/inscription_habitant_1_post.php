@@ -1,8 +1,14 @@
 <?php
+    session_start();
+    $_SESSION["mail"]=$_POST['mail'];
+?>
+
+<?php
+
 	// Connexion à la base de données
 	try
 	{
-		$bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'appg9d', 'virifocus');
+		$bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
 		echo "connecté à la bdd </br>";
 	}
 	catch(Exception $e)

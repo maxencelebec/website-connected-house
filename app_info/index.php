@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +22,7 @@
      </div>
 
      <form>
-         <input type="text" size="35" maxlength="25" class="cadreID" style="text-align: center">
+         <input type="email" size="35" maxlength="25" class="cadreID" style="text-align: center" required>
      </form>
 
      <div class="txtMdp">
@@ -26,12 +30,12 @@
      </div>
 	 
 	 <form>
-         <input type="password" size="35" maxlength="25" class="cadreMdp" style="text-align: center">
+         <input type="password" size="35" maxlength="25" class="cadreMdp" style="text-align: center" required>
      </form>
 
      <a class = "lien_co" href="dashboard_simple.php">Se connecter</a>
      </br>
-     <a class = "lien_in" href="Inscription_1.html">S'inscrire</a>
+     <a class = "lien_in" href="Inscription_1.php">S'inscrire</a>
 
 </div>
 

@@ -24,7 +24,9 @@
             <div class="case1515"><br><br>Aide</div></a></div>
         <div class="case16"></div>
     </div>
-
+<?php
+    session_start();
+?>
 </div>
 
 
@@ -53,7 +55,7 @@
             <br/>
             <input class="valider" type="submit" value="Valider">
 
-            <a class="lien" href="inscription_habitant_2.html"><p>Next Page Debug</p></a>
+            <a class="lien" href="inscription_habitant_2.php"><p>Next Page Debug</p></a>
 
         </div>
 

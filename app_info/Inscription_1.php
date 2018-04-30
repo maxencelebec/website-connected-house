@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,11 +29,11 @@
 
             <div class="titre"><h1>Vous souhaitez</h1></div>
 
-            <div class="option1"><a class="lien" href="inscription_habitant_1.html">
+            <div class="option1"><a class="lien" href="inscription_habitant_1.php">
                 <img class="option_image" src="image/home.svg"></a></div>
-            <div class="option2"><a class="lien" href="inscription_gerant_1.html">
+            <div class="option2"><a class="lien" href="inscription_gerant_1.php">
                 <img class="option_image" src="image/building.svg"></a></div>
-            <div class="option3"><a class="lien" href="inscription_technicien_1.html">
+            <div class="option3"><a class="lien" href="inscription_technicien_1.php">
                 <img class="option_image" src="image/gears.svg"></a></div>
 
             <div class="option1_text"><a class="lien" href="inscription_habitant_1.html">Définir votre habitation afin</br>de paramétrer vos capteurs</a></div>
