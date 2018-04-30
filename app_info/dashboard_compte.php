@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Virifocus | Compte</title>
+    <title>Virifocus</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="dashboard_compte.css"/>
     <link rel="icon" type="image/png" href="image/logo.png" />
@@ -15,10 +15,10 @@
 			
 				<!-- Boutons des tabs (tableau gauche) -->
 				<div class="tab">
-				<button class="tablinks" onclick="openTab(event,'profile')">Profile</button>		<!-- Le bouton "Profile" est ouvert par défault-->
-				<button class="tablinks" onclick="openTab(event,'compte')">Compte</button>
-				<button class="tablinks" onclick="openTab(event,'confidentialite')">Confidentialit&eacute;</button>
-				<button class="tablinks" onclick="openTab(event,'notifications')">Notifications</button>
+				<button class="tablinks" id="tablink1">Profile</button>		<!-- Le bouton "Profile" est ouvert par défault-->
+				<button class="tablinks" id="tablink2">Compte</button>
+				<button class="tablinks" id="tablink3">Confidentialit&eacute;</button>
+				<button class="tablinks" id="tablink4">Notifications</button>
 				</div>
 				
 					<!-- Tab 1 : Profile -->
@@ -42,6 +42,7 @@
 			?>
 			
             </div>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="dashboard_compte.js"></script>
 </body>
-<script src="dashboard_compte.js"></script>
 </html>
