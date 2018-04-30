@@ -18,7 +18,6 @@
 	 
 
 	<div class="infobox"></div>
-	<div id="triangle_msg"></div>
     <form>
     
         <!-- Ici il faudra voir les utilisateur dispo avec la BDD -->

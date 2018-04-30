@@ -15,7 +15,7 @@ a{
 .help_msgs{
 	
 	display:grid;
-	grid-template-columns:2fr 28fr;
+	grid-template-columns:2fr 26fr;
 	font-family: Segoe UI Light;
 }
 footer{
@@ -26,7 +26,7 @@ footer{
 .container{
 	grid-column:2;
 	display: grid;
-	grid-templates-columns:68% 2% 30%;
+	grid-templates-columns:60% 40%;
 	background-color:#333333;
 	color:#2cc872;
 	
@@ -40,15 +40,11 @@ footer{
     background-position: center;
     
 }
-#triangle_msg{
-grid-row: 2
-background-color: #333333;
-clip-path: polygon(0 50%, 100% 0, 100% 100%);
-} 
+
 
 .container form{
 	
-	grid-column:3;
+	grid-column:2;
 	display:grid;
 	grid-template-rows:repeat(4,auto);
 	margin-right: 5%;
