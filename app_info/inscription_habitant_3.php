@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +28,6 @@
             <div class="case1515"><br><br>Aide</div></a></div>
         <div class="case16"></div>
     </div>
-<?php
-    session_start();
-?>
 </div>
 
 

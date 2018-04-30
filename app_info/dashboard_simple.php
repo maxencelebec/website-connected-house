@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +45,11 @@
                                     </div>
                                 </div>
                                 <div class="qui_autresoptions">
-                                    <div class="quiestalamaison">Qui est à la maison ?</div>
+                                    <div class="quiestalamaison">Qui est à la maison ? </br></br>
+                                            <?php
+                                                echo "<p style='color: #2cc872'>".$_SESSION["prenom"]."</p>"; 
+                                            ?>
+                                    </div>
                                     <div class="autresoptions">
                                         <a class="lien2" href="dashboard_maison.php">
                                             <div class="autresoptions1">Autres Options<br>...</div>

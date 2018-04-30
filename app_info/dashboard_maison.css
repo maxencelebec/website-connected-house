@@ -321,16 +321,16 @@ a{
 }
 
 .cuisine_capteurs{
-    display: grid;
+    display: flex;
+    justify-content: flex-start;
     overflow: auto;
-    grid-auto-rows: 97px;
-    grid-template-columns: repeat(12, 193px);
-    grid-column-gap: 10px;
 }
 
 .case32121{
     background-color: #8c9ca4;
     border-radius: 10px;
+    min-width: 32%;
+    margin-right: 10px;
 }
 .case322{
     border-bottom: lightgrey solid 3px;

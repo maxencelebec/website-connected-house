@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,6 +41,9 @@
                         </div>
                         <div class="utilisateur_titre">Utilisateur<br>Connecté</div>
                         <div class="utilisateur">
+                            <?php
+                                echo "<p style='color: #2cc872'>".$_SESSION["prenom"]."</p>"; 
+                             ?>
                         </div>
                     </div>
                 </div>
@@ -75,6 +82,7 @@
                                 <div class="case32121">d</div>
                                 <div class="case32121">e</div>
                                 <div class="case32121">f</div>
+
                             </div>
                             
                             <div class="boutton2">
