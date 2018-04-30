@@ -33,9 +33,9 @@
 
         <div class="titre"><h1>Choisissez votre type d'habitation</h1></div>
 
-        <div class="option1"><a class="lien" href="inscription_habitant_1.html">
+        <div class="option1"><a class="lien" href="inscription_habitant_3.php">
             <img class="option_image" src="image/home.svg"></a></div>
-        <div class="option2"><a class="lien" href="inscription_gerant_1.html">
+        <div class="option2"><a class="lien" href="inscription_habitant_3.php">
             <img class="option_image" src="image/building.svg"></a></div>
 
 
