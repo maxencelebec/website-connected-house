@@ -30,20 +30,20 @@
 
 <div class="Main">
 
-    <form class="infos" action="website-connected-house/app_info/controleur_connexion.php" method="POST">
+    <form class="infos" action="inscription_habitant_1_post.php" method="post">
 
         <div class="formulaire">
 
             <div class="titre"><h1>Entrez vos informations</h1></div>
 
             <div>Adresse email :</div>
-            <input type="text" id="email" maxlenght="255" style="text-align: center"/>
+            <input type="text" name="mail" maxlenght="255" style="text-align: center"/>
             <div>Confirmez votre addresse email :</div>
-            <input type="text" id="email_confirm" maxlenght="255" style="text-align: center"/>
+            <input type="text" name="mail_confirm" maxlenght="255" style="text-align: center"/>
             <div>Mot de passe :</div>
-            <input type="password" id="mdp" minlenght="6" maxlenght="255" style="text-align: center"/>
+            <input type="password" name="password" minlenght="6" maxlenght="255" style="text-align: center"/>
             <div>Confirmez votre mot de passe :</div>
-            <input type="password" id="mdp_confirm" minlenght="6" maxlenght="255" style="text-align: center"/>
+            <input type="password" name="password_confirm" minlenght="6" maxlenght="255" style="text-align: center"/>
 
         </div>
 

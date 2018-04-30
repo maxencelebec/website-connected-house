@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+²<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,11 +25,11 @@
 
             <div class="titre"><h1>Vous souhaitez</h1></div>
 
-            <div class="option1"><a class="lien" href="inscription_habitant1.html">
+            <div class="option1"><a class="lien" href="inscription_habitant1.php">
                 <img class="option_image" src="image/home.svg"></a></div>
-            <div class="option2"><a class="lien" href="inscription_gerant1.html">
+            <div class="option2"><a class="lien" href="inscription_gerant1.php">
                 <img class="option_image" src="image/building.svg"></a></div>
-            <div class="option3"><a class="lien" href="inscription_technicien1.html">
+            <div class="option3"><a class="lien" href="inscription_technicien1.php">
                 <img class="option_image" src="image/gears.svg"></a></div>
 
             <div class="option1_text"><a class="lien" href="inscription_habitant1.html">Définir votre habitation afin</br>de paramétrer vos capteurs</a></div>

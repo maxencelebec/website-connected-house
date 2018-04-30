@@ -2,7 +2,7 @@
 
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=virifocus;charset=utf8', 'root', '',
+    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'appg9d', 'virifocus'),
         array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 }
 
