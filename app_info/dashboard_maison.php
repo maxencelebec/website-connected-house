@@ -34,15 +34,16 @@
                         <div class="securite_titre">Sécurité</div>
                         <div class="securite">
                             <div class="boutton_onoff">
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label><br>ON/OFF</div>
+                                <?php
+                                    include "boutton.php";
+                                ?>
+                                <br>ON/OFF
+                            </div>
                         </div>
                         <div class="utilisateur_titre">Utilisateur<br>Connecté</div>
                         <div class="utilisateur">
                             <?php
-                                echo "<p style='color: #2cc872'>".$_SESSION["prenom"]."</p>"; 
+                                 echo "<p style='color: #2cc872'>".$_SESSION["prenom"]." ".$_SESSION["nom"]."</p>"; 
                              ?>
                         </div>
                     </div>
@@ -73,29 +74,15 @@
                         <div class="fond_triangle"></div>
                     </div>
                     <div class="control_pieces">
-                        <div class="cuisine">
-                            <div class="cuisine_titre">cuisine</div>
-                            <div class="cuisine_capteurs">
-                                <div class="case32121">a</div>
-                                <div class="case32121">b</div>
-                                <div class="case32121">c</div>
-                                <div class="case32121">d</div>
-                                <div class="case32121">e</div>
-                                <div class="case32121">f</div>
 
-                            </div>
-                            
-                            <div class="boutton2">
-                                <button class="ajoutercapteur" onclick="change()">+</button>
-                            </div>
-                            
-                        </div>
-                        <div class="case322">salon</div>
-                        <div class="case323">chambre 1</div>
-                        <div class="case321">d</div>
-                        <div class="case322">a</div>
-                        <div class="case323">d</div>
-                        <div class="case321">a</div>
+                        <?php
+                            include_once "ajout_piece.php";
+                            ajout_piece("cuisine");
+                            ajout_piece("chambre");
+                            ajout_piece("salle_de_bain");
+                            ajout_piece("salon");
+                            ajout_piece("cave");
+                        ?>
 
                         <div class="boutton1">
                             <button class="ajouterpiece"> + modifier pièce </button>

@@ -310,34 +310,12 @@ a{
     background-color: white;
     grid-auto-rows: 130px;
     color:#2cc872;
-    font-size: 40px;
+    font-size: 25px;
     border-top: lightgrey solid 5px;
     border-bottom: lightgrey solid 3px;
 }
-.cuisine{
-    display: grid;
-    grid-template-columns: 2fr 5fr 1fr;
-    border-bottom: lightgrey solid 3px;
-}
 
-.cuisine_capteurs{
-    display: flex;
-    justify-content: flex-start;
-    overflow: auto;
-}
 
-.case32121{
-    background-color: #8c9ca4;
-    border-radius: 10px;
-    min-width: 32%;
-    margin-right: 10px;
-}
-.case322{
-    border-bottom: lightgrey solid 3px;
-}
-.case323{
-    border-bottom: lightgrey solid 3px;
-}
 
 
 
@@ -366,81 +344,6 @@ a{
     border:#2cc872 solid 1px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.switch {
-  position: relative;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 25px;
-  margin-top: 10px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-    display:none;
-
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #2cc872;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 17px;
-  width: 17px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #ae4c43;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #ae4f43;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(15px);
-  -ms-transform: translateX(15px);
-  transform: translateX(15px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
 
 
 

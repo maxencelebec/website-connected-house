@@ -1,0 +1,125 @@
+.cave, .cuisine, .salon, .salle_de_bain, .chambre{
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr;
+    border-bottom: lightgrey solid 3px;
+}
+
+.cuisine_titre_donnees, .chambre_titre_donnees, .salon_titre_donnees, .salle_de_bain_titre_donnees, .cave_titre_donnees {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    text-align: center;
+}
+.photo_cuisine{
+    border-right: lightgrey solid 2px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: grey;
+    background-image: url("image/cuisine.png");
+    background-size: cover;
+    background-position: center;
+}
+.photo_chambre{
+    border-right: lightgrey solid 2px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: grey;
+    background-image: url("image/chambre.png");
+    background-size: cover;
+    background-position: center;
+}
+.photo_salon{
+    border-right: lightgrey solid 2px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: grey;
+    background-image: url("image/salon.png");
+    background-size: cover;
+    background-position: center;
+}
+.photo_salle_de_bain{
+    border-right: lightgrey solid 2px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: grey;
+    background-image: url("image/salle de bain.png");
+    background-size: cover;
+    background-position: center;
+}
+.photo_cave{
+    border-right: lightgrey solid 2px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: grey;
+    background-image: url("image/cave.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.donnees{
+    display: grid;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.temp{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    border-bottom: lightgrey solid 1px;
+}
+.lum{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    border-bottom: lightgrey solid 1px;
+}
+.err{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+.temp_img{
+    background-image: url("image/temp.png");
+    background-size: cover;
+    background-position: center;
+}
+.lum_img{
+    background-image: url("image/light.png");
+    background-size: cover;
+    background-position: center;
+}
+.err_img{
+    color:red;
+    background-image: url("image/warning.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.temp_txt{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lum_txt{
+    font-size: 13px;
+}
+.err_txt{
+    font-size: 13px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*donne la forme des cases pour chaque capteur*/
+.cuisine_capteurs, .chambre_capteurs, .salle_de_bain_capteurs, .salon_capteurs, .cave_capteurs{
+    display: flex;
+    justify-content: flex-start;
+    overflow: auto;
+    color: white;
+}
+

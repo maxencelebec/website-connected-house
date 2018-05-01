@@ -1,6 +1,7 @@
 <?php
     session_start();
     $_SESSION["prenom"]=$_POST['prenom'];
+    $_SESSION["nom"]=$_POST['nom'];
 ?>
 <?php
 	// Connexion à la base de données

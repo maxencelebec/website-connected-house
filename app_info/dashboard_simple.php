@@ -47,7 +47,7 @@
                                 <div class="qui_autresoptions">
                                     <div class="quiestalamaison">Qui est à la maison ? </br></br>
                                             <?php
-                                                echo "<p style='color: #2cc872'>".$_SESSION["prenom"]."</p>"; 
+                                                echo "<p style='color: #2cc872'>".$_SESSION["prenom"]." ".$_SESSION["nom"]."</p>"; 
                                             ?>
                                     </div>
                                     <div class="autresoptions">
