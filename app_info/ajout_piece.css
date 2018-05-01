@@ -121,5 +121,6 @@
     justify-content: flex-start;
     overflow: auto;
     color: white;
+    margin-top: 3px;
 }
 
