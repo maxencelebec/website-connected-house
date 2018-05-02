@@ -33,7 +33,7 @@
 
 <div class="Main">
 
-    <form class="infos" action="inscription_habitant_3_post" method="post">
+    <form class="infos" action="inscription_habitant_4_post" method="post">
 
         <div class="formulaire">
 
