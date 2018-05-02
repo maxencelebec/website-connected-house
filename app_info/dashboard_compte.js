@@ -32,3 +32,5 @@ document.getElementById("tablink3").addEventListener("click", function(){
 document.getElementById("tablink4").addEventListener("click", function(){
 	openTab(event, "notifications");
 }); 
+
+document.getElementById("tablink1").click();
