@@ -7,7 +7,7 @@ body
 
 #site{
     display: grid;
-    grid-template-columns: 2fr 3fr 25fr;		/* Normalement 30fr, mais la header rétrécit */
+    grid-template-columns: 2fr 28fr;		/* Normalement 30fr, mais la header rétrécit */
     grid-auto-rows: 196px;
 	grid-gap: auto 20px;
     font-family: Segoe UI Light, Georgia;
@@ -27,24 +27,18 @@ body
 
 /* Menu du dashboard_compte*/
 .tab {
-	display: grid;
-	grid-column-start: 2;
-    float: left;
+	display: flex;
     border: 1px solid #ccc;
     background-color: #333333;
-    width: 30%;
-    height: 150px;
+	overflow: hidden;
+	height: 50px;
 }
 
 .tab button {
-    display: grid;
     background-color: inherit;
     color: white;
-    padding: 11px 16px;
-    width: 100%;
     border: none;
     outline: none;
-    text-align: left;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -59,15 +53,13 @@ body
 
 .tabcontent {
 	display: none;
-	grid-column-start: 3;
-    float: left;
+	grid-row-start: 2;
+	position: relative;
+	bottom: 140px;
 	color: white;
-    padding: 0px 12px;
     border: 1px solid #ccc;
-	border-radius: 15px;
 	background-color: #333333;
-    width: 95%;
-    height: 550px;
+    height: 500px;
 	overflow: auto;
 	text-align: center;
 }
