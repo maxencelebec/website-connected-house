@@ -10,17 +10,11 @@
 
 
 <body class="corps">
-
-	<?php
-		include "header.php";
-		include "footer.php";
-    ?>
      
 	<div class="centre">
 	    </br>
         <div class= "nom_piece">  
 		    <?php
-		        $selected_room = "Cuisine";
 		        echo "$selected_room";
 		    ?>
 		</div>

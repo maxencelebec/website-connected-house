@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Virifocus | Inscription</title>
-    <link rel="stylesheet" href="inscription_habitant_1.css"/>
+    <link rel="stylesheet" href="inscription_habitant_3.css"/>
     <link rel="icon" type="image/png" href="image/logo.png" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -37,12 +37,21 @@ session_start();
 
         <div class="formulaire">
 
-            <div class="titre"><h1>Créez voter maison</h1></div>
+            <div class="titre"><h1>Créez votre maison</h1></div>
 
-            <div>Nom :</div>
-            <input type="text" name="nom" maxlenght="255" style="text-align: center" required />
+            <div>Pièce :</div>
+            <div>Surface (m2)</div>
+            <input type="text" name="p1" maxlenght="255" style="text-align: center" required />
+            <input type="number" name="s1" maxlenght="255" style="text-align: center" required />
 
 
+
+        </div>
+
+        <div class="boutton2">
+            <a href="#" class="lien3">
+                <button class="ajoutermaisonlink" onclick="">+</button>
+            </a>
         </div>
 
         <div class="captcha">
@@ -55,7 +64,6 @@ session_start();
         </div>
 
     </form>
-
 
 
 </div>
