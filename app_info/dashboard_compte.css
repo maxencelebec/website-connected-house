@@ -71,3 +71,11 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
+
+.valider {
+	display: grid;
+	width: 75px;
+	height: 20px;
+	grid-row-start: 4;
+	position: relative;
+}
