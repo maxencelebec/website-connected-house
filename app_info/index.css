@@ -54,6 +54,15 @@ body
 	top : 50%;
 }
 
+.mdpoublie{
+	display: block;
+	position: absolute;
+	margin-left: 75%;
+	margin-right: auto;
+	top: 53%;
+	color: white;
+}
+
 .lien_co{
     text-decoration:none;
     position : absolute;
