@@ -16,8 +16,8 @@
 				echo "ERREUR BDD ERREUR BDD ERREUR BDD";
 		}
 		/* Requêtes des différentes données du compte */
-		$request_name = $bdd->query('SELECT name FROM users WHERE mail="vincent.nguyen@96ymail.com"');
-		$request_firstname = $bdd->query('SELECT firstname FROM users WHERE mail="vincent.nguyen@96ymail.com"');
+		$request_name = $bdd->query('SELECT name FROM users WHERE id=17');
+		$request_firstname = $bdd->query('SELECT firstname FROM users WHERE id=17');
 		/* Attribution variable des données */
 		 while ($donnees = $request_name->fetch()) {
 			$name = $donnees['name'];
