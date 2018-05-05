@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,13 +20,11 @@
 				echo "ERREUR BDD ERREUR BDD ERREUR BDD";
 		}
 		/* Requêtes des différentes données du compte */
-		$request_name = $bdd->query('SELECT name FROM users WHERE id=17');
-		$request_firstname = $bdd->query('SELECT firstname FROM users WHERE id=17');
+		$req = $bdd->prepare('SELECT name, firstname FROM users WHERE mail=?');
+		$req->execute(array($_SESSION['mail']));
 		/* Attribution variable des données */
-		 while ($donnees = $request_name->fetch()) {
+		 while ($donnees = $req->fetch()) {
 			$name = $donnees['name'];
-		}
-		while ($donnees = $request_firstname->fetch()) {
 			$firstname = $donnees['firstname'];
 		}
 	?>

@@ -13,31 +13,28 @@
 
 <body>
 
-<div id="Partie_Droite">
+    <div id="partie_gauche">
+        
+    </div>
+    <div id="partie_droite">
 
-     <img id="image" src="image/virifocus droit.png"/>
+        <img id="image" src="image/virifocus droit.png"/>
 
-     <div class="txtIdentifiant">
-         <strong> Identifiant ou Adresse email </strong>
-     </div>
+        <form action="connexion_post.php" method="post">
+            <div class="txtIdentifiant"> Identifiant ou Adresse email </div>
+            <input type="email" name="mail" size="35" maxlength="25" class="cadreID" style="text-align: center" required>
+            <div class="txtMdp">Mot de passe <div>
+            <input type="password" name="password" size="35" maxlength="25" class="cadreMdp" style="text-align: center" required>
+            <br/>
+            <input class="valider" type="submit" value="Se connecter">
+        </form>
 
-     <form>
-         <input type="email" size="35" maxlength="25" class="cadreID" style="text-align: center" required>
-     </form>
+    	<a class="mdpoublie" href="mdp_oublie.php"> Mot de passe oubli&eacute; ? </a>
+        </br>
+        <br/>
+        <a class = "lien_in" href="Inscription_1.php">S'inscrire</a>
 
-     <div class="txtMdp">
-         <strong> Mot de passe </strong>
-     </div>
-	 
-	 <form>
-         <input type="password" size="35" maxlength="25" class="cadreMdp" style="text-align: center" required>
-     </form>
-	 <a class="mdpoublie" href="mdp_oublie.php"> Mot de passe oubli&eacute; ? </a>
-     <a class = "lien_co" href="dashboard_simple.php">Se connecter</a>
-     </br>
-     <a class = "lien_in" href="Inscription_1.php">S'inscrire</a>
-
-</div>
+    </div>
 
 </body>
 
