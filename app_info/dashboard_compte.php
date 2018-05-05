@@ -44,14 +44,18 @@
 				
 				<!-- Tab 1 : Profile -->
 				<div id="profile" class="tabcontent">
-					<form class="profile_form" action="dashboard_compte_submit.php" method="post"> 
-						Name: <input type="text" name="name" value="<?php echo $name;?>">
-						Firstname: <input type="text" name="firstname" value="<?php echo $firstname;?>">
-					</form>
-					<hr />
-					<p> J'aimerai savoir comment faire une bonne pur&eacute;e. </p>
-					<hr />
-					<p> Quel est votre secret ? </p>			
+					<div class="bloc">
+						<form class="profile_form" action="dashboard_compte_submit.php" method="post"> 
+							Name: <input type="text" name="name" value="<?php echo $name;?>">
+							Firstname: <input type="text" name="firstname" value="<?php echo $firstname;?>">
+						</form>
+					</div>
+					<div class="bloc">
+						J'aimerai savoir comment faire une bonne pur&eacute;e.
+					</div>
+					<div class="bloc">
+						 Quel est votre secret ?
+					</div>
 				</div>			
 						
 					<!-- Tab 2 : Compte -->

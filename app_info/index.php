@@ -32,7 +32,7 @@
 	 <form>
          <input type="password" size="35" maxlength="25" class="cadreMdp" style="text-align: center" required>
      </form>
-
+	 <a class="mdpoublie" href="mdp_oublie.php"> Mot de passe oubli&eacute; ? </a>
      <a class = "lien_co" href="dashboard_simple.php">Se connecter</a>
      </br>
      <a class = "lien_in" href="Inscription_1.php">S'inscrire</a>
