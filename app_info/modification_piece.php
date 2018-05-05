@@ -29,12 +29,12 @@
 			
 			<span class="boutonModif">                                           <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			    <a href="inscription_piece"> Modifier </a>
+			    <a href="inscription_piece.php"> Modifier </a>
 			</span>
 
 		</div>
 		
-		<img class="image" src="image/cuisine.jpg"/>
+		<img class="image" src="image/<?php echo"$selected_room"?>.jpg"/>
 		
 		</br>
 		
