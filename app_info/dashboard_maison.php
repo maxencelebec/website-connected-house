@@ -43,7 +43,20 @@
                         <div class="utilisateur_titre">Utilisateur<br>Connecté</div>
                         <div class="utilisateur">
                             <?php
-                                 echo "<p style='color: #2cc872'>".$_SESSION["prenom"]." ".$_SESSION["nom"]."</p>"; 
+                                                try
+                                                {
+                                                    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                                                }
+                                                catch(Exception $e)
+                                                {
+                                                        die('Erreur : '.$e->getMessage());
+                                                }
+                                                $req = $bdd->prepare('SELECT name,firstname FROM users WHERE mail=?');
+                                                $req->execute(array($_SESSION["mail"]));
+                                                while ($donnees = $req->fetch())
+                                                {
+                                                    echo "<p style='color: #2cc872'>".$donnees["firstname"]." ".$donnees["name"]."</p>";
+                                                }
                              ?>
                         </div>
                     </div>

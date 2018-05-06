@@ -6,7 +6,11 @@ body
     background-color : #333333;
     color : white;
     font-family: Segoe UI Light, Georgia;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
 }
+
+
 
 #Partie_Droite {
     margin-top: auto ;
@@ -14,90 +18,60 @@ body
 }
 
 #image{
-    width: 25%;
-    display: block ;
-    margin-left: 65% ;
-    margin-right: auto ;
+    width: 75%;
 }
 
+
 .txtIdentifiant{
-    position : absolute;
     font-size : 110%;
-    display: block ;
-    margin-left: 67% ;
-    margin-right: auto ;
-    top : 33%;
 }
 
 .cadreID{
-    position : absolute;
-    display: block ;
-    margin-left: 67% ;
-    margin-right: auto ;
-	top : 38%;
+
 }
 
 .txtMdp{
-	position : absolute;
 	font-size : 110%;
-    display: block ;
-    margin-left: 67% ;
-    margin-right: auto ;
-	top : 45%;
 }
 
 .cadreMdp{
-	position : absolute;
-    display: block ;
-    margin-left: 67% ;
-    margin-right: auto ;
-	top : 50%;
 }
 
 .mdpoublie{
-	display: block;
-	position: absolute;
-	margin-left: 75%;
-	margin-right: auto;
-	top: 53%;
 	color: white;
 }
 
-.lien_co{
-    text-decoration:none;
-    position : absolute;
-    color:white;
-    display: block ;
-    margin-left: 67% ;
-    margin-right: auto ;
-    top : 60%;
+.valider{
+    color: white;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    background-color: #333333;
     border:#2cc872 solid 2px;
     border-radius: 10px;
     padding:10px;
-    
+    margin-top: 20px;
+    font-size: 15px;
+}
+.valider:hover{
+    box-shadow: 0 0 0 2px #2cc872;
 }
 
 .lien_in{
     text-decoration:none;
-    position : absolute;
     color:white;
-    display: block ;
-    margin-left: 67% ;
-    margin-right: auto ;
-    top : 70%;
     border:#2cc872 solid 2px;
     border-radius: 10px;
     padding:10px;
+    padding-right: 100px;
+    padding-left: 100px;
     
 }
-.lien_co:hover{
-    transform: scale(1.02);
-    box-shadow: 0 0 0 1px #2cc872;
-}
 .lien_in:hover{
-    transform: scale(1.02);
-    box-shadow: 0 0 0 1px #2cc872;
+    transform: scale(1.12);
+    box-shadow: 0 0 0 2px #2cc872;
 }
+
 
 
 
