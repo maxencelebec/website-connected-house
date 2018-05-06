@@ -114,7 +114,7 @@
 		    <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp; </span>
 			
 			<form>
-			    <label for="Type de capteur"> Choisisser le type de votre capteur </label>
+			    <label for="Type de capteur"> Choisisser votre capteur </label>
 				<select name="Type de capteur">
 				    <option value="feu"> Feu </option>
 					<option value="eau"> Eau </option>
@@ -137,13 +137,13 @@
 			    </select>
 			</form>
 			
-			<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>                        <!-- Je sais c'est dégueulasse -->
+			<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>                        <!-- Je sais c'est dégueulasse -->
 			
 			<form>
 			    Nommer votre capteur <input type="text" name="nomCapteur" size="25" maxlength="15" style="text-align: center" /> 
 			</form>
 			
-			<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
 			
 			<form>
 			    Entrer l'ID du capteur <input type="text" name="IDcapteur" size="25" maxlength="20" style="text-align: center" />
