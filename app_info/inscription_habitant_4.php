@@ -33,22 +33,22 @@
 
 <div class="Main">
 
-    <form class="infos" action="inscription_habitant_2_post" method="post">
+    <form class="infos" action="inscription_habitant_4_post" method="post">
 
         <div class="formulaire">
 
             <div class="titre"><h1>Informations de la maison</h1></div>
 
             <div>Adresse :</div>
-            <input type="text" name="adresse" maxlenght="255" style="text-align: center" required/>
+            <input type="text" name="adresse" maxlenght="255" style="text-align: center" />
             <div>Code postal :</div>
-            <input type="text" name="code_postal" maxlenght="255" style="text-align: center" required/>
+            <input type="text" name="code_postal" maxlenght="255" style="text-align: center" />
             <div>Ville :</div>
-            <input type="text" name="ville" maxlenght="255" style="text-align: center" required/>
+            <input type="text" name="ville" maxlenght="255" style="text-align: center" />
             <div>Pays :</div>
-            <input type="text" name="pays" maxlenght="255" style="text-align: center" required/>
+            <input type="text" name="pays" maxlenght="255" style="text-align: center" />
             <div>Surface totale :</div>
-            <input type="text" name="surface" maxlenght="255" style="text-align: center" required />
+            <input type="text" name="surface" maxlenght="255" style="text-align: center"  />
 
         </div>
 
@@ -57,7 +57,7 @@
             <br/>
             <input class="valider" type="submit" value="Valider">
 
-            <a class="lien" href="dashboard_compte.php"><p>Next Page Debug</p></a>
+            <a class="lien" href="inscription_habitant_5.php"><p>Next Page Debug</p></a>
 
         </div>
 
