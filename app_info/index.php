@@ -25,11 +25,12 @@
             <input type="email" name="mail" size="35" maxlength="25" class="cadreID" style="text-align: center" required>
             <div class="txtMdp">Mot de passe <div>
             <input type="password" name="password" size="35" maxlength="25" class="cadreMdp" style="text-align: center" required>
+			<br/>
+			<a class="mdpoublie" href="mdp_oublie.php"> Mot de passe oubli&eacute; ? </a>
             <br/>
             <input class="valider" type="submit" value="Se connecter">
         </form>
 
-    	<a class="mdpoublie" href="mdp_oublie.php"> Mot de passe oubli&eacute; ? </a>
         </br>
         <br/>
         <a class = "lien_in" href="Inscription_1.php">S'inscrire</a>

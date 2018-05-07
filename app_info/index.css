@@ -39,6 +39,9 @@ body
 
 .mdpoublie{
 	color: white;
+	float: right;
+	padding-right: 225px;
+	font-size: 12px;
 }
 
 .valider{
