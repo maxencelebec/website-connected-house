@@ -111,9 +111,9 @@
 		</table>
 		
 	    <div>
-		    <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp; </span>
+		    <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp; </span> </br>
 			
-			<form>
+			<form class="nouvcapt">
 			    <label for="Type de capteur"> Choisisser votre capteur </label>
 				<select name="Type de capteur">
 				    <option value="feu"> Feu </option>
