@@ -30,8 +30,21 @@
 }
 
 .boutonModif{
+	margin-left:200px;
     text-decoration:none;
-	color:white;
+    background-color: #34445c;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px #212122;
+	padding : 7px 15px 7px 15px;
+    font-size: 30px;
+    text-align: center;
+    color:#2cc872;
+    border: #2cc872 solid 2px;
+    transition: 0.1s;
+}
+
+.boutonModif:hover{
+    transform: scale(1.12);
 }
 
 .image{
@@ -69,6 +82,24 @@ form{
 .nouvcapt {
 	margin-left:20px;
 	margin-top:100px;
+}
+
+.boutonAjout {
+	margin-left:10px;
+    text-decoration:none;
+    background-color: #34445c;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px #212122;
+	padding : 7px 15px 7px 15px;
+    font-size: 30px;
+    text-align: center;
+    color:#2cc872;
+    border: #2cc872 solid 2px;
+    transition: 0.1s;
+}
+
+.boutonAjout:hover{
+    transform: scale(1.12);
 }
 
 
