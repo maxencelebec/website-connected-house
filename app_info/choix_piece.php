@@ -12,6 +12,7 @@
 <body class="fond">
 
     <div id="site">		
+    	
 	    <?php
 			include "header.php";
 		?>
