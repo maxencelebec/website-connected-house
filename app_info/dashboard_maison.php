@@ -69,16 +69,16 @@
                     <div class="informations">
                         <div class="informations_valeur">
                             <div id="eau" onclick="eau()">
-                                <div class="case31111">Eau</div>
-                                <div class="case31112">175L</div>
+                                <div class="case31111">Luminosité</div>
+                                <div class="case31112">1000L</div>
                             </div>
                             <div id="temperature" onclick="temperature()">
                                 <div class="case31121">Température</div>
                                 <div class="case31122">23°C</div>
                             </div>
                             <div id="consommation" onclick="consommation()">
-                                <div class="case31131">Consommation<br>Energétique</div>
-                                <div class="case31132">750kW</div>
+                                <div class="case31131">Utilisation</div>
+                                <div class="case31132">65%</div>
                             </div>
                         </div>
                         <div class="informations_graphe">
