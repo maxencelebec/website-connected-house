@@ -28,7 +28,7 @@
 		    ?>
 			
 			<span class="boutonModif">                                           <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
-			    <a href="inscription_habitant_3.php"> Modifier </a>
+			    <a href="inscription_habitant_5.php"> Modifier </a>
 			</span>
 
 		</div>
