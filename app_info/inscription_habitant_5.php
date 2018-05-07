@@ -33,16 +33,19 @@ session_start();
 
 <div class="Main">
     <div class= "formul">
-        <form class="infos" action="inscription_habitant_3_post" method="post">
+        <form class="infos" action="inscription_habitant_5_post" method="post">
+
+            <div class="titre"><h1>Créez votre maison</h1></div>
+            <div class="stitre"><h2>Définissez une pièce de votre habitation</h2></div>
 
             <div class="formulaire">
 
-                <div class="titre"><h1>Créez votre maison</h1></div>
+
 
                 <div>Pièce :</div>
                 <div>Surface (m2)</div>
-                <input type="text" name="p1" maxlenght="255" style="text-align: center" required />
-                <input type="number" name="s1" maxlenght="255" style="text-align: center" required />
+                <input type="text" name="nom" maxlenght="255" style="text-align: center" required />
+                <input type="number" name="surface" maxlenght="255" style="text-align: center" required />
 
 
 
@@ -57,7 +60,7 @@ session_start();
             <div class="captcha">
 
                 <br/>
-                <input class="valider" type="submit" value="Valider">
+                <input class="valider" type="submit" value="Ajouter">
 
                 <a class="lien" href="inscription_habitant_4.php"><p>Next Page Debug</p></a>
 
