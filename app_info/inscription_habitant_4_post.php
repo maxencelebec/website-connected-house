@@ -1,8 +1,7 @@
 <?php
     session_start();
-    $_SESSION["prenom"]=$_POST['prenom'];
-    $_SESSION["nom"]=$_POST['nom'];
 ?>
+
 <?php
 	// Connexion à la base de données
 	try
@@ -16,12 +15,21 @@
 	        echo "non connecté à la bdd";
 	}
 
+	$req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
+	$req->execute(array($_SESSION["mail"]));
 
-	$req = $bdd->prepare('UPDATE users SET name = ?, firstname = ? , address = ? , postal_code = ? , city = ? , country = ? , phone_number_home = ? , phone_number_portable = ? WHERE mail= ? ');
-	$req->execute(array($_POST["nom"],$_POST["prenom"],$_POST["adresse"],$_POST["code_postal"],$_POST["ville"],$_POST["pays"],
-		$_POST["numero_home"], $_POST["numero_portable"], $_SESSION["mail"]));
+	$id_user;
+	while ($donnees = $req->fetch())
+	{
+		$id_user=$donnees['id'];
+	}
 
+
+/*INSERT INTO habitation (pays, ville, code_postal, adresse, surface, id_user, type) VALUES (?, ?, ?, ?, ?, ?, NULL)'*/
+
+	$req = $bdd->prepare('INSERT INTO habitation (pays, ville, code_postal, adresse, surface, id_user, type) VALUES (?, ?, ?, ?, ?, ?, NULL)');
+	$req->execute(array($_POST["pays"],$_POST["ville"],$_POST["code_postal"],$_POST["adresse"],$_POST["surface"],$id_user));
 
 	// Redirection du visiteur vers la page suivante
-	header('Location: dashboard_simple.php');
+	header('Location: inscription_habitant_5.php');
 ?>

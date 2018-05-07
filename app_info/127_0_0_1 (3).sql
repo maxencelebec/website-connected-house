@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 07 mai 2018 à 07:42
+-- Généré le :  lun. 07 mai 2018 à 09:27
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -185,6 +185,33 @@ USE `virifocus`;
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `habitation`
+--
+
+DROP TABLE IF EXISTS `habitation`;
+CREATE TABLE IF NOT EXISTS `habitation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pays` varchar(40) DEFAULT NULL,
+  `ville` varchar(40) DEFAULT NULL,
+  `code_postal` int(20) DEFAULT NULL,
+  `adresse` text,
+  `type` varchar(20) DEFAULT NULL,
+  `surface` int(10) DEFAULT NULL,
+  `id_user` int(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `habitation`
+--
+
+INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `surface`, `id_user`) VALUES
+(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, 200, 23),
+(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, 200, 23);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `test`
 --
 
@@ -226,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone_number_portable` int(20) DEFAULT NULL,
   `type` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
@@ -236,7 +263,8 @@ INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `
 (15, 'thierry.lincoln@isep.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lincoln', 'Thierry', '12 de mon cul', 92600, 'Asnières-sur-Seine', 'France', 1831931, 19391939, NULL),
 (20, 'famille.lebec@wanadoo.fr', '558e62b37930a34393f7f997985186b167d3321a', 'Lebec', 'Aude', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 22929229, 92929292, NULL),
 (19, 'maxence.lbc@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 101010101, 101010101, NULL),
-(22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, NULL);
+(22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, NULL),
+(23, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 30303030, 30303030, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

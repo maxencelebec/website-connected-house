@@ -4,9 +4,7 @@ body
     margin:0;
     width:auto;
 }
-.main{
-    overflow: auto;
-}
+
 
 #site{
 	display: grid;

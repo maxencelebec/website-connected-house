@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,6 @@ session_start();
     <title>Virifocus | Inscription</title>
     <link rel="stylesheet" href="inscription_habitant_3.css"/>
     <link rel="icon" type="image/png" href="image/logo.png" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body class="fond">
@@ -28,43 +27,23 @@ session_start();
             <div class="case1515"><br><br>Aide</div></a></div>
         <div class="case16"></div>
     </div>
+
 </div>
 
 
 <div class="Main">
 
-    <form class="infos" action="inscription_habitant_3_post" method="post">
+    <div class="options">
 
-        <div class="formulaire">
+        <div class="titre"><h1>Choisissez votre type d'habitation</h1></div>
 
-            <div class="titre"><h1>Créez votre maison</h1></div>
-
-            <div>Pièce :</div>
-            <div>Surface (m2)</div>
-            <input type="text" name="p1" maxlenght="255" style="text-align: center" required />
-            <input type="number" name="s1" maxlenght="255" style="text-align: center" required />
+        <div class="option1"><a class="lien" href="inscription_habitant_4.php">
+            <img class="option_image" src="image/home.svg"></a></div>
+        <div class="option2"><a class="lien" href="inscription_habitant_3.php">
+            <img class="option_image" src="image/building.svg"></a></div>
 
 
-
-        </div>
-
-        <div class="boutton2">
-            <a href="#" class="lien3">
-                <button class="ajoutermaisonlink" onclick="">+</button>
-            </a>
-        </div>
-
-        <div class="captcha">
-
-            <br/>
-            <input class="valider" type="submit" value="Valider">
-
-            <a class="lien" href="inscription_habitant_4.php"><p>Next Page Debug</p></a>
-
-        </div>
-
-    </form>
-
+    </div>
 
 </div>
 
