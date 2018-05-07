@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 07 mai 2018 à 07:42
+-- Généré le :  lun. 07 mai 2018 à 08:52
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -181,6 +181,24 @@ CREATE TABLE IF NOT EXISTS `visiteurs` (
 --
 CREATE DATABASE IF NOT EXISTS `virifocus` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `virifocus`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `habitation`
+--
+
+DROP TABLE IF EXISTS `habitation`;
+CREATE TABLE IF NOT EXISTS `habitation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pays` varchar(40) DEFAULT NULL,
+  `ville` varchar(40) DEFAULT NULL,
+  `code_postal` int(20) DEFAULT NULL,
+  `adresse` text,
+  `type` varchar(20) DEFAULT NULL,
+  `surface` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

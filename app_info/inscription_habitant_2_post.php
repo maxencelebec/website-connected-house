@@ -23,5 +23,5 @@
 
 
 	// Redirection du visiteur vers la page suivante
-	header('Location: dashboard_simple.php');
+	header('Location: inscription_habitant_3.php');
 ?>
