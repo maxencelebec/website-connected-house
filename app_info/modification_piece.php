@@ -28,8 +28,7 @@
 		    ?>
 			
 			<span class="boutonModif">                                           <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
-			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			    <a href="inscription_piece.php"> Modifier </a>
+			    <a href="inscription_habitant_3.php"> Modifier </a>
 			</span>
 
 		</div>
@@ -137,17 +136,21 @@
 			    </select>
 			</form>
 			
-			<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>                        <!-- Je sais c'est dégueulasse -->
+			<span> &nbsp;&nbsp;&nbsp;&nbsp; </span>                        <!-- Je sais c'est dégueulasse -->
 			
 			<form>
 			    Nommer votre capteur <input type="text" name="nomCapteur" size="25" maxlength="15" style="text-align: center" /> 
 			</form>
 			
-			<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			<span> &nbsp;&nbsp;&nbsp;&nbsp; </span>
 			
 			<form>
 			    Entrer l'ID du capteur <input type="text" name="IDcapteur" size="25" maxlength="20" style="text-align: center" />
 			</form>
+			
+			<span class="boutonAjout">
+			    <a href="choix_piece.php">Ajouter</a>
+			</span>
 			
 		</div>
 		
