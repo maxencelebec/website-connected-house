@@ -95,7 +95,11 @@ body
 }
 
 /*Menu*/
-
+.Main{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: auto;
+}
 .formulaire {
     display: grid;
     grid-template-columns: 40% 20%;
@@ -161,4 +165,12 @@ body
 
 .ajoutermaisonlink:active{
     transform: scale(1.03);
+}
+
+
+.tableau_pieces{
+    border-left:grey 2px solid;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
 }

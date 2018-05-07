@@ -32,38 +32,59 @@ session_start();
 
 
 <div class="Main">
+    <div class= "formul">
+        <form class="infos" action="inscription_habitant_3_post" method="post">
 
-    <form class="infos" action="inscription_habitant_3_post" method="post">
+            <div class="formulaire">
 
-        <div class="formulaire">
+                <div class="titre"><h1>Créez votre maison</h1></div>
 
-            <div class="titre"><h1>Créez votre maison</h1></div>
-
-            <div>Pièce :</div>
-            <div>Surface (m2)</div>
-            <input type="text" name="p1" maxlenght="255" style="text-align: center" required />
-            <input type="number" name="s1" maxlenght="255" style="text-align: center" required />
+                <div>Pièce :</div>
+                <div>Surface (m2)</div>
+                <input type="text" name="p1" maxlenght="255" style="text-align: center" required />
+                <input type="number" name="s1" maxlenght="255" style="text-align: center" required />
 
 
 
-        </div>
+            </div>
 
-        <div class="boutton2">
-            <a href="#" class="lien3">
-                <button class="ajoutermaisonlink" onclick="">+</button>
-            </a>
-        </div>
+            <div class="boutton2">
+                <a href="#" class="lien3">
+                    <button class="ajoutermaisonlink" onclick="">+</button>
+                </a>
+            </div>
 
-        <div class="captcha">
+            <div class="captcha">
 
-            <br/>
-            <input class="valider" type="submit" value="Valider">
+                <br/>
+                <input class="valider" type="submit" value="Valider">
 
-            <a class="lien" href="inscription_habitant_4.php"><p>Next Page Debug</p></a>
+                <a class="lien" href="inscription_habitant_4.php"><p>Next Page Debug</p></a>
 
-        </div>
+            </div>
 
-    </form>
+        </form>
+    </div>
+
+    <div class = "tableau_pieces">
+        <?php
+            try
+            {
+                $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+            }
+            catch(Exception $e)
+            {
+                    die('Erreur : '.$e->getMessage());
+            }
+            $req = $bdd->prepare('SELECT name FROM users WHERE mail=?');
+            $req->execute(array($_SESSION["mail"]));
+            while ($donnees = $req->fetch())
+            {
+                echo $donnees['name'];
+            }
+
+        ?>
+    </div>
 
 
 </div>
