@@ -40,33 +40,19 @@ session_start();
 
             <div class="formulaire">
 
-
-
                 <div>Pièce :</div>
                 <div>Surface (m2)</div>
                 <input type="text" name="nom" maxlenght="255" style="text-align: center" required />
                 <input type="number" name="surface" maxlenght="255" style="text-align: center" required />
-
+                <input class="valider" type="submit" value="Valider">
 
 
             </div>
-
-            <div class="boutton2">
-                <a href="#" class="lien3">
-                    <button class="ajoutermaisonlink" onclick="">+</button>
-                </a>
-            </div>
-
-            <div class="captcha">
-
-                <br/>
-                <input class="valider" type="submit" value="Ajouter">
-
-                <a class="lien" href="inscription_habitant_4.php"><p>Next Page Debug</p></a>
-
-            </div>
-
         </form>
+        <div class="captcha">
+
+            <a class="lien" href="dashboard_simple.php"><p>Lancer la session</p></a>
+        </div>
     </div>
 
     <div class = "tableau_pieces">
@@ -79,12 +65,33 @@ session_start();
             {
                     die('Erreur : '.$e->getMessage());
             }
-            $req = $bdd->prepare('SELECT name FROM users WHERE mail=?');
+            $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
             $req->execute(array($_SESSION["mail"]));
+
+            $id_user;
             while ($donnees = $req->fetch())
             {
-                echo $donnees['name'];
+                $id_user=$donnees['id'];
             }
+
+            $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
+            $req->execute(array($id_user));
+
+            $id_habitation;
+            while ($donnees = $req->fetch())
+            {
+                $id_habitation=$donnees['id'];
+            }
+
+            $req = $bdd->prepare('SELECT nom, surface FROM pieces WHERE id_habitation= ? ');
+            $req->execute(array($id_habitation));
+
+            $id_habitation;
+            while ($donnees = $req->fetch())
+            {
+                echo $donnees['nom']. " de ".$donnees['surface']."m2<br/>";
+            }
+
 
         ?>
     </div>

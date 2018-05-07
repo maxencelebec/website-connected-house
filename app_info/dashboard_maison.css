@@ -292,12 +292,13 @@ a{
     position: relative;
     
 }
+/*
 @keyframes onmove {
     0% {top: 0px;}
     50% {top: 124px;}
     100% {top: 0px;}
 }
-
+*/
 
 .fond_triangle{
     background-color: lightgrey/*#838383*/;

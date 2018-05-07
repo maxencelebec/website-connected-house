@@ -7,12 +7,10 @@ session_start();
 try
 {
     $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-    echo "connecté à la bdd </br>";
 }
 catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
-    echo "non connecté à la bdd";
 }
 
 $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
@@ -30,11 +28,13 @@ $req->execute(array($id_user));
 $id_habitation;
 while ($donnees = $req->fetch())
 {
-    $id_user=$donnees['id'];
+    $id_habitation=$donnees['id'];
 }
 
 $req = $bdd->prepare('INSERT INTO pieces (nom, surface, id_user, id_habitation) VALUES (?, ?, ?, ?)');
-$req->execute(array($_POST["nom"],$_POST["surface"],$id_habitation));
+$req->execute(array($_POST["nom"],$_POST["surface"],$id_user,$id_habitation));
+
+
 
 // Redirection du visiteur vers la page suivante
 header('Location: inscription_habitant_5.php');
