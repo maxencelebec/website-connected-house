@@ -42,18 +42,33 @@ session_start();
 
                 <div>Pièce :</div>
                 <div>Surface (m2)</div>
-                <input type="text" name="nom" maxlenght="255" style="text-align: center" required />
-                <input type="number" name="surface" maxlenght="255" style="text-align: center" required />
-                <input class="valider" type="submit" value="Valider">
-
+                <select name = "type" maxlenght="255" style="text-align: center">
+                    <option value="entree">Entrée</option>
+                    <option value="chambre">Chambre</option>
+                    <option value="cuisine">Cuisine</option>
+                    <option value="toilettes">Toilettes</option>
+                    <option value="salle_de_bain">Salle de bain</option>
+                    <option value="salon">Salon</option>
+                    <option value="cave">Cave</option>
+                    <option value="grenier">Grenier</option>
+                    <option value="garage">Garage</option>
+                    <option value="autre">Autre</option>
+                </select> 
+                <input type="number" name="surface" maxlenght="255" style="text-align: center"  required />
+                <input type="text" name="nom" maxlenght="255" placeholder="Comment s'appelle votre pièce ?" style="text-align: center" required />
+                <input class="valider" type="submit" value="Ajouter">
 
             </div>
         </form>
         <div class="captcha">
 
-            <a class="lien" href="dashboard_simple.php"><p>Lancer la session</p></a>
+            <a class="lien" href="dashboard_simple.php">Lancer la session</a>
         </div>
     </div>
+
+
+
+
 
     <div class = "tableau_pieces">
         <?php
@@ -83,13 +98,13 @@ session_start();
                 $id_habitation=$donnees['id'];
             }
 
-            $req = $bdd->prepare('SELECT nom, surface FROM pieces WHERE id_habitation= ? ');
+            $req = $bdd->prepare('SELECT type, nom, surface FROM pieces WHERE id_habitation= ? ');
             $req->execute(array($id_habitation));
 
             $id_habitation;
             while ($donnees = $req->fetch())
             {
-                echo $donnees['nom']. " de ".$donnees['surface']."m2<br/>";
+                echo "<p>".$donnees['nom']. " (".$donnees['type']. ") de ".$donnees['surface']."m2<br/></p>";
             }
 
 

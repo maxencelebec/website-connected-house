@@ -43,20 +43,20 @@
                         <div class="utilisateur_titre">Utilisateur<br>Connecté</div>
                         <div class="utilisateur">
                             <?php
-                                                try
-                                                {
-                                                    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-                                                }
-                                                catch(Exception $e)
-                                                {
-                                                        die('Erreur : '.$e->getMessage());
-                                                }
-                                                $req = $bdd->prepare('SELECT name,firstname FROM users WHERE mail=?');
-                                                $req->execute(array($_SESSION["mail"]));
-                                                while ($donnees = $req->fetch())
-                                                {
-                                                    echo "<p style='color: #2cc872'>".$donnees["firstname"]." ".$donnees["name"]."</p>";
-                                                }
+                                    try
+                                    {
+                                        $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                                    }
+                                    catch(Exception $e)
+                                    {
+                                            die('Erreur : '.$e->getMessage());
+                                    }
+                                    $req = $bdd->prepare('SELECT name,firstname FROM users WHERE mail=?');
+                                    $req->execute(array($_SESSION["mail"]));
+                                    while ($donnees = $req->fetch())
+                                    {
+                                        echo "<p style='color: #2cc872'>".$donnees["firstname"]." ".$donnees["name"]."</p>";
+                                    }
                              ?>
                         </div>
                     </div>
@@ -96,11 +96,11 @@
                             ajout_piece("salon");
                             ajout_piece("cave");
                         ?>
-
+                        
                         <div class="boutton1">
                             <button class="ajouterpiece"> + modifier pièce </button>
                         </div>
-
+                        
                         
                     </div>
                 </div>
