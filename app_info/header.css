@@ -1,7 +1,7 @@
 .header{
 	
     display: grid;
-    grid-auto-rows: 18px;
+    grid-auto-rows: 3vh;
     grid-row: 1/4;
     background-color: #333333;
     text-align: center; 

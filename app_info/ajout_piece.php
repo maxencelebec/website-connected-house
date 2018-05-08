@@ -49,7 +49,7 @@ function ajout_piece($piece)
         <div class="chambre">
             <div class="chambre_titre_donnees">
                 <div class="photo_chambre">Chambre</div>
-               <div class ="donnees">
+                    <div class ="donnees">
                     <div class="temp">
                         <div class="temp_img"></div>
                         <div class="temp_txt">23°C</div>
