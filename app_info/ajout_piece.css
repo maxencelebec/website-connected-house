@@ -12,7 +12,7 @@
 }
 .photo_cuisine{
     border-right: lightgrey solid 2px;
-    font-size: 20px;
+    font-size: 1.5vw;
     margin-bottom: 5px;
     margin-top: 5px;
     color: grey;
@@ -22,7 +22,7 @@
 }
 .photo_chambre{
     border-right: lightgrey solid 2px;
-    font-size: 20px;
+    font-size:  1.5vw;
     margin-bottom: 5px;
     margin-top: 5px;
     color: grey;
@@ -32,7 +32,7 @@
 }
 .photo_salon{
     border-right: lightgrey solid 2px;
-    font-size: 20px;
+    font-size:  1.5vw;
     margin-bottom: 5px;
     margin-top: 5px;
     color: grey;
@@ -42,7 +42,7 @@
 }
 .photo_salle_de_bain{
     border-right: lightgrey solid 2px;
-    font-size: 20px;
+    font-size:  1.5vw;
     margin-bottom: 5px;
     margin-top: 5px;
     color: grey;
@@ -52,7 +52,7 @@
 }
 .photo_cave{
     border-right: lightgrey solid 2px;
-    font-size: 20px;
+    font-size:  1.5vw;
     margin-bottom: 5px;
     margin-top: 5px;
     color: grey;

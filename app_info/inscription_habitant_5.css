@@ -20,22 +20,40 @@ body
     transition: 0.5s;
     color: white;
 }
-.ok{
-    background-color: pink;
+
+.valider {
+    border : none;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+    background-color:#2CC872;
+    color: white;
+    border-radius: 2px;
+    padding: 1vw;
+    font-size: 2vw;
+    transition: 0.1s;
 }
+.valider:hover{
+    background-color:#2CC872;
+    color: white;
+    transform: scale(1.05);
+}
+
 .lien{
     text-decoration:none;
-    color: white;
+    color: #2CC872;
     border-radius: 5px;
-    background-color: #2CC872;
+    background-color: white;
     width: 100%;
     font-size: 30px;
     padding: 20px;
-    transition: 0.2s;
-    border: #27ae60 2px solid;
+    transition: 0.3s;
+    border: #2CC872 2px solid;
 }
 .lien:hover{
-    transform: scale(1.04);
+    background-color:#2CC872;
+    color: white;
+    transform: scale(1.08);
 }
 .lien:active{
     transform: scale(1.00);
@@ -157,16 +175,6 @@ body
     width: 304px;
 }
 
-.valider {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.boutton2{
-    align-items: center;
-    display:flex;
-    justify-content: center;
-}
 
 .ajoutermaisonlink{
     background-color: #333333;
