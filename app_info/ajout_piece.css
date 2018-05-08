@@ -1,6 +1,6 @@
 .cave, .cuisine, .salon, .salle_de_bain, .chambre{
     display: grid;
-    grid-template-columns: 2fr 5fr 1fr;
+    grid-template-columns: 2fr 5fr;
     border-bottom: lightgrey solid 3px;
 }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 07 mai 2018 à 13:42
+-- Généré le :  mar. 08 mai 2018 à 12:16
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `surface` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `habitation`
@@ -50,7 +50,8 @@ INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type
 (2, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, 200, 23),
 (3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 2000, 24),
 (4, NULL, NULL, NULL, NULL, NULL, NULL, 24),
-(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 300, 25);
+(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 300, 25),
+(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, 300, 26);
 
 -- --------------------------------------------------------
 
@@ -61,12 +62,22 @@ INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type
 DROP TABLE IF EXISTS `pieces`;
 CREATE TABLE IF NOT EXISTS `pieces` (
   `id` int(20) NOT NULL AUTO_INCREMENT,
+  `type` varchar(30) NOT NULL,
   `nom` varchar(40) NOT NULL,
   `surface` int(10) NOT NULL,
   `id_user` int(20) NOT NULL,
   `id_habitation` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `pieces`
+--
+
+INSERT INTO `pieces` (`id`, `type`, `nom`, `surface`, `id_user`, `id_habitation`) VALUES
+(18, 'chambre', 'chambre Andreas', 8, 26, 6),
+(16, 'salon', 'Salle à fumer', 10, 26, 6),
+(17, 'cuisine', 'cuisine maman', 7, 26, 6);
 
 -- --------------------------------------------------------
 
@@ -112,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone_number_portable` int(20) DEFAULT NULL,
   `type` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
@@ -123,9 +134,7 @@ INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `
 (20, 'famille.lebec@wanadoo.fr', '558e62b37930a34393f7f997985186b167d3321a', 'Lebec', 'Aude', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 22929229, 92929292, NULL),
 (19, 'maxence.lbc@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 101010101, 101010101, NULL),
 (22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, NULL),
-(23, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 30303030, 30303030, NULL),
-(24, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(25, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(26, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101010, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
