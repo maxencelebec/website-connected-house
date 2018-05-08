@@ -39,10 +39,6 @@ function ajout_piece($piece)
                     ajout_capteur("porte");
                 ?>
             </div>
-                                
-            <div class="boutton2">
-                <button class="ajoutercapteur" onclick="change()">+</button>
-            </div>
         </div>
         <?php
     }
@@ -53,7 +49,7 @@ function ajout_piece($piece)
         <div class="chambre">
             <div class="chambre_titre_donnees">
                 <div class="photo_chambre">Chambre</div>
-               <div class ="donnees">
+                    <div class ="donnees">
                     <div class="temp">
                         <div class="temp_img"></div>
                         <div class="temp_txt">23°C</div>
@@ -81,10 +77,6 @@ function ajout_piece($piece)
                     ajout_capteur("temperature");
 
                 ?>
-            </div>
-                                
-            <div class="boutton2">
-                <button class="ajoutercapteur" onclick="change()">+</button>
             </div>
         </div>
         <?php
@@ -126,11 +118,7 @@ function ajout_piece($piece)
                     ajout_capteur("luminosité");
                     ajout_capteur("presence");
                 ?>
-            </div>
-                                
-            <div class="boutton2">
-                <button class="ajoutercapteur" onclick="change()">+</button>
-            </div>
+            </div>   
         </div>
         <?php
     }   
@@ -171,11 +159,7 @@ function ajout_piece($piece)
                     ajout_capteur("humidité");
                     ajout_capteur("luminosité");
                 ?>
-            </div>
-                                
-            <div class="boutton2">
-                <button class="ajoutercapteur" onclick="change()">+</button>
-            </div>
+            </div>   
         </div>
         <?php
     }
@@ -216,11 +200,7 @@ function ajout_piece($piece)
                     ajout_capteur("presence");
                     ajout_capteur("porte");
                 ?>
-            </div>
-                                
-            <div class="boutton2">
-                <button class="ajoutercapteur" onclick="change()">+</button>
-            </div>
+            </div>           
         </div>
         <?php
     }
@@ -228,3 +208,10 @@ function ajout_piece($piece)
 }
                             
 ?>
+
+
+<!-- 
+        <div class="boutton2">
+            <button class="ajoutercapteur" onclick="change()">+</button>
+        </div>
+-->

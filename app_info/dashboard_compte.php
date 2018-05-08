@@ -48,6 +48,7 @@
 				<button class="tablinks" id="tablink2">Compte</button>
 				<button class="tablinks" id="tablink3">Confidentialit&eacute;</button>
 				<button class="tablinks" id="tablink4">Notifications</button>
+				<a class ="deco" href="index.php"><button class="deco_boutton">D&eacuteconnexion</button></a>
 				</div>
 				
 				<!-- Tab 1 : Profile -->

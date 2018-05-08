@@ -45,19 +45,23 @@ session_start();
 				</div>
 				<div class="utilisateur">
                             <?php
-                            try {
-                                $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-                            } catch (Exception $e) {
-                                die('Erreur : ' . $e->getMessage());
-                            }
-                            $req = $bdd->prepare('SELECT name,firstname FROM users WHERE mail=?');
-                            $req->execute(array(
-                                $_SESSION["mail"]
-                            ));
-                            while ($donnees = $req->fetch()) {
-                                echo "<p style='color: #2cc872'>" . $donnees["firstname"] . " " . $donnees["name"] . "</p>";
-                            }
-                            ?>
+
+                                    try
+                                    {
+                                        $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                                    }
+                                    catch(Exception $e)
+                                    {
+                                            die('Erreur : '.$e->getMessage());
+                                    }
+                                    $req = $bdd->prepare('SELECT name,firstname FROM users WHERE mail=?');
+                                    $req->execute(array($_SESSION["mail"]));
+                                    while ($donnees = $req->fetch())
+                                    {
+                                        echo "<p style='color: #2cc872'>".$donnees["firstname"]." ".$donnees["name"]."</p>";
+                                    }
+                             ?>
+
                         </div>
 			</div>
 		</div>
@@ -89,21 +93,55 @@ session_start();
 			<div class="control_pieces">
 
                         <?php
-                        include_once "ajout_piece.php";
-                        ajout_piece("cuisine");
-                        ajout_piece("chambre");
-                        ajout_piece("salle_de_bain");
-                        ajout_piece("salon");
-                        ajout_piece("cave");
+
+                            include_once "ajout_piece.php";
+
+                            try
+                            {
+                                $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                            }
+                            catch(Exception $e)
+                            {
+                                    die('Erreur : '.$e->getMessage());
+                            }
+                            $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
+                            $req->execute(array($_SESSION["mail"]));
+
+                            $id_user;
+                            while ($donnees = $req->fetch())
+                            {
+                                $id_user=$donnees['id'];
+                            }
+
+                            $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
+                            $req->execute(array($id_user));
+
+                            $id_habitation;
+                            while ($donnees = $req->fetch())
+                            {
+                                $id_habitation=$donnees['id'];
+                            }
+
+                            $req = $bdd->prepare('SELECT type FROM pieces WHERE id_habitation= ? ');
+                            $req->execute(array($id_habitation));
+
+                            while ($donnees = $req->fetch())
+                            {
+                                $piece = $donnees['type'];
+                                ajout_piece("$piece");
+                            }
+
                         ?>
-
+                        
                         <div class="boutton1">
-					<button class="ajouterpiece">+ modifier pièce</button>
-				</div>
 
+                            <button class="ajouterpiece"> + modifier pièce </button>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
 
-			</div>
-		</div>
 
                 <?php
                 include "footer.php";

@@ -33,38 +33,42 @@ session_start();
 
 <div class="Main">
     <div class= "formul">
-        <form class="infos" action="inscription_habitant_3_post" method="post">
+        <form class="infos" action="inscription_habitant_5_post" method="post">
+
+            <div class="titre"><h1>Créez votre maison</h1></div>
+            <div class="stitre"><h2>Définissez une pièce de votre habitation</h2></div>
 
             <div class="formulaire">
 
-                <div class="titre"><h1>Créez votre maison</h1></div>
-
                 <div>Pièce :</div>
                 <div>Surface (m2)</div>
-                <input type="text" name="p1" maxlenght="255" style="text-align: center" required />
-                <input type="number" name="s1" maxlenght="255" style="text-align: center" required />
-
-
-
-            </div>
-
-            <div class="boutton2">
-                <a href="#" class="lien3">
-                    <button class="ajoutermaisonlink" onclick="">+</button>
-                </a>
-            </div>
-
-            <div class="captcha">
-
-                <br/>
-                <input class="valider" type="submit" value="Valider">
-
-                <a class="lien" href="inscription_habitant_4.php"><p>Next Page Debug</p></a>
+                <select name = "type" maxlenght="255" style="text-align: center">
+                    <option value="entree">Entrée</option>
+                    <option value="chambre">Chambre</option>
+                    <option value="cuisine">Cuisine</option>
+                    <option value="toilettes">Toilettes</option>
+                    <option value="salle_de_bain">Salle de bain</option>
+                    <option value="salon">Salon</option>
+                    <option value="cave">Cave</option>
+                    <option value="grenier">Grenier</option>
+                    <option value="garage">Garage</option>
+                    <option value="autre">Autre</option>
+                </select> 
+                <input type="number" name="surface" maxlenght="255" style="text-align: center"  required />
+                <input type="text" name="nom" maxlenght="255" placeholder="Comment s'appelle votre pièce ?" style="text-align: center" required />
+                <input class="valider" type="submit" value="Ajouter">
 
             </div>
-
         </form>
+        <div class="captcha">
+
+            <a class="lien" href="dashboard_simple.php">Lancer la session</a>
+        </div>
     </div>
+
+
+
+
 
     <div class = "tableau_pieces">
         <?php
@@ -76,12 +80,33 @@ session_start();
             {
                     die('Erreur : '.$e->getMessage());
             }
-            $req = $bdd->prepare('SELECT name FROM users WHERE mail=?');
+            $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
             $req->execute(array($_SESSION["mail"]));
+
+            $id_user;
             while ($donnees = $req->fetch())
             {
-                echo $donnees['name'];
+                $id_user=$donnees['id'];
             }
+
+            $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
+            $req->execute(array($id_user));
+
+            $id_habitation;
+            while ($donnees = $req->fetch())
+            {
+                $id_habitation=$donnees['id'];
+            }
+
+            $req = $bdd->prepare('SELECT type, nom, surface FROM pieces WHERE id_habitation= ? ');
+            $req->execute(array($id_habitation));
+
+            $id_habitation;
+            while ($donnees = $req->fetch())
+            {
+                echo "<p>".$donnees['nom']. " (".$donnees['type']. ") de ".$donnees['surface']."m2<br/></p>";
+            }
+
 
         ?>
     </div>
