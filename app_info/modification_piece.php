@@ -70,28 +70,56 @@
 
 		
 		<div class="centre">
-	    </br>
-        <div class= "nom_piece">  
+	        </br>
+        <div class= "nom_piece">
+
 		    <?php
-		        echo "$piece";
+            $req = $bdd->prepare('SELECT type FROM pieces WHERE id= ? ');
+            $req->execute(array($link));
+
+            while ($donnees = $req->fetch())
+            {
+                $piece = $donnees['type'];
+            }
 		    ?>
+
 		</div>
+
+        <div>
+            <?php
+                echo $piece;
+            ?>
+        </div>
+
 		
 		</br>
 		
 		<div class= "taille">
 		    <?php
-		        $superficie= 15;
-			    echo 'Superficie : ' . $superficie . ' m²';
+
+                $req = $bdd->prepare('SELECT surface FROM pieces WHERE id= ? ');
+                $req->execute(array($link));
+                while ($donnees = $req->fetch())
+                {
+                    $surface = $donnees['surface'];
+                }
 		    ?>
+
+        </div>
+
+        <div>
+            <?php
+                echo $surface;
+            ?>
+        </div>
 			
 			<span class="boutonModif">                                           <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
 			    <a href="inscription_habitant_5.php"> Modifier </a>
 			</span>
 
-		</div>
+
 		
-		<img class="image" src="image/<?php echo"$selected_room"?>.jpg"/>
+		<img class="image" src="image/<?php echo"$piece"?>.jpg"/>
 		
 		</br>
 		
@@ -103,7 +131,7 @@
 		    ?>
 		    </br>
 		    <?php
-       		    echo ' Capteurs actifs : ' . $nbCapteursActifs;
+                echo ' Capteurs actifs : ' . $nbCapteursActifs;
 		    ?>
 		</div>
 		
