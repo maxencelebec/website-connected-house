@@ -73,7 +73,7 @@
 	    </br>
         <div class= "nom_piece">  
 		    <?php
-		        echo "$selected_room";
+		        echo "$piece";
 		    ?>
 		</div>
 		
