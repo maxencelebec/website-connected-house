@@ -5,6 +5,10 @@
 	height: 4.6%;
 	bottom: 2px;
 }
+a{
+    text-decoration:none;
+    color:white;
+}
 .boutton_footer{
 	background-color: #40495E;
     border:none;

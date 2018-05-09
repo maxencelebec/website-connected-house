@@ -11,9 +11,9 @@
 
     <?php
 	    include"header.php";
-		include"footer.php"
 	?>
-	<div>
+
+	<div class = "mention_legale">
         <div class="titre1">
 	        Nos mentions légales
 	    </div>
@@ -315,4 +315,8 @@
         </br>		
 		
 	</div>
+
+	<?php
+		include"footer.php"
+	?>
 </body>

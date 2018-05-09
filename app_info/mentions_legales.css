@@ -9,7 +9,10 @@
 	grid-template-columns: 2fr 28fr;
 	grid-auto-rows: 196px;
 }
-
+a{
+    text-decoration:none;
+    color:white;
+}
 .titre1 {
     font-size:50px;
 	font-weight:bold;
@@ -27,5 +30,9 @@
 
 .lien {
 	text-decoration:none;
-	color:green;
+}
+
+.mention_legale{
+	height:100vh;
+	overflow: auto;
 }
