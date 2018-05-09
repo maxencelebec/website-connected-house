@@ -40,7 +40,9 @@ mysqli_select_db($link, "virifocus"); // select the database
 				<option value="Casa de Papel">Casa de Papel</option>
 				<option value="Maison Blanche">Maison Blanche</option>
 				<option value="Trouville en Seine">Trouville en Seine</option>
-			</select> <label for="device">Type de matériel défectieux</label> <select
+			</select> 
+			
+			<label for="device">Type de matériel défectieux</label> <select
 				id="device" name="device">
 				<option value="">Sélectionner...</option>
 				<option value="Patrick">CeMac</option>

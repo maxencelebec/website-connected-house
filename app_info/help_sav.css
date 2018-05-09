@@ -74,7 +74,8 @@ imgbox1{
 	background-color:#333333;
 	
 	display:grid;
-	grid-template-rows:repeat(4,auto);
+	grid-template-rows:repeat(7,7vh) 30vh 9vh;
+	grid-template-columns: 95%;
 	margin-right: 5%;
 	border:#2cc872 solid 1px;
     border-radius: 5px;
@@ -83,6 +84,13 @@ imgbox1{
 	margin:2%;
 	
 	
+}
+.containersav form label{
+	
+	align-self: end;
+	margin:0;
+	padding:0;
+	margin-left:10%
 }
 
 #submit{
@@ -152,10 +160,7 @@ imgbox1{
 	
 }
 
-.container form label{
-	
-	justify-items:center;
-	
+
 }
 #submit:hover{
 	

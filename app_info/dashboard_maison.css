@@ -23,14 +23,14 @@ a{
 .main1{
     grid-row: 1/4;
     display: grid;
-    grid-template-rows:20vh 80vh;
+    grid-template-rows:30vh 70vh;
     
 }
 .photo_nom{
     background-color: white;
     grid-row: 1; 
     display: grid;
-    //grid-auto-rows: 16.4px;
+    grid-auto-rows: 2.5vh;
 }
 .photomaison{
     background-image:url("image/maison.png");
@@ -59,7 +59,6 @@ a{
 .home_mode_titre{
     grid-row: 1/4;
     font-size: 20px;
-    
     margin:15%;
     margin-top:25%;
 }
@@ -128,6 +127,7 @@ a{
 
 .securite_titre{
     grid-row: 9/13;
+    display:grid;
     font-size: 20px;
     padding-top: 5px;
     margin:15%;
@@ -159,8 +159,6 @@ a{
 }
 .utilisateur{
 	grid-row: 27/37;
-
-    
     background-color: #40495e;
     color:#e48177;
     border-radius: 10px;
@@ -175,14 +173,11 @@ a{
 
 
 
-
-
-
 .main2{
     overflow: auto;
     grid-row: 1/4;
     display: grid;
-    grid-auto-rows:20vh;
+    grid-auto-rows:30vh;
 }
 .informations{
     grid-row: 1/2;
@@ -192,7 +187,7 @@ a{
 }
 .informations_valeur{
     display: grid;
-    grid-auto-rows: 65.3px;
+    grid-auto-rows: 10vh;
     background-color: #333333;
     font-size: 18px;
 }
@@ -289,7 +284,7 @@ a{
 .informations_graphe{
     background-color: #333333;
     display: grid;
-    grid-auto-rows: 63px;
+    grid-auto-rows: 8vh;
     border-top: #2cc872 solid 3px;
     border-bottom: #2cc872 solid 3px;
 }
