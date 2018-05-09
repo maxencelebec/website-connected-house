@@ -24,7 +24,7 @@ function ajout_piece($piece,$id)
         while ($donnees = $req->fetch())
         {
             $valeur = $donnees['valeur'];
-        }
+        }   
         ?>
 
         <div class="type_piece">
@@ -54,7 +54,7 @@ function ajout_piece($piece,$id)
                     </div>
                     <div class="err">
                         <div class="err_img"></div>
-                        <div class="err_txt">Erreur <br/>capteur : 2</div>
+                        <div class="err_txt">Erreur <br/>capteur : <?php echo $piece ?></div>
                     </div>
                     
                 </div>

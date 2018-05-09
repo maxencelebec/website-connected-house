@@ -41,7 +41,7 @@ session_start();
 					</div>
 				</div>
 				<div class="utilisateur_titre">
-					Utilisateur<br>Connecté
+					Utilisateur connecté
 				</div>
 				<div class="utilisateur">
                             <?php
@@ -122,7 +122,7 @@ session_start();
                                 $id_habitation=$donnees['id'];
                             }
 
-                            $req = $bdd->prepare('SELECT type,id FROM pieces WHERE id_habitation= ? ');
+                            $req = $bdd->prepare('SELECT type, id FROM pieces WHERE id_habitation= ? ');
                             $req->execute(array($id_habitation));
 
                             while ($donnees = $req->fetch())
