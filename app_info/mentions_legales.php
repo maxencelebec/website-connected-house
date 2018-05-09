@@ -43,7 +43,7 @@
 		</br>
 		
 		<div class="para1">
-		    Le site accessible par les url suivants : <a href="http://localapp/app_info/index.html"> http://localapp/app_info/index.html </a> est exploité dans le respect de la législation française.
+		    Le site accessible par les url suivants : <a href="http://localapp/app_info/index.php" class="lien2"> http://localapp/app_info/index.html </a> est exploité dans le respect de la législation française.
 			L'utilisation de ce site est régie par les présentes conditions générales.
 			En utilisant le site, vous reconnaissez avoir pris connaissance de ces conditions et les avoir acceptées.
 			Celles-ci pourront êtres modifiées à tout moment et sans préavis par la société ESN9D.
@@ -100,7 +100,7 @@
 		
 		<div class="para1">
 		    Conformément à la loi 78-17 du 6 janvier 1978 (modifiée par la loi 2004-801 du 6 août 2004 relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel) relative à l'informatique,
-			aux fichiers et aux libertés, le site a fait l'objet d'une déclaration auprès de la Commission nationale de l'informatique et des libertés (<a href="www.cnil.fr">www.cnil.fr</a>). 
+			aux fichiers et aux libertés, le site a fait l'objet d'une déclaration auprès de la Commission nationale de l'informatique et des libertés (<a href="www.cnil.fr" class="lien2">www.cnil.fr</a>). 
 		</div>
 		
 		</br>
@@ -153,7 +153,7 @@
 			</br>
 			</br>
 			Les utilisateurs et visiteurs du site internet peuvent mettre en place un hyperlien en direction de ce site, mais uniquement en direction de la page d’accueil, 
-			accessible à l’URL suivante : <a href=" http://localapp/app_info/index.html">  http://localapp/app_info/index.html </a>, à condition que ce lien s’ouvre dans une nouvelle fenêtre. En particulier un lien vers une sous page (« lien profond ») est interdit,
+			accessible à l’URL suivante : <a href=" http://localapp/app_info/index.php" class="lien2">  http://localapp/app_info/index.html </a>, à condition que ce lien s’ouvre dans une nouvelle fenêtre. En particulier un lien vers une sous page (« lien profond ») est interdit,
 			ainsi que l’ouverture du présent site au sein d’un cadre (« framing »), sauf l'autorisation expresse et préalable de Natural-net.
 			</br>
 			</br>
