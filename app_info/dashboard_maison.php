@@ -122,13 +122,14 @@ session_start();
                                 $id_habitation=$donnees['id'];
                             }
 
-                            $req = $bdd->prepare('SELECT type FROM pieces WHERE id_habitation= ? ');
+                            $req = $bdd->prepare('SELECT type,id FROM pieces WHERE id_habitation= ? ');
                             $req->execute(array($id_habitation));
 
                             while ($donnees = $req->fetch())
                             {
                                 $piece = $donnees['type'];
-                                ajout_piece("$piece");
+                                $id = $donnees['id'];
+                                ajout_piece("$piece","$id");
                             }
 
                         ?>

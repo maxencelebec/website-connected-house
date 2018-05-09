@@ -2,14 +2,14 @@
 
 <?php
 
-function ajout_piece($piece)
+function ajout_piece($piece,$id)
 {
     if ($piece=="cuisine")
     {
     ?>
         <div class="cuisine">
             <div class="cuisine_titre_donnees">
-                <div class="photo_cuisine">Cuisine</div>
+                <div class="photo_<?php echo $piece ?>">Cuisine</div>
                 <div class ="donnees">
                     <div class="temp">
                         <div class="temp_img"></div>
@@ -25,20 +25,37 @@ function ajout_piece($piece)
                     </div>
                     <div class="err">
                         <div class="err_img"></div>
-                        <div class="err_txt">Erreur <br/>capteur : 2</div>
+                        <div class="err_txt">Erreur <br/>capteur : <?php echo $piece ?></div>
                     </div>
                     
                 </div>
             </div>
             <div class="cuisine_capteurs">
+
                 <?php
-                    include_once "ajout_capteur.php";
-                    ajout_capteur("presence");
-                    ajout_capteur("humidité");
-                    ajout_capteur("temperature");
-                    ajout_capteur("porte");
+
+                    try
+                    {
+                        $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                    }
+                    catch(Exception $e)
+                    {
+                        die('Erreur : '.$e->getMessage());
+                    }
+
+                    $req = $bdd->prepare('SELECT type FROM capteurs WHERE id_piece= ? ');
+                    $req->execute(array($id));
+
+                    while ($donnees = $req->fetch())
+                    {
+                        $type = $donnees['type'];
+                        include_once "ajout_capteur.php";
+                        ajout_capteur("$type","$id");
+                    }
                 ?>
+
             </div>
+
         </div>
         <?php
     }
@@ -69,14 +86,29 @@ function ajout_piece($piece)
                 </div>
             </div>
             <div class="chambre_capteurs">
-                <?php
-                    include_once "ajout_capteur.php";
-                    ajout_capteur("porte");
-                    ajout_capteur("presence");
-                    ajout_capteur("luminosité");
-                    ajout_capteur("temperature");
 
+                <?php
+
+                try
+                {
+                    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                }
+                catch(Exception $e)
+                {
+                    die('Erreur : '.$e->getMessage());
+                }
+
+                $req = $bdd->prepare('SELECT type FROM capteurs WHERE id_piece= ? ');
+                $req->execute(array($piece));
+
+                while ($donnees = $req->fetch())
+                {
+                    $type = $donnees['type'];
+                    include_once "ajout_capteur.php";
+                    ajout_capteur("$type");
+                }
                 ?>
+
             </div>
         </div>
         <?php
@@ -109,15 +141,29 @@ function ajout_piece($piece)
                 </div>
             </div>
             <div class="salle_de_bain_capteurs">
+
                 <?php
+
+                try
+                {
+                    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                }
+                catch(Exception $e)
+                {
+                    die('Erreur : '.$e->getMessage());
+                }
+
+                $req = $bdd->prepare('SELECT type FROM capteurs WHERE id_piece= ? ');
+                $req->execute(array($piece));
+
+                while ($donnees = $req->fetch())
+                {
+                    $type = $donnees['type'];
                     include_once "ajout_capteur.php";
-                    ajout_capteur("porte");
-                    ajout_capteur("luminosité");
-                    ajout_capteur("presence");
-                    ajout_capteur("porte");
-                    ajout_capteur("luminosité");
-                    ajout_capteur("presence");
+                    ajout_capteur("$type");
+                }
                 ?>
+
             </div>   
         </div>
         <?php
@@ -150,15 +196,29 @@ function ajout_piece($piece)
                 </div>
             </div>
             <div class="salon_capteurs">
+
                 <?php
+
+                try
+                {
+                    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                }
+                catch(Exception $e)
+                {
+                    die('Erreur : '.$e->getMessage());
+                }
+
+                $req = $bdd->prepare('SELECT type FROM capteurs WHERE id_piece= ? ');
+                $req->execute(array($piece));
+
+                while ($donnees = $req->fetch())
+                {
+                    $type = $donnees['type'];
                     include_once "ajout_capteur.php";
-                    ajout_capteur("temperature");
-                    ajout_capteur("humidité");
-                    ajout_capteur("luminosité");
-                    ajout_capteur("temperature");
-                    ajout_capteur("humidité");
-                    ajout_capteur("luminosité");
+                    ajout_capteur("$type");
+                }
                 ?>
+
             </div>   
         </div>
         <?php
@@ -191,15 +251,29 @@ function ajout_piece($piece)
                 </div>
             </div>
             <div class="cave_capteurs">
+
                 <?php
+
+                try
+                {
+                    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                }
+                catch(Exception $e)
+                {
+                    die('Erreur : '.$e->getMessage());
+                }
+
+                $req = $bdd->prepare('SELECT type FROM capteurs WHERE id_piece= ? ');
+                $req->execute(array($piece));
+
+                while ($donnees = $req->fetch())
+                {
+                    $type = $donnees['type'];
                     include_once "ajout_capteur.php";
-                    ajout_capteur("luminosité");
-                    ajout_capteur("presence");
-                    ajout_capteur("porte");
-                    ajout_capteur("luminosité");
-                    ajout_capteur("presence");
-                    ajout_capteur("porte");
+                    ajout_capteur("$type");
+                }
                 ?>
+
             </div>           
         </div>
         <?php

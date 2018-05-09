@@ -1,10 +1,10 @@
-.cave, .cuisine, .salon, .salle_de_bain, .chambre{
+.cuisine, .chambre, .salon{
     display: grid;
     grid-template-columns: 2fr 5fr;
     border-bottom: lightgrey solid 3px;
 }
 
-.cuisine_titre_donnees, .chambre_titre_donnees, .salon_titre_donnees, .salle_de_bain_titre_donnees, .cave_titre_donnees {
+.cuisine_titre_donnees, .chambre_titre_donnees, .salon_titre_donnees{
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 15px;
