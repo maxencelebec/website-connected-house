@@ -55,7 +55,7 @@ session_start();
                     <option value="autre">Autre</option>
                 </select> 
                 <input type="number" name="surface" maxlenght="255" style="text-align: center"  required />
-                <input type="text" name="nom" maxlenght="10" placeholder="Comment s'appelle votre pièce ?" style="text-align: center" required />
+                <input type="text" name="nom" maxlenght="255" placeholder="Comment s'appelle votre pièce ? (16 caractères max)" style="text-align: center" required />
                 <input class="valider" type="submit" value="Ajouter">
 
             </div>

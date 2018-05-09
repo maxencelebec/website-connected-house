@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 08 mai 2018 à 12:16
+-- Généré le :  mer. 09 mai 2018 à 09:00
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -21,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `virifocus`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `capteurs`
+--
+
+DROP TABLE IF EXISTS `capteurs`;
+CREATE TABLE IF NOT EXISTS `capteurs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(10) NOT NULL,
+  `id_habitation` int(10) NOT NULL,
+  `id_piece` int(10) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `nom` varchar(20) NOT NULL,
+  `etat` int(10) NOT NULL,
+  `id_capteur` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -63,21 +82,23 @@ DROP TABLE IF EXISTS `pieces`;
 CREATE TABLE IF NOT EXISTS `pieces` (
   `id` int(20) NOT NULL AUTO_INCREMENT,
   `type` varchar(30) NOT NULL,
-  `nom` varchar(40) NOT NULL,
+  `nom` varchar(16) NOT NULL,
   `surface` int(10) NOT NULL,
   `id_user` int(20) NOT NULL,
   `id_habitation` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `pieces`
 --
 
 INSERT INTO `pieces` (`id`, `type`, `nom`, `surface`, `id_user`, `id_habitation`) VALUES
-(18, 'chambre', 'chambre Andreas', 8, 26, 6),
+(21, 'cave', 'cave à vin', 30, 26, 6),
 (16, 'salon', 'Salle à fumer', 10, 26, 6),
-(17, 'cuisine', 'cuisine maman', 7, 26, 6);
+(17, 'cuisine', 'cuisine maman', 7, 26, 6),
+(32, 'salle_de_bain', 'salle du haut', 10, 26, 6),
+(36, 'chambre', 'Chambre de Max', 10, 26, 6);
 
 -- --------------------------------------------------------
 
