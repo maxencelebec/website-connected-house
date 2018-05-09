@@ -1,17 +1,75 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 
+<html>
+
 <head>
-    <meta charset="UTF-8">
-	<title> Virifocus | Modification piece</title>
-	<link rel="stylesheet" href="modification_piece.css"/>
-    <link rel"icon" type="image/png" href="image/logo.png" />
+    <title>Virifocus</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="choix_piece.css"/>
+    <link rel="icon" type="image/png" href="image/logo.png" />
 </head>
 
+<body class="fond">
 
+    <div id="site">		
+    	
+	    <?php
+			include "header.php";
+		?>
+		
+		<?php 
+			$link = $_GET['id'];
+		?>
+		
+		<div class="tab">  
+						<?php
 
-<body class="corps">
-     
-	<div class="centre">
+                            try
+                            {
+                                $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                            }
+                            catch(Exception $e)
+                            {
+                                    die('Erreur : '.$e->getMessage());
+                            }
+                            $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
+                            $req->execute(array($_SESSION["mail"]));
+
+                            $id_user;
+                            while ($donnees = $req->fetch())
+                            {
+                                $id_user=$donnees['id'];
+                            }
+
+                            $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
+                            $req->execute(array($id_user));
+
+                            $id_habitation;
+                            while ($donnees = $req->fetch())
+                            {
+                                $id_habitation=$donnees['id'];
+                            }
+
+                            $req = $bdd->prepare('SELECT type,id FROM pieces WHERE id_habitation= ? ');
+                            $req->execute(array($id_habitation));
+
+                            while ($donnees = $req->fetch())
+                            {
+                                $piece = $donnees['type'];
+                                $id = $donnees['id'];
+
+                                ?> <a href = "modification_piece.php?id=<?php echo $id; ?>"  id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
+                                <?php
+                            }
+                        ?>
+		</div>
+
+		
+		<div class="centre">
 	    </br>
         <div class= "nom_piece">  
 		    <?php
@@ -155,5 +213,11 @@
 		</div>
 		
     </div>
+			
+    </div>
+	
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="choix_piece.js"></script>
 
 </body>
+</html>

@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -18,49 +22,51 @@
 		?>
 		
 		
-		<div class="tab">                                              	    <!-- Boutons des tabs (tableau gauche) -->
-			<button class="tablinks" id="tablink1">Cuisine</button>
-			<button class="tablinks" id="tablink2">Salon</button>
-			<button class="tablinks" id="tablink3">Salle de bain</button>
-			<button class="tablinks" id="tablink4">Cave</button>
-			<button class="tablinks" id="tablink5">Chambre</button>
+		<div class="tab">  
+						<?php
+
+                            try
+                            {
+                                $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                            }
+                            catch(Exception $e)
+                            {
+                                    die('Erreur : '.$e->getMessage());
+                            }
+                            $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
+                            $req->execute(array($_SESSION["mail"]));
+
+                            $id_user;
+                            while ($donnees = $req->fetch())
+                            {
+                                $id_user=$donnees['id'];
+                            }
+
+                            $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
+                            $req->execute(array($id_user));
+
+                            $id_habitation;
+                            while ($donnees = $req->fetch())
+                            {
+                                $id_habitation=$donnees['id'];
+                            }
+
+                            $req = $bdd->prepare('SELECT type,id FROM pieces WHERE id_habitation= ? ');
+                            $req->execute(array($id_habitation));
+
+                            while ($donnees = $req->fetch())
+                            {
+                                $piece = $donnees['type'];
+                                $id = $donnees['id'];
+                                $_SESSION["id_piece_choix"]=$id;
+
+
+                                ?> <a href = "modification_piece.php?id=<?php echo $id; ?>"  id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
+                                <?php
+                            }
+                        ?>
 		</div>
 
-		
-		<div id="Cuisine" class="tabcontent">
-			<?php
-				$selected_room = "Cuisine";
-				include "modification_piece.php";
-			?>
-		</div>			
-
-		<div id="Salon" class="tabcontent">
-			<?php
-				$selected_room = "Salon";
-				include "modification_piece.php";
-			?>						
-		</div>		
-		
-		<div id="Salle de bain" class="tabcontent">
-			<?php
-				$selected_room = "Salle de bain";
-				include "modification_piece.php";
-			?>
-		</div>		
-
-		<div id="Cave" class="tabcontent">
-			<?php
-				$selected_room = "Cave";
-				include "modification_piece.php";
-			?>
-		</div>
-	
-		<div id="Chambre" class="tabcontent">
-			<?php
-				$selected_room = "Chambre";
-				include "modification_piece.php";
-			?>
-		</div>
 			
 		<?php
 			include "footer.php";
