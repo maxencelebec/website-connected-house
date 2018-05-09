@@ -29,7 +29,7 @@ function ajout_piece($piece,$id)
 
         <div class="type_piece">
             <div class="piece_titre_donnees">
-                <div class="photo_<?php echo $piece ?>">Cuisine</div>
+                <div class="photo_<?php echo $piece ?>"><?php echo $piece ?></div>
                 <div class ="donnees">
                     <div class="temp">
                         <div class="temp_img"></div>

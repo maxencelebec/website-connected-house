@@ -26,8 +26,8 @@
       <file leaf-file-name="ajout_piece.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_info/ajout_piece.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+            <state relative-caret-position="238">
+              <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -156,12 +156,12 @@
       <updated>1525677139229</updated>
       <workItem from="1525677141656" duration="2155000" />
       <workItem from="1525697193654" duration="2669000" />
-      <workItem from="1525862969297" duration="7477000" />
+      <workItem from="1525862969297" duration="7544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12302000" />
+    <option name="totallyTimeSpent" value="12369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -550,8 +550,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/ajout_piece.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+        <state relative-caret-position="238">
+          <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
         </state>
       </provider>
     </entry>
