@@ -53,7 +53,7 @@
 				
 				<!-- Tab 1 : Profile -->
 				<div id="profile" class="tabcontent">
-				<form class="profile_form" action="dashboard_compte_post" method="post"> 
+				<form class="profile_form" action="dashboard_compte_post.php" method="post"> 
 					<!-- (Profile) Bloc 1 -->
 					<div class="bloc" id="bloc_profile_1">
 						<div id="name">

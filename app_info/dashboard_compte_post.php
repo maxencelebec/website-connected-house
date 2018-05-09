@@ -17,8 +17,8 @@
 	}
 
 
-	$req = $bdd->prepare('UPDATE users SET name = ?, firstname = ? , postal_code = ? , city = ? , country = ?  , phone_number_portable = ? , mail = ? , WHERE mail= ? ');
-	$req->execute(array($_POST["name"],$_POST["firstname"],$_POST["postal_code"],$_POST["city"],$_POST["country"],
+	$req = $bdd->prepare('UPDATE users SET name = ?, firstname = ? , postal_code = ?  , country = ?  , phone_number_portable = ? , mail = ?  WHERE mail= ? ');
+	$req->execute(array($_POST["name"],$_POST["firstname"],$_POST["postal_code"],$_POST["country"],
 		 $_POST["phone_number"], $_POST["mail"], $_SESSION["mail"]));
 
 
