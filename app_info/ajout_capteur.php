@@ -3,7 +3,7 @@
 
 
 <?php
-function ajout_capteur($capteur_actionneur)
+function ajout_capteur($capteur_actionneur,$id)
 {
 	if ($capteur_actionneur=="luminosité")
 	{
@@ -18,7 +18,30 @@ function ajout_capteur($capteur_actionneur)
 	elseif ($capteur_actionneur=="temperature")
 	{
 		?>
-			<div class="capteur">Température <br/> 23°C </br>
+
+
+        <?php
+
+        try
+        {
+            $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+        }
+        catch(Exception $e)
+        {
+            die('Erreur : '.$e->getMessage());
+        }
+
+        $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE id_piece= ? ');
+        $req->execute(array($id));
+
+        while ($donnees = $req->fetch())
+        {
+            $valeur = $donnees['valeur'];
+        }
+        ?>
+
+
+			<div class="capteur">Température <br/> <?php echo $valeur ?> </br>
 				<?php
                     include 'boutton.php';
                 ?>

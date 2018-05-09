@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 09 mai 2018 à 11:49
+-- Généré le :  mer. 09 mai 2018 à 12:50
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -38,8 +38,17 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
   `nom` varchar(20) NOT NULL,
   `etat` int(10) NOT NULL,
   `id_capteur` varchar(30) NOT NULL,
+  `valeur` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `capteurs`
+--
+
+INSERT INTO `capteurs` (`id`, `id_user`, `id_habitation`, `id_piece`, `type`, `nom`, `etat`, `id_capteur`, `valeur`) VALUES
+(3, 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 9000),
+(2, 27, 7, 39, 'humidité', 'Humidité 1', 0, 'XXXX', 0);
 
 -- --------------------------------------------------------
 

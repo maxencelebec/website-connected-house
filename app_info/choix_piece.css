@@ -8,7 +8,7 @@ body
 #site{
     display: grid;
     grid-template-columns: 2fr 28fr;    
-    grid-auto-rows: 196px;
+    grid-auto-rows: 100vh;
     grid-gap: auto 20px;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
@@ -32,7 +32,6 @@ a{
     color:white;
 }
 
-
 .compte{
     background-color: #486454;
     border-left: #2cc872 solid 3px;
@@ -43,7 +42,6 @@ a{
     display: flex;
     border: 1px solid #ccc;
     background-color: #333333;
-    overflow: hidden;
     height: 50px;
 }
 
@@ -60,65 +58,16 @@ a{
     background-color: #486454;
 }
 
-.tab button.active {
-    background-color: #486454;
-}
 
-/* Disposition des blocs */
-.tabcontent {
-    display: none;
-    grid-row-start: 2;
-    position: relative;
-    bottom: 140px;
-    color: black;
-    height: 500px;
-    overflow: auto;
-    color: black;
-}
 
-.bold {
-    font-weight: bold;
-}
-
-.bloc {
-    background-color: lightgrey;
-    border-radius: 15px;
-    padding: 3px 3px;
-    margin-top: 5px;
-    width: 99%;
-    height: 12%;
-}
-
-/* Contenu de la tab Profile */
-.profile_form {
-    padding-top: 5px;
-    padding-left: 5px;
-    font-size: 15px;
-}
-    
-    /* Bloc n°1 de Profile*/
-    #bloc_profile_1 {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-    }
-    
-    #name {
-        grid-column-start: 1;
-    }
-    
-    #firstname {
-        grid-column-start: 2;
-    }
-
-/* Bouton d'envoi des informations */
-.enregistrer {
-    width: 100px;
-    height: 20px;
-    float: right;
-    margin-top: 5px;
-    margin-right: 5px;
-}
 
 .tablinks{
     height: 50px;
+}
+
+.choix{
+    border-left:white 1px solid;
+}
+
+.test{
 }

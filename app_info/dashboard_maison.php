@@ -41,7 +41,7 @@ session_start();
 					</div>
 				</div>
 				<div class="utilisateur_titre">
-					Utilisateur<br>Connecté
+					Utilisateur connecté
 				</div>
 				<div class="utilisateur">
                             <?php
@@ -122,21 +122,23 @@ session_start();
                                 $id_habitation=$donnees['id'];
                             }
 
-                            $req = $bdd->prepare('SELECT type FROM pieces WHERE id_habitation= ? ');
+                            $req = $bdd->prepare('SELECT type, id FROM pieces WHERE id_habitation= ? ');
                             $req->execute(array($id_habitation));
 
                             while ($donnees = $req->fetch())
                             {
                                 $piece = $donnees['type'];
-                                ajout_piece("$piece");
+                                $id = $donnees['id'];
+                                ajout_piece("$piece","$id");
                             }
 
                         ?>
                         
                         <div class="boutton1">
-
-                            <a href = "choix_piece.php"class="ajouterpiece"> + modifier pièce </a>
+                            <a href = "inscription_habitant_5.php" class="ajouterpiece"> + ajouter pièce </a>
+                            <a href = "choix_piece.php" class="ajouterpiece"> modifier pièce </a>
                         </div>
+                        
                         
                         
                     </div>

@@ -101,8 +101,9 @@ form{
 .boutonAjout:hover{
     transform: scale(1.12);
 }
-
-
+.choix{
+    border-left:white 1px solid;
+}
 
 
 
