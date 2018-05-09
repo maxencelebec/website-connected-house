@@ -135,9 +135,10 @@ session_start();
                         ?>
                         
                         <div class="boutton1">
-
-                            <a href = "choix_piece.php"class="ajouterpiece"> + modifier pièce </a>
+                            <a href = "inscription_habitant_5.php" class="ajouterpiece"> + ajouter pièce </a>
+                            <a href = "choix_piece.php" class="ajouterpiece"> modifier pièce </a>
                         </div>
+                        
                         
                         
                     </div>
