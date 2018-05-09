@@ -17,11 +17,13 @@ body
 .deco{
     text-decoration:none;
     color:white;
-    margin-left:50%;
+    margin-left:48%;
 }
+
 .deco_boutton{
 	font-size: 41px;
 }
+
 /* Actualisation header */
 .lien{
     text-decoration: none;
@@ -40,6 +42,10 @@ body
     background-color: #333333;
 	overflow: hidden;
 	height: 50px;
+}
+
+.tablinks {
+	font-size: 15px;
 }
 
 .tab button {

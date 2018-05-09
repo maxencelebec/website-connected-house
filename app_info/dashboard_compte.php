@@ -48,12 +48,12 @@
 				<button class="tablinks" id="tablink2">Compte</button>
 				<button class="tablinks" id="tablink3">Confidentialit&eacute;</button>
 				<button class="tablinks" id="tablink4">Notifications</button>
-				<a class ="deco" href="index.php"><button class="deco_boutton">D&eacuteconnexion</button></a>
+				<a class ="deco" href="index.php"><button class="deco_boutton">D&eacute;connexion</button></a>
 				</div>
 				
 				<!-- Tab 1 : Profile -->
 				<div id="profile" class="tabcontent">
-				<form class="profile_form" action="" method="post"> 
+				<form class="profile_form" action="dashboard_compte_post" method="post"> 
 					<!-- (Profile) Bloc 1 -->
 					<div class="bloc" id="bloc_profile_1">
 						<div id="name">
@@ -93,15 +93,15 @@
 					<input class="enregistrer" type="submit" value="Enregistrer">												
 				</form>
 				</div>			
-						
-					<!-- Tab 2 : Compte -->
-						<div id="compte" class="tabcontent"> Test2 </div>		
-						
-					<!-- Tab 3 : Confidentialité -->
-						<div id="confidentialite" class="tabcontent"> Test3 </div>		
-						
-					<!-- Tab 4 : Notifications -->
-						<div id="notifications" class="tabcontent"> Test4 </div>
+				<!-- ---------------------------------------------------- -->
+				<!-- Tab 2 : Compte -->
+				<div id="compte" class="tabcontent"> Test2 </div>		
+				<!-- ---------------------------------------------------- -->		
+				<!-- Tab 3 : Confidentialité -->
+				<div id="confidentialite" class="tabcontent"> Test3 </div>		
+				<!-- ---------------------------------------------------- -->		
+				<!-- Tab 4 : Notifications -->
+				<div id="notifications" class="tabcontent"> Test4 </div>
 			<?php
 				include "footer.php";
 			?>
