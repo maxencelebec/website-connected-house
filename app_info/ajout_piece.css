@@ -1,10 +1,10 @@
-.cuisine, .chambre, .salon{
+.type_piece{
     display: grid;
     grid-template-columns: 2fr 5fr;
     border-bottom: lightgrey solid 3px;
 }
 
-.cuisine_titre_donnees, .chambre_titre_donnees, .salon_titre_donnees{
+.piece_titre_donnees{
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 15px;
