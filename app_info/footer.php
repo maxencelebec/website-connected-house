@@ -5,7 +5,7 @@
     </div>
 
 	<div id="footer">
-	    footer
+	    <a href="mentions_legales.php"> Mentions Légales </a>
 	</div>
 
 	<script src="footer.js"></script>
