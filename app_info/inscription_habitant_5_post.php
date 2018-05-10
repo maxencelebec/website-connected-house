@@ -20,6 +20,7 @@ session_start();
 	while ($donnees = $req->fetch())
 	{
 	    $id_user=$donnees['id'];
+        $_SESSION["id_user"]=$id_user;
 	}
 
 	$req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
