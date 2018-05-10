@@ -166,8 +166,8 @@
 			</br>
 			<ul>
 			    <li> Créé le 28/04/2018</li>
-				<li> Auteur : MICHEL Jackie</li>
-				<li> Contact : tmtc </li>
+				<li> Auteur : MICHEL Paul</li>
+				<li> Contact : paul.miche3717@gmail.com </li>
 			</ul>
 		
 		</div>
