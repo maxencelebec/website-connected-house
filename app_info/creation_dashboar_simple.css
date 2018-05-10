@@ -3,19 +3,6 @@ body
     padding:0;
     margin:0;
     width:auto;
-
-}
-
-.main {
-    overflow: auto;
-}
-
-#site{
-    display: grid;
-    grid-template-columns: 2fr auto;
-    font-family: Segoe UI Light, Georgia;
-    text-decoration:none;
-    color: white;
 }
 
 a{
@@ -32,6 +19,12 @@ a{
     border-left: #2cc872 solid 3px;
 }
 
+.main{
+    display: grid;
+    grid-template-columns: 1fr 300fr 2fr;
+    overflow: auto;
+    grid-row: 1/4;
+}
 .informations{
     display: grid;
     grid-auto-rows: 10px;
@@ -161,7 +154,7 @@ a{
 
 }
 .quiestalamaison{
-    grid-row: 1/2;  
+    grid-row: 1/2;
     background-color: #343c44;
     border-radius: 10px;
     box-shadow: 2px 2px 10px #212122;
@@ -208,4 +201,24 @@ a{
     align-items: center;
     display:flex;
     justify-content: center;
+}
+.ajoutermaisonlink{
+    background-color: #333333;
+    border:none;
+    border-radius: 50%;
+    color:#2cc872;
+    cursor: pointer;
+    font-size: 30px;
+    outline: none;
+    border: #2cc872 solid 3px;
+    transition: 0.3s;
+    padding-left:8px;
+    padding-right:8px;
+}
+.ajoutermaisonlink:hover{
+    transform:scale(1.15);
+    border: #2cc872 solid 3px;
+}
+.ajoutermaisonlink:active{
+    transform: scale(1.03);
 }

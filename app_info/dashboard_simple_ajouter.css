@@ -1,0 +1,41 @@
+.ajoutmaison{
+    background-color: #333333;
+    grid-row: 50/58;
+    display: grid;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 25fr;
+}
+.lien3{
+    text-decoration: none;
+    color:#2cc872;
+}
+.boutton2{
+    align-items: center;
+    display:flex;
+    justify-content: center;
+}
+
+.ajoutermaisonlink{
+    background-color: #333333;
+    border:none;
+    border-radius: 50%;
+    color:#2cc872;
+    cursor: pointer;
+    font-size: 30px;
+    outline: none;
+    border: #2cc872 solid 3px;
+    transition: 0.3s;
+    padding-left:8px;
+    padding-right:8px;
+}
+.ajoutermaisonlink:hover{
+    transform:scale(1.15);
+    border: #2cc872 solid 3px;
+}
+.ajoutermaisonlink:active{
+    transform: scale(1.03);
+}
