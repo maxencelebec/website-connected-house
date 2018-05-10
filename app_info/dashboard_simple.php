@@ -27,7 +27,7 @@
                             <div class="case2211"></div>
                             <div class="maison_conso">
                                 <div class="maison">Maison : Casa de papel</div>
-                                <div class="conso"></div>
+                                    <div class="chartContainer"></div>
                             </div>
                             <div class="case2213"></div>
                             <div class="donnees">
@@ -78,7 +78,7 @@
                         <div class="ajoutmaison">
                             <div></div>
                             <div class="boutton2">
-                                <a href="a" class="lien3">
+                                <a href="inscription_habitant_3.php" class="lien3">
                                     <button class="ajoutermaisonlink" onclick="">+</button>
                                 </a>
                             </div>
@@ -95,6 +95,8 @@
 
             </div>
 
+            <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+            <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 </body>
 <script src="dashboard_simple.js"></script>
 </html>

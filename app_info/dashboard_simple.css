@@ -56,7 +56,7 @@ a{
     background-size: cover;
     background-position: center;
 }
-.conso{
+.chartContainer{
     background-color: #343c44;
     grid-row: 10/45;
     border-radius: 15px;
