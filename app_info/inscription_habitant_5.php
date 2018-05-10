@@ -1,9 +1,6 @@
 <?php
-session_start();
-?>
-
-<?php
-$id_habitation = $_GET['id'];
+    session_start();
+    $_SESSION["id_habitation"]=$_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -84,25 +81,9 @@ $id_habitation = $_GET['id'];
             {
                     die('Erreur : '.$e->getMessage());
             }
-            $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
-            $req->execute(array($_SESSION["mail"]));
-
-            $id_user;
-            while ($donnees = $req->fetch())
-            {
-                $id_user=$donnees['id'];
-            }
-
-            $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
-            $req->execute(array($id_user));
-
-            while ($donnees = $req->fetch())
-            {
-                $id_habitation=$donnees['id'];
-            }
-
+            
             $req = $bdd->prepare('SELECT type, nom, surface FROM pieces WHERE id_habitation= ? ');
-            $req->execute(array($id_habitation));
+            $req->execute(array( $_SESSION["id_habitation"]));
 
             while ($donnees = $req->fetch())
             {
