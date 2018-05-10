@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 10 mai 2018 à 13:18
+-- Généré le :  jeu. 10 mai 2018 à 15:17
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -76,24 +76,26 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `code_postal` int(20) DEFAULT NULL,
   `adresse` text,
   `type` varchar(20) DEFAULT NULL,
+  `nom` varchar(25) DEFAULT NULL,
   `surface` int(10) DEFAULT NULL,
   `mode` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `habitation`
 --
 
-INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `surface`, `mode`, `id_user`) VALUES
-(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, 200, 0, 23),
-(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, 200, 0, 23),
-(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 2000, 0, 24),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24),
-(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 300, 0, 25),
-(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, 300, 0, 26),
-(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 20000, 0, 27);
+INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `nom`, `surface`, `mode`, `id_user`) VALUES
+(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, NULL, 200, 0, 23),
+(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, NULL, 200, 0, 23),
+(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 2000, 0, 24),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24),
+(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 300, 0, 25),
+(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, NULL, 300, 0, 26),
+(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 0, 27),
+(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, NULL, 27);
 
 -- --------------------------------------------------------
 
