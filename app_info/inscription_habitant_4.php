@@ -39,6 +39,8 @@
 
             <div class="titre"><h1>Informations de la maison</h1></div>
 
+            <div>Nom de la maison :</div>
+            <input type="text" name="nom" maxlenght="255" style="text-align: center" />
             <div>Adresse :</div>
             <input type="text" name="adresse" maxlenght="255" style="text-align: center" />
             <div>Code postal :</div>

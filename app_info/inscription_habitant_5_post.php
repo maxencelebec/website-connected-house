@@ -20,23 +20,14 @@ session_start();
 	while ($donnees = $req->fetch())
 	{
 	    $id_user=$donnees['id'];
-        $_SESSION["id_user"]=$id_user;
 	}
 
-	$req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
-	$req->execute(array($id_user));
-
-	$id_habitation;
-	while ($donnees = $req->fetch())
-	{
-	    $id_habitation=$donnees['id'];
-	}
 
 	$req = $bdd->prepare('INSERT INTO pieces (type, nom, surface, id_user, id_habitation) VALUES (?, ?, ?, ?, ?)');
-	$req->execute(array($_POST["type"], $_POST["nom"],$_POST["surface"],$id_user,$id_habitation));
+	$req->execute(array($_POST["type"], $_POST["nom"],$_POST["surface"],$id_user, $_SESSION["id_habitation"]));
 
 
 
 	// Redirection du visiteur vers la page suivante
-	header('Location: inscription_habitant_5.php');
+	header('Location: inscription_habitant_5.php?id= $_SESSION["id_habitation"]');
 ?>
