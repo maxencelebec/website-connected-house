@@ -92,14 +92,11 @@
             </br>
 
 
-			
-			<div class="boutonModif">  <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
-			    <a href="inscription_habitant_5.php"> Modifier </a>
-			</div>
 
-            <div class="boutonAjout">
-                <a href="choix_piece.php">Ajouter</a>
-            </div>
+			  <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
+			<a href="inscription_habitant_5.php" class="boutonModif"> Modifier </a>
+            
+            <a href="choix_piece.php" class="boutonAjout">Ajouter</a>
 
             <div class= "taille">
                 <?php
@@ -113,7 +110,7 @@
                 ?>
 
                 <?php
-                echo "Surface : $surface m^2";
+                echo "Surface : $surface m2";
                 ?>
             </div>
 		
@@ -186,7 +183,7 @@
 			    }
 			?>
 
-            <div class="image_main"><img class="image" src="image/<?php echo"$piece"?>.jpg"/></div>
+            <img class="image" src="image/<?php echo"$piece"?>.jpg"/>
 
 		</table>
 
@@ -217,7 +214,7 @@
                 </form>
 
 
-                <span> &nbsp;&nbsp;&nbsp;&nbsp; </span>                        <!-- Je sais c'est dégueulasse -->
+                                      <!-- Je sais c'est dégueulasse -->
 
                 <form class="nommage">
                     Nommer votre capteur <input type="text" name="nomCapteur" size="25" maxlength="15" style="text-align: center" />

@@ -14,14 +14,6 @@ body
     text-decoration:none;
 }
 
-.deco{
-    text-decoration:none;
-    color:white;
-    margin-left:50%;
-}
-.deco_boutton{
-    font-size: 41px;
-}
 /* Actualisation header */
 .lien{
     text-decoration: none;
@@ -30,11 +22,6 @@ body
 a{
     text-decoration:none;
     color:white;
-}
-
-.compte{
-    background-color: #486454;
-    border-left: #2cc872 solid 3px;
 }
 
 /* Menu du dashboard_compte*/
@@ -84,40 +71,41 @@ a{
 
 .boutonModif{
 
-    text-decoration:none;
-    background-color: #34445c;
-    border-radius: 15px;
-    box-shadow: 2px 2px 10px #212122;
-    padding : 7px 15px 7px 15px;
-    font-size: 30px;
+
+    border : none;
+    cursor: pointer;
+    outline: none;
     text-align: center;
-    color:#2cc872;
-    border: #2cc872 solid 2px;
+    background-color: white;
+    background-color:#2CC872;
+    color: white;
+    border-radius: 2px;
+    padding: 1vw;
+    font-size: 2vw;
     transition: 0.1s;
-    height: 50px;
     grid-column: 2;
     grid-row: 1;
-    justify-content: center;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .boutonModif:hover{
-    transform: scale(1.12);
+    transform: scale(1.04);
 }
 
 .boutonAjout {
-    text-decoration:none;
-    background-color: #34445c;
-    border-radius: 15px;
-    box-shadow: 2px 2px 10px #212122;
-    padding : 7px 15px 7px 15px;
-    font-size: 30px;
+    border : none;
+    cursor: pointer;
+    outline: none;
     text-align: center;
-    color:#2cc872;
-    border: #2cc872 solid 2px;
+    background-color: white;
+    background-color:#2CC872;
+    color: white;
+    border-radius: 2px;
+    padding: 1vw;
+    font-size: 2vw;
+    width: 25vw;
     transition: 0.1s;
-    height: 50px;
     grid-column: 3;
     grid-row: 1;
     justify-content: center;
@@ -126,7 +114,7 @@ a{
 }
 
 .boutonAjout:hover{
-    transform: scale(1.12);
+    transform: scale(1.04);
 }
 
 
@@ -193,8 +181,8 @@ form{
 }
 
 .image {
-    width: 50%;
-    height: 50%;
+    width: 27vw;
+    height: 15vw;
     grid-column: 3;
     grid-row: 2;
 }
