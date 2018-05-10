@@ -49,14 +49,14 @@
                 }
 
                 $req = $bdd->prepare('SELECT type, nom, id FROM pieces WHERE id_habitation= ? ');
-                $req->execute(array($id_habitation));
+                $req->execute(array($_SESSION["id_habitation"]));
 
                 while ($donnees = $req->fetch())
                 {
                     $piece = $donnees['nom'];
                     $id = $donnees['id'];
 
-                    ?> <a href = "modification_piece.php?id=<?php echo $id; ?>&id2=<?php echo $id_habitation; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
+                    ?> <a href = "modification_piece.php?id=<?php echo $id; ?>&id2=<?php echo $_SESSION["id_habitation"]; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
                     <?php
                 }
             ?>
@@ -115,8 +115,16 @@
             </div>
 		
 		<div class="infoCapteurs">
-		    
-		</div>
+            <?php
+
+            $req = $bdd->prepare('SELECT type FROM capteurs WHERE id_piece= ? ');
+            $req->execute(array($_GET['id']));
+            while ($donnees = $req->fetch())
+            {
+                echo $donnees['type']."<br/>";
+            }
+            ?>
+		</div>    
 		
 		<table class="table" border="0" width="40%" cellpadding="20">
 		    
@@ -124,10 +132,10 @@
 		</table>
         <img class="image" src="image/<?php echo"$piece"?>.jpg"/>
 
-                <form action ="modification_piece_post.php?id=<?php echo $link; ?>" method="post" class="nommage">
+                <form action ="modification_piece_post.php?id=<?php echo $link;?>&id2=<?php echo $id_habitation; ?>" method="post" class="nommage">
                     <br/>
                     <div> Choisisser votre capteur
-                    <select name="Type de capteur">
+                    <select name="type">
                         <option value="temperature"> Température </option>
                         <option value="luminosite"> Luminosité </option>
                         <option value="presence"> Présence </option>
