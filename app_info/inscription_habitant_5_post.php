@@ -38,5 +38,5 @@ session_start();
 
 
 	// Redirection du visiteur vers la page suivante
-	header('Location: inscription_habitant_5.php');
+	header('Location: inscription_habitant_5.php?id=$id_habitation');
 ?>

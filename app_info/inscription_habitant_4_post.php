@@ -27,9 +27,17 @@
 
 /*INSERT INTO habitation (pays, ville, code_postal, adresse, surface, id_user, type) VALUES (?, ?, ?, ?, ?, ?, NULL)'*/
 
-	$req = $bdd->prepare('INSERT INTO habitation (pays, ville, code_postal, adresse, surface, id_user, type) VALUES (?, ?, ?, ?, ?, ?, NULL)');
-	$req->execute(array($_POST["pays"],$_POST["ville"],$_POST["code_postal"],$_POST["adresse"],$_POST["surface"],$id_user));
+	$req = $bdd->prepare('INSERT INTO habitation (pays, ville, code_postal, adresse, surface, id_user, nom, type) VALUES (?, ?, ?, ?, ?, ?, ?, NULL)');
+	$req->execute(array($_POST["pays"],$_POST["ville"],$_POST["code_postal"],$_POST["adresse"],$_POST["surface"],$id_user, $_POST["nom"]));
+
+    $req = $bdd->prepare('SELECT id FROM habitation WHERE nom=?');
+    $req->execute(array($_POST["nom"]));
+    while ($donnees = $req->fetch())
+    {
+        $id_habitation = $donnees['id'];
+
+    }
 
 	// Redirection du visiteur vers la page suivante
-	header('Location: inscription_habitant_5.php');
+	header("Location: inscription_habitant_5.php?id=$id_habitation");
 ?>

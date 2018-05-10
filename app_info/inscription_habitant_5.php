@@ -2,6 +2,10 @@
 session_start();
 ?>
 
+<?php
+$id_habitation = $_GET['id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,7 +96,6 @@ session_start();
             $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
             $req->execute(array($id_user));
 
-            $id_habitation;
             while ($donnees = $req->fetch())
             {
                 $id_habitation=$donnees['id'];
@@ -101,7 +104,6 @@ session_start();
             $req = $bdd->prepare('SELECT type, nom, surface FROM pieces WHERE id_habitation= ? ');
             $req->execute(array($id_habitation));
 
-            $id_habitation;
             while ($donnees = $req->fetch())
             {
                 echo "<p>".$donnees['nom']. " (".$donnees['type']. ") de ".$donnees['surface']."m2<br/></p>";

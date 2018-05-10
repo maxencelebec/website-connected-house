@@ -78,6 +78,7 @@ catch(Exception $e)
                             while ($donnees = $req->fetch())
                             {
                                 $id_habitation = $donnees['id'];
+
                             }
 
                             ?>
