@@ -88,7 +88,7 @@
 
 
 			  <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
-			<a href="inscription_habitant_5.php" class="boutonModif"> Modifier </a>
+			<a href="inscription_habitant_5.php?id=<?php echo $id_habitation; ?>" class="boutonModif"> Modifier </a>
             
 
             <div class= "taille">
