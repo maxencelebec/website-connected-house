@@ -8,23 +8,20 @@
 </head>
 
 <body class="fond">
+
+	<!-- Header sans les icones -->
 	<div class="header">
 		<div class="virifocus"></div>
 	</div>
 	
 	<div class="Main">
-
-		<form class="infos" action="?" method="POST">
-
+		<form class="infos" action="mdp_oublie_post.php" method="post">
 			<div class="formulaire">
 				<div class="titre"><h1>Réinitialisez votre mot de passe</h1></div>
 				<div>Adresse Mail :</div>
-				<input type="text" id="mail" style="text-align: center"/>
-			</div>
-			
-			<input class="valider" type="submit" value="Valider">
-			<a class="lien"  href="change_mdp.php"> Debug </a>
-
+				<input type="text" name="mail" style="text-align: center"/>
+			</div>		
+			<input class="valider" type="submit" value="Valider" name="valider">
 		</form>
 	</div>
 	
