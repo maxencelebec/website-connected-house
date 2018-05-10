@@ -27,7 +27,26 @@ $_SESSION["id_habitation"]=$_GET['id'];
           <div class="main1">
 			<div class="photo_nom">
 				<div class="photomaison"></div>
-				<div class="nommaison">Casa de Papel</div>
+				<div class="nommaison">
+                    <?php
+                         try
+                        {
+                            $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                        }
+                        catch(Exception $e)
+                        {
+                            die('Erreur : '.$e->getMessage());
+                        }
+
+                        $req = $bdd->prepare('SELECT nom FROM habitation WHERE id=?');
+                        $req->execute(array($_GET['id']));
+                        while ($donnees = $req->fetch())
+                        {
+                            echo $donnees["nom"];
+                        }
+                    ?>
+
+                </div>
 			</div>
 			<div class="cadre_info_fixe">
 				<div class="home_mode_titre">Home Mode</div>
@@ -51,14 +70,6 @@ $_SESSION["id_habitation"]=$_GET['id'];
 				<div class="utilisateur">
                             <?php
 
-                                    try
-                                    {
-                                        $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-                                    }
-                                    catch(Exception $e)
-                                    {
-                                            die('Erreur : '.$e->getMessage());
-                                    }
                                     $req = $bdd->prepare('SELECT name,firstname FROM users WHERE mail=?');
                                     $req->execute(array($_SESSION["mail"]));
                                     while ($donnees = $req->fetch())

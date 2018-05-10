@@ -5,7 +5,7 @@
 <?php
 function ajout_capteur($capteur_actionneur,$id)
 {
-	if ($capteur_actionneur=="luminosité")
+	if ($capteur_actionneur=="luminosite")
 	{
 		?>
 			<div class="capteur">Luminosité <br/> 220 Lux </br>
@@ -58,7 +58,7 @@ function ajout_capteur($capteur_actionneur,$id)
 			</div>
 		<?php
 	}
-	elseif ($capteur_actionneur=="humidité")
+	elseif ($capteur_actionneur=="humidite")
 	{
 		?>
 			<div class="capteur">Humidité <br/> 24% </br> 

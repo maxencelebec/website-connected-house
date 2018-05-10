@@ -387,14 +387,14 @@ a{
     outline: none;
     padding: 10px;
     border: #2cc872 solid 3px;
-    transition: 0.3s;
+    transition: 0.2s;
+    margin-left: 5vw;
 }
 .ajouterpiece:hover{
-    transform:scale(1.05);
-    border: #2cc872 solid 5px;
+    transform:scale(1.04);
 }
 .ajouterpiece:active{
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .boutton2{
