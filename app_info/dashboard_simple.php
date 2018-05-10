@@ -1,5 +1,15 @@
 <?php
+    try
+    {
+        $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+    }
+    catch(Exception $e)
+    {
+        die('Erreur : '.$e->getMessage());
+    }
+
     session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +36,30 @@
                         <div class="maison_1">
                             <div class="case2211"></div>
                             <div class="maison_conso">
-                                <div class="maison">Maison : Casa de papel</div>
+                                <div class="maison">
+
+                                    <?php
+
+                                    $req = $bdd->prepare('SELECT name,firstname,id FROM users WHERE mail=?');
+                                    $req->execute(array($_SESSION["mail"]));
+                                    while ($donnees = $req->fetch())
+                                    {
+                                        $id_user = $donnees['id'];
+                                    }
+                                    ?>
+
+                                    <?php
+                                    $req = $bdd->prepare('SELECT nom FROM habitation WHERE id_user= ? ');
+                                    $req->execute(array($id_user));
+
+                                    while ($donnees = $req->fetch())
+                                    {
+                                    $nom = $donnees['nom'];
+                                    echo "Maison : $nom";
+                                    }
+                                    ?>
+
+                                </div>
                                     <div class="chartContainer"></div>
                             </div>
                             <div class="case2213"></div>
@@ -50,18 +83,12 @@
                                 <div class="qui_autresoptions">
                                     <div class="quiestalamaison">Qui est à la maison ? </br></br>
                                             <?php
-                                                try
-                                                {
-                                                    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-                                                }
-                                                catch(Exception $e)
-                                                {
-                                                        die('Erreur : '.$e->getMessage());
-                                                }
-                                                $req = $bdd->prepare('SELECT name,firstname FROM users WHERE mail=?');
+
+                                                $req = $bdd->prepare('SELECT name,firstname,id FROM users WHERE mail=?');
                                                 $req->execute(array($_SESSION["mail"]));
                                                 while ($donnees = $req->fetch())
                                                 {
+
                                                     echo "<p style='color: #2cc872'>".$donnees["firstname"]." ".$donnees["name"]."</p>";
                                                 }
                                             ?>
