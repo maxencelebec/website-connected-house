@@ -32,8 +32,8 @@
       <file leaf-file-name="modification_piece.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/modification_piece.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="139" column="27" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
+            <state relative-caret-position="-1237">
+              <caret line="97" column="18" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
               <folding>
                 <element signature="e#6230#6236#0#HTML" expanded="true" />
                 <element signature="e#6236#6242#0#HTML" expanded="true" />
@@ -47,8 +47,8 @@
       <file leaf-file-name="modification_piece.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_info/modification_piece.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="194" column="13" selection-start-line="194" selection-start-column="13" selection-end-line="194" selection-end-column="13" />
+            <state relative-caret-position="456">
+              <caret line="146" column="16" lean-forward="true" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -110,8 +110,8 @@
         <option value="$PROJECT_DIR$/app_info/ajout_capteur.php" />
         <option value="$PROJECT_DIR$/app_info/ajout_piece.css" />
         <option value="$PROJECT_DIR$/app_info/ajout_piece.php" />
-        <option value="$PROJECT_DIR$/app_info/modification_piece.php" />
         <option value="$PROJECT_DIR$/app_info/modification_piece.css" />
+        <option value="$PROJECT_DIR$/app_info/modification_piece.php" />
       </list>
     </option>
   </component>
@@ -189,12 +189,12 @@
       <workItem from="1525862969297" duration="7544000" />
       <workItem from="1525890167384" duration="650000" />
       <workItem from="1525943462884" duration="32000" />
-      <workItem from="1525947369794" duration="3716000" />
+      <workItem from="1525947369794" duration="4821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16767000" />
+    <option name="totallyTimeSpent" value="17872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -573,8 +573,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/modification_piece.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="139" column="27" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
+        <state relative-caret-position="-1237">
+          <caret line="97" column="18" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
           <folding>
             <element signature="e#6230#6236#0#HTML" expanded="true" />
             <element signature="e#6236#6242#0#HTML" expanded="true" />
@@ -586,8 +586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/modification_piece.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="194" column="13" selection-start-line="194" selection-start-column="13" selection-end-line="194" selection-end-column="13" />
+        <state relative-caret-position="456">
+          <caret line="146" column="16" lean-forward="true" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
         </state>
       </provider>
     </entry>

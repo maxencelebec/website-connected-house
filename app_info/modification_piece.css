@@ -145,6 +145,8 @@ a{
     font-size:25px;
     grid-column: 1;
     grid-row: 3;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 form{
@@ -191,6 +193,13 @@ form{
 }
 
 .image {
+    width: 50%;
+    height: 50%;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.image_main {
     width: 50%;
     height: 50%;
     grid-column: 3;

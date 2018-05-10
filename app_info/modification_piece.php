@@ -116,10 +116,6 @@
                 echo "Surface : $surface m^2";
                 ?>
             </div>
-
-
-		
-		</br>
 		
 		<div class="infoCapteurs">
 		    <?php
@@ -132,10 +128,6 @@
                 echo ' Capteurs actifs : ' . $nbCapteursActifs;
 		    ?>
 		</div>
-
-        <div class="image_main"><img class="image" src="image/<?php echo"$piece"?>.jpg"/></div>
-		
-		</br>
 		
 		<table class="table" border="0" width="40%" cellpadding="20">
 		    <?php
@@ -192,7 +184,10 @@
 					</tr>
 			<?php
 			    }
-			?>		    
+			?>
+
+            <div class="image_main"><img class="image" src="image/<?php echo"$piece"?>.jpg"/></div>
+
 		</table>
 
                 <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp; </span> </br>
