@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 10 mai 2018 à 15:17
+-- Généré le :  jeu. 10 mai 2018 à 17:10
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `mode` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `habitation`
@@ -95,7 +95,16 @@ INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type
 (5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 300, 0, 25),
 (6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, NULL, 300, 0, 26),
 (7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 0, 27),
-(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, NULL, 27);
+(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, NULL, 27),
+(9, 'Italie', 'Venise', 29930, '23 rue de Paradis', NULL, 'Villa', 3940, NULL, 27),
+(10, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison Test', 2042, NULL, 28),
+(11, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(12, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(13, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(14, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(15, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29);
 
 -- --------------------------------------------------------
 
@@ -112,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `pieces` (
   `id_user` int(20) NOT NULL,
   `id_habitation` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `pieces`
@@ -127,7 +136,16 @@ INSERT INTO `pieces` (`id`, `type`, `nom`, `surface`, `id_user`, `id_habitation`
 (37, 'cuisine', 'Cocina', 20, 27, 7),
 (38, 'chambre', 'Chambre 1', 23, 27, 7),
 (39, 'salon', 'Saloon', 45, 27, 7),
-(40, 'grenier', 'test', 12, 27, 7);
+(40, 'grenier', 'test', 12, 27, 7),
+(41, 'salon', 'Grand Salon', 345, 27, 9),
+(42, 'entree', 'Entreee', 23, 27, 9),
+(43, 'cuisine', 'Cuisina', 23, 28, 11),
+(44, 'salon', 'saloooon', 22, 28, 13),
+(45, 'entree', 'zeojf', 23, 28, 14),
+(46, 'entree', 're', 34, 28, 16),
+(47, 'salon', 'grezdfz', 23, 28, 16),
+(48, 'toilettes', 'fdfz', 43, 28, 16),
+(49, 'chambre', 'C1', 34, 29, 17);
 
 -- --------------------------------------------------------
 
@@ -173,7 +191,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone_number_portable` int(20) DEFAULT NULL,
   `type` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
@@ -185,7 +203,9 @@ INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `
 (19, 'maxence.lbc@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 101010101, 101010101, NULL),
 (22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, NULL),
 (26, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101010, NULL),
-(27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL);
+(27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL),
+(28, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL),
+(29, 'tlincoln@isep.fr', '5ed25af7b1ed23fb00122e13d7f74c4d8262acd8', 'Lincoln', 'Thierry', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
