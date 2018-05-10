@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-a{
-    text-decoration:none;
-    color:white;
+.help_lien{
+	color:black;
+	text-decoration: none;
 }
 
 body
@@ -23,7 +23,8 @@ body
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
     transition: 0.5s;
-    color: white;
+    
+  
 }
 
 .help_lien{
@@ -52,6 +53,7 @@ body
 }
 
 .option2 {
+	
     grid-row: 2;
 }
 
@@ -69,6 +71,7 @@ body
 }
 
 .option1_text {
+	color:#000000 !important;
 	
     font-size: 20px;
     margin-top: 3%;
@@ -83,8 +86,11 @@ body
 }
 
 .option3_text {
+	color: #000; /* for browsers that don't support 'inherit' as a color value */
+    
 	
     font-size: 20px;
     margin-top: 3%;
     grid-row:3;
+    
 }
