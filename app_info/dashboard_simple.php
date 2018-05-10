@@ -53,7 +53,7 @@
                     <?php
                         include "dashboard_simple_ajouter.php";
                     ?>
-                    <br>
+                    
                 </div>
 
                 <?php

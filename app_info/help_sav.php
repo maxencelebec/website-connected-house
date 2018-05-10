@@ -13,7 +13,7 @@ mysqli_select_db($link, "virifocus"); // select the database
 
 </head>
 
-<?php include("help_sav_val.php");?>
+
 
 <body class="help_sav">
 
@@ -32,21 +32,28 @@ mysqli_select_db($link, "virifocus"); // select the database
 	</div>
 	<div class="containersav">
 		
-		<form id="ticketsav" method="post" action=<?php $_SERVER['PHP_SELF']?>>
+		<form id="ticketsav" action="help_sav_post" method="post" >
 
 
 			<label for="maison">Maison</label> <select id="maison" name="maison">
 				<option value="">Sélectionner...</option>
-				<option value="Casa de Papel">Casa de Papel</option>
-				<option value="Maison Blanche">Maison Blanche</option>
-				<option value="Trouville en Seine">Trouville en Seine</option>
+				
+				 <?php
+        $res = mysqli_query($link, "select * from habitation");
+        while ($row = mysqli_fetch_array($res)) {
+            ?>
+            <option><?php echo $row["adresse"];?></option>
+            <?php
+        }
+        
+        ?>
 			</select> 
 			
 			<label for="device">Type de matériel défectieux</label> <select
 				id="device" name="device">
 				<option value="">Sélectionner...</option>
-				<option value="Patrick">CeMac</option>
-				<option value="Bob">Capteur</option>
+				<option value="">CeMac</option>
+				<option value="">Capteur</option>
 				<option id="pannegene" value="Patricia">Panne Généralisée</option>
 			</select>
 
@@ -55,10 +62,10 @@ mysqli_select_db($link, "virifocus"); // select the database
 				name="capteur">
 				<option value="">Sélectionner...</option>
           <?php
-        $res = mysqli_query($link, "select * from capteur");
+        $res = mysqli_query($link, "select * from capteurs");
         while ($row = mysqli_fetch_array($res)) {
             ?>
-            <option><?php echo $row["Capteur 1"];?></option>
+            <option><?php echo $row["nom"];?></option>
             <?php
         }
         
@@ -70,6 +77,7 @@ mysqli_select_db($link, "virifocus"); // select the database
 			<textarea id="msg" name="msg" placeholder="Dites nous tout..."></textarea>
 
 			<input id="submit" type="submit" value="Envoyer">
+			
 
 		</form>
 	</div>

@@ -10,10 +10,15 @@ body
 
 #site{
     display: grid;
-    grid-template-columns: 2fr auto;
+    grid-template-columns:2fr 26fr;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
+    grid-template-rows:100vh;
     color: white;
+    
+}
+.main{
+	overflow:auto;
 }
 
 a{
@@ -35,6 +40,7 @@ a{
     grid-auto-rows: 10px;
 }
 .maison_1{
+	
     background-color: #333333;
     grid-row: 2/48;
     display: grid;
