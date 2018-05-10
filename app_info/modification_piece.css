@@ -63,10 +63,7 @@ a{
     width:auto;
     color : black;
     font-family: Segoe UI Light, Georgia;
-    grid-template-columns: 300px auto auto;
-    grid-template-rows: auto auto auto auto;
-    grid-auto-rows: 196px;
-    grid-column-gap: 30px;
+    grid-column-gap: 1vw;
 }
 
 .boutonModif{
@@ -102,31 +99,19 @@ a{
     background-color:#2CC872;
     color: white;
     border-radius: 2px;
+    height: 9vh;
     padding: 1vw;
     font-size: 2vw;
     width: 25vw;
     transition: 0.1s;
     grid-column: 3;
-    grid-row: 1;
-    justify-content: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    grid-row: 2;
 }
 
 .boutonAjout:hover{
     transform: scale(1.04);
 }
 
-
-.ON{
-    color:green;
-    font-weight:bold;
-}
-
-.OFF{
-    color:red;
-    font-weight:bold;
-}
 
 .ajout{
     margin-left:20px;
@@ -137,19 +122,10 @@ a{
     margin-bottom: auto;
 }
 
-form{
-    display:inline;
-}
-
-.nouvcapt {
-    margin-left:20px;
-    grid-column: 1;
-    grid-row: 4;
-}
 
 .nommage {
-    grid-column: 2;
-    grid-row: 4;
+    grid-column: 3;
+    grid-row: 2;
 }
 
 .idcapteur {
@@ -171,7 +147,7 @@ form{
 }
 
 .taille{
-    font-size:30px;
+    font-size:20px;
     margin-left:20px;
     grid-column: 1;
     grid-row: 2;
@@ -184,7 +160,7 @@ form{
     width: 27vw;
     height: 15vw;
     grid-column: 3;
-    grid-row: 2;
+    grid-row: 1;
 }
 
 .image_main {
@@ -195,13 +171,11 @@ form{
 }
 
 .infoCapteurs{
-    margin-left:20px;
-    font-size:25px;
     grid-column: 2;
     grid-row: 2;
 }
 
 .table {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 2;
 }

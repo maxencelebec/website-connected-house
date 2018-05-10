@@ -6,9 +6,7 @@ body
 
 }
 
-.main {
-    overflow: auto;
-}
+
 
 #site{
     display: grid;

@@ -96,7 +96,6 @@
 			  <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
 			<a href="inscription_habitant_5.php" class="boutonModif"> Modifier </a>
             
-            <a href="choix_piece.php" class="boutonAjout">Ajouter</a>
 
             <div class= "taille">
                 <?php
@@ -107,128 +106,58 @@
                 {
                     $surface = $donnees['surface'];
                 }
-                ?>
-
-                <?php
                 echo "Surface : $surface m2";
+                ?>
+                </br>
+                <?php
+                $nbCapteurs=3;
+                $nbCapteursActifs=2;
+                echo 'Nombre de capteurs : ' . $nbCapteurs;
+                ?>
+                </br>
+                <?php
+                echo ' Capteurs actifs : ' . $nbCapteursActifs;
                 ?>
             </div>
 		
 		<div class="infoCapteurs">
-		    <?php
-		        $nbCapteurs=3;
-			    $nbCapteursActifs=2;
-			    echo 'Nombre de capteurs : ' . $nbCapteurs;
-		    ?>
-		    </br>
-		    <?php
-                echo ' Capteurs actifs : ' . $nbCapteursActifs;
-		    ?>
+		    
 		</div>
 		
 		<table class="table" border="0" width="40%" cellpadding="20">
-		    <?php
-			    for($nbLignes = 1 ; $nbLignes <= $nbCapteurs ; $nbLignes++) {				
-			?>	
-			        <tr>                                       <!-- Le remplissage c'est du fake (c'est pour ça que c'est dégueulasse connard) -->
-					    <td>                                       <!-- Colonne1 DEBUT -->
-						    <?php
-							    if ($nbLignes=1) {
-							?>
-							        <div> Chauffage </div> </br>
-							<?php
-							    }
-							?>
-							<?php
-							    if ($nbLignes=2) {
-							?>
-							        <div> Lumière </div> </br>
-							<?php
-							    }
-							?>
-							<?php
-							    if ($nbLignes=3) {
-							?>
-							        <div> Volets </div> </br>
-							<?php
-							    }
-							?>                                    <!-- Colonne1 FIN -->
-						</td>
-						
-						<td>                                      <!-- Colonne2 DEBUT -->
-						    <?php
-							    if ($nbLignes=1) {
-							?>
-							        <div class="ON"> ON </div> </br>
-							<?php
-							    }
-							?>
-							<?php
-							    if ($nbLignes=2) {
-							?>
-							        <div class="ON"> ON </div> </br>
-							<?php
-							    }
-							?>
-							<?php
-							    if ($nbLignes=3) {
-							?>
-							        <div class="OFF"> OFF </div> </br>
-							<?php
-							    }
-							?>												
-						</td>                                     <!-- Colonne2 FIN -->
-					</tr>
-			<?php
-			    }
-			?>
-
-            <img class="image" src="image/<?php echo"$piece"?>.jpg"/>
+		    
 
 		</table>
+        <img class="image" src="image/<?php echo"$piece"?>.jpg"/>
 
-                <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp; </span> </br>
-
-                <form class="nouvcapt">
-                    <label for="Type de capteur"> Choisisser votre capteur </label>
+                <form action ="modification_piece_post.php?id=<?php echo $link; ?>" method="post" class="nommage">
+                    <br/>
+                    <div> Choisisser votre capteur
                     <select name="Type de capteur">
-                        <option value="feu"> Feu </option>
-                        <option value="eau"> Eau </option>
-                        <option value="plante"> Plante </option>
-                        <option value="sol"> Sol </option>
-                        <option value="elec"> Electrique </option>
-                        <option value="normal"> Normal </option>
-                        <option value="combat"> Combat </option>
-                        <option value="glace"> Glace </option>
-                        <option value="roche"> Roche </option>
-                        <option value="psy"> Psy </option>
-                        <option value="spectre"> Spectre </option>
-                        <option value="tenebre"> Ténèbre </option>
-                        <option value="poison"> Poison </option>
-                        <option value="insecte"> Insecte </option>
-                        <option value="vol"> Vol </option>
-                        <option value="acier"> Acier </option>
-                        <option value="dragon"> Dragon </option>
-                        <option value="fee"> Fée </option>
-                    </select>
-                </form>
-
-
-                                      <!-- Je sais c'est dégueulasse -->
-
-                <form class="nommage">
-                    Nommer votre capteur <input type="text" name="nomCapteur" size="25" maxlength="15" style="text-align: center" />
-                </form>
-
-                <span> &nbsp;&nbsp;&nbsp;&nbsp; </span>
-
-                <form class="idcapteur">
-                    Entrer l'ID du capteur <input type="text" name="IDcapteur" size="25" maxlength="20" style="text-align: center" />
+                        <option value="temperature"> Température </option>
+                        <option value="luminosite"> Luminosité </option>
+                        <option value="presence"> Présence </option>
+                        <option value="porte"> Porte </option>
+                        <option value="humidite"> Humidité </option>
+                        <option value="fenetre"> Fenêtre </option>
+                        <option value="sonore"> Sonore </option>
+                    </select></div>
+                    <br/>
+                    <div>Nommer votre capteur
+                    <input type="text" name="nom" size="25" maxlength="15" style="text-align: center" /></div>
+                    <br/>
+                    <div>Entrer l'ID du capteur
+                    <input class="idcapteur" type="text" name="IDcapteur" size="25" maxlength="20" style="text-align: center" /></div> 
+                    <br/>
+                    <input type="submit" class="boutonAjout" name="valider" value="Ajouter"/>
                 </form>
 
         </div>
 			
     </div>
+    <?php
+        include "footer.php";
+    ?>
 	
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="choix_piece.js"></script>
