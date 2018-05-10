@@ -103,25 +103,37 @@
                 echo "Surface : $surface m2";
                 ?>
                 </br>
+
                 <?php
-                $nbCapteurs=3;
-                $nbCapteursActifs=2;
-                echo 'Nombre de capteurs : ' . $nbCapteurs;
+
+                    $req = $bdd->prepare('SELECT * FROM capteurs WHERE id_piece = ? ');
+                    $req->execute(array($_GET['id']));
+
+                    $counter=0;  
+                    while ($donnees = $req->fetch())
+                    {
+                        $counter++;
+                    }
+
+                    echo 'Nombre de capteurs : ' . $counter;
                 ?>
+
                 </br>
                 <?php
-                echo ' Capteurs actifs : ' . $nbCapteursActifs;
+                    $nbCapteursActifs=2;
+                    echo ' Capteurs actifs : ' ;
                 ?>
             </div>
 		
 		<div class="infoCapteurs">
+            <div class="liste">Liste des capteurs : </div>
             <?php
 
-            $req = $bdd->prepare('SELECT type FROM capteurs WHERE id_piece= ? ');
+            $req = $bdd->prepare('SELECT type, nom FROM capteurs WHERE id_piece= ? ');
             $req->execute(array($_GET['id']));
             while ($donnees = $req->fetch())
             {
-                echo $donnees['type']."<br/>";
+                echo "- ".$donnees['nom']." (type : ".$donnees['type'].")"."<br/>";
             }
             ?>
 		</div>    

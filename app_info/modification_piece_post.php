@@ -19,11 +19,11 @@
 	    $id_user=$donnees['id'];
 	}
 
-	$req = $bdd->prepare('INSERT INTO capteurs (timestam, id_user, id_habitation, id_piece, id_capteur, type, nom, etat, valeur) VALUES (NULL, ?, ?, ?, ?, ?, ?, NULL, NULL)');
-	$req->execute(array($id_user, $_GET['id2'], $_GET['id'], $_POST['IDcapteur'], $_POST['type'], $_POST['nom']));
+	$req = $bdd->prepare('INSERT INTO capteurs (timestamp, id_user, id_habitation, id_piece, id_capteur, type, nom, etat, valeur) VALUES (NULL, ?, ?, ?, ?, ?, ?, NULL, NULL)');
+	$req->execute(array($id_user, $_SESSION['id_habitation'], $_GET['id'], $_POST['IDcapteur'], $_POST['type'], $_POST['nom']));
 
-	echo $_GET['id']. " ".$_GET['id2']. " ".$id_user. " ".$_POST['IDcapteur']." ".$_POST['type']." ".$_POST['nom'];
-
+	$temp = $_GET['id'];
+	$dac = $_SESSION['id_habitation'];
 	// Redirection du visiteur vers la page suivante
-	//header('Location: inscription_habitant_5.php');
+	header("Location: modification_piece.php?id=$temp&id2=$dac");
 ?>

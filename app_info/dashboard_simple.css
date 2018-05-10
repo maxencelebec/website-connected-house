@@ -10,7 +10,7 @@ body
 
 #site{
     display: grid;
-    grid-template-columns:2fr 26fr;
+    grid-template-columns:2fr 28fr;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
     grid-template-rows:100vh;

@@ -131,7 +131,7 @@ $_SESSION["id_habitation"]=$_GET['id'];
                         ?>
                         
                         <div class="boutton1">
-                            <a href = "inscription_habitant_5.php" class="ajouterpiece"> + ajouter pièce </a>
+                            <a href = "inscription_habitant_5.php?id=<?php echo $_SESSION["id_habitation"]; ?>" class="ajouterpiece"> + ajouter pièce </a>
                             <a href = "choix_piece.php?id=<?php echo $id_habitation; ?>" class="ajouterpiece"> modifier pièce </a>
                         </div>
                         
