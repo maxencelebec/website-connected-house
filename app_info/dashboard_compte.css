@@ -8,8 +8,7 @@ body
 #site{
     display: grid;
     grid-template-columns: 2fr 28fr;	
-    grid-auto-rows: 196px;
-	grid-gap: auto 20px;
+    grid-templat-rows: 100vh;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
 }
