@@ -45,6 +45,7 @@
     background-size: cover;
     margin-bottom:5%;
     background-position: center;
+    text-decoration:none;
     color:white;
 }
 
@@ -55,7 +56,8 @@
     background-size:100%;
     background-repeat:no-repeat;
     background-position:center;
-    justify-self: end
+    text-decoration:none;
+    justify-self: end;
     color:white;
 }
 .compte_lien{
@@ -64,7 +66,8 @@
     background-size:100%;
     background-repeat:no-repeat;
     background-position:center;
-    justify-self: end
+    text-decoration:none;
+    justify-self: end;
     color:white;
 }
 .parametres_lien{
@@ -73,7 +76,8 @@
     background-size:100%;
     background-repeat:no-repeat;
     background-position:center;
-    justify-self: end
+    text-decoration:none;
+    justify-self: end;
     color:white;
 }
 .aide_lien{
@@ -82,7 +86,8 @@
     background-size:100%;
     background-repeat:no-repeat;
     background-position:center;
-    justify-self: end
+    text-decoration:none;
+    justify-self: end;
     color:white;
 }
 .home:hover{

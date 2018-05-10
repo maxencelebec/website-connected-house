@@ -30,9 +30,9 @@
 	            <div class="option3"><a class="lien" href="help_sav.php">
 	                <img class="option_image" src="image/SAV.png"></a></div>
 
-	            <div class="option1_text"><a class="lien" href="help_faq.php">Foire aux questions</a></div>
-	            <div class="option2_text"><a class="lien" href="help_msg.php">Envoyer un message</a></div>
-	            <div class="option3_text"><a class="lien" href="help_sav.php">Signaler un problème <br/> technique</a></div>
+	            <div class="option1_text"><a class="help_lien" href="help_faq.php">Foire aux questions</a></div>
+	            <div class="option2_text"><a class="help_lien" href="help_msg.php">Envoyer un message</a></div>
+	            <div class="option3_text"><a class="help_lien" href="help_sav.php">Signaler un problème <br/> technique</a></div>
 			
 			</div>
 		

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 09 mai 2018 à 12:50
+-- Généré le :  jeu. 10 mai 2018 à 13:18
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -31,6 +31,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `capteurs`;
 CREATE TABLE IF NOT EXISTS `capteurs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `timestamp` datetime(6) DEFAULT NULL,
   `id_user` int(10) NOT NULL,
   `id_habitation` int(10) NOT NULL,
   `id_piece` int(10) NOT NULL,
@@ -40,15 +41,26 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
   `id_capteur` varchar(30) NOT NULL,
   `valeur` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `capteurs`
 --
 
-INSERT INTO `capteurs` (`id`, `id_user`, `id_habitation`, `id_piece`, `type`, `nom`, `etat`, `id_capteur`, `valeur`) VALUES
-(3, 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 9000),
-(2, 27, 7, 39, 'humidité', 'Humidité 1', 0, 'XXXX', 0);
+INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece`, `type`, `nom`, `etat`, `id_capteur`, `valeur`) VALUES
+(3, NULL, 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 9000),
+(2, NULL, 27, 7, 39, 'humidité', 'Humidité 1', 0, 'XXXX', 0),
+(16, '2018-05-10 15:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 24),
+(15, '2018-05-10 14:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 24),
+(14, '2018-05-10 13:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
+(7, '2018-05-10 06:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
+(8, '2018-05-10 07:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
+(9, '2018-05-10 08:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
+(10, '2018-05-10 09:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 21),
+(11, '2018-05-10 10:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
+(12, '2018-05-10 11:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
+(13, '2018-05-10 12:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
+(17, '2018-05-10 16:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 24);
 
 -- --------------------------------------------------------
 
@@ -65,6 +77,7 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `adresse` text,
   `type` varchar(20) DEFAULT NULL,
   `surface` int(10) DEFAULT NULL,
+  `mode` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
@@ -73,14 +86,14 @@ CREATE TABLE IF NOT EXISTS `habitation` (
 -- Déchargement des données de la table `habitation`
 --
 
-INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `surface`, `id_user`) VALUES
-(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, 200, 23),
-(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, 200, 23),
-(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 2000, 24),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, 24),
-(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 300, 25),
-(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, 300, 26),
-(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 20000, 27);
+INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `surface`, `mode`, `id_user`) VALUES
+(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, 200, 0, 23),
+(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, 200, 0, 23),
+(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 2000, 0, 24),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24),
+(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 300, 0, 25),
+(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, 300, 0, 26),
+(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 20000, 0, 27);
 
 -- --------------------------------------------------------
 
@@ -97,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `pieces` (
   `id_user` int(20) NOT NULL,
   `id_habitation` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `pieces`
@@ -111,7 +124,8 @@ INSERT INTO `pieces` (`id`, `type`, `nom`, `surface`, `id_user`, `id_habitation`
 (36, 'chambre', 'Chambre de Max', 10, 26, 6),
 (37, 'cuisine', 'Cocina', 20, 27, 7),
 (38, 'chambre', 'Chambre 1', 23, 27, 7),
-(39, 'salon', 'Saloon', 45, 27, 7);
+(39, 'salon', 'Saloon', 45, 27, 7),
+(40, 'grenier', 'test', 12, 27, 7);
 
 -- --------------------------------------------------------
 

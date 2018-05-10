@@ -32,7 +32,10 @@
                             <div class="case2213"></div>
                             <div class="donnees">
                                 <div class="temp_mode_secu">
-                                    <div class="temperature">Température</div>
+                                    <div class="temperature">
+                                        Température
+
+                                    </div>
                                     <div class="modemaison">Mode Maison</div>
                                     <div class="securite">Sécurité</div>
                                 </div>

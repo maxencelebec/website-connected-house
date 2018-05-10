@@ -6,7 +6,7 @@ a{
 }
 
 body
-{
+{	
     padding:0;
     margin:0;
     width:auto;
@@ -20,14 +20,13 @@ body
 	
     display: grid;
     grid-template-columns: 2fr 28fr;
-
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
     transition: 0.5s;
     color: white;
 }
 
-.lien{
+.help_lien{
     text-decoration:none;
 }
 
@@ -39,8 +38,8 @@ body
     text-align: center;
 }
 .titre_help {
-	margin-top:10%;
-    grid-column: 1/4;
+	
+    grid-column:1/4;
     color:black;
     grid-row: 1;
     font-size: 30px;
