@@ -26,8 +26,7 @@ session_start();
 	$req = $bdd->prepare('INSERT INTO pieces (type, nom, surface, id_user, id_habitation) VALUES (?, ?, ?, ?, ?)');
 	$req->execute(array($_POST["type"], $_POST["nom"],$_POST["surface"],$id_user, $_SESSION["id_habitation"]));
 
-
-
+	$temp =  $_SESSION["id_habitation"];
 	// Redirection du visiteur vers la page suivante
-	header('Location: inscription_habitant_5.php?id= $_SESSION["id_habitation"]');
+	header("Location: inscription_habitant_5.php?id=$temp");
 ?>
