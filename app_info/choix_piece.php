@@ -51,23 +51,23 @@
                                 $id_habitation=$donnees['id'];
                             }
 
-                            $req = $bdd->prepare('SELECT type,id FROM pieces WHERE id_habitation= ? ');
+                            $req = $bdd->prepare('SELECT type, nom, id FROM pieces WHERE id_habitation= ? ');
                             $req->execute(array($id_habitation));
 
                             while ($donnees = $req->fetch())
                             {
-                                $piece = $donnees['type'];
+                                $piece = $donnees['nom'];
                                 $id = $donnees['id'];
                                 $_SESSION["id_piece_choix"]=$id;
 
 
-                                ?> <a href = "modification_piece.php?id=<?php echo $id; ?>"  id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
+                                ?> <a href = "modification_piece.php?id=<?php echo $id; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
                                 <?php
                             }
                         ?>
-		</div>
 
-			
+		</div>
+        <div>salut</div>
 		<?php
 			include "footer.php";
 		?>

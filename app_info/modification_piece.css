@@ -1,101 +1,128 @@
-.corps{
-	display: grid;
+body
+{
     padding:0;
     margin:0;
     width:auto;
-    background-color : #333333;
-    color : white;
-    font-family: Segoe UI Light, Georgia;
-	grid-template-columns: 2fr 28fr;
-	grid-auto-rows: 196px;
 }
 
+#site{
+    display: grid;
+    grid-template-columns: 2fr 28fr;
+    grid-template-rows: auto auto;
+    grid-gap: auto 20px;
+    font-family: Segoe UI Light, Georgia;
+    text-decoration:none;
+}
+
+.deco{
+    text-decoration:none;
+    color:white;
+    margin-left:50%;
+}
+.deco_boutton{
+    font-size: 41px;
+}
+/* Actualisation header */
 .lien{
-	text-decoration:none;
+    text-decoration: none;
+    color: white;
+}
+a{
+    text-decoration:none;
     color:white;
 }
 
+.compte{
+    background-color: #486454;
+    border-left: #2cc872 solid 3px;
+}
+
+/* Menu du dashboard_compte*/
+.tab {
+    display: flex;
+    border: 1px solid #ccc;
+    background-color: #333333;
+    height: 50px;
+}
+
+.tab button {
+    background-color: inherit;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #486454;
+}
+
+.tablinks{
+    height: 50px;
+}
+
+.choix{
+    border-left:white 1px solid;
+}
+
+
+
+
 .centre{
-
-}
-
-.nom_piece{
-	font-size:75px;
-	font-weight:bold;
-}
-
-.taille{
-    font-size:30px;
-	margin-left:20px;
+    display: grid;
+    padding:0;
+    margin:0;
+    width:auto;
+    color : black;
+    font-family: Segoe UI Light, Georgia;
+    grid-template-columns: 300px auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-auto-rows: 196px;
+    grid-column-gap: 30px;
 }
 
 .boutonModif{
-	margin-left:200px;
+
     text-decoration:none;
     background-color: #34445c;
     border-radius: 15px;
     box-shadow: 2px 2px 10px #212122;
-	padding : 7px 15px 7px 15px;
+    padding : 7px 15px 7px 15px;
     font-size: 30px;
     text-align: center;
     color:#2cc872;
     border: #2cc872 solid 2px;
     transition: 0.1s;
+    height: 50px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .boutonModif:hover{
     transform: scale(1.12);
 }
 
-.image{
-	position:absolute;
-	top:50px;
-	left:680px;
-	width:32%;
-	height:40%;
-}
-
-.infoCapteurs{
-	margin-left:20px;
-	font-size:25px;
-}
-
-.ON{
-	color:green;
-	font-weight:bold;
-}
-
-.OFF{
-	color:red;
-	font-weight:bold;
-}
-
-.ajout{
-	margin-left:20px;
-	font-size:25px;
-}
-
-form{
-    display:inline;	
-}
-
-.nouvcapt {
-	margin-left:20px;
-	margin-top:100px;
-}
-
 .boutonAjout {
-	margin-left:10px;
     text-decoration:none;
     background-color: #34445c;
     border-radius: 15px;
     box-shadow: 2px 2px 10px #212122;
-	padding : 7px 15px 7px 15px;
+    padding : 7px 15px 7px 15px;
     font-size: 30px;
     text-align: center;
     color:#2cc872;
     border: #2cc872 solid 2px;
     transition: 0.1s;
+    height: 50px;
+    grid-column: 3;
+    grid-row: 1;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .boutonAjout:hover{
@@ -103,6 +130,90 @@ form{
 }
 
 
+.ON{
+    color:green;
+    font-weight:bold;
+}
 
+.OFF{
+    color:red;
+    font-weight:bold;
+}
 
+.ajout{
+    margin-left:20px;
+    font-size:25px;
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
+form{
+    display:inline;
+}
+
+.nouvcapt {
+    margin-left:20px;
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.nommage {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.idcapteur {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.lien{
+    text-decoration:none;
+    color:white;
+}
+
+.nom_piece{
+    margin-left:20px;
+    font-size:75px;
+    font-weight:bold;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.taille{
+    font-size:30px;
+    margin-left:20px;
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.image {
+    width: 50%;
+    height: 50%;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.image_main {
+    width: 50%;
+    height: 50%;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.infoCapteurs{
+    margin-left:20px;
+    font-size:25px;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.table {
+    grid-column: 2;
+    grid-row: 3;
+}

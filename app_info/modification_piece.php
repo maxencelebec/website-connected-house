@@ -9,7 +9,7 @@
 <head>
     <title>Virifocus</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="choix_piece.css"/>
+    <link rel="stylesheet" href="modification_piece.css"/>
     <link rel="icon" type="image/png" href="image/logo.png" />
 </head>
 
@@ -26,76 +26,83 @@
 		?>
 		
 		<div class="tab">  
-						<?php
+            <?php
 
-                            try
-                            {
-                                $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-                            }
-                            catch(Exception $e)
-                            {
-                                    die('Erreur : '.$e->getMessage());
-                            }
-                            $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
-                            $req->execute(array($_SESSION["mail"]));
+                try
+                {
+                    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+                }
+                catch(Exception $e)
+                {
+                        die('Erreur : '.$e->getMessage());
+                }
+                $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
+                $req->execute(array($_SESSION["mail"]));
 
-                            $id_user;
-                            while ($donnees = $req->fetch())
-                            {
-                                $id_user=$donnees['id'];
-                            }
+                $id_user;
+                while ($donnees = $req->fetch())
+                {
+                    $id_user=$donnees['id'];
+                }
 
-                            $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
-                            $req->execute(array($id_user));
+                $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
+                $req->execute(array($id_user));
 
-                            $id_habitation;
-                            while ($donnees = $req->fetch())
-                            {
-                                $id_habitation=$donnees['id'];
-                            }
+                $id_habitation;
+                while ($donnees = $req->fetch())
+                {
+                    $id_habitation=$donnees['id'];
+                }
 
-                            $req = $bdd->prepare('SELECT type,id FROM pieces WHERE id_habitation= ? ');
-                            $req->execute(array($id_habitation));
+                $req = $bdd->prepare('SELECT type, nom, id FROM pieces WHERE id_habitation= ? ');
+                $req->execute(array($id_habitation));
 
-                            while ($donnees = $req->fetch())
-                            {
-                                $piece = $donnees['type'];
-                                $id = $donnees['id'];
+                while ($donnees = $req->fetch())
+                {
+                    $piece = $donnees['nom'];
+                    $id = $donnees['id'];
 
-                                ?> <a href = "modification_piece.php?id=<?php echo $id; ?>"  id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
-                                <?php
-                            }
-                        ?>
+                    ?> <a href = "modification_piece.php?id=<?php echo $id; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
+                    <?php
+                }
+            ?>
 		</div>
 
 		
 		<div class="centre">
 	        </br>
-        <div class= "nom_piece">
+            <div class= "nom_piece">
 
-		    <?php
-            $req = $bdd->prepare('SELECT type FROM pieces WHERE id= ? ');
-            $req->execute(array($link));
+                <?php
+                $req = $bdd->prepare('SELECT type FROM pieces WHERE id= ? ');
+                $req->execute(array($link));
 
-            while ($donnees = $req->fetch())
-            {
-                $piece = $donnees['type'];
-            }
-		    ?>
+                while ($donnees = $req->fetch())
+                {
+                    $piece = $donnees['type'];
+                }
+                ?>
 
-		</div>
-
-        <div>
-            <?php
-                echo $piece;
-            ?>
-        </div>
+                <?php
+                    echo $piece;
+                ?>
+            </div>
 
 		
-		</br>
-		
-		<div class= "taille">
-		    <?php
+            </br>
+
+
+			
+			<div class="boutonModif">  <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
+			    <a href="inscription_habitant_5.php"> Modifier </a>
+			</div>
+
+            <div class="boutonAjout">
+                <a href="choix_piece.php">Ajouter</a>
+            </div>
+
+            <div class= "taille">
+                <?php
 
                 $req = $bdd->prepare('SELECT surface FROM pieces WHERE id= ? ');
                 $req->execute(array($link));
@@ -103,25 +110,12 @@
                 {
                     $surface = $donnees['surface'];
                 }
-		    ?>
+                ?>
 
-        </div>
-
-        <div>
-            <?php
-                echo $surface;
-            ?>
-        </div>
-			
-			<span class="boutonModif">                                           <!-- Bouton modifier, la page inscription piece est à faire (elle est dans les mockups) -->
-			    <a href="inscription_habitant_5.php"> Modifier </a>
-			</span>
-
-
-		
-		<img class="image" src="image/<?php echo"$piece"?>.jpg"/>
-		
-		</br>
+                <?php
+                echo "Surface : $surface m^2";
+                ?>
+            </div>
 		
 		<div class="infoCapteurs">
 		    <?php
@@ -135,9 +129,7 @@
 		    ?>
 		</div>
 		
-		</br>
-		
-		<table border="0" width="40%" cellpadding="20">
+		<table class="table" border="0" width="40%" cellpadding="20">
 		    <?php
 			    for($nbLignes = 1 ; $nbLignes <= $nbCapteurs ; $nbLignes++) {				
 			?>	
@@ -192,55 +184,52 @@
 					</tr>
 			<?php
 			    }
-			?>		    
+			?>
+
+            <div class="image_main"><img class="image" src="image/<?php echo"$piece"?>.jpg"/></div>
+
 		</table>
-		
-	    <div>
-		    <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp; </span> </br>
-			
-			<form class="nouvcapt">
-			    <label for="Type de capteur"> Choisisser votre capteur </label>
-				<select name="Type de capteur">
-				    <option value="feu"> Feu </option>
-					<option value="eau"> Eau </option>
-					<option value="plante"> Plante </option>
-					<option value="sol"> Sol </option>
-					<option value="elec"> Electrique </option>
-					<option value="normal"> Normal </option>
-					<option value="combat"> Combat </option>
-					<option value="glace"> Glace </option>
-					<option value="roche"> Roche </option>
-					<option value="psy"> Psy </option>
-					<option value="spectre"> Spectre </option>
-					<option value="tenebre"> Ténèbre </option>
-					<option value="poison"> Poison </option>
-					<option value="insecte"> Insecte </option>
-					<option value="vol"> Vol </option>
-					<option value="acier"> Acier </option>
-					<option value="dragon"> Dragon </option>
-					<option value="fee"> Fée </option>
-			    </select>
-			</form>
-			
-			<span> &nbsp;&nbsp;&nbsp;&nbsp; </span>                        <!-- Je sais c'est dégueulasse -->
-			
-			<form>
-			    Nommer votre capteur <input type="text" name="nomCapteur" size="25" maxlength="15" style="text-align: center" /> 
-			</form>
-			
-			<span> &nbsp;&nbsp;&nbsp;&nbsp; </span>
-			
-			<form>
-			    Entrer l'ID du capteur <input type="text" name="IDcapteur" size="25" maxlength="20" style="text-align: center" />
-			</form>
-			
-			<span class="boutonAjout">
-			    <a href="choix_piece.php">Ajouter</a>
-			</span>
-			
-		</div>
-		
-    </div>
+
+                <span class="ajout"> Ajouter un capteur :&nbsp;&nbsp;&nbsp; </span> </br>
+
+                <form class="nouvcapt">
+                    <label for="Type de capteur"> Choisisser votre capteur </label>
+                    <select name="Type de capteur">
+                        <option value="feu"> Feu </option>
+                        <option value="eau"> Eau </option>
+                        <option value="plante"> Plante </option>
+                        <option value="sol"> Sol </option>
+                        <option value="elec"> Electrique </option>
+                        <option value="normal"> Normal </option>
+                        <option value="combat"> Combat </option>
+                        <option value="glace"> Glace </option>
+                        <option value="roche"> Roche </option>
+                        <option value="psy"> Psy </option>
+                        <option value="spectre"> Spectre </option>
+                        <option value="tenebre"> Ténèbre </option>
+                        <option value="poison"> Poison </option>
+                        <option value="insecte"> Insecte </option>
+                        <option value="vol"> Vol </option>
+                        <option value="acier"> Acier </option>
+                        <option value="dragon"> Dragon </option>
+                        <option value="fee"> Fée </option>
+                    </select>
+                </form>
+
+
+                <span> &nbsp;&nbsp;&nbsp;&nbsp; </span>                        <!-- Je sais c'est dégueulasse -->
+
+                <form class="nommage">
+                    Nommer votre capteur <input type="text" name="nomCapteur" size="25" maxlength="15" style="text-align: center" />
+                </form>
+
+                <span> &nbsp;&nbsp;&nbsp;&nbsp; </span>
+
+                <form class="idcapteur">
+                    Entrer l'ID du capteur <input type="text" name="IDcapteur" size="25" maxlength="20" style="text-align: center" />
+                </form>
+
+        </div>
 			
     </div>
 	

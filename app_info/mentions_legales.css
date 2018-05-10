@@ -28,8 +28,14 @@ a{
 	margin-left:5px;
 }
 
-.lien {
+.lien2 {
 	text-decoration:none;
+	color:green;
+	text-decoration:underline green;
+}
+
+.lien2:hover {
+	font-weight:bold;
 }
 
 .mention_legale{
