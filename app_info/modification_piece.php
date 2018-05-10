@@ -24,6 +24,9 @@
 		<?php 
 			$link = $_GET['id'];
 		?>
+        <?php
+            $id_habitation = $_GET['id2'];
+        ?>
 		
 		<div class="tab">  
             <?php
@@ -45,15 +48,6 @@
                     $id_user=$donnees['id'];
                 }
 
-                $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
-                $req->execute(array($id_user));
-
-                $id_habitation;
-                while ($donnees = $req->fetch())
-                {
-                    $id_habitation=$donnees['id'];
-                }
-
                 $req = $bdd->prepare('SELECT type, nom, id FROM pieces WHERE id_habitation= ? ');
                 $req->execute(array($id_habitation));
 
@@ -62,7 +56,7 @@
                     $piece = $donnees['nom'];
                     $id = $donnees['id'];
 
-                    ?> <a href = "modification_piece.php?id=<?php echo $id; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
+                    ?> <a href = "modification_piece.php?id=<?php echo $id; ?>&id2=<?php echo $id_habitation; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
                     <?php
                 }
             ?>

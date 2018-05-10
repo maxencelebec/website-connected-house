@@ -72,10 +72,18 @@ catch(Exception $e)
 
                                 echo "<p style='color: #2cc872'>".$donnees["firstname"]." ".$donnees["name"]."</p>";
                             }
+
+                            $req = $bdd->prepare('SELECT id FROM habitation WHERE nom=?');
+                            $req->execute(array($nom_maison));
+                            while ($donnees = $req->fetch())
+                            {
+                                $id_habitation = $donnees['id'];
+                            }
+
                             ?>
                         </div>
                         <div class="autresoptions">
-                            <a class="lien2" href="dashboard_maison.php">
+                            <a class="lien2" href="dashboard_maison.php?id=<?php echo $id_habitation; ?>">
                                 <div class="autresoptions1">Autres Options<br>...</div>
                             </a>
                         </div>

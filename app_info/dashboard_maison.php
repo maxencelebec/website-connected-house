@@ -15,9 +15,13 @@ session_start();
 <body class="fond">
 	<div id="site">
                 
-                <?php
-                include "header.php";
-                ?>
+        <?php
+        include "header.php";
+        ?>
+
+        <?php
+        $id_habitation = $_GET['id'];
+        ?>
 
           <div class="main1">
 			<div class="photo_nom">
@@ -113,15 +117,6 @@ session_start();
                                 $id_user=$donnees['id'];
                             }
 
-                            $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
-                            $req->execute(array($id_user));
-
-                            $id_habitation;
-                            while ($donnees = $req->fetch())
-                            {
-                                $id_habitation=$donnees['id'];
-                            }
-
                             $req = $bdd->prepare('SELECT type, id FROM pieces WHERE id_habitation= ? ');
                             $req->execute(array($id_habitation));
 
@@ -136,7 +131,7 @@ session_start();
                         
                         <div class="boutton1">
                             <a href = "inscription_habitant_5.php" class="ajouterpiece"> + ajouter pièce </a>
-                            <a href = "choix_piece.php" class="ajouterpiece"> modifier pièce </a>
+                            <a href = "choix_piece.php?id=<?php echo $id_habitation; ?>" class="ajouterpiece"> modifier pièce </a>
                         </div>
                         
                         
