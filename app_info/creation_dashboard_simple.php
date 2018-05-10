@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="dashboard_simple.css"/>
+<link rel="stylesheet" href="création_dashboard_simple.css"/>
 
 <?php
 
@@ -19,9 +19,9 @@ catch(Exception $e)
 
 ?>
 
-<div id="site">
+<div>
 
-    <div class="main">
+    <div>
         <div class="case21"></div>
         <div class="informations">
             <div class="maison_1">

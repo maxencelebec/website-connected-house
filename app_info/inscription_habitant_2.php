@@ -51,7 +51,7 @@
             <input type="text" name="ville" maxlenght="255" style="text-align: center" required/>
             <div>Pays :</div>
             <input type="text" name="pays" maxlenght="255" style="text-align: center" required/>
-            <div>Numéro de téléhpone :</div>
+            <div>Numéro de téléphone :</div>
             <input type="text" name="numero_home" maxlenght="255" style="text-align: center" required />
             <div>Numéro de téléphone portable :</div>
             <input type="text" name="numero_portable" maxlenght="255" style="text-align: center" required/>

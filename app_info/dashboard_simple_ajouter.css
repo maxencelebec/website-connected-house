@@ -1,6 +1,6 @@
 .ajoutmaison{
     background-color: #333333;
-    grid-row: 50/58;
+    //grid-row: 50/58;
     display: grid;
     border-radius: 15px;
     justify-content: center;
