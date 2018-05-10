@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 10 mai 2018 à 12:54
+-- Généré le :  jeu. 10 mai 2018 à 13:06
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -31,6 +31,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `capteurs`;
 CREATE TABLE IF NOT EXISTS `capteurs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `timestamp` datetime(6) DEFAULT NULL,
   `id_user` int(10) NOT NULL,
   `id_habitation` int(10) NOT NULL,
   `id_piece` int(10) NOT NULL,
@@ -46,9 +47,9 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
 -- Déchargement des données de la table `capteurs`
 --
 
-INSERT INTO `capteurs` (`id`, `id_user`, `id_habitation`, `id_piece`, `type`, `nom`, `etat`, `id_capteur`, `valeur`) VALUES
-(3, 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 9000),
-(2, 27, 7, 39, 'humidité', 'Humidité 1', 0, 'XXXX', 0);
+INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece`, `type`, `nom`, `etat`, `id_capteur`, `valeur`) VALUES
+(3, NULL, 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 9000),
+(2, NULL, 27, 7, 39, 'humidité', 'Humidité 1', 0, 'XXXX', 0);
 
 -- --------------------------------------------------------
 
