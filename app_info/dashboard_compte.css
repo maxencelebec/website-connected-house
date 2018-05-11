@@ -8,11 +8,7 @@ body
 #site{
     display: grid;
     grid-template-columns: 2fr 28fr;	
-<<<<<<< HEAD
-    grid-auto-rows: 35vh;
-=======
-    grid-template-rows: 40vh;
->>>>>>> d7b4b6a8580fb1adf0bfab143a51d4f57a8bbede
+    grid-template-rows: 9vh 91vh;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
 }
@@ -41,6 +37,7 @@ body
 /* Menu du dashboard_compte*/
 .tab {
 	display: flex;
+	grid-row-start: 1;
     border: 1px solid #ccc;
     background-color: #333333;
 	overflow: hidden;
@@ -73,7 +70,6 @@ body
 	display: none;
 	grid-row-start: 2;
 	position: relative;
-	bottom: 160px;
 	color: black;
     height: 500px;
 	overflow: auto;
