@@ -56,7 +56,7 @@
                     $piece = $donnees['nom'];
                     $id = $donnees['id'];
 
-                    ?> <a href = "modification_piece.php?id2=<?php echo $id; ?>&id=<?php echo $_SESSION["id_habitation"]; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
+                    ?> <a href = "modification_piece.php?id=<?php echo $id; ?>&id2=<?php echo $_SESSION["id_habitation"]; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
                     <?php
                 }
             ?>
@@ -132,8 +132,7 @@
             $req->execute(array($_GET['id']));
             while ($donnees = $req->fetch())
             {
-                $capt = $donnees['id'];
-                ?> <a class = "suppr" href="modification_piece_delete_post.php?id=<?php echo $capt; ?>&id2=<?php echo $link; ?>>x </a> <?php
+
                 echo "- ".$donnees['nom']." (type : ".$donnees['type'].")"."<br/>";
             }
             ?>
