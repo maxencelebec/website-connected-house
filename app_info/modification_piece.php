@@ -94,16 +94,15 @@
             <div class= "taille">
                 <?php
 
-                $req = $bdd->prepare('SELECT surface FROM pieces WHERE id= ? ');
-                $req->execute(array($link));
-                while ($donnees = $req->fetch())
-                {
-                    $surface = $donnees['surface'];
-                }
-                echo "Surface : $surface m2";
+                    $req = $bdd->prepare('SELECT surface FROM pieces WHERE id= ? ');
+                    $req->execute(array($link));
+                    while ($donnees = $req->fetch())
+                    {
+                        $surface = $donnees['surface'];
+                    }
+                    echo "Surface : $surface m2";
                 ?>
                 </br>
-
                 <?php
 
                     $req = $bdd->prepare('SELECT * FROM capteurs WHERE id_piece = ? ');
@@ -129,10 +128,12 @@
             <div class="liste">Liste des capteurs : </div>
             <?php
 
-            $req = $bdd->prepare('SELECT type, nom FROM capteurs WHERE id_piece= ? ');
+            $req = $bdd->prepare('SELECT type, nom, id FROM capteurs WHERE id_piece= ? ');
             $req->execute(array($_GET['id']));
             while ($donnees = $req->fetch())
             {
+                $capt = $donnees['id'];
+                ?> <a class = "suppr" href="modification_piece_delete_post.php?id=<?php echo $capt; ?>">x </a> <?php
                 echo "- ".$donnees['nom']." (type : ".$donnees['type'].")"."<br/>";
             }
             ?>

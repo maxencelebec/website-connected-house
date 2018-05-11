@@ -183,3 +183,8 @@ a{
 .liste{
     font-size: 20px;
 }
+
+.suppr{
+    color:#2CC872;
+    padding-bottom: 2px;
+}

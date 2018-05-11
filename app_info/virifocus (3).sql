@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 10 mai 2018 à 17:10
+-- Généré le :  ven. 11 mai 2018 à 07:56
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -32,16 +32,16 @@ DROP TABLE IF EXISTS `capteurs`;
 CREATE TABLE IF NOT EXISTS `capteurs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `timestamp` datetime(6) DEFAULT NULL,
-  `id_user` int(10) NOT NULL,
-  `id_habitation` int(10) NOT NULL,
-  `id_piece` int(10) NOT NULL,
-  `type` varchar(30) NOT NULL,
-  `nom` varchar(20) NOT NULL,
-  `etat` int(10) NOT NULL,
-  `id_capteur` varchar(30) NOT NULL,
-  `valeur` int(10) NOT NULL,
+  `id_user` int(10) DEFAULT NULL,
+  `id_habitation` int(10) DEFAULT NULL,
+  `id_piece` int(10) DEFAULT NULL,
+  `type` varchar(30) DEFAULT NULL,
+  `nom` varchar(20) DEFAULT NULL,
+  `etat` int(10) DEFAULT NULL,
+  `id_capteur` varchar(30) DEFAULT NULL,
+  `valeur` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `capteurs`
@@ -56,11 +56,18 @@ INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece
 (7, '2018-05-10 06:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
 (8, '2018-05-10 07:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
 (9, '2018-05-10 08:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
-(10, '2018-05-10 09:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 21),
-(11, '2018-05-10 10:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
-(12, '2018-05-10 11:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
-(13, '2018-05-10 12:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
-(17, '2018-05-10 16:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 24);
+(33, NULL, 29, 11, 60, 'presence', 'ici', NULL, 'xxx', NULL),
+(32, NULL, 29, 11, 59, 'humidite', 'mouillé', NULL, 'xxx', NULL),
+(31, NULL, 29, 11, 60, 'humidite', 'eau', NULL, 'xxx', NULL),
+(30, NULL, 29, 11, 61, 'porte', 'door de dehors', NULL, 'xxx', NULL),
+(29, NULL, 29, 11, 60, 'temperature', 'chaleur', NULL, 'xxx', 22),
+(28, NULL, 29, 11, 60, 'luminosite', 'lumiere', NULL, 'ok', NULL),
+(27, NULL, 29, 11, 11, 'luminosite', 'salut', NULL, 'ok', NULL),
+(34, NULL, 29, 11, 60, 'porte', 'porte cave', NULL, 'xxx', NULL),
+(35, NULL, 27, 7, 39, 'humidite', 'coucou', NULL, 'xxx', NULL),
+(36, NULL, 27, 7, 63, 'luminosite', 'lum', NULL, 'xxx', NULL),
+(37, NULL, 29, 11, 61, 'humidite', 'mouillé', NULL, 'xxx', NULL),
+(38, NULL, 29, 11, 59, 'temperature', 'chaleur', NULL, 'xxx', NULL);
 
 -- --------------------------------------------------------
 
@@ -81,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `mode` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `habitation`
@@ -96,15 +103,10 @@ INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type
 (6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, NULL, 300, 0, 26),
 (7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 0, 27),
 (8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, NULL, 27),
-(9, 'Italie', 'Venise', 29930, '23 rue de Paradis', NULL, 'Villa', 3940, NULL, 27),
-(10, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison Test', 2042, NULL, 28),
-(11, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(12, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(13, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(14, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(15, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29);
+(9, 'France', 'Asnières-sur-Seine', 92600, '15 rue waldeck rousseau', NULL, 'home mi', 400, NULL, 28),
+(10, 'France', 'Asnières-sur-Seine', 92600, '12 rue waldeck rousseau', NULL, 'coccina', 300, NULL, 28),
+(11, 'France', 'Asnières-sur-Seine', 92600, '12 rue waldeck rousseau', NULL, 'pouloulou', 300, NULL, 29),
+(12, 'France', 'Asnières-sur-Seine', 92600, '12 rue waldeck rousseau', NULL, 'Normandie', 30, NULL, 29);
 
 -- --------------------------------------------------------
 
@@ -121,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `pieces` (
   `id_user` int(20) NOT NULL,
   `id_habitation` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `pieces`
@@ -136,16 +138,15 @@ INSERT INTO `pieces` (`id`, `type`, `nom`, `surface`, `id_user`, `id_habitation`
 (37, 'cuisine', 'Cocina', 20, 27, 7),
 (38, 'chambre', 'Chambre 1', 23, 27, 7),
 (39, 'salon', 'Saloon', 45, 27, 7),
-(40, 'grenier', 'test', 12, 27, 7),
-(41, 'salon', 'Grand Salon', 345, 27, 9),
-(42, 'entree', 'Entreee', 23, 27, 9),
-(43, 'cuisine', 'Cuisina', 23, 28, 11),
-(44, 'salon', 'saloooon', 22, 28, 13),
-(45, 'entree', 'zeojf', 23, 28, 14),
-(46, 'entree', 're', 34, 28, 16),
-(47, 'salon', 'grezdfz', 23, 28, 16),
-(48, 'toilettes', 'fdfz', 43, 28, 16),
-(49, 'chambre', 'C1', 34, 29, 17);
+(60, 'chambre', 'robert', 60, 29, 11),
+(59, 'salle_de_bain', 'jacquie', 40, 29, 11),
+(58, 'cave', 'biquette', 10, 28, 10),
+(57, 'salle_de_bain', 'ma salle de bain', 11, 28, 10),
+(56, 'chambre', 'chambre max', 15, 28, 9),
+(55, 'cuisine', 'cochinana', 10, 27, 8),
+(61, 'cuisine', 'conchita', 11, 29, 11),
+(62, 'cuisine', 'coucou', 3, 29, 12),
+(63, 'chambre', 'chambre max', 20, 27, 7);
 
 -- --------------------------------------------------------
 
@@ -204,8 +205,8 @@ INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `
 (22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, NULL),
 (26, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101010, NULL),
 (27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL),
-(28, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL),
-(29, 'tlincoln@isep.fr', '5ed25af7b1ed23fb00122e13d7f74c4d8262acd8', 'Lincoln', 'Thierry', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL);
+(28, 'andreas@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(29, 'andreas669@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1212121212, 658856338, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

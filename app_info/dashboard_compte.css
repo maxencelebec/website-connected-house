@@ -8,7 +8,7 @@ body
 #site{
     display: grid;
     grid-template-columns: 2fr 28fr;	
-    grid-templat-rows: 100vh;
+    grid-template-rows: 40vh;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
 }
