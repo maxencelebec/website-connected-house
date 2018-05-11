@@ -1,8 +1,8 @@
 
-document.getElementById("device").addEventListener("click", choosedisplay);
-$('#device').change(function(){
+document.getElementById("pannegene").addEventListener("click", choosedisplay);
 
-	$('#msg').placeholder($("#device option:selected").text());
-	    
-	});
+function choosedisplay(){
 
+ document.getElementById('capteur').style.visibility = "hidden";
+ 
+}
