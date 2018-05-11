@@ -8,7 +8,7 @@ body
 #site{
     display: grid;
     grid-template-columns: 2fr 28fr;	
-    grid-templat-rows: 100vh;
+    grid-auto-rows: 35vh;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
 }
@@ -67,9 +67,9 @@ body
 /* Disposition des blocs */
 .tabcontent {
 	display: none;
-	grid-row-start: 2;
+	grid-row: 2;
 	position: relative;
-	bottom: 140px;
+	bottom: 160px;
 	color: black;
     height: 500px;
 	overflow: auto;
