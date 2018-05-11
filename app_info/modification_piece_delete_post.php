@@ -1,5 +1,9 @@
 <?php
-	$capt = $_GET['id'];
+	session_start()
+
+	$capt = $_GET['id2'];
+	$piece = $_GET['id'];
+	$id_habitation = $_SESSION["id_habitation"];
 	try
 	{
 		$bdd = new PDO('mysql:host=localapp;dbname=test;charset=utf8', 'root', '');
@@ -14,6 +18,6 @@
 	$req->execute(array($capt);
 
 	// Redirection du visiteur vers la page du minichat
-	header('Location: minichat.php');
+	header("Location: modification_piece.php?id=$piece&$id2=$id_habitation");
 ?>
 ?>
