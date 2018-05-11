@@ -38,6 +38,15 @@ catch(Exception $e)
                             $_SESSION['id_user'] = $donnees['id'];
                             echo "Maison : $nom_maison";
                         }
+
+                        $req = $bdd->prepare('SELECT id FROM habitation WHERE nom=?');
+                        $req->execute(array($nom_maison));
+                        while ($donnees = $req->fetch())
+                        {
+                            $id_habitation = $donnees['id'];
+
+                        }
+
                         ?>
 
                     </div>
@@ -50,15 +59,91 @@ catch(Exception $e)
                             Température
 
                         </div>
-                        <div class="modemaison">Mode Maison</div>
+                        <div class="modemaison">Mode Maison
+
+                            <?php
+
+                            $req = $bdd->prepare('SELECT mode FROM habitation WHERE id_habitation=?');
+                            $req->execute(array($id_habitation));
+                            while ($donnees = $req->fetch())
+                            {
+                                $mode = $donnees['id'];
+                                if ($mode==1) {
+                                    echo $mode;
+                                    ?>
+                                    <img src="image/eco_mode.png"/>
+                                    <?php
+                                }
+                                elseif ($mode==2) {
+                                    echo $mode;
+                                    ?>
+                                    <img src="image/moyen_mode.png"/>
+                                    <?php
+                                }
+                                elseif ($mode==3) {
+                                    echo $mode;
+                                    ?>
+                                        <img src="image/max_mode.png"/>
+                                    <?php
+                                }
+                                echo $mode;
+                            }
+                            ?>
+
+                        </div>
                         <div class="securite">Sécurité</div>
                     </div>
                     <div class="capteurs">
                         <div class="titre">Capteurs</div>
                         <div class="infos">
-                            <div class="actifs">Actifs : 22</div>
-                            <div class="inactifs">Inactifs : 3</div>
-                            <div class="erreur">Erreur : 2</div>
+                            <div class="actifs"> Actifs :
+
+                                <?php
+
+                                $req = $bdd->prepare('SELECT etat==1 FROM capteurs WHERE id_habitation=?');
+                                $req->execute(array($id_habitation));
+                                $cap_actif=0;
+                                while ($donnees = $req->fetch())
+                                {
+                                    $cap_actif++;
+
+                                }
+                                echo $cap_actif;
+                                ?>
+
+                            </div>
+                            <div class="inactifs"> Inactifs :
+
+                                <?php
+
+                                $req = $bdd->prepare('SELECT etat FROM capteurs WHERE (id_habitation=?) AND (etat=?)');
+                                $req->execute(array($id_habitation, 0));
+                                $cap_inactif=0;
+                                while ($donnees = $req->fetch())
+                                {
+                                    $cap_inactif++;
+
+                                }
+                                echo $cap_inactif;
+                                ?>
+
+                            </div>
+                            <div class="erreur"> Erreur :
+
+                                <?php
+
+                                $req = $bdd->prepare('SELECT etat==1 FROM capteurs WHERE id_habitation=?');
+                                $req->execute(array($id_habitation));
+                                $cap_erreur=0;
+                                while ($donnees = $req->fetch())
+                                {
+                                    $cap_erreur++;
+
+                                }
+                                echo $cap_erreur;
+                                ?>
+
+                            </div>
                         </div>
                     </div>
                     <div class="qui_autresoptions">
@@ -71,14 +156,6 @@ catch(Exception $e)
                             {
 
                                 echo "<p style='color: #2cc872'>".$donnees["firstname"]." ".$donnees["name"]."</p>";
-                            }
-
-                            $req = $bdd->prepare('SELECT id FROM habitation WHERE nom=?');
-                            $req->execute(array($nom_maison));
-                            while ($donnees = $req->fetch())
-                            {
-                                $id_habitation = $donnees['id'];
-
                             }
 
                             ?>
