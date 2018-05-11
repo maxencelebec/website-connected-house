@@ -35,8 +35,8 @@ session_start();
 	
 	
 	
-	$req = $bdd->prepare('INSERT INTO message ( Date_Heure, contenu_msg, id_utilisateur, id_type_message, id_habitation) VALUES (?, ?, ?, ?, ?)');
-	$req->execute(array(NULL,$_POST["msg"],$id_user,$id_type_message,$id_habitation));
+	$req = $bdd->prepare('INSERT INTO message (contenu_msg, id_utilisateur, id_type_message, id_habitation) VALUES (?, ?, ?, ?)');
+	$req->execute(array($_POST["msg"],$id_user,$id_type_message,$id_habitation));
 	
 	
 	
