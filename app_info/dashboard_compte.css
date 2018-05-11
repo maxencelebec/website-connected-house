@@ -8,7 +8,11 @@ body
 #site{
     display: grid;
     grid-template-columns: 2fr 28fr;	
+<<<<<<< HEAD
+    grid-auto-rows: 35vh;
+=======
     grid-template-rows: 40vh;
+>>>>>>> d7b4b6a8580fb1adf0bfab143a51d4f57a8bbede
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
 }
@@ -69,7 +73,7 @@ body
 	display: none;
 	grid-row-start: 2;
 	position: relative;
-	bottom: 140px;
+	bottom: 160px;
 	color: black;
     height: 500px;
 	overflow: auto;

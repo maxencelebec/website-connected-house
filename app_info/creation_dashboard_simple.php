@@ -103,9 +103,9 @@ catch(Exception $e)
 
                                 <?php
 
-                                $req = $bdd->prepare('SELECT etat==1 FROM capteurs WHERE id_habitation=?');
-                                $req->execute(array($id_habitation));
-                                $cap_actif=0;
+                                $req = $bdd->prepare('SELECT etat FROM capteurs WHERE (id_habitation=?) AND (etat=?)');
+								$req->execute(array($id_habitation, 1));
+								$cap_actif=0;
                                 while ($donnees = $req->fetch())
                                 {
                                     $cap_actif++;
