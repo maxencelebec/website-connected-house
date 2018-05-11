@@ -132,6 +132,8 @@
             $req->execute(array($_GET['id']));
             while ($donnees = $req->fetch())
             {
+                $capt = $donnees['id'];
+                ?><a class = "suppr" href="modification_piece_delete_post.php?id2=<?php echo $capt; ?>&id=<?php echo $link; ?>"> x </a> <?php
                 echo "- ".$donnees['nom']." (type : ".$donnees['type'].")"."<br/>";
             }
             ?>
