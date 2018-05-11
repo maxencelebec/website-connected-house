@@ -59,35 +59,38 @@ catch(Exception $e)
                             Température
 
                         </div>
-                        <div class="modemaison">Mode Maison
+                        <div class="modemaison">Mode Maison <br>
 
                             <?php
 
-                            $req = $bdd->prepare('SELECT mode FROM habitation WHERE id_habitation=?');
+                            $req = $bdd->prepare('SELECT mode FROM habitation WHERE id=?');
                             $req->execute(array($id_habitation));
+
                             while ($donnees = $req->fetch())
+
                             {
-                                $mode = $donnees['id'];
+                                $mode = $donnees['mode'];
+
                                 if ($mode==1) {
-                                    echo $mode;
                                     ?>
-                                    <img src="image/eco_mode.png"/>
+                                    <img src="image/eco-mode-dash.png" style="height: 65%" width="50%"/>
                                     <?php
                                 }
                                 elseif ($mode==2) {
-                                    echo $mode;
+
                                     ?>
-                                    <img src="image/moyen_mode.png"/>
+                                    <img src="image/moyen-mode-dash.png" style="height: 40%" width="40%"/>
                                     <?php
                                 }
                                 elseif ($mode==3) {
-                                    echo $mode;
+
                                     ?>
-                                        <img src="image/max_mode.png"/>
+                                    <img src="image/max-mode-dash.png" style="height: 65%" width="50%"/>
                                     <?php
                                 }
-                                echo $mode;
+
                             }
+
                             ?>
 
                         </div>
