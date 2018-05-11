@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
-<<<<<<< HEAD
 -- Généré le :  ven. 11 mai 2018 à 08:11
-=======
--- Généré le :  jeu. 10 mai 2018 à 17:10
->>>>>>> parent of a2c5181... bdd + dash simple
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -36,16 +32,16 @@ DROP TABLE IF EXISTS `capteurs`;
 CREATE TABLE IF NOT EXISTS `capteurs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `timestamp` datetime(6) DEFAULT NULL,
-  `id_user` int(10) NOT NULL,
-  `id_habitation` int(10) NOT NULL,
-  `id_piece` int(10) NOT NULL,
-  `type` varchar(30) NOT NULL,
-  `nom` varchar(20) NOT NULL,
-  `etat` int(10) NOT NULL,
-  `id_capteur` varchar(30) NOT NULL,
-  `valeur` int(10) NOT NULL,
+  `id_user` int(10) DEFAULT NULL,
+  `id_habitation` int(10) DEFAULT NULL,
+  `id_piece` int(10) DEFAULT NULL,
+  `type` varchar(30) DEFAULT NULL,
+  `nom` varchar(20) DEFAULT NULL,
+  `etat` int(10) DEFAULT NULL,
+  `id_capteur` varchar(30) DEFAULT NULL,
+  `valeur` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `capteurs`
@@ -64,7 +60,8 @@ INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece
 (11, '2018-05-10 10:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
 (12, '2018-05-10 11:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
 (13, '2018-05-10 12:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
-(17, '2018-05-10 16:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 24);
+(17, '2018-05-10 16:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 24),
+(18, NULL, 27, 7, 38, 'presence', 'pres1', 1, 'XXXX', NULL);
 
 -- --------------------------------------------------------
 
@@ -98,8 +95,8 @@ INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type
 (4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24),
 (5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 300, 0, 25),
 (6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, NULL, 300, 0, 26),
-(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 0, 27),
-(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, NULL, 27),
+(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 1, 27),
+(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, 2, 27),
 (9, 'Italie', 'Venise', 29930, '23 rue de Paradis', NULL, 'Villa', 3940, NULL, 27),
 (10, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison Test', 2042, NULL, 28),
 (11, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
