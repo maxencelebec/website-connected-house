@@ -18,6 +18,10 @@
 	{
 	    $id_user=$donnees['id'];
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of d37c96e... Modif dernière minute
 	$req = $bdd->prepare('INSERT INTO capteurs (timestamp, id_user, id_habitation, id_piece, id_capteur, type, nom, etat, valeur) VALUES (NULL, ?, ?, ?, ?, ?, ?, NULL, NULL)');
 	$req->execute(array($id_user, $_SESSION['id_habitation'], $_GET['id'], $_POST['IDcapteur'], $_POST['type'], $_POST['nom']));
 
