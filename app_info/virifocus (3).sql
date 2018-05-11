@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
+<<<<<<< HEAD:app_info/virifocus (3).sql
 -- Généré le :  ven. 11 mai 2018 à 07:56
+=======
+-- Généré le :  ven. 11 mai 2018 à 07:27
+>>>>>>> 58e01d5a0f72ef27d25b8851a21bd0ff2122af8b:app_info/virifocus.sql
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -41,7 +45,11 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
   `id_capteur` varchar(30) DEFAULT NULL,
   `valeur` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
+<<<<<<< HEAD:app_info/virifocus (3).sql
 ) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+>>>>>>> 58e01d5a0f72ef27d25b8851a21bd0ff2122af8b:app_info/virifocus.sql
 
 --
 -- Déchargement des données de la table `capteurs`
@@ -56,6 +64,7 @@ INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece
 (7, '2018-05-10 06:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
 (8, '2018-05-10 07:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
 (9, '2018-05-10 08:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
+<<<<<<< HEAD:app_info/virifocus (3).sql
 (33, NULL, 29, 11, 60, 'presence', 'ici', NULL, 'xxx', NULL),
 (32, NULL, 29, 11, 59, 'humidite', 'mouillé', NULL, 'xxx', NULL),
 (31, NULL, 29, 11, 60, 'humidite', 'eau', NULL, 'xxx', NULL),
@@ -68,6 +77,14 @@ INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece
 (36, NULL, 27, 7, 63, 'luminosite', 'lum', NULL, 'xxx', NULL),
 (37, NULL, 29, 11, 61, 'humidite', 'mouillé', NULL, 'xxx', NULL),
 (38, NULL, 29, 11, 59, 'temperature', 'chaleur', NULL, 'xxx', NULL);
+=======
+(10, '2018-05-10 09:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 21),
+(11, '2018-05-10 10:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 22),
+(12, '2018-05-10 11:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
+(13, '2018-05-10 12:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
+(17, '2018-05-10 16:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 24),
+(18, NULL, 27, 7, 38, 'presence', 'pres1', 1, 'XXXX', NULL);
+>>>>>>> 58e01d5a0f72ef27d25b8851a21bd0ff2122af8b:app_info/virifocus.sql
 
 -- --------------------------------------------------------
 
@@ -101,12 +118,26 @@ INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type
 (4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24),
 (5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 300, 0, 25),
 (6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, NULL, 300, 0, 26),
+<<<<<<< HEAD:app_info/virifocus (3).sql
 (7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 0, 27),
 (8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, NULL, 27),
 (9, 'France', 'Asnières-sur-Seine', 92600, '15 rue waldeck rousseau', NULL, 'home mi', 400, NULL, 28),
 (10, 'France', 'Asnières-sur-Seine', 92600, '12 rue waldeck rousseau', NULL, 'coccina', 300, NULL, 28),
 (11, 'France', 'Asnières-sur-Seine', 92600, '12 rue waldeck rousseau', NULL, 'pouloulou', 300, NULL, 29),
 (12, 'France', 'Asnières-sur-Seine', 92600, '12 rue waldeck rousseau', NULL, 'Normandie', 30, NULL, 29);
+=======
+(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 1, 27),
+(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, 2, 27),
+(9, 'Italie', 'Venise', 29930, '23 rue de Paradis', NULL, 'Villa', 3940, NULL, 27),
+(10, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison Test', 2042, NULL, 28),
+(11, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(12, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(13, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(14, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(15, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
+(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29);
+>>>>>>> 58e01d5a0f72ef27d25b8851a21bd0ff2122af8b:app_info/virifocus.sql
 
 -- --------------------------------------------------------
 
