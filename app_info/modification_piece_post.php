@@ -19,8 +19,8 @@
 	    $id_user=$donnees['id'];
 	}
 
-	$req = $bdd->prepare('INSERT INTO capteurs (timestamp, id_user, id_habitation, id_piece, id_capteur, type, nom, etat, valeur) VALUES (NULL, ?, ?, ?, ?, ?, ?, NULL, NULL)');
-	$req->execute(array($id_user, $_SESSION['id_habitation'], $_GET['id'], $_POST['IDcapteur'], $_POST['type'], $_POST['nom']));
+	$req = $bdd->prepare('INSERT INTO capteurs (timestamp, id_user, id_habitation, id_piece, id_capteur, type, nom, etat, valeur) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, NULL)');
+	$req->execute(array($id_user, $_SESSION['id_habitation'], $_GET['id'], $_POST['IDcapteur'], $_POST['type'], $_POST['nom'],1));
 
 	$temp = $_GET['id'];
 	$dac = $_SESSION['id_habitation'];

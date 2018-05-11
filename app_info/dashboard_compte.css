@@ -8,11 +8,7 @@ body
 #site{
     display: grid;
     grid-template-columns: 2fr 28fr;	
-<<<<<<< HEAD
-    grid-template-rows: 40vh;
-=======
-    grid-templat-rows: 100vh;
->>>>>>> parent of d37c96e... Modif dernière minute
+    grid-auto-rows: 35vh;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
 }
@@ -73,7 +69,7 @@ body
 	display: none;
 	grid-row-start: 2;
 	position: relative;
-	bottom: 140px;
+	bottom: 160px;
 	color: black;
     height: 500px;
 	overflow: auto;
