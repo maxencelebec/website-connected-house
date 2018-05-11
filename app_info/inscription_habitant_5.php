@@ -82,12 +82,15 @@
                     die('Erreur : '.$e->getMessage());
             }
             
-            $req = $bdd->prepare('SELECT type, nom, surface FROM pieces WHERE id_habitation= ? ');
+            $req = $bdd->prepare('SELECT type, nom, surface, id FROM pieces WHERE id_habitation= ? ');
             $req->execute(array( $_SESSION["id_habitation"]));
 
             while ($donnees = $req->fetch())
             {
-                echo "<p>".$donnees['nom']. " (".$donnees['type']. ") de ".$donnees['surface']."m2<br/></p>";
+                $piece = $donnees['id'];
+                ?> <p> <a href="inscription_habitant_5_delete_post.php?id=<?php echo $piece; ?>">x </a><?php
+                echo $donnees['nom']. " (".$donnees['type']. ") de ".$donnees['surface']."m2<br/>";
+                ?> </p> <?php
             }
 
 

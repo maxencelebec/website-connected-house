@@ -10,7 +10,10 @@ body
     display: grid;
     grid-template-columns: 2fr 28fr auto;
 }
-
+a{
+    text-decoration:none;
+    color:#2CC872;
+}
 #menu{
     display: grid;
     grid-template-columns: 2fr 28fr;
