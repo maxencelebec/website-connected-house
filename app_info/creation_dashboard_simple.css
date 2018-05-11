@@ -129,7 +129,6 @@ a{
     align-items: center;
     display: flex;
     padding-left: 80px;
-    color: white;
 }
 .inactifs{
     background-image:url("image/inactif.png");
