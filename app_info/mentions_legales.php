@@ -32,7 +32,17 @@
 		</div>
 		
 		</br>
-		<div> à remplir </div>                <!-- à faire -->
+		
+		<div> 
+		    <ul>
+			    <li> Auteur : ESN9D</li>
+				<li> Adresse : </li>
+				<li> Contact : contact@ESN9D.fr </li>
+			</ul>
+		
+		</div>                <!-- à faire -->
+		
+		
 		</br>
 		</br>
 		
