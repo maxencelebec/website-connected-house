@@ -14,38 +14,19 @@ if (ISSET($_GET['mail']) && ISSET($_GET['pass_token'])) {
     
     $mail = $_GET['mail'];
     $token = $_GET['pass_token'];
-
-    /* Requêtes des différentes données du compte */
-    $req = $bdd->prepare('SELECT COUNT(id) FROM users WHERE mail=? AND pass_token=?');
-    $req->execute(array($mail,$token));
-    
-    while ($donnees = $req->fetch()) {
-        $compteur = $donnees['COUNT(id)'];
-    }
-    
-    
-    if ($compteur>0) { /* Combinaison mail/pass_token correct */
-                
-        if (isset($_POST['valider']) && ($_POST['mdp']==$_POST['mdp_confirm'])) {   /* Lors de l'envoi et nouveaux mdps similaires */
-            
-            $nmdp = sha1($_POST['mdp']);
-            $req = $bdd->prepare('UPDATE users SET password=? WHERE mail=? AND pass_token=?');
-            $req->execute(array($mdp, $mail, $token));
-            
+ 
+    if (isset($_POST['valider'])) {     /* Après envoie */            
+          
+        if($_POST['mdp']===$_POST['mdp_confirm']) {
+            $mdp = sha1($_POST['mdp']);
+            $req = $bdd->prepare('UPDATE users SET password=? FROM users WHERE mail=? AND pass_token=?');
+            $req->execute(array($mdp, $mail,$token));
         }
-        
-        else if (isset($_POST['valider']) && ($_POST['mdp']!=$_POST['mdp_confirm'])) { /* Lors de l'envoi et nouveaux mdps différents */
-            echo "mdp différents...";
+        else {
+            echo "sortie 1";
         }
-    }
-    
-    else {
-        echo "sortie 1";
-        /* header("Location: index.php"); /* Retour à l'index car combinaison mail/pass_token incorrect */
-        /* exit();*/
     }
 }
-
 else {
     echo "sortie 2";
     /*  header("Location: index.php"); /* Retour à l'index car l'URL est erronné */
@@ -67,14 +48,14 @@ else {
 	
 	<div class="Main">
 
-		<form class="infos" action="change_mdp.php?mail=<?php $_GET['mail']; ?>&pass_token=<?php $_GET['pass_token'] ?>" method="POST">
+		<form class="infos" action="change_mdp.php?mail=<?php $mail; ?>&pass_token=<?php $pass_token; ?>" method="POST">
 
 			<div class="formulaire">
 				<div class="titre"><h1>Changez votre mot de passe</h1></div>
 				<div>Mot de passe :</div>
-				<input type="password" id="mdp" style="text-align: center"/>
+				<input type="password" name="mdp" style="text-align: center"/>
 				<div>Confirmez votre mot de passe :</div>
-				<input type="password" id="mdp_confirm" style="text-align: center"/>
+				<input type="password" name="mdp_confirm" style="text-align: center"/>
 			</div>
 
 			<input class="valider" type="submit" value="Valider" name="valider">
