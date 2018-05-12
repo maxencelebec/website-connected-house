@@ -23,5 +23,5 @@
 
 
 	// Redirection du visiteur vers la page suivante
-	header('Location: dashboard_compte.php');
+	header('Location: compte.php');
 ?>

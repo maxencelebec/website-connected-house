@@ -7,7 +7,7 @@
 <head>
     <title>Virifocus</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="dashboard_compte.css"/>
+    <link rel="stylesheet" href="compte.css"/>
     <link rel="icon" type="image/png" href="image/logo.png" />
 	<?php
 		try
@@ -108,6 +108,6 @@
 			
 			</div>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<script src="dashboard_compte.js"></script>
+		<script src="compte.js"></script>
 </body>
 </html>
