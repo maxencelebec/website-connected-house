@@ -1,7 +1,5 @@
 ﻿<?php
     session_start();
-    $_SESSION["firstname"]=$_POST['firstname'];
-    $_SESSION["name"]=$_POST['name'];
 ?>
 <?php
 	// Connexion à la base de données
@@ -15,7 +13,29 @@
 	        die('Erreur : '.$e->getMessage());
 	        echo "non connecté à la bdd";
 	}
-
+    
+	if (isset($_POST['nmdp'])) { /* Si l'utilisateur souhaite changer son mdp et a entré des valeurs dans le champ */	    
+	    
+	    if (isset($_POST['cmdp'])) {   /* Vérification que l'utilisateur a bien rempli les 2 champs pour mdp */
+	        
+	        $nmdp = $_POST['nmdp'];
+	        $cmdp = $_POST['cmdp'];
+	        
+	        if ($nmdp==$cmdp) {    /* Vérification que les deux champs sont identiques */
+	            $mdp = sha1($nmdp);
+	            $req = $bdd->prepare('UPDATE users SET password=? WHERE mail=?');
+	            $req->execute(array($mdp, $_SESSION['mail']));
+	        }
+	        else {
+	            echo "Mot de passe erronné.";
+	        }
+	    }
+	    else {
+	        echo "Veuillez confirmer votre mot de passe.";
+	    }
+	}
+	
+	
 
 	$req = $bdd->prepare('UPDATE users SET name = ?, firstname = ? , postal_code = ?  , country = ?  , phone_number_portable = ? , mail = ?  WHERE mail= ? ');
 	$req->execute(array($_POST["name"],$_POST["firstname"],$_POST["postal_code"],$_POST["country"],

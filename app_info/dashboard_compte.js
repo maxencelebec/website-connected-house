@@ -19,7 +19,14 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
+function submitForms() {	/* Fonction qui submit tous les formulaires de la page (le menu empêche l'envoi) */
+	document.forms["profile_form"].submit();
+	setTimeOut(function(){
+		document.forms["compte_form"].submit();
+	}, 5000); 
+}
 
+/* Définition des évènements "onclick" */
 document.getElementById("tablink1").addEventListener("click", function(){
 	openTab(event, "profile");
 }); 
@@ -32,5 +39,8 @@ document.getElementById("tablink3").addEventListener("click", function(){
 document.getElementById("tablink4").addEventListener("click", function(){
 	openTab(event, "notifications");
 }); 
+document.getElementsByClassName("enregistrer").addEventListener("click", function() {
+	submitForms();
+});
 
 document.getElementById("tablink1").click();

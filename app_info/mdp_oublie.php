@@ -12,9 +12,12 @@
 	
 	/* Après le submit */
 	if (ISSET($_POST['valider'])) {
-    	/* Requêtes des différentes données du compte */
+	    
+	    $mail = $_POST['mail'];
+	    
+    	/* Requêtes des différentes données du compte */	
     	$req = $bdd->prepare('SELECT COUNT(id) FROM users WHERE mail=?');
-    	$req->execute(array($_POST['mail']));
+    	$req->execute(array($mail));
     		
     	/* Attribution variable des données */
     	while ($donnees = $req->fetch()) {
@@ -28,14 +31,15 @@
     		$token = substr($token,0,10);
     		
     		$req = $bdd->prepare('UPDATE users SET pass_token=? WHERE mail=?');
-    		$req-> execute(array($token, $_POST['mail']));
+    		$req-> execute(array($token, $mail));
+    		
+    		header("Location: change_mdp.php?mail=$mail&pass_token=$token");
     		?>
     		<p class='text_envoi'>
        		Un mail vous permettant de réinitialiser votre mot de passe vous a été envoyé.
     		Vous le trouverez dans votre boîte de réception d'ici quelques minutes.
     		Pensez à vérifier vos Courriers Indésirables si vous ne trouvez pas le mail.
     		 </p>
-    		 <a href='localapp/app_info/change_mdp.php?mail=<?php echo $mail; ?>&pass_token=<?php echo $token; ?>'>  </a>
     		 <?php
     	}
     	else { ?>   	

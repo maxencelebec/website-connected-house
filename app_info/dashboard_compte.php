@@ -95,7 +95,22 @@
 				</div>			
 				<!-- ---------------------------------------------------- -->
 				<!-- Tab 2 : Compte -->
-				<div id="compte" class="tabcontent"> Test2 </div>		
+				<div id="compte" class="tabcontent">
+				<form class="compte_form" action="dashboard_compte_post.php" method="post">
+					<!--  (Compte) Bloc 1 -->
+					<div class="bloc" id="bloc_compte_1">
+						<div id="nmdp">
+    						<span class="bold"> Nouveau Mot de passe </span>
+    						<input type="password" name="nmdp">
+						</div>
+						<div id="cmdp">
+							<span class="bold"> Confirmez Mot de passe </span>
+							<input type="password" name="cmdp">
+						</div>
+					</div>
+					<input class="enregistrer" type="submit" value="Enregistrer">	
+				</form>
+				</div>		
 				<!-- ---------------------------------------------------- -->		
 				<!-- Tab 3 : Confidentialité -->
 				<div id="confidentialite" class="tabcontent"> Test3 </div>		
