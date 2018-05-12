@@ -87,9 +87,17 @@
 
             while ($donnees = $req->fetch())
             {
+
+
                 $piece = $donnees['id'];
-                ?> <p> <a href="inscription_habitant_5_delete_post.php?id=<?php echo $piece; ?>">x </a><?php
-                echo $donnees['nom']. " (".$donnees['type']. ") de ".$donnees['surface']."m2<br/>";
+                ?> <p> <a href="#" onclick="if(confirm('Etes vous sur de vouloir supprimer cette pièce ? Tous les capteurs seront ainsi perdus'))
+                {   
+                    document.location.href='inscription_habitant_5_delete_post.php?id=<?php echo $piece; ?>';
+                } else {
+
+                } ">x </a><?php
+                    
+                    echo $donnees['nom']. " (".$donnees['type']. ") de ".$donnees['surface']."m2<br/>";
                 ?> </p> <?php
             }
 

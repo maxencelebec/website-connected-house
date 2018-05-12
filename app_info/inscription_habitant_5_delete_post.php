@@ -15,6 +15,9 @@
 	$req = $bdd->prepare('DELETE FROM pieces WHERE id = ?');
 	$req->execute(array($piece));
 
+	$req = $bdd->prepare('DELETE FROM capteurs WHERE id_piece = ?');
+	$req->execute(array($piece));
+
 	// Redirection du visiteur vers la page du minichat
 	header("Location: inscription_habitant_5_post.php?id=$id_habitation");
 ?>
