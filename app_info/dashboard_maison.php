@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION["id_habitation"]=$_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +20,7 @@ $_SESSION["id_habitation"]=$_GET['id'];
         ?>
 
         <?php
-        $id_habitation = $_GET['id'];
+        $id_habitation = $_SESSION['id_habitation'];
         ?>
 
           <div class="main1">

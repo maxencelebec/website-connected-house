@@ -55,7 +55,7 @@
                                 $_SESSION["id_piece_choix"]=$id;
 
 
-                                ?> <a href = "modification_piece.php?id=<?php echo $id; ?>&id2=<?php echo $id_habitation; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
+                                ?> <a href = "modification_piece(abd).php?id=<?php echo $id; ?>&id2=<?php echo $id_habitation; ?>" class = "choix" id= '<?php echo $id; ?>'> <button class="tablinks" id="tablink1"> <?php echo $piece; ?> </button></a>
                                 <?php
                             }
                         ?>

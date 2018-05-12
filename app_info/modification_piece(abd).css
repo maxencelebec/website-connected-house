@@ -1,0 +1,232 @@
+body
+{
+    padding:0;
+    margin:0;
+    width:auto;
+}
+
+#site{
+    display: grid;
+    grid-template-columns: 2fr 28fr;
+    grid-template-rows: auto auto;
+    background-color: grey;
+    grid-gap: auto 20px;
+    font-family: Segoe UI Light, Georgia;
+    text-decoration:none;
+}
+/* Actualisation header */
+.lien{
+    text-decoration: none;
+    color: white;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+
+/* Menu du dashboard_compte*/
+.tab {
+    display: flex;
+    border: 1px solid #ccc;
+    background-color: #333333;
+    height: 50px;
+}
+
+.tab button {
+    background-color: inherit;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #486454;
+}
+
+.tablinks{
+    height: 50px;
+}
+
+.choix{
+    border-left:white 1px solid;
+}
+
+.centre{
+    background-color: lightgrey;
+    padding:0;
+    margin:0;
+    width:auto;
+    display: grid;
+    font-family: Segoe UI Light, Georgia;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-columns:5fr 7fr;
+
+}
+.piece{ 
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    grid-auto-rows: 16.3px;
+    background-size: cover;
+}
+
+
+
+.image {
+    width: 27vw;
+    height: 15vw;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.image_main {
+    width: 50%;
+    height: 50%;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.nom_piece{
+    background-color: #333333;
+    grid-row: 12/15;
+    font-size: 25px;
+    text-align: center;
+    color :white;
+}
+
+.info_piece{
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    grid-auto-rows: 90px;
+    background-color: #333333;
+    font-size: 18px;
+    grid-row-gap: 5px;
+    grid-template-rows: 3fr 6fr 3fr;
+
+}
+.case_modif{
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 2;
+    grid-row:2;
+    text-align: center;
+}
+
+.boutonModif{
+
+    border : none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    background-color: white;
+    background-color:#2CC872;
+    color: white;
+    border-radius: 2px;
+    padding: 1vw;
+    font-size: 2vw;
+    transition: 0.1s;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.case_info{
+    display: grid;
+    grid-column: 1;
+    grid-row:2;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.case_capteurs{
+    display: grid;
+    grid-auto-rows:10px;
+    background-color: lightgrey;
+    grid-column:1;
+    grid-row: 2;
+    text-align: center;
+    color:black;
+    overflow-y: scroll;
+}
+
+.info_capteurs{
+    grid-row: 1/5;
+    font-size: 20px;
+    padding-top: 5px;
+    background-color:#2cc872;
+}
+
+.liste_capteurs{
+    grid-row: 5/13;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.suppr{
+    color:#2CC872;
+    padding-bottom: 2px;
+}
+
+.case_ajout{
+    display: grid;
+    grid-auto-rows:10px;
+    grid-column: 2;
+    grid-row: 2;
+    background-color: lightgrey;
+    color:#2cc872;
+    font-size: 36px;
+}
+.case_ajout1{
+    text-align: center;
+    color:black;
+    grid-row: 1/5;
+    font-size: 20px;
+    padding-top: 5px;
+    background-color:#2cc872;
+}
+.case_ajout2{
+    display: grid;
+    grid-row: 5/45;
+}
+
+.boutonAjout {
+    border : none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    background-color: white;
+    background-color:#2CC872;
+    color: white;
+    border-radius: 3px;
+    height: 9vh;
+    padding: 1vw;
+    font-size: 2vw;
+    width: 15vw;
+    transition: 0.1s;
+    grid-column: 4;
+    grid-row: 2;
+
+}
+
+.boutonAjout:hover{
+    transform: scale(1.04);
+}
+
+
+
+
+
+.nommage {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.idcapteur {
+    grid-column: 3;
+    grid-row: 4;
+}
