@@ -62,7 +62,7 @@ a{
     font-family: Segoe UI Light, Georgia;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    grid-template-columns:5fr 7fr;
+    grid-template-columns:2fr 7fr;
 
 }
 .piece{ 
