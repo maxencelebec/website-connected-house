@@ -1,40 +1,75 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title> APP isep </title>
+    <title> Virifocus </title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="cssgrid3.css"/>
-    <script src="frimeworks/jQuery.js"></script>
+    <link rel="stylesheet" href="parametres.css"/>
+    <link rel="icon" type="image/png" href="image/logo.png" />
+    <script src="jQuery.js"></script>
 
 </head>
-<body class="fond">
-    <section>
-            <div class="site">
-                <div class="case1">
-                    <div class="case11"></div>
-                    <div class="case12">
-                        <a href="dashboard_maison.html">
-                            <div class="case1212"><br><br>Home</div></a></div>
-                    <div class="case13">
-                        <a href="htmlgrid2.html">
-                            <div class="case1313"><br><br>Compte</div></a></div>
-                    <div class="case14">
-                        <a href="htmlgrid3.html">
-                            <div class="case1414"><br><br>Paramètres</div></a></div>
-                    <div class="case15">
-                        <a href="htmlgrid4.html">
-                            <div class="case1515"><br><br>Aide</div></a></div>
-                    <div class="case16"></div>
-                </div>
 
+<body>
+	<div id="site">
 
-                <div class="case2">
+		<?php 
+	    include "header.php"; 
+	    ?>
 
-            </div>
+		<?php
+            include_once "ajout_piece.php";
+            
+            $id_habitation = $_SESSION['id_habitation'];
 
-        </div>
+            try
+            {
+                $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+            }
+            catch(Exception $e)
+            {
+                die('Erreur : '.$e->getMessage());
+            }
+            $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
+            $req->execute(array($_SESSION["mail"]));
+            
+            $id_user;
+            while ($donnees = $req->fetch())
+            {
+                $id_user=$donnees['id'];
+            }
+        ?>
+		
+		<div class="main_parametres">
+		
+			<div class="option_parametres">
+			
+				<div class="titre_parametres"><h1>G&eacute;rez votre espace</h1></div>
+				
+				<div class="option1"><a class="lien" href="inscription_habitant_3.php">
+	                <img class="option_image" src=""></a></div>
+	            <div class="option2"><a class="lien" href="inscription_habitant_5.php?id=<?php echo $_SESSION["id_habitation"]; ?>">
+	                <img class="option_image" src="image/message.png"></a></div>
+	            <div class="option3"><a class="lien" href="choix_piece.php?id=<?php echo $id_habitation; ?>">
+	                <img class="option_image" src="image/SAV.png"></a></div>
 
-    </section>
+	            <div class="option1_text"><a class="help_lien" href="inscription_habitant_3.php">Ajouter une maison</a></div>
+	            <div class="option2_text"><a class="help_lien" href="inscription_habitant_5.php?id=<?php echo $_SESSION["id_habitation"]; ?>">Ajouter une pi&egrave;ce</a></div>
+	            <div class="option3_text"><a class="help_lien" href="choix_piece.php?id=<?php echo $id_habitation; ?>">Ajouter un capteur</a></div>
+			
+			</div>
+		
+		
+		
+		
+		</div>
+
+		<?php 
+			include "footer.php" 
+		?>
+	</div>
+
 </body>
-<script src="seance2js.js"></script>
-</html>
