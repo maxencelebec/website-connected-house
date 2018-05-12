@@ -9,13 +9,15 @@
     <title>Virifocus | Home</title>
     <link rel="stylesheet" href="index.css"/>
     <link rel="icon" type="image/png" href="image/logo.png" />
+	<script src="index.js"></script>
 </head>
 
 <body>
 
     <div id="partie_gauche">
-        
+        <img id="diapo" src="image/" id="element"/>
     </div>
+	
     <div id="partie_droite">
 
         <img id="image" src="image/virifocus droit.png"/>
