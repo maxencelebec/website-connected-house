@@ -17,5 +17,5 @@
 	$req->execute(array($capt));
 
 	// Redirection du visiteur vers la page du minichat
-	header("Location: modification_piece.php?id=$piece&id2=$id_habitation");
+	header("Location: modification_piece(abd).php?id=$piece&id2=$id_habitation");
 ?>

@@ -26,5 +26,5 @@
 	$temp = $_GET['id'];
 	$dac = $_SESSION['id_habitation'];
 	// Redirection du visiteur vers la page suivante
-	header("Location: modification_piece.php?id=$temp&id2=$dac");
+	header("Location: modification_piece(abd).php?id=$temp&id2=$dac");
 ?>
