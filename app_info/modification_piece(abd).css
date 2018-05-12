@@ -54,17 +54,21 @@ a{
 }
 
 .centre{
-    background-color: white;
+    background-color: lightgrey;
     padding:0;
     margin:0;
     width:auto;
     display: grid;
     font-family: Segoe UI Light, Georgia;
-    grid-column-gap: 1vw;
-    grid-template-columns:5fr 7fr ;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-columns:5fr 7fr;
+
 }
 .piece{ 
     display: grid;
+    grid-column: 1;
+    grid-row: 1;
     grid-auto-rows: 16.3px;
     background-size: cover;
 }
@@ -95,13 +99,20 @@ a{
 
 .info_piece{
     display: grid;
-    grid-auto-rows: 70px;
+    grid-column: 2;
+    grid-row: 1;
+    grid-auto-rows: 90px;
     background-color: #333333;
     font-size: 18px;
+    grid-row-gap: 5px;
+    grid-template-rows: 3fr 6fr 3fr;
+
 }
 .case_modif{
-    border-bottom: #2cc872 solid 3px;
-    
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 2;
+    grid-row:2;
     text-align: center;
 }
 
@@ -122,16 +133,22 @@ a{
     margin-bottom: auto;
 }
 .case_info{
-    border-bottom: #2cc872 solid 3px;
+    display: grid;
+    grid-column: 1;
+    grid-row:2;
+    margin-top: 10px;
     text-align: center;
     justify-content: center;
+    color: white;
 }
+
 
 .case_capteurs{
     display: grid;
     grid-auto-rows:10px;
     background-color: lightgrey;
-    grid-row: 2/4;
+    grid-column:1;
+    grid-row: 2;
     text-align: center;
     color:black;
     overflow-y: scroll;
@@ -145,7 +162,7 @@ a{
 }
 
 .liste_capteurs{
-    grid-row: 5/8;
+    grid-row: 5/13;
     font-size: 20px;
     padding-top: 5px;
 }
@@ -156,17 +173,27 @@ a{
 }
 
 .case_ajout{
-    grid-column: 2/4;
-    grid-row: 2/4;
     display: grid;
-    background-color: white;
-    grid-auto-rows: 140px;
+    grid-auto-rows:10px;
+    grid-column: 2;
+    grid-row: 2;
+    background-color: lightgrey;
     color:#2cc872;
-    font-size: 40px;
-    overflow: auto ;
-    border-top: lightgrey solid 5px;
-    border-bottom: lightgrey solid 5px;
+    font-size: 36px;
 }
+.case_ajout1{
+    text-align: center;
+    color:black;
+    grid-row: 1/5;
+    font-size: 20px;
+    padding-top: 5px;
+    background-color:#2cc872;
+}
+.case_ajout2{
+    display: grid;
+    grid-row: 5/45;
+}
+
 .boutonAjout {
     border : none;
     cursor: pointer;
@@ -175,14 +202,15 @@ a{
     background-color: white;
     background-color:#2CC872;
     color: white;
-    border-radius: 2px;
+    border-radius: 3px;
     height: 9vh;
     padding: 1vw;
     font-size: 2vw;
-    width: 25vw;
+    width: 15vw;
     transition: 0.1s;
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 2;
+
 }
 
 .boutonAjout:hover{
@@ -190,14 +218,7 @@ a{
 }
 
 
-.ajout{
-    margin-left:20px;
-    font-size:25px;
-    grid-column: 1;
-    grid-row: 3;
-    margin-top: auto;
-    margin-bottom: auto;
-}
+
 
 
 .nommage {
