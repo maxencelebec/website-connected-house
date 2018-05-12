@@ -1,7 +1,9 @@
 <?php
 require "core.php";
 //$Virifocus = Model::load("virifocus");
-$messag=Model::load("Message");
+$messag= Model::load("Message");
+
+/*
 ?>
 
 
@@ -24,13 +26,13 @@ echo $messag->read();?>
 
 </form>
 
-*/?> 
-<p>
+*/
 
-
-
-</p>
-
+?>
+<?php 
+$message =$messag->find(array("order"=>"contenu_msg ASC"));
+printr($message);
+?>
 
 
 
