@@ -30,8 +30,8 @@ echo $messag->read();?>
 
 ?>
 <?php 
-$message =$messag->find(array("order"=>"contenu_msg ASC"));
-printr($message);
+$message =$messag->find(array("order"=> " contenu_msg ASC"));
+print_r($message);
 ?>
 
 

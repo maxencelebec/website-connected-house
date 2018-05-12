@@ -15,7 +15,7 @@ class Model
         $db = mysqli_connect("localhost", "root", "", "virifocus");
         $sql = "SELECT $fields FROM " . $this->table . " WHERE id=" . $this->id;
         
-        $req=mysqli_query($GLOBALS['db'],$sql) or die(mysqli_error($sql) . "<br/> =>" . mysqli_query($GLOBALS['db'],$sql)); // on revoie aussi la query qui a été faite pour débugger si besoin
+        $req=mysqli_query($GLOBALS['db'],$sql) or die(mysqli_error($GLOBALS['db']) . "<br/> =>" . mysqli_query($GLOBALS['db'],$sql)); // on revoie aussi la query qui a été faite pour débugger si besoin
         $data = mysqli_fetch_assoc($req);
         
         foreach ($data as $k => $v) {
@@ -79,19 +79,19 @@ class Model
             $condition = $data["condition"];
         }
         if (isset($data["fields"])) {
-            $condition = $data["fields"];
+            $fields = $data["fields"];
         }
         if (isset($data["limit"])) {
-            $condition = $data["limit"];
+            $limit = $data["limit"];
         }
-        if (isset($data["condition"])) {
-            $condition = $data["condition"];
+        if (isset($data["order"])) {
+            $order = $data["order"];
         }
-        $sql = "SELECT $fields FROM " . $this->table . "WHERE $condition ORDER BY $order $limit";
-        $req=mysqli_query($GLOBALS['db'],$sql) or die(mysqli_error($sql) . "<br/> =>" . mysqli_query($GLOBALS['db'],$sql)); // on revoie aussi la query qui a été faite pour débugger si besoin
+        $sql = "SELECT $fields FROM ". $this->table." WHERE $condition ORDER BY $order $limit";
+        $req=mysqli_query($GLOBALS['db'],$sql) or die(mysqli_error($GLOBALS['db']) . "<br/> =>" . mysqli_query($GLOBALS['db'],$sql)); // on revoie aussi la query qui a été faite pour débugger si besoin
         $d = array();
         while ($data = mysqli_fetch_assoc($req)) {
-            $d = $data;
+            $d[] = $data;
         }
         return $d;
     }
