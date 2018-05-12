@@ -1,0 +1,211 @@
+body
+{
+    padding:0;
+    margin:0;
+    width:auto;
+}
+
+#site{
+    display: grid;
+    grid-template-columns: 2fr 28fr;
+    grid-template-rows: auto auto;
+    background-color: grey;
+    grid-gap: auto 20px;
+    font-family: Segoe UI Light, Georgia;
+    text-decoration:none;
+}
+/* Actualisation header */
+.lien{
+    text-decoration: none;
+    color: white;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+
+/* Menu du dashboard_compte*/
+.tab {
+    display: flex;
+    border: 1px solid #ccc;
+    background-color: #333333;
+    height: 50px;
+}
+
+.tab button {
+    background-color: inherit;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #486454;
+}
+
+.tablinks{
+    height: 50px;
+}
+
+.choix{
+    border-left:white 1px solid;
+}
+
+.centre{
+    background-color: white;
+    padding:0;
+    margin:0;
+    width:auto;
+    display: grid;
+    font-family: Segoe UI Light, Georgia;
+    grid-column-gap: 1vw;
+    grid-template-columns:5fr 7fr ;
+}
+.piece{ 
+    display: grid;
+    grid-auto-rows: 16.3px;
+    background-size: cover;
+}
+
+
+
+.image {
+    width: 27vw;
+    height: 15vw;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.image_main {
+    width: 50%;
+    height: 50%;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.nom_piece{
+    background-color: #333333;
+    grid-row: 12/15;
+    font-size: 25px;
+    text-align: center;
+    color :white;
+}
+
+.info_piece{
+    display: grid;
+    grid-auto-rows: 70px;
+    background-color: #333333;
+    font-size: 18px;
+}
+.case_modif{
+    border-bottom: #2cc872 solid 3px;
+    
+    text-align: center;
+}
+
+.boutonModif{
+
+    border : none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    background-color: white;
+    background-color:#2CC872;
+    color: white;
+    border-radius: 2px;
+    padding: 1vw;
+    font-size: 2vw;
+    transition: 0.1s;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.case_info{
+    border-bottom: #2cc872 solid 3px;
+    text-align: center;
+    justify-content: center;
+}
+
+.case_capteurs{
+    display: grid;
+    grid-auto-rows:10px;
+    background-color: lightgrey;
+    grid-row: 2/4;
+    text-align: center;
+    color:black;
+    overflow-y: scroll;
+}
+
+.info_capteurs{
+    grid-row: 1/5;
+    font-size: 20px;
+    padding-top: 5px;
+    background-color:#2cc872;
+}
+
+.liste_capteurs{
+    grid-row: 5/8;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.suppr{
+    color:#2CC872;
+    padding-bottom: 2px;
+}
+
+.case_ajout{
+    grid-column: 2/4;
+    grid-row: 2/4;
+    display: grid;
+    background-color: white;
+    grid-auto-rows: 140px;
+    color:#2cc872;
+    font-size: 40px;
+    overflow: auto ;
+    border-top: lightgrey solid 5px;
+    border-bottom: lightgrey solid 5px;
+}
+.boutonAjout {
+    border : none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    background-color: white;
+    background-color:#2CC872;
+    color: white;
+    border-radius: 2px;
+    height: 9vh;
+    padding: 1vw;
+    font-size: 2vw;
+    width: 25vw;
+    transition: 0.1s;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.boutonAjout:hover{
+    transform: scale(1.04);
+}
+
+
+.ajout{
+    margin-left:20px;
+    font-size:25px;
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.nommage {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.idcapteur {
+    grid-column: 3;
+    grid-row: 4;
+}
