@@ -15,30 +15,41 @@ if (ISSET($_GET['mail']) && ISSET($_GET['pass_token'])) {
     $mail = $_GET['mail'];
     $token = $_GET['pass_token'];
     
- 
-    if (isset($_POST['valider'])) {     /* Après envoie */            
-          
-        if($_POST['mdp']===$_POST['mdp_confirm']) {
-            $nouv_mdp = sha1($_POST['mdp']);
-            $req = $bdd->prepare('UPDATE users SET password=? WHERE mail=? AND pass_token=?');
-            $req->execute(array($nouv_mdp,$mail,$token));
-            
-        }
-        else {
-            ?>
-            
+    $req = $bdd->prepare("SELECT COUNT(id) FROM users WHERE mail=? AND pass_token=?");
+    $req->execute(array($mail, $token));
+    
+    while ($donnees = $req->fetch()) {
+        $compteur = $donnees['COUNT(id)'];
+    }
+    
+    if ($compteur>0) {      /* Vérification de la combinaison mail/pass_token */
+        if (isset($_POST['valider'])) {     /* Après envoie */
+            if($_POST['mdp']===$_POST['mdp_confirm']) {     /* Vérification que les champs soient identiques */
+                /* Changement du mot de passe */
+                $nouv_mdp = sha1($_POST['mdp']);
+                $req = $bdd->prepare('UPDATE users SET password=?, pass_token=? WHERE mail=? AND pass_token=?');
+                $req->execute(array($nouv_mdp, NULL, $mail, $token));
+                           
+                /* Redirection */
+                header("Location: index.php");                
+            }
+            else {      /* Les champs ne sont pas identiques */
+                ?>
             <p class="text_erreur">
             	Veuillez vérifier les données saisies
-            </p>
-            
+            </p>            
             <?php 
+            }
         }
+    }
+    else {
+        header("Location: index.php"); /* Retour à l'index car la combinaison mail/pass_token est erronnée */
+        exit(); 
     }
 }
 else {
-    echo "sortie 2";
-    /*  header("Location: index.php"); /* Retour à l'index car l'URL est erronné */
-    /*  exit(); */
+      header("Location: index.php"); /* Retour à l'index car l'URL est erronnée */
+      exit(); 
 }
 ?>
 <html>

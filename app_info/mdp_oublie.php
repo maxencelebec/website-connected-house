@@ -34,6 +34,15 @@
     		$req-> execute(array($token, $mail));
     		
     		header("Location: change_mdp.php?mail=$mail&pass_token=$token");
+    		/* Ecriture du mail et envoie */
+    		/*
+    		$url = "http://localapp/app_info/change_mdp.php?mail='$mail'&pass_token='$token'";
+    		$sujet = "Virifocus | Réinitialisation du mot de passe";
+    		$message = "Une demande de réinitialisation de votre mot de passe a été faite.
+                        \n Afin de poursuivre la procédure, veuillez cliquer sur ce lien:
+                        \n '$url'"
+            mail("vincent.nguyen96@ymail.com", $sujet, $message, "From: vincent.nguyen96@ymail.com\r\n");
+    		*/
     		?>
     		<p class='text_envoi'>
        		Un mail vous permettant de réinitialiser votre mot de passe vous a été envoyé.
