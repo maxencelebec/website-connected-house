@@ -14,14 +14,15 @@ if (ISSET($_GET['mail']) && ISSET($_GET['pass_token'])) {
     
     $mail = $_GET['mail'];
     $token = $_GET['pass_token'];
+    
  
     if (isset($_POST['valider'])) {     /* Après envoie */            
           
         if($_POST['mdp']===$_POST['mdp_confirm']) {
             $nouv_mdp = sha1($_POST['mdp']);
-            echo $nouv_mdp;
-            $req = $bdd->prepare('UPDATE users SET password=? FROM users WHERE mail=? AND pass_token=?');
+            $req = $bdd->prepare('UPDATE users SET password=? WHERE mail=? AND pass_token=?');
             $req->execute(array($nouv_mdp,$mail,$token));
+            
         }
         else {
             ?>
