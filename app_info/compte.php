@@ -53,7 +53,7 @@
 				
 				<!-- Tab 1 : Profile -->
 				<div id="profile" class="tabcontent">
-				<form class="profile_form" action="dashboard_compte_post.php" method="post"> 
+				<form class="profile_form" action="compte_post.php" method="post"> 
 					<!-- (Profile) Bloc 1 -->
 					<div class="bloc" id="bloc_profile_1">
 						<div id="name">
@@ -96,7 +96,7 @@
 				<!-- ---------------------------------------------------- -->
 				<!-- Tab 2 : Compte -->
 				<div id="compte" class="tabcontent">
-				<form class="compte_form" action="dashboard_compte_post.php" method="post">
+				<form class="compte_form" action="compte_post.php" method="post">
 					<!--  (Compte) Bloc 1 -->
 					<div class="bloc" id="bloc_compte_1">
 						<div id="nmdp">

@@ -19,6 +19,7 @@ if (ISSET($_GET['mail']) && ISSET($_GET['pass_token'])) {
           
         if($_POST['mdp']===$_POST['mdp_confirm']) {
             $nouv_mdp = sha1($_POST['mdp']);
+            echo $nouv_mdp;
             $req = $bdd->prepare('UPDATE users SET password=? FROM users WHERE mail=? AND pass_token=?');
             $req->execute(array($nouv_mdp,$mail,$token));
         }
