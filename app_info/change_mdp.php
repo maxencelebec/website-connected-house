@@ -23,7 +23,7 @@ if (ISSET($_GET['mail']) && ISSET($_GET['pass_token'])) {
     }
     
     if ($compteur>0) {      /* Vérification de la combinaison mail/pass_token */
-        if (isset($_POST['valider'])) {     /* Après envoie */
+        if (isset($_POST['valider'])&&isset($_POST['mdp'])) {     /* Après envoie */
             if($_POST['mdp']===$_POST['mdp_confirm']) {     /* Vérification que les champs soient identiques */
                 /* Changement du mot de passe */
                 $nouv_mdp = sha1($_POST['mdp']);
@@ -36,7 +36,7 @@ if (ISSET($_GET['mail']) && ISSET($_GET['pass_token'])) {
             else {      /* Les champs ne sont pas identiques */
                 ?>
             <p class="text_erreur">
-            	Veuillez vérifier les données saisies
+            	Erreur lors de la saisie du mot de passe
             </p>            
             <?php 
             }
@@ -72,9 +72,9 @@ else {
 			<div class="formulaire">
 				<div class="titre"><h1>Changez votre mot de passe</h1></div>
 				<div>Mot de passe :</div>
-				<input type="password" name="mdp" style="text-align: center"/>
+				<input type="password" name="mdp" style="text-align: center" required/>
 				<div>Confirmez votre mot de passe :</div>
-				<input type="password" name="mdp_confirm" style="text-align: center"/>
+				<input type="password" name="mdp_confirm" style="text-align: center" required/>
 			</div>
 
 			<input class="valider" type="submit" value="Valider" name="valider">
