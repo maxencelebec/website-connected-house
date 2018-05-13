@@ -23,7 +23,6 @@
 			    <li>SLIDE 1</li>
 			    <li>SLIDE 2</li>
 			    <li> <img class="imageDiapo" src="image/Cuisine.jpg"/> </li>
-			    <li>SLIDE 4</li>
 		    </ul>  
 		</div>
 
