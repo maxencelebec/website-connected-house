@@ -10,12 +10,28 @@
     <link rel="stylesheet" href="index.css"/>
     <link rel="icon" type="image/png" href="image/logo.png" />
 	<script src="index.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
 
     <div id="partie_gauche">
-        <img id="diapo" src="image/" id="element"/>
+        <div id="slider">
+		    <a href="#" class="control_next">>></a>
+		    <a href="#" class="control_prev"><</a>
+		    <ul>
+			    <li>SLIDE 1</li>
+			    <li>SLIDE 2</li>
+			    <li> <img class="imageDiapo" src="image/Cuisine.jpg"/> </li>
+			    <li>SLIDE 4</li>
+		    </ul>  
+		</div>
+
+		<div class="slider_option">
+		    <input type="checkbox" id="checkbox">
+		    <label for="checkbox">Autoplay Slider</label>
+		</div> 
+
     </div>
 	
     <div id="partie_droite">
