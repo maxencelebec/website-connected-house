@@ -11,7 +11,7 @@
                <a class="lien" href="parametres.php">
                 <div class="parametres_lien"><br><br>Paramètres</div></a></div>
         <div class="aide">
-              <a class="lien" href="help.php">
+              <a class="lien" href="help.php?p=help_ctlr">
                    <div class="aide_lien"><br><br>Aide</div></a></div>
         <div class="virifocus"></div>
     </div>

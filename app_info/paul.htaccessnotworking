@@ -1,0 +1,24 @@
+RewriteEngine On
+
+    RewriteRule ^Virifocus/inscription$ virifocus.sql/Inscription_1.php
+	
+
+        RewriteRule ^Virifocus/inscription/habitant/page1$ virifocus.sql/inscription_habitant_1.php
+		
+		
+		    RewriteRule ^Virifocus/inscription/habitant/page2$ virifocus.sql/inscription_habitant_2.php
+			
+			RewriteRule ^Virifocus/inscription/habitant/page3$ virifocus.sql/inscription_habitant_3.php
+			
+			RewriteRule ^Virifocus/inscription/habitant/page4$ virifocus.sql/inscription_habitant_4.php
+			
+			RewriteRule ^Virifocus/inscription/habitant/page5/([a-z0-9]+)$ virifocus.sql/inscription_habitant_5.php?id=$1
+	 
+		
+		
+		RewriteRule ^Virifocus/inscription/gerant/page1$ virifocus.sql/inscription_gerant_1.php
+		
+		
+		
+		
+		RewriteRule ^Virifocus/inscription/technicien/page1$ virifocus.sql/inscription_technicien_1.php

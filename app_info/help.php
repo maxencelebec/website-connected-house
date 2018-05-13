@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title> Virifocus </title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="help.css"/>
-    <link rel="icon" type="image/png" href="image/logo.png" />
-    <script src="jQuery.js"></script>
-
-</head>
-
-<body>
-	<div id="site">
-
-		<?php 
-	    include "header.php"; 
-	    ?>
 
 		<div class="main_help">
 		
@@ -41,9 +23,3 @@
 		
 		</div>
 
-		<?php 
-			include "footer.php" 
-		?>
-	</div>
-
-</body>

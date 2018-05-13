@@ -1,9 +1,39 @@
 <?php
-require "core.php";
+define("WEBROOT",str_replace('index_mvc.php',"",$_SERVER['SCRIPT_NAME']));
+define("ROOT",str_replace('index_mvc.php',"",$_SERVER['SCRIPT_FILENAME']));
+
+
+require(ROOT.'core/model.php');
+require(ROOT.'core/controller.php');
+
+$params=explode('/',$_GET['p']);
+
+
+$controller=$params[0]; // ceci conrrespond au premier élément dans les liens /help/
+$action=isset($params[1]) ? $params[1]:'index_mvc'; //ceci conrrespond au second élément dans les liens /help/action par exemple help.php
+
+require('/controllers/'.$controller.'.php');
+$controller= new $controller();
+
+if(method_exists($controller,$action)){
+    $controller->$action();
+}
+else{
+    echo'erreur 404  not found';
+}
+
+
+
+
+/*
+ * 
+ * 
+ * 
+ * require "core.php";
 //$Virifocus = Model::load("virifocus");
 $messag= Model::load("Message");
 
-/*
+
 ?>
 
 
@@ -26,12 +56,13 @@ echo $messag->read();?>
 
 </form>
 
-*/
+
 
 ?>
 <?php 
 $message =$messag->find(array("order"=> " contenu_msg ASC"));
 print_r($message);
+*/
 ?>
 
 
