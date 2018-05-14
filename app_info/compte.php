@@ -28,101 +28,62 @@
 		 while ($donnees = $req->fetch()) {
 			$name = $donnees['name'];
 			$firstname = $donnees['firstname'];
-			$mail = $donnees['mail'];
-			$phone_number_portable = $donnees['phone_number_portable'];
-			$country = $donnees['country'];
+			$address = $donnees['address'];
+            $city = $donnees['city'];
 			$postal_code = $donnees['postal_code'];
+			$country = $donnees['country'];
+			$mail = $donnees['mail'];
+			$phone_number_home = $donnees['phone_number_home'];
+			$phone_number_portable = $donnees['phone_number_portable'];
+			
 		}
 	?>
 </head>
 <body class="fond">
-            <div id="site">
+	<div id="site">
 			
-			<?php
-				include "header.php";
-			?>
-			
-				<!-- Boutons des tabs (tableau horizontal) -->
-				<div class="tab">
-				<button class="tablinks" id="tablink1">Profile</button>		<!-- Le bouton "Profile" est ouvert par défault (voir JS) -->
-				<button class="tablinks" id="tablink2">Compte</button>
-				<button class="tablinks" id="tablink3">Confidentialit&eacute;</button>
-				<button class="tablinks" id="tablink4">Notifications</button>
-				<a class ="deco" href="deconnexion_post"><button class="deco_boutton">D&eacute;connexion</button></a>
+	<?php
+        include "header.php";
+    ?>
+		<!--  Contenu du site: PARTIE GAUCHE  -->
+		<div class="partie_gauche">
+			<div class="bloc" id="user_infos">
+				<div class="case" id="head">
+					<div class="titre"> Profile </div>
 				</div>
-				
-				<!-- Tab 1 : Profile -->
-				<div id="profile" class="tabcontent">
-				<form class="profile_form" action="compte_post.php" method="post"> 
-					<!-- (Profile) Bloc 1 -->
-					<div class="bloc" id="bloc_profile_1">
-						<div id="name">
-							<span class="bold"> Name </span>
-							<input type="text" name="name" value="<?php echo $name;?>">
-						</div>
-						<div id="firstname">
-							<span class="bold"> Firstname </span>
-							<input type="text" name="firstname" value="<?php echo $firstname;?>">
-						</div>
-						<div id="birthday">
-						<span class="bold"> Birthday </span> <?php?>
-						</div>
-					</div>
-					<!-- (Profile) Bloc 2 -->
-					<div class="bloc" id="bloc_profile_2">
-						<div id="country">
-							<span class="bold"> Country </span>
-							<input type="text" name="country" value="<?php echo $country;?>">
-						</div>
-						<div id="city">
-							<span class="bold"> Code Postal </span>							
-							<input type="text" name="postal_code" value="<?php echo $postal_code;?>">
-						</div>
-					</div>
-					<!-- (Profile) Bloc 3 -->
-					<div class="bloc" id="bloc_profile_3">
-						<div id="mail">
-							<span class="bold"> Adresse Mail </span>
-							<input type="text" name="mail" value="<?php echo $mail;?>">
-						</div>
-						<div id="phone">
-							<span class="bold"> Phone number </span>
-							<input type="text" name="phone_number" value="<?php echo $phone_number_portable;?>">
-						</div>
-					</div>
-					<input class="enregistrer" type="submit" value="Enregistrer">												
-				</form>
-				</div>			
-				<!-- ---------------------------------------------------- -->
-				<!-- Tab 2 : Compte -->
-				<div id="compte" class="tabcontent">
-				<form class="compte_form" action="compte_post.php" method="post">
-					<!--  (Compte) Bloc 1 -->
-					<div class="bloc" id="bloc_compte_1">
-						<div id="nmdp">
-    						<span class="bold"> Nouveau Mot de passe </span>
-    						<input type="password" name="nmdp">
-						</div>
-						<div id="cmdp">
-							<span class="bold"> Confirmez Mot de passe </span>
-							<input type="password" name="cmdp">
-						</div>
-					</div>
-					<input class="enregistrer" type="submit" value="Enregistrer">	
-				</form>
-				</div>		
-				<!-- ---------------------------------------------------- -->		
-				<!-- Tab 3 : Confidentialité -->
-				<div id="confidentialite" class="tabcontent"> Test3 </div>		
-				<!-- ---------------------------------------------------- -->		
-				<!-- Tab 4 : Notifications -->
-				<div id="notifications" class="tabcontent"> Test4 </div>
-			<?php
-				include "footer.php";
-			?>
-			
+				<div class="case" id="ligne1">
+    				<div class="text" id="name"> Nom: <?php echo $name;?> </div>
+    				<div class="text" id="firstname"> Pr&eacute;nom: <?php echo $firstname;?> </div>
+    			</div>
+    			<div class="case" id="ligne2">
+					<div class="text" id="address"> Addresse de r&eacute;sidence: <?php echo $address;?> </div>
+				</div>
+				<div class="case" id="ligne3">
+					<div class="text" id="city"> Ville: <?php echo $city;?> </div>
+					<div class="text" id="postal_code"> Code Postale: <?php echo $postal_code;?> </div>
+					<div class="text" id="country"> Pays: <?php echo $country;?> </div>
+				</div>
+				<div class="case" id="ligne4">
+					<div class="text" id="mail"> Mail: <?php echo $mail;?> </div>
+				</div>
+				<div class="case" id="ligne5">
+					<div class="text" id="phone_number_home"> Num&eacute;ro fixe: <?php echo $phone_number_home;?></div>
+				</div>
+				<div class="case" id="ligne6">
+					<div class="text" id="phone_number_portable"> Num&eacute;ro portable: <?php echo $phone_number_portable;?></div>				
+				</div>
 			</div>
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<script src="compte.js"></script>
+		</div>
+		
+		<!--  Contenu du site: PARTIE DROITE  -->
+		<div class="partie_droite">
+			<div class="bloc" id="ticket"></div>
+		</div>
+				
+	<?php
+		include "footer.php";
+    ?>
+			
+	</div>
 </body>
 </html>

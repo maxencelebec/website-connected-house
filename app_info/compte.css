@@ -7,21 +7,10 @@ body
 
 #site{
     display: grid;
-    grid-template-columns: 2fr 28fr;	
-    grid-auto-rows: 35vh;
-    grid-template-rows: 40vh;
+    grid-template-columns: 4fr 27fr 2fr 27fr;	
+    grid-template-rows: 100vh;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
-}
-
-.deco{
-    text-decoration:none;
-    color:white;
-    margin-left:48%;
-}
-
-.deco_boutton{
-	font-size: 41px;
 }
 
 /* Actualisation header */
@@ -35,87 +24,78 @@ body
     border-left: #2cc872 solid 3px;
 }
 
-/* Menu du dashboard_compte*/
-.tab {
-	display: flex;
-    border: 1px solid #ccc;
-    background-color: #333333;
-	overflow: hidden;
-	height: 50px;
+/* CONTENU DE LA PAGE */
+/* GAUCHE */
+.partie_gauche {
+	display: grid;
+	grid-column: 2;
 }
 
-.tablinks {
-	font-size: 15px;
+/* Bloc des infos utilisateurs */
+#user_infos { 
+	display: grid;
+	grid-template-rows: 3fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr; /* Head|Ligne1|Ligne2|Ligne3|ligne4|ligne5|ligne6|Boutton */
+	border-radius: 15px;
+	border: 1px solid;
+	margin-top: 12px;
+	margin-bottom: 12px;
 }
 
-.tab button {
-    background-color: inherit;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.tab button:hover {
-    background-color: #486454;
-}
-
-.tab button.active {
-    background-color: #486454;
-}
-
-/* Disposition des blocs */
-.tabcontent {
-	display: none;
-	grid-row-start: 2;
-	position: relative;
-	bottom: 190px;
-	color: black;
-    height: 500px;
-	overflow: auto;
-	color: black;
-}
-
-.bold {
+.text {
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size: 18px;
 	font-weight: bold;
 }
 
-.bloc {
-	background-color: lightgrey;
+#head {
+	background-color: #333333;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	text-weight: bold;
+}
+
+#ligne1{
+	display: flex;
+	grid-row: 2;
+	flex: 1;
+}
+
+#ligne2{
+	grid-row: 3;
+}
+
+#ligne3{
+	display: flex;
+	grid-row: 4;
+}
+
+#ligne4{
+	grid-row: 5;
+}
+
+#ligne5{
+	grid-row: 6;
+}
+
+#ligne6{
+	grid-row: 7;
+}
+/* DROITE */
+.partie_droite {
+	display: grid;
+	grid-template-rows: 50vh 50vh;
+	grid-column: 4;
+	margin-right: 12px;
+}
+
+/* Bloc des tickets */
+#ticket {
+	grid-row: 2;
 	border-radius: 15px;
-	padding: 3px 3px;
-	margin-top: 15px;
-	width: 99%;
-	height: 12%;
-}
-
-/* Contenu de la tab Profile */
-.profile_form {
-	padding-top: 5px;
-	padding-left: 5px;
-	font-size: 15px;
-}
-	
-	/* Bloc n°1 de Profile*/
-	#bloc_profile_1 {
-		display: grid;
-		grid-template-columns: auto auto auto auto;
-	}
-	
-	#name {
-		grid-column-start: 1;
-	}
-	
-	#firstname {
-		grid-column-start: 2;
-	}
-
-/* Bouton d'envoi des informations */
-.enregistrer {
-	width: 100px;
-	height: 20px;
-	float: right;
-	margin-top: 5px;
-	margin-right: 5px;
+	margin-bottom: 12px;
+	background-color: lightgray;
 }
