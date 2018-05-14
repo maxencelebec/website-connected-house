@@ -1,4 +1,3 @@
-<!DOCTYPE html5>
 
 <?php
 $link = mysqli_connect("localhost", "root", ""); // define the login and password
@@ -6,6 +5,7 @@ mysqli_select_db($link, "virifocus"); // select the database
 mysqli_set_charset($link,"utf8");
 ?>
 
+<?php /*
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,12 +16,14 @@ mysqli_set_charset($link,"utf8");
 
 
 
-<body class="help_sav">
+<body class="help_sav" id="site">
 
-	<header> 
+<header> 
 
 <?php include "header.php";?>
 </header>
+*/
+?>
 
 	<div class="imgbox1">
 		<img class="bebe" src="image/crying.svg">

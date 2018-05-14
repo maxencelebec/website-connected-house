@@ -1,0 +1,135 @@
+body
+{
+    padding:0;
+    margin:0;
+    width:auto;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+@charset "utf-8";
+
+.help_msgs{
+	
+	display:grid;
+	grid-template-columns:2fr 26fr;
+	grid-template-rows:100vh;
+	font-family: Segoe UI Light;
+}
+#site{
+	
+	display:grid;
+	grid-template-columns:2fr 26fr;
+	grid-template-rows:100vh;
+	font-family: Segoe UI Light;
+}
+footer{
+	grid-column:1;
+}
+
+
+.container{
+	grid-column:2;
+	display: grid;
+	grid-templates-columns:60% 40%;
+	background-color:#333333;
+	color:#2cc872;
+	
+}
+
+.container .infobox{
+	grid-column:1;
+	background-image: url("image/isepaddress.png");
+    background-size: cover;
+    max-height:100vh;
+    background-position: center;
+    
+}
+
+
+.container form{
+	
+	grid-column:2;
+	display:grid;
+	grid-template-rows:repeat(4,auto);
+	margin-right: 5%;
+	border:#2cc872 solid 1px;
+    border-radius: 5px;
+	max-width:75%;
+	
+	margin:10%;
+	
+	
+}
+
+#submit{
+	display: block;
+	
+	text-decoration:none;
+    color:white;
+    background-color:#333333;
+    font-family: Segoe UI Light;
+    cursor:pointer;
+    font-size:1em;
+    border:#2cc872 solid 1px;
+    border-radius: 5px;
+    padding:5px;
+    margin:5%;
+    max-width:55%;
+    max-height:75%;
+    margin-left: 25%;
+    margin-right: 1%;
+	
+}
+
+#maison{
+	display: block;
+	border:#2cc872 solid 1px;
+	background-color:#333333;
+	font-family: Segoe UI Light;
+	color:white;
+	border-radius: 5px;
+	margin:10%;
+	
+}
+
+#msg{
+	display: block;
+	resize:none;
+	border:#2cc872 solid 1px;
+	background-color:#333333;
+	font-family: Segoe UI Light;
+	color:white;
+	border-radius: 5px;
+	margin:10%;
+	
+}
+
+#utilisateur{
+	display: block;
+	resize:none;
+	border:#2cc872 solid 1px;
+	background-color:#333333;
+	font-family: Segoe UI Light;
+	color:white;
+	border-radius: 5px;
+	margin:10%;
+	
+}
+
+.container form label{
+	
+	transform:translate(10%,50%);
+	
+}
+#submit:hover{
+	
+	transform:scale(1.1);
+	background-color:#2cc872;
+}
+
+
+

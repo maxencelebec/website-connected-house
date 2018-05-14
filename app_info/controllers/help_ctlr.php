@@ -10,8 +10,12 @@ class help_ctlr extends Controller{
         
     }
     
-    function help_sav($id_utilisateur,$id_habitation) {
-        ;
+    function sav() {
+        $this->render('sav');
+        
+    }
+    function message(){
+        $this->render('message');
     }
     
     

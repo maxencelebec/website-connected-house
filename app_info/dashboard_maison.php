@@ -20,6 +20,7 @@ session_start();
         ?>
 
         <?php
+        $_SESSION['id_habitation'] = $_GET['id'];
         $id_habitation = $_SESSION['id_habitation'];
         ?>
 

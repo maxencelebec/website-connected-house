@@ -12,8 +12,6 @@ catch(Exception $e)
 */
 
     
-    
-    
     $db=mysqli_connect("localhost","root","","virifocus");
     mysqli_set_charset($db,"utf8");
     echo "Connected successfully";
