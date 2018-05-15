@@ -9,8 +9,10 @@ class help_ctlr extends Controller{
         $this->render('index');
         
     }
-    
-    function sav() {
+    /**
+     * Test de recommandation pour la fonction
+     */
+    function sav() { 
         $this->render('sav');
         
     }
@@ -18,7 +20,9 @@ class help_ctlr extends Controller{
         $this->render('message');
     }
     
-    
+    function faq() {
+    	$this->render('faq');
+    }
 }
 
 

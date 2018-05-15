@@ -1,0 +1,138 @@
+body
+{
+    padding:0;
+    margin:0;
+    width:auto;
+}
+
+#site{
+    display: grid;
+    grid-template-columns: 2fr 28fr;
+
+    font-family: Segoe UI Light, Georgia;
+    text-decoration:none;
+    transition: 0.5s;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+
+
+
+$timing: .4s;
+$ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+.content{
+	//overflow:auto;
+	display:grid;
+	grid-template-rows:1vh 80vh 2vh; 
+
+	
+	
+}
+
+.title{
+	grid-row:1;
+	text-align:center;
+	font-size:1em;
+	font-family: Segoe UI Light, Georgia;
+}
+.accordion {
+	overflow:auto;
+  grid-row:2;
+  position:relative;
+  top:75%;
+  left:50%;	
+  font-family: Segoe UI Light, Georgia;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  
+  length:75%;
+  overflow:auto;
+  
+}
+.accordion input[name='panel'] {
+  display: none;
+}
+
+.accordion label {
+  position: relative;
+  display: block;
+  padding: 0.5em;
+  background: #333333;
+  border-top: 0.5px solid;
+  border-bottom: 0.5px solid;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+.accordion label:after {
+  content: '+';
+  position: absolute;
+  right: 1em;
+  width: 1em;
+  height: 1em;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  background: #27ae60;
+  line-height: .8em;
+
+}
+.accordion label:hover {
+  color: #27ae60;
+}
+.accordion input:checked + label {
+  color: #27ae60;
+}
+.accordion input:checked + label:after {
+  content: '-';
+  line-height: .8em;
+}
+
+.accordion .accordion__content {
+  overflow: hidden;
+  height: 0px;
+  //position: relative;
+  padding: 0 1.5em;
+  box-shadow: inset 4px 0 0 0 #27ae60;
+  background: white;
+  color: black;
+  transition: height 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+
+.accordion .accordion__content .accordion__body {
+  font-size: .825em;
+  line-height: 1.4em;
+}
+
+
+input[name='panel']:checked ~ .accordion__content.accordion__content--small {
+  height: 100px;
+}
+
+.bottom_msg{
+	
+ grid-row:3;
+ position:relative;
+ justify:center;
+ color:#333333;
+ text-align:center;
+ font-family: Segoe UI Light, Georgia;
+ max-length:15%;
+}
+
+
+
+
+

@@ -25,7 +25,7 @@ if(method_exists($controller,$action)){
     
 }
 else{
-    echo'erreur 404  not found';
+    echo'Erreur 404: not found';
 }
 
 
