@@ -62,7 +62,7 @@
      
      <hr class=line>
      
-     <a class="bottom_msg" href=ROOT."help/message">Vous ne trouvez pas ce que vous voulez ?<br>Envoyez un message</a>
+     <a class="bottom_msg" href="index_mvc.php?p=help_ctlr/message">Vous ne trouvez pas ce que vous voulez ?<br>Envoyez un message</a>
       
      	
  
