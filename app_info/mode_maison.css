@@ -3,33 +3,77 @@ body
     padding:0;
     margin:0;
     width:auto;
+
 }
 
 #site{
     display: grid;
-    grid-template-columns: 2fr 5fr 23fr;
-    grid-template-rows:100vh;
-	background-color:blue;
-	overflow:hidden;
-	
+    grid-template-rows: auto auto;
+    background-color: grey;
+    grid-gap: auto 20px;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
-    transition: 0.5s;
 }
+
 a{
     text-decoration:none;
     color:white;
 }
 
+.mode_maison{
+    overflow:hidden;
+    
+    display:grid;
+    grid-template-column: auto auto;
+}
+
+$timing: .4s;
+$ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.content{
+    overflow:auto;
+    grid-column:2;
+    display:grid;
+}
 
 .main1{
-	
-    grid-row: 1;
     display: grid;
-    grid-template-rows:30vh 70vh;
-
+    background-color: lightgrey;
+    font-family: Segoe UI Light, Georgia;
+    grid-row-gap: 200px;
+    grid-template-rows: 5fr 10fr 5fr ;
 }
-#eco_mode{
+
+.title{
+    grid-row:1;
+    text-align:center;
+    font-size:1em;
+    font-family: Segoe UI Light, Georgia;
+}
+
+
+.mode{ 
+    display: grid;
+    grid-row: 2;
+    grid-column-gap: 20px;
+    background-size: cover;
+    grid-template-columns: 3fr 3fr 3fr;
+}
+.comment{
+    grid-row:3;
+    text-align:center;
+    font-size:1em;
+    font-family: Segoe UI Light, Georgia;
+}
+
+.eco_mode{
+    grid-column: 1;
     background-color: #40495e;
     border-radius: 10px;
     box-shadow: 0px 4px 20px #212122;
@@ -43,7 +87,8 @@ a{
     background-size: cover;
     background-position: center;
 }
-#moyen_mode{
+.moyen_mode{
+    grid-column: 2;
     background-color: #40495e;
     border-radius: 10px;
     box-shadow: 0px 4px 20px #212122;
@@ -57,7 +102,8 @@ a{
     background-size: cover;
     background-position: center;
 }
-#max_mode{
+.max_mode{
+    grid-column: 3;
     background-color: #40495e;
     border-radius: 10px;
     box-shadow: 0px 4px 20px #212122;
