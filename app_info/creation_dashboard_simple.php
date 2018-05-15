@@ -19,6 +19,7 @@ catch(Exception $e)
 
 ?>
 
+
 <div>
 
     <div>
@@ -50,7 +51,11 @@ catch(Exception $e)
                         ?>
 
                     </div>
-                    <div class="chartContainer"></div>
+
+                    <div class="chartContainer">
+
+                    </div>
+
                 </div>
                 <div class="case2213"></div>
                 <div class="donnees">
