@@ -48,8 +48,8 @@
 		<!--  Contenu du site: PARTIE GAUCHE  -->
 		<div class="partie_gauche">
 			<div class="bloc" id="user_infos">
-				<div class="case" id="head">
-					<div class="titre"> Profile </div>
+				<div class="case" id="head_user_infos">
+					<div class="titre"> Vos Informations </div>
 				</div>
 				<div class="case" id="ligne1">
     				<div class="text" id="name"> Nom: <?php echo $name;?> </div>
@@ -72,11 +72,17 @@
 				<div class="case" id="ligne6">
 					<div class="text" id="phone_number_portable"> Num&eacute;ro portable: <?php echo $phone_number_portable;?></div>				
 				</div>
+				<div class="case" id="ligne_modif">
+					<a class="modif" href="parametres.php"> Modifier Informations </a>
+				</div>
 			</div>
 		</div>
 		
 		<!--  Contenu du site: PARTIE DROITE  -->
 		<div class="partie_droite">
+			<div class="deconnect_space">
+				<a class="deconnexion" href="deconnexion_post"><button class="deconnect_button"> Se d&eacute;connecter </button></a>
+			</div>			
 			<div class="bloc" id="ticket"></div>
 		</div>
 				

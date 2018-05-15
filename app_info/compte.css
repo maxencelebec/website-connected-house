@@ -39,6 +39,7 @@ body
 	border: 1px solid;
 	margin-top: 12px;
 	margin-bottom: 12px;
+	background-color: lightgray;
 }
 
 .text {
@@ -48,7 +49,7 @@ body
 	font-weight: bold;
 }
 
-#head {
+#head_user_infos {
 	background-color: #333333;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
@@ -59,9 +60,13 @@ body
 }
 
 #ligne1{
-	display: flex;
+	display: grid;
 	grid-row: 2;
-	flex: 1;
+	grid-template-columns: 1fr 1fr;
+}
+
+#firstname{
+	grid-column: 2;
 }
 
 #ligne2{
@@ -69,8 +74,9 @@ body
 }
 
 #ligne3{
-	display: flex;
+	display: grid;
 	grid-row: 4;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 #ligne4{
@@ -84,12 +90,42 @@ body
 #ligne6{
 	grid-row: 7;
 }
+
+.ligne_modif{
+    text-align: center;
+}
+
+.modif{
+    border : none;
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    background-color:#2CC872;
+    color: white;
+    border-radius: 2px;
+    padding: 1vw;
+    font-size: 20px;
+    transition: 0.1s;
+}
 /* DROITE */
 .partie_droite {
 	display: grid;
 	grid-template-rows: 50vh 50vh;
 	grid-column: 4;
 	margin-right: 12px;
+}
+
+.deconnexion {
+	color: black;
+	font-size: 30px;
+	text-decoration: none; 
+	float: right;
+}
+
+.deconnect_button {
+	
 }
 
 /* Bloc des tickets */
