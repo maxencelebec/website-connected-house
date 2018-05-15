@@ -16,15 +16,13 @@ body
     border-left: #2cc872 solid 3px;
 }
 
-#site{
-	
+#site{	
     display: grid;
     grid-template-columns: 2fr 28fr;
     font-family: Segoe UI Light, Georgia;
+    grid-template-rows:100vh;
     text-decoration:none;
-    transition: 0.5s;
-    
-  
+    transition: 0.5s;  
 }
 
 .parametres_lien{
@@ -33,13 +31,11 @@ body
 
 .option_parametres {
     display: grid;
-    
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 25% 25% 25%;
     text-align: center;
 }
 .titre_parametres {
-	
     grid-column:1/4;
     color:black;
     grid-row: 1;
