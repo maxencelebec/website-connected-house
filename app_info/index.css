@@ -10,36 +10,40 @@ body
     grid-template-columns: 5fr 3fr;
 }
 
+a{
+    text-decoration:none;
+    color:white;
+}
 
 
 #Partie_Droite {
     margin-top: auto ;
     margin-bottom: auto ;
+    z-index: 1;
 }
 
-#Partie_gauche {
-	margin-top: auto ;
-    margin-bottom: auto ;
-}
 
 #image{
     width: 75%;
 }
 
-
 .txtIdentifiant{
     font-size : 110%;
 }
 
-.cadreID{
-
-}
 
 .txtMdp{
 	font-size : 110%;
 }
-
+.cadreID{
+    border:none;
+    outline: none;
+    height: 20px;
+}
 .cadreMdp{
+    border:none;
+    outline: none;
+    height: 20px;
 }
 
 .mdpoublie{
@@ -54,6 +58,7 @@ body
     cursor: pointer;
     border:none;
     outline: none;
+    font-family: Segoe UI Light, Georgia;
     background-color: #333333;
     border:#2cc872 solid 2px;
     border-radius: 10px;
@@ -66,6 +71,7 @@ body
 }
 
 .lien_in{
+    background-color: #333333;
     text-decoration:none;
     color:white;
     border:#2cc872 solid 2px;
@@ -78,6 +84,38 @@ body
 .lien_in:hover{
     transform: scale(1.12);
     box-shadow: 0 0 0 2px #2cc872;
+}
+
+.prev{
+    margin-left: 20vw;
+}
+.next{
+    margin-left: 5vw;
+}
+
+.partie_gauche{
+    position: relative;
+    left : 3vw;
+    top : 13vh;
+    width: 50vw;
+}
+
+.boutton{
+    background-color: #333333;
+    border:none;
+    border-radius: 50%;
+    color:white;
+    cursor: pointer;
+    font-size: 30px;
+    outline: none;
+    border: white solid 1px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.boutton:hover{
+    color : #2cc872;
+    background-color: white;
+    border: #2cc872 solid 1px;
 }
 
 

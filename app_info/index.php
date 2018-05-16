@@ -14,9 +14,10 @@
 
 <body onLoad="preload('image/Cuisine.jpg','image/Cave.jpg','image/Chambre.jpg')">
 
-    <div id="Partie_Gauche">
-              <img src="image/Cuisine.jpg" id="Puzzle" name="Puzzle" width="380" height="280"><br>
-              <a href="javascript:chgSlide(-1)"><b> < </b></a> &nbsp; &nbsp; <a href="javascript:chgSlide(1)"><b> > </b></a><br>
+    <div class="partie_gauche">
+            <img src="image/Cuisine.jpg" id="Puzzle" name="Puzzle" width="700vw" height="400vh"><br>
+            <a href="javascript:chgSlide(-1)" class="prev ">   <button class="boutton">< </button>   </a>
+            <a href="javascript:chgSlide(1)" class="next">   <button class="boutton"> > </button>  </a>
     </div>
 	
     <div id="Partie_Droite">
