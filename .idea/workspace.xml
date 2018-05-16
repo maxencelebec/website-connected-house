@@ -33,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/app_info/graphtest.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="473">
-              <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
@@ -167,12 +167,12 @@
       <workItem from="1526046286609" duration="597000" />
       <workItem from="1526239984796" duration="163000" />
       <workItem from="1526368527851" duration="4634000" />
-      <workItem from="1526375907866" duration="63000" />
+      <workItem from="1526375907866" duration="673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42612000" />
+    <option name="totallyTimeSpent" value="43222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -557,7 +557,7 @@
     <entry file="file://$PROJECT_DIR$/app_info/graphtest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
-          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
