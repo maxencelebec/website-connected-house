@@ -20,11 +20,11 @@
 				echo "ERREUR BDD ERREUR BDD ERREUR BDD";
 		}
 		
-		/* RequÍtes des diffÈrentes donnÈes du compte */
+		/* RequÔøΩtes des diffÔøΩrentes donnÔøΩes du compte */
 		$req = $bdd->prepare('SELECT * FROM users WHERE mail=?');
 		$req->execute(array($_SESSION['mail']));
 		
-		/* Attribution variable des donnÈes */
+		/* Attribution variable des donnÔøΩes */
 		 while ($donnees = $req->fetch()) {
 			$name = $donnees['name'];
 			$firstname = $donnees['firstname'];
@@ -64,13 +64,21 @@
 					<div class="text" id="country"> Pays: <?php echo $country;?> </div>
 				</div>
 				<div class="case" id="ligne4">
-					<div class="text" id="mail"> Mail: <?php echo $mail;?> </div>
+					<img id="mail-icon" src="image/close-envelope.png">
+					<div class="text" id="mail"> 
+						<span class="label"> Mail: </span>
+						<?php echo $mail;?> 
+					</div>
 				</div>
 				<div class="case" id="ligne5">
 					<div class="text" id="phone_number_home"> Num&eacute;ro fixe: <?php echo $phone_number_home;?></div>
 				</div>
 				<div class="case" id="ligne6">
-					<div class="text" id="phone_number_portable"> Num&eacute;ro portable: <?php echo $phone_number_portable;?></div>				
+					<img id="phone-icon" src="image/smartphone-call.png">
+					<div class="text" id="phone_number_portable"> 
+						<span class="label"> Num√©ro Portable:   </span> 
+						<?php echo $phone_number_portable;?>
+					</div>				
 				</div>
 				<div class="case" id="ligne_modif">
 					<a class="modif" href="parametres.php"> Modifier Informations </a>
