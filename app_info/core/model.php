@@ -6,7 +6,7 @@ class Model
     public $id;
     var $table;
 
-    public function read($fields = null)
+    function read($fields = null)
     {
         if ($fields == null) {
             $fields = "*";
@@ -16,6 +16,7 @@ class Model
         
         $req=mysqli_query($GLOBALS['db'],$sql) or die(mysqli_error($GLOBALS['db']) . "<br/> =>" . mysqli_query($GLOBALS['db'],$sql)); // on revoie aussi la query qui a été faite pour débugger si besoin
         $data = mysqli_fetch_assoc($req);
+        
         
         foreach ($data as $k => $v) {
             $this->$k = $v;
@@ -30,7 +31,7 @@ class Model
         ;
     }
 
-    public function save($data)
+    function save($data)
     {
         if (isset($data['id']) && empty($data['id'])) {
             $sql = "UPDATE" . $this->table . "SET";
@@ -67,7 +68,7 @@ class Model
         }
     }
 
-    public function find($data = array())
+    function find($data = array())
     {
         $condition = "1=1";
         $fields = "*";
@@ -95,13 +96,12 @@ class Model
         return $d;
     }
     
-    public function del($id=null) {
+    function del($id=null) {
         if(id==null){$id=$this.id;}
         $sql="DELETE FROM".$this->table."WHERE id=$id";
         mysqli_query($GLOBALS['db'],$sql) or die(mysqli_error($GLOBALS['db']) . "<br/> =>" . mysqli_query($GLOBALS['db'],$sql)); // on revoie aussi la query qui a été faite pour débugger si besoin
         
-        
-        ;
     }
+    
 }
 

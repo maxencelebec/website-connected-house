@@ -36,6 +36,11 @@ class Controller{
         
     
     }
+    public function loadModel($name) {
+        
+    	require_once(ROOT."model/".strtolower($name).".php");
+        $this->$name = new $name();
+    }
     
    
     

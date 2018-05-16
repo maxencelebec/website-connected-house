@@ -2,7 +2,7 @@
 define("WEBROOT",str_replace('index_mvc.php',"",$_SERVER['SCRIPT_NAME']));
 define("ROOT",str_replace('index_mvc.php',"",$_SERVER['SCRIPT_FILENAME']));
 
-
+require(ROOT.'core/core.php');
 require(ROOT.'core/model.php');
 require(ROOT.'core/controller.php');
 

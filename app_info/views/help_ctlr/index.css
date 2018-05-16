@@ -20,6 +20,7 @@ body
 	
     display: grid;
     grid-template-columns: 2fr 28fr;
+    grid-template-rows: 45vh 45vh 10vh;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
     transition: 0.5s;
@@ -34,13 +35,13 @@ body
 .option_help {
     display: grid;
     
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 25% 25% 25%;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 30% 25% 25%;
     text-align: center;
 }
 .titre_help {
 	
-    grid-column:1/4;
+    grid-column:1/5;
     color:black;
     grid-row: 1;
     font-size: 30px;
@@ -59,6 +60,9 @@ body
 
 .option3 {
     grid-row: 2;
+}
+.option4{
+    grid-row:2;
 }
 
 
@@ -93,4 +97,15 @@ body
     margin-top: 3%;
     grid-row:3;
     
+}
+
+.option4_text{
+
+    color:#000000 !important;
+	
+    font-size: 20px;
+    margin-top: 3%;
+    grid-row:3;
+
+
 }
