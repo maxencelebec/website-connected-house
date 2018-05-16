@@ -20,18 +20,21 @@ session_start();
 				echo "ERREUR BDD ERREUR BDD ERREUR BDD";
 		}
 		
-		/* Requêtes des différentes données du compte */
+		/* Requï¿½tes des diffï¿½rentes donnï¿½es du compte */
 		$req = $bdd->prepare('SELECT * FROM users WHERE mail=?');
 		$req->execute(array($_SESSION['mail']));
 		
-		/* Attribution variable des données */
+		/* Attribution variable des donnï¿½es */
 		 while ($donnees = $req->fetch()) {
-			$name = $donnees['name'];
-			$firstname = $donnees['firstname'];
-			$mail = $donnees['mail'];
-			$phone_number_portable = $donnees['phone_number_portable'];
-			$country = $donnees['country'];
-			$postal_code = $donnees['postal_code'];
+		     $name = $donnees['name'];
+		     $firstname = $donnees['firstname'];
+		     $address = $donnees['address'];
+		     $city = $donnees['city'];
+		     $postal_code = $donnees['postal_code'];
+		     $country = $donnees['country'];
+		     $mail = $donnees['mail'];
+		     $phone_number_home = $donnees['phone_number_home'];
+		     $phone_number_portable = $donnees['phone_number_portable'];
 		}
 	?>
 </head>
@@ -44,7 +47,7 @@ session_start();
 			
 				<!-- Boutons des tabs (tableau horizontal) -->
 				<div class="tab">
-				<button class="tablinks" id="tablink1">Profile</button>		<!-- Le bouton "Profile" est ouvert par défault (voir JS) -->
+				<button class="tablinks" id="tablink1">Profile</button>		<!-- Le bouton "Profile" est ouvert par dï¿½fault (voir JS) -->
 				<button class="tablinks" id="tablink2">Compte</button>
 				<button class="tablinks" id="tablink3">Confidentialit&eacute;</button>
 				<button class="tablinks" id="tablink4">Notifications</button>
@@ -93,7 +96,7 @@ session_start();
 				<!-- Tab 2 : Compte -->
 				<div id="compte" class="tabcontent"> Test2 </div>		
 				<!-- ---------------------------------------------------- -->		
-				<!-- Tab 3 : Confidentialité -->
+				<!-- Tab 3 : Confidentialitï¿½ -->
 				<div id="confidentialite" class="tabcontent"> Test3 </div>		
 				<!-- ---------------------------------------------------- -->		
 				<!-- Tab 4 : Notifications -->

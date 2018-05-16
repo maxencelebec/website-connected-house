@@ -35,8 +35,7 @@
 			$country = $donnees['country'];
 			$mail = $donnees['mail'];
 			$phone_number_home = $donnees['phone_number_home'];
-			$phone_number_portable = $donnees['phone_number_portable'];
-			
+			$phone_number_portable = $donnees['phone_number_portable'];			
 		}
 	?>
 </head>
