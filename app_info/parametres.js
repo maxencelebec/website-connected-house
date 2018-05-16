@@ -39,8 +39,8 @@ document.getElementById("tablink3").addEventListener("click", function(){
 document.getElementById("tablink4").addEventListener("click", function(){
 	openTab(event, "notifications");
 }); 
-document.getElementsByClassName("enregistrer").addEventListener("click", function() {
+/*document.getElementsByClassName("enregistrer").addEventListener("click", function() {
 	submitForms();
-});
+});*/
 
 document.getElementById("tablink1").click();
