@@ -22,9 +22,18 @@ session_start();
 			    <div class="title"><h1>MODE MAISON</h1></div>
 
 			    <div class="mode">
-			    	<div class="eco_mode"onclick="mode_eco()">Eco</div>
-			    	<div class="moyen_mode" onclick="mode_moyen()">Moyen</div>
-					<div class="max_mode" onclick="mode_max()">Max</div>
+			    	<div class="eco_mode"onclick="mode_eco()">
+			    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mode Economiseur
+				    	<div class="overlay">
+	    					<div class="text">Le mode économie d’énergie réduit la quantité d’énergie utilisé en etteingnant les capteurs suivants (1,2,3...)</div>
+	    				</div>
+	    			</div>
+			    	<div class="mon_mode" onclick="mon_moyen()">
+			    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon Mode
+				    	<div class="overlay">
+	    					<div class="text">&nbsp;&nbsp;&nbsp;les capteurs que vous allez sélectionner seront éteind automatiquement quand ce mode est activé </div>
+	    				</div>
+			    	</div>
 			    </div>
 			    <div class="comment"></div>
 			</div>
