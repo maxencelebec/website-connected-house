@@ -19,7 +19,7 @@
             <a href="javascript:chgSlide(-1)" class="prev ">   <button class="boutton">< </button>   </a>
             <a href="javascript:chgSlide(1)" class="next">   <button class="boutton"> > </button>  </a>
     </div>
-	
+
     <div id="Partie_Droite">
 
         <img id="image" src="image/virifocus droit.png"/>

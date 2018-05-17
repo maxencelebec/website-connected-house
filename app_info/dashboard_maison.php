@@ -5,11 +5,12 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-<title>Virifocus</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="dashboard_maison.css" />
-<link rel="icon" type="image/png" href="image/logo.png" />
-<script src="jQuery.js"></script>
+    <title>Virifocus</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="dashboard_maison.css" />
+    <link rel="icon" type="image/png" href="image/logo.png" />
+    <script src="jQuery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 </head>
 <body class="fond">
@@ -164,5 +165,15 @@ session_start();
 	</div>
 </body>
 <script src="dashboard_maison.js"></script>
+<script>
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            $.ajax({
+                url:"check.php",
+                method:"POST",
+            });
+        });
+    });
+</script>
 </html>
 
