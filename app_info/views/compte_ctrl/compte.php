@@ -9,6 +9,7 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="compte.css"/>
     <link rel="icon" type="image/png" href="image/logo.png" />
+    <script src="jQuery.js"></script>
 	<?php
 		try
 		{
@@ -20,11 +21,11 @@
 				echo "ERREUR BDD ERREUR BDD ERREUR BDD";
 		}
 		
-		/* RequÍtes des diffÈrentes donnÈes du compte */
+		/* RequÔøΩtes des diffÔøΩrentes donnÔøΩes du compte */
 		$req = $bdd->prepare('SELECT * FROM users WHERE mail=?');
 		$req->execute(array($_SESSION['mail']));
 		
-		/* Attribution variable des donnÈes */
+		/* Attribution variable des donnÔøΩes */
 		 while ($donnees = $req->fetch()) {
 			$name = $donnees['name'];
 			$firstname = $donnees['firstname'];
@@ -34,8 +35,7 @@
 			$country = $donnees['country'];
 			$mail = $donnees['mail'];
 			$phone_number_home = $donnees['phone_number_home'];
-			$phone_number_portable = $donnees['phone_number_portable'];
-			
+			$phone_number_portable = $donnees['phone_number_portable'];			
 		}
 	?>
 </head>
@@ -49,39 +49,78 @@
 		<div class="partie_gauche">
 			<div class="bloc" id="user_infos">
 				<div class="case" id="head_user_infos">
-					<div class="titre"> Vos Informations </div>
-				</div>
+					<div class="titre"> Vos Informations</div>
+				</div> 
 				<div class="case" id="ligne1">
-    				<div class="text" id="name"> Nom: <?php echo $name;?> </div>
-    				<div class="text" id="firstname"> Pr&eacute;nom: <?php echo $firstname;?> </div>
+    				<div class="text" id="name"> 
+    					<span class="label"> Nom: </span> 
+    					<?php echo $name;?>
+    				</div>
+    				<div class="text" id="firstname"> 
+    					<span class="label"> Pr√©nom: </span> 
+    					<?php echo $firstname;?> 
+    				</div>
     			</div>
     			<div class="case" id="ligne2">
-					<div class="text" id="address"> Addresse de r&eacute;sidence: <?php echo $address;?> </div>
+    				<img id="address-icon" src="image/home.png">
+					<div class="text" id="address">  
+						<span class="label"> Addresse de r√©sidence: </span>
+						<?php echo $address;?> 
+					</div>
 				</div>
 				<div class="case" id="ligne3">
-					<div class="text" id="city"> Ville: <?php echo $city;?> </div>
-					<div class="text" id="postal_code"> Code Postale: <?php echo $postal_code;?> </div>
-					<div class="text" id="country"> Pays: <?php echo $country;?> </div>
+					<div class="text" id="city">
+						<img id="city-icon" src="image/bank.png">
+						<span class="label"> Ville: </span>
+						<?php echo $city;?> 
+					</div>
+					<div class="text" id="postal_code">
+						<img id="postal-icon" src="image/mailbox.png">
+						<span class="label"> Code Postale: </span>
+						<?php echo $postal_code;?> 
+					</div>
 				</div>
 				<div class="case" id="ligne4">
-					<div class="text" id="mail"> Mail: <?php echo $mail;?> </div>
+					<div class="text" id="country">  
+						<img id="country-icon" src="image/flag.png">
+						<span class="label"> Pays: </span>
+						<?php echo $country;?> 
+					</div>
 				</div>
 				<div class="case" id="ligne5">
-					<div class="text" id="phone_number_home"> Num&eacute;ro fixe: <?php echo $phone_number_home;?></div>
+					<img id="mail-icon" src="image/close-envelope.png">
+					<div class="text" id="mail"> 
+						<span class="label"> Mail: </span>
+						<?php echo $mail;?> 
+					</div>
 				</div>
 				<div class="case" id="ligne6">
-					<div class="text" id="phone_number_portable"> Num&eacute;ro portable: <?php echo $phone_number_portable;?></div>				
+					<img id="fixe-icon" src="image/telephone-of-old-design.png">
+					<div class="text" id="phone_number_home"> 
+					<span class="label"> Num√©ro fixe: </span>
+					<?php echo $phone_number_home;?>
+					</div>
 				</div>
-				<div class="case" id="ligne_modif">
-					<a class="modif" href="parametres.php"> Modifier Informations </a>
+				<div class="case" id="ligne7">
+					<img id="phone-icon" src="image/smartphone-call.png">
+					<div class="text" id="phone_number_portable"> 
+						<span class="label"> Num√©ro Portable:   </span> 
+						<?php echo $phone_number_portable;?>
+					</div>
+					<div class="case" id="ligne_modif">
+						<a class="modif" href="parametres.php"> Modifier Informations </a>
+					</div>		
 				</div>
+				
 			</div>
 		</div>
 		
 		<!--  Contenu du site: PARTIE DROITE  -->
 		<div class="partie_droite">
 			<div class="deconnect_space">
-				<a class="deconnexion" href="deconnexion_post"><button class="deconnect_button"> Se d&eacute;connecter </button></a>
+				<a class="deconnexion" href="deconnexion_post">
+					<img class="deconnect_button" src="image/power-button-off.png">
+				</a>
 			</div>			
 			<div class="bloc" id="ticket"></div>
 		</div>

@@ -2,7 +2,7 @@
 define("WEBROOT",str_replace('index_mvc.php',"",$_SERVER['SCRIPT_NAME']));
 define("ROOT",str_replace('index_mvc.php',"",$_SERVER['SCRIPT_FILENAME']));
 
-
+require(ROOT.'core/core.php');
 require(ROOT.'core/model.php');
 require(ROOT.'core/controller.php');
 
@@ -17,14 +17,15 @@ $controller= new $controller();
 
 if(method_exists($controller,$action)){
     unset($params[0]);unset($params[1]);
-    call_user_func_array(array($controller,$action),$params)
+    call_user_func_array(array($controller,$action),$params);
+    
     
     
     //$controller->$action();
     
 }
 else{
-    echo'erreur 404  not found';
+    echo'Erreur 404: not found';
 }
 
 

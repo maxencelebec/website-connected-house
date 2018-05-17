@@ -1,27 +1,10 @@
-<!DOCTYPE html5>
-
 <?php
 $link = mysqli_connect("localhost", "root", ""); // define the login and password
 mysqli_select_db($link, "virifocus"); // select the database
 mysqli_set_charset($link,"utf8");
 ?>
 
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="help_sav.css" />
-<script src="help_sav.js"></script>
 
-</head>
-
-
-
-<body class="help_sav">
-
-	<header> 
-
-<?php include "header.php";?>
-</header>
 
 	<div class="imgbox1">
 		<img class="bebe" src="image/crying.svg">
@@ -91,9 +74,6 @@ mysqli_set_charset($link,"utf8");
 		</form>
 	</div>
 
-	<footer><?php include "footer.php";?></footer>
-
-</body>
 
 
 

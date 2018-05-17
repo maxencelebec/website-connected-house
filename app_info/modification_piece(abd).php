@@ -38,6 +38,7 @@
                 $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
                 $req->execute(array($_SESSION["mail"]));
 
+
                 $id_user;
                 while ($donnees = $req->fetch())
                 {

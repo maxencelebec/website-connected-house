@@ -1,0 +1,130 @@
+body
+{
+    padding:0;
+    margin:0;
+    width:auto;
+
+}
+
+
+#site{
+    display: grid;
+    grid-template-columns: 2fr 28fr;
+    grid-template-rows: auto auto;
+    grid-gap: auto 20px;
+    font-family: Segoe UI Light, Georgia;
+    text-decoration:none;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+.mode_maison{
+    display: grid;
+    font-family: Segoe UI Light, Georgia;
+    text-decoration:none;
+    color: white;
+}
+
+$timing: .4s;
+$ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.content{
+    overflow:auto;
+    display:grid;
+    grid-column:2;
+
+}
+
+.main1{
+    display: grid;
+    background-color: lightgrey;
+    font-family: Segoe UI Light, Georgia;
+    grid-row-gap: 200px;
+    grid-template-rows: 5fr 10fr 5fr ;
+}
+
+.title{
+    grid-row:1;
+    text-align:center;
+    font-size:1em;
+    font-family: Segoe UI Light, Georgia;
+}
+
+
+.mode{ 
+    display: grid;
+    grid-row: 2;
+    grid-column-gap: 20px;
+    background-size: cover;
+    grid-template-columns: 3fr 3fr 3fr;
+}
+.comment{
+    grid-row:3;
+    text-align:center;
+    font-size:1em;
+    font-family: Segoe UI Light, Georgia;
+}
+
+.eco_mode{
+    grid-column: 1;
+    background-color: #40495e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px #212122;
+    align-items: center;
+    display: flex;
+    padding-left: 200px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+    background-image: url("image/eco_mode.png");
+    background-size: cover;
+    background-position: center;
+}
+.moyen_mode{
+    grid-column: 2;
+    background-color: #40495e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px #212122;
+    align-items: center;
+    display: flex;
+    padding-left: 200px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 11.5px;
+    background-image: url("image/moyen_mode.png");
+    background-size: cover;
+    background-position: center;
+}
+.max_mode{
+    grid-column: 3;
+    background-color: #40495e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px #212122;
+    align-items: center;
+    display: flex;
+    padding-left: 200px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+    background-image: url("image/max_mode.png");
+    background-size: cover;
+    background-position: center;
+}
+#eco_mode:hover{
+    box-shadow: 0 0 0 3px #2cc872;
+}
+#moyen_mode:hover{
+    box-shadow: 0 0 0 3px #2cc872;
+}
+#max_mode:hover{
+    box-shadow: 0 0 0 3px #2cc872;
+}

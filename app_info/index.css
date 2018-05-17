@@ -10,31 +10,40 @@ body
     grid-template-columns: 5fr 3fr;
 }
 
+a{
+    text-decoration:none;
+    color:white;
+}
 
 
 #Partie_Droite {
     margin-top: auto ;
     margin-bottom: auto ;
+    z-index: 1;
 }
+
 
 #image{
     width: 75%;
 }
 
-
 .txtIdentifiant{
     font-size : 110%;
 }
 
-.cadreID{
-
-}
 
 .txtMdp{
 	font-size : 110%;
 }
-
+.cadreID{
+    border:none;
+    outline: none;
+    height: 20px;
+}
 .cadreMdp{
+    border:none;
+    outline: none;
+    height: 20px;
 }
 
 .mdpoublie{
@@ -49,6 +58,7 @@ body
     cursor: pointer;
     border:none;
     outline: none;
+    font-family: Segoe UI Light, Georgia;
     background-color: #333333;
     border:#2cc872 solid 2px;
     border-radius: 10px;
@@ -61,6 +71,7 @@ body
 }
 
 .lien_in{
+    background-color: #333333;
     text-decoration:none;
     color:white;
     border:#2cc872 solid 2px;
@@ -75,81 +86,37 @@ body
     box-shadow: 0 0 0 2px #2cc872;
 }
 
-
-#slider {
-  position: relative;
-  overflow: hidden;
-  margin: 20px auto 0 auto;
-  border-radius: 4px;
+.prev{
+    margin-left: 20vw;
+}
+.next{
+    margin-left: 5vw;
 }
 
-#slider ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 200px;
-  list-style: none;
+.partie_gauche{
+    position: relative;
+    left : 3vw;
+    top : 13vh;
+    width: 50vw;
 }
 
-#slider ul li {
-  position: relative;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 500px;
-  height: 300px;
-  background: #ccc;
-  text-align: center;
-  line-height: 300px;
+.boutton{
+    background-color: #333333;
+    border:none;
+    border-radius: 50%;
+    color:white;
+    cursor: pointer;
+    font-size: 30px;
+    outline: none;
+    border: white solid 1px;
+    padding-left:10px;
+    padding-right:10px;
 }
-
-a.control_prev, a.control_next {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
+.boutton:hover{
+    color : #2cc872;
+    background-color: white;
+    border: #2cc872 solid 1px;
 }
-
-a.control_prev:hover, a.control_next:hover {
-  opacity: 1;
-  -webkit-transition: all 0.2s ease;
-}
-
-a.control_prev {
-  border-radius: 0 2px 2px 0;
-}
-
-a.control_next {
-  right: 0;
-  border-radius: 2px 0 0 2px;
-}
-
-.slider_option {
-  position: relative;
-  margin: 10px auto;
-  width: 160px;
-  font-size: 18px;
-}
-
-.imageDiapo {
-	width:100%;
-}
-
-
-
-
-
 
 
 

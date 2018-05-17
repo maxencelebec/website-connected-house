@@ -9,31 +9,18 @@
     <title>Virifocus | Home</title>
     <link rel="stylesheet" href="index.css"/>
     <link rel="icon" type="image/png" href="image/logo.png" />
-	<script src="index.js"></script>
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script language="JavaScript" src="index.js"></script>
 </head>
 
-<body>
+<body onLoad="preload('image/Cuisine.jpg','image/Cave.jpg','image/Chambre.jpg')">
 
-    <div id="partie_gauche">
-        <div id="slider">
-		    <a href="#" class="control_next">>></a>
-		    <a href="#" class="control_prev"><</a>
-		    <ul>
-			    <li>SLIDE 1</li>
-			    <li>SLIDE 2</li>
-			    <li> <img class="imageDiapo" src="image/Cuisine.jpg"/> </li>
-		    </ul>  
-		</div>
-
-		<div class="slider_option">
-		    <input type="checkbox" id="checkbox">
-		    <label for="checkbox">Autoplay Slider</label>
-		</div> 
-
+    <div class="partie_gauche">
+            <img src="image/Cuisine.jpg" id="Puzzle" name="Puzzle" width="700vw" height="400vh"><br>
+            <a href="javascript:chgSlide(-1)" class="prev ">   <button class="boutton">< </button>   </a>
+            <a href="javascript:chgSlide(1)" class="next">   <button class="boutton"> > </button>  </a>
     </div>
 	
-    <div id="partie_droite">
+    <div id="Partie_Droite">
 
         <img id="image" src="image/virifocus droit.png"/>
 
