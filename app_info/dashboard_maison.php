@@ -165,12 +165,14 @@ session_start();
 	</div>
 </body>
 <script src="dashboard_maison.js"></script>
+
 <script>
     $(document).ready(function(){
         $('input[type="checkbox"]').click(function(){
             $.ajax({
                 url:"check.php",
                 method:"POST",
+                data:'id_capteur=' + 56
             });
         });
     });

@@ -62,7 +62,7 @@ function ajout_piece($piece,$id)
             <div class="cuisine_capteurs">
 
                 <?php
-
+                    include_once "ajout_capteur.php";
                     try
                     {
                         $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
@@ -72,14 +72,14 @@ function ajout_piece($piece,$id)
                         die('Erreur : '.$e->getMessage());
                     }
 
-                    $req = $bdd->prepare('SELECT type FROM capteurs WHERE id_piece= ? ');
+                    $req = $bdd->prepare('SELECT id, type FROM capteurs WHERE id_piece= ? ');
                     $req->execute(array($id));
 
                     while ($donnees = $req->fetch())
                     {
                         $type = $donnees['type'];
-                        include_once "ajout_capteur.php";
-                        ajout_capteur("$type","$id");
+                        $id_capteur = $donnees['id'];
+                        ajout_capteur("$type","$id","$id_capteur");
                     }
                 ?>
 

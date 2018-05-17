@@ -3,18 +3,19 @@
 
 
 <?php
-function ajout_capteur($capteur_actionneur,$id)
+function ajout_capteur($capteur_actionneur,$id,$id_capteur)
 {
 	if ($capteur_actionneur=="luminosite")
 	{
 		?>
 			<div class="capteur">Luminosité <br/> 220 Lux </br>
 				<?php
-                    include 'boutton.php';
+                    include "boutton.php";
                 ?>
 			</div>
 		<?php
 	}
+
 	elseif ($capteur_actionneur=="temperature")
 	{
 		?>
@@ -61,7 +62,7 @@ function ajout_capteur($capteur_actionneur,$id)
 	elseif ($capteur_actionneur=="humidite")
 	{
 		?>
-			<div class="capteur">Humidité <br/> 24% </br> 
+			<div class="capteur">Humidité <br/> 24% </br>
 				<?php
                     include 'boutton.php';
                 ?>
@@ -80,5 +81,6 @@ function ajout_capteur($capteur_actionneur,$id)
 			</div>
 		<?php
 	}
+
 }
 ?>
