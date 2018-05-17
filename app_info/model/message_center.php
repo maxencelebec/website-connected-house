@@ -12,12 +12,12 @@ class Message_Center extends Model{
 		
 
 		if($type_msg==1){
-		return $this->find(
+			return $this->find(
 			
 			array(
 			
 			"order"=> "id ASC",
-			"fields"=> "id,contenu_msg,id_type_msg",
+			"fields"=> "id,id_type_msg,Date_Heure,contenu_msg",
 			"condition"=> "id_type_msg = '1'"
 			
 			
@@ -33,8 +33,19 @@ class Message_Center extends Model{
 			return $this->find(array(
 				
 				"order"=> "id ASC",
-				"fields"=> "id,contenu_msg,id_type_msg",
+				"fields"=> "id,id_type_msg,Date_Heure,contenu_msg",
 				"condition"=> "id_type_msg = '2'"
+			
+				)
+			
+			);
+
+		}
+		else if($type_msg==3){
+			return $this->find(array(
+				
+				"order"=> "id ASC",
+				"fields"=> "id,id_type_msg,Date_Heure,contenu_msg"
 			
 				)
 			

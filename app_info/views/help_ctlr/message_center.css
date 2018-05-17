@@ -16,12 +16,15 @@ body
 	position:relative;
 	max-width:28fr;
 	overflow: auto;
+	margin:5%;
 	
 	
-	border:1px solid #000;
+	
+	
 }
 .table-wrap {
 	width:100%;
+	
 	
 }
 .table-scroll table {
@@ -32,11 +35,12 @@ body
 	margin-top: auto;
 	margin-bottom: auto;
 	
+	
 }
 .table-scroll th, .table-scroll td {
 	padding:5px 10px;
-	border:1px solid #000;
-	background:#fff;
+	border:0.3px solid #000;
+	
 	white-space:nowrap;
 	vertical-align:top;
 }
@@ -57,11 +61,19 @@ body
 }
 .clone tbody th {
 	visibility:visible;
-	color:red;
+	background-color: #333333;
 }
-.clone .fixed-side {
-	border:1px solid #000;
-	background:#eee;
+.fixed-side {
+	border:0.3px solid #000;
+	
 	visibility:visible;
+	color: #27ae60;
+}
+#top{
+	background-color:#333333;
+	border:0.1px solid #fff;
+	visibility:visible;
+	color: #27ae60;
+
 }
 .clone thead, .clone tfoot{background:transparent;}

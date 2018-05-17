@@ -43,5 +43,5 @@ session_start();
 	
 	
 	// Redirection vers la page suivante
-	header('Location:index_mvc.php?p=help_ctlr');
+	//header('Location:../index_mvc.php?p=help_ctlr');
 	?>

@@ -23,7 +23,7 @@ class help_ctlr extends Controller{
 
     function message_center(){
         $this->loadModel("Message_Center");
-        $d["d"]= $this->Message_Center->get_msg(2,"4");
+        $d["d"]= $this->Message_Center->get_msg(3,"4");
      
         $this->set($d);
 
