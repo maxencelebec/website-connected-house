@@ -16,7 +16,7 @@ mysqli_set_charset($link,"utf8");
 	</div>
 	<div class="containersav">
 
-		<form id="ticketsav" action="help_sav_post" method="post">
+		<form id="ticketsav" action="<?php echo WEBROOT;?>index_mvc.php?p=help_ctlr/sav_post" method="post">
 
 
 			<label for="maison">Maison</label> <select id="maison" name="maison">

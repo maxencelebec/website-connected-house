@@ -8,6 +8,7 @@ class Controller{
     
     function set($d){
         $this->vars_set=array_merge($this->vars_set,$d);
+       
     }
     
     

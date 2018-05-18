@@ -60,33 +60,35 @@ session_start();
 					<div class="bloc" id="bloc_profile_1">
 						<div id="name">
 							<span class="bold"> Name </span>
-							<input type="text" name="name" value="<?php echo $name;?>">
+							<input type="text"  name="name" value="<?php echo $name;?>" style="margin-left:15px ;margin-top: 10px;float: right; height:30%; text-align: center;">
 						</div>
 						<div id="firstname">
 							<span class="bold"> Firstname </span>
-							<input type="text" name="firstname" value="<?php echo $firstname;?>">
+							<input type="text" name="firstname" value="<?php echo $firstname;?>" style="margin-left:15px ;margin-top: 10px; float: right; height:30%; text-align: center;">
 						</div>
 					</div>
+					<div class="blocvide"></div>
 					<!-- (Profile) Bloc 2 -->
-					<div class="bloc" id="bloc_profile_2">
+					<div class="bloc" id="bloc_profile_1">
 						<div id="country">
 							<span class="bold"> Country </span>
-							<input type="text" name="country" value="<?php echo $country;?>">
+							<input type="text" name="country" value="<?php echo $country;?>" style="margin-left:15px ;margin-top: 10px;float: right; height:30%; text-align: center;">
 						</div>
 						<div id="city">
 							<span class="bold"> Code Postal </span>							
-							<input type="text" name="postal_code" value="<?php echo $postal_code;?>">
+							<input type="text" name="postal_code" value="<?php echo $postal_code;?>" style="margin-left:15px ;margin-top: 10px;float: right; height:30%; text-align: center;">
 						</div>
 					</div>
+					<div class="blocvide"></div>
 					<!-- (Profile) Bloc 3 -->
-					<div class="bloc" id="bloc_profile_3">
+					<div class="bloc" id="bloc_profile_1">
 						<div id="mail">
 							<span class="bold"> Adresse Mail </span>
-							<input type="text" name="mail" value="<?php echo $mail;?>">
+							<input type="text" name="mail" value="<?php echo $mail;?>" style="margin-left:15px;margin-top: 10px;float: right; height:30%; text-align: center;">
 						</div>
 						<div id="phone">
 							<span class="bold"> Phone number </span>
-							<input type="text" name="phone_number" value="<?php echo $phone_number_portable;?>">
+							<input type="text" name="phone_number" value="<?php echo $phone_number_portable;?>" style="margin-left:15px;margin-top: 10px;float: right; height:30%; text-align: center;">
 						</div>
 					</div>
 					<input class="enregistrer" type="submit" value="Enregistrer">												

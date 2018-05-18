@@ -3,27 +3,38 @@
     <table class="main-table">
       <thead>
         <tr>
-          <th class="fixed-side" scope="col">&nbsp;</th>
+        
+                    <?php //print_r($d);?>
+                   <?php foreach($d[0] as $key=>$value){?>
+                   <?php if($key=='id'){?>
+                     
+                      <th class="fixed-side" id="top" scope="col">Numéro <br>Message </th>
 
-          <?php foreach($d as $t){?>
-                <th scope="col"><?php echo $t['']?> </th>
-            <?php }  ?>
+                    <?php }else{?>
+                <th id="top" scope="col"><?php 
+                
+                if($key=="contenu_msg"){echo "Contenu du Message";}
+                if($key=="Date_Heure"){echo "Date/Heure";}
+                if($key=="id_type_msg"){ echo "Type Requête";}?> </th>
+            <?php }  }?>
           
           
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th class="fixed-side"><?php echo $t['id']?></th>
-          <td>Cell content<br>
-            test</td>
-          <td>Cell content</td>
-          <td>Cell content</td>
-          <td>Cell content</td>
-          <td>Cell content</td>
-          <td>Cell content</td>
-          <td>Cell content</td>
-        </tr>
+        
+
+
+        <?php foreach($d as $key=>$value){?>
+          <tr>
+        
+          <th class="fixed-side"><?php echo $value['id'];?></th>
+          <td><?php echo $value['id_type_msg'];?></td>
+          <td><?php echo $value['Date_Heure'];?></td>
+          <td><?php echo $value['contenu_msg'];?></td>
+          </tr>
+        <?php }?>
+        
         
       </tbody>
     </table>
