@@ -41,11 +41,11 @@
 
             <div class="formulaire">
 
-                <div>Pièce :</div>
-                <div>Surface (m2)</div>
+                <label>Pièce :</label>
+                <label>Surface (m2)</label>
                 <select name = "type" maxlenght="255" style="text-align: center">
-                    <option value="entree">Entrée</option>
                     <option value="chambre">Chambre</option>
+                    <option value="entree">Entrée</option>
                     <option value="cuisine">Cuisine</option>
                     <option value="toilettes">Toilettes</option>
                     <option value="salle_de_bain">Salle de bain</option>
@@ -87,7 +87,6 @@
 
             while ($donnees = $req->fetch())
             {
-
 
                 $piece = $donnees['id'];
                 ?> <p> <a href="#" onclick="if(confirm('Etes vous sur de vouloir supprimer cette pièce ? Tous les capteurs seront ainsi perdus'))

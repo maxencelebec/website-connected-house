@@ -60,7 +60,7 @@ session_start();
 				<div class="securite">
 					<div class="boutton_onoff">
                                 <?php
-                                include "boutton.php";
+                                //include "boutton.php";
                                 ?>
                                 <br>ON/OFF
 					</div>
@@ -160,7 +160,7 @@ session_start();
             </div>
 
 	<div id="fenetre">
-		<button id="close" onclick="fermer()">x</button>
+		<button id="close" data-ido="56" onclick="fermer()">x</button>
 		fenetre pop-up
 	</div>
 </body>
@@ -169,13 +169,15 @@ session_start();
 <script>
     $(document).ready(function(){
         $('input[type="checkbox"]').click(function(){
+            var id_capteur = $("#ajout_boutton").data('id');
             $.ajax({
                 url:"check.php",
                 method:"POST",
-                data:'id_capteur=' + 56
+                data:{id_capteur:id_capteur}
             });
         });
     });
 </script>
+
 </html>
 

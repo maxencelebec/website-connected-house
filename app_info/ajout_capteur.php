@@ -5,12 +5,52 @@
 <?php
 function ajout_capteur($capteur_actionneur,$id,$id_capteur)
 {
+    ?>
+    <div class="capteur">
+
+        <?php
+            if ($capteur_actionneur=="luminosite"){
+                echo "Luminosité";
+            }
+            elseif ($capteur_actionneur=="temperature"){
+                echo "Température";
+            }
+            elseif ($capteur_actionneur=="presence"){
+                echo "Présence";
+            }
+            elseif ($capteur_actionneur=="humidite"){
+                echo "Humidité";
+            }
+            elseif ($capteur_actionneur=="porte"){
+                echo "Porte";
+            }
+        ?>
+
+        <br/>  </br>
+
+        <?php
+            echo $id_capteur;
+            include ('boutton.php');
+        ?>
+    </div>
+
+    <?php
+
+    }
+?>
+
+
+
+
+<?php /*
+
 	if ($capteur_actionneur=="luminosite")
 	{
 		?>
 			<div class="capteur">Luminosité <br/> 220 Lux </br>
 				<?php
-                    include "boutton.php";
+                echo $id_capteur;
+                    include ('boutton.php');
                 ?>
 			</div>
 		<?php
@@ -44,6 +84,7 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
 
 			<div class="capteur">Température <br/> <?php echo $valeur ?> </br>
 				<?php
+                echo $id_capteur;
                     include 'boutton.php';
                 ?>
 			</div>
@@ -54,6 +95,7 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
 		?>
 			<div class="capteur">Présence <br/> OUI </br>
 				<?php
+                echo $id_capteur;
                     include 'boutton.php';
                 ?>
 			</div>
@@ -64,6 +106,7 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
 		?>
 			<div class="capteur">Humidité <br/> 24% </br>
 				<?php
+                    echo $id_capteur;
                     include 'boutton.php';
                 ?>
 			</div>
@@ -74,6 +117,7 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
 		?>
 			<div class="capteur">Porte <br/>
 				<?php
+                    echo $id_capteur;
                     include 'boutton.php';
                 ?>
 			</br>
@@ -83,4 +127,5 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
 	}
 
 }
+ */
 ?>
