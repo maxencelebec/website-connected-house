@@ -19,12 +19,9 @@ class Message_Center extends Model{
 			"order"=> "id ASC",
 			"fields"=> "id,id_type_msg,Date_Heure,contenu_msg",
 			"condition"=> "id_type_msg = '1'"
-			
-			
-			
+
 		)
-			
-		
+
 			);
 			
 
