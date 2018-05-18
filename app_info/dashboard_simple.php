@@ -16,12 +16,16 @@
 <head>
     <title> Virifocus </title>
     <meta charset="utf-8"/>
+
     <link rel="stylesheet" href="dashboard_simple.css"/>
+
     <link rel="icon" type="image/png" href="image/logo.png" />
     <script src="jQuery.js"></script>
 
 </head>
 <body class="fond">
+
+<script src="chartist/chartist-js-master/dist/chartist.min.jsh"></script>
 
             <div id="site">
 
@@ -62,6 +66,8 @@
 
             </div>
 
+
+
 </body>
-<script src="dashboard_simple.js"></script>
+
 </html>
