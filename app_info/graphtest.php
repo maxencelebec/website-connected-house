@@ -30,6 +30,7 @@ session_start();
 
         </script>
 
+
         <?php
         $nom = "temp1";
 
@@ -41,10 +42,9 @@ session_start();
             $time = $donnees['timestamp'];
             $time = strval($time);
             $time = "'$time'";
-            echo $time;
             ?> <script>
 
-            tab_time.push(<?php $time ?>),
+            tab_time.push(<?php echo $time ?>);
 
             </script> <?php
 
@@ -57,15 +57,13 @@ session_start();
         while ($donnees = $req->fetch())
         {
             $val = $donnees['valeur'];
-            echo $val;
             ?> <script>
 
-            tab_val.push(<?php $val ?>),
+            tab_val.push(<?php echo $val ?>);
 
-        </script> <?php
+        </script><?php
 
         }
-
         ?>
 
         <script>
@@ -73,12 +71,16 @@ session_start();
         var data = {
 
             labels: tab_time,
-
             series: [tab_val]
 
         };
 
-        new Chartist.Line('.ct-chart', data);
+        var options = {
+            width: 400,
+            height: 300
+        };
+
+        new Chartist.Line('.ct-chart', data, options);
 
     </script>
 
