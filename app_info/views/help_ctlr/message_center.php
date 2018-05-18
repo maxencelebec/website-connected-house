@@ -3,7 +3,7 @@
     <table class="main-table">
       <thead>
         <tr>
-          &nbsp;</th>
+        
                     <?php //print_r($d);?>
                    <?php foreach($d[0] as $key=>$value){?>
                    <?php if($key=='id'){?>
@@ -23,6 +23,7 @@
       </thead>
       <tbody>
         
+
 
         <?php foreach($d as $key=>$value){?>
           <tr>

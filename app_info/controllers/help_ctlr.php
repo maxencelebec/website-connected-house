@@ -30,6 +30,14 @@ class help_ctlr extends Controller{
         $this->render('message_center');
 
     }
+    function sav_post(){
+        $message = $_POST["msg"];
+        $this->loadModel("Sav_Post");
+        $this->Sav_Post->execute_sav($message);
+        
+        
+
+    }
 }
 
 

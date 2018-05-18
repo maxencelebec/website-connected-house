@@ -1,9 +1,11 @@
-<?php
-session_start();
-?>
 
-<?php
+<?php session_start();?>
+<?php class sav_post extends Model{
+
+
+function execute_sav($message){
 // Connexion à la base de données
+	
 	try
 	{
 	    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
@@ -35,13 +37,15 @@ session_start();
 	
 	
 	
-	$req = $bdd->prepare('INSERT INTO message (contenu_msg, id_utilisateur, id_type_message, id_habitation) VALUES (?, ?, ?, ?)');
-	$req->execute(array($_POST["msg"],$id_user,$id_type_message,$id_habitation));
+	$req = $bdd->prepare('INSERT INTO message (id_type_msg,contenu_msg, id_utilisateur, id_habitation) VALUES (?, ?, ?, ?)');
+	$req->execute(array($id_type_message,$message,$id_user,$id_habitation));
 	
-	
+}
 	
 	
 	
 	// Redirection vers la page suivante
 	//header('Location:../index_mvc.php?p=help_ctlr');
-	?>
+	
+
+ }?>
