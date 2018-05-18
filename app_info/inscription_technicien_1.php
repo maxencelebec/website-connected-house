@@ -34,7 +34,7 @@
 
 <div class="Main">
 
-    <form class="infos" action="?" method="POST">
+    <form class="infos" action="inscription_technicien_2" method="POST">
 
         <div class="formulaire">
 

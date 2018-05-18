@@ -64,40 +64,44 @@ catch(Exception $e)
                             Température
 
                         </div>
-                        <div class="modemaison">Mode Maison <br>
-
-                            <?php
-
-                            $req = $bdd->prepare('SELECT mode FROM habitation WHERE id=?');
-                            $req->execute(array($id_habitation));
-
-                            while ($donnees = $req->fetch())
-
-                            {
-                                $mode = $donnees['mode'];
-
-                                if ($mode==1) {
-                                    ?>
-                                    <img src="image/eco-mode-dash.png" style="height: 65%" width="50%"/>
+                        <div class="modemaison">
+                            <a href="mode_maison.php?id=<?php echo $id_habitation; ?>">
+                                <div class="modemaison1">Mode Maison <br>
+                                
                                     <?php
-                                }
-                                elseif ($mode==2) {
+
+                                    $req = $bdd->prepare('SELECT mode FROM habitation WHERE id=?');
+                                    $req->execute(array($id_habitation));
+
+                                    while ($donnees = $req->fetch())
+
+                                    {
+                                        $mode = $donnees['mode'];
+
+                                        if ($mode==1) {
+                                            ?>
+                                            <img src="image/eco-mode-dash.png" style="height: 65%" width="50%"/>
+                                            <?php
+                                        }
+                                        elseif ($mode==2) {
+
+                                            ?>
+                                            <img src="image/moyen-mode-dash.png" style="height: 40%" width="40%"/>
+                                            <?php
+                                        }
+                                        elseif ($mode==3) {
+
+                                            ?>
+                                            <img src="image/max-mode-dash.png" style="height: 65%" width="50%"/>
+                                            <?php
+                                        }
+
+                                    }
 
                                     ?>
-                                    <img src="image/moyen-mode-dash.png" style="height: 40%" width="40%"/>
-                                    <?php
-                                }
-                                elseif ($mode==3) {
-
-                                    ?>
-                                    <img src="image/max-mode-dash.png" style="height: 65%" width="50%"/>
-                                    <?php
-                                }
-
-                            }
-
-                            ?>
-
+                                
+                                </div>
+                            </a>
                         </div>
                         <div class="securite">Sécurité</div>
                     </div>

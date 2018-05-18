@@ -86,14 +86,17 @@ body
 }
 
 .option1 {
+	text-decoration:none;
     grid-row: 2;
 }
 
 .option2 {
+	text-decoration:none;
     grid-row: 2;
 }
 
 .option3 {
+	text-decoration:none;
     grid-row: 2;
 }
 

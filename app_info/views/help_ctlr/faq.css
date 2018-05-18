@@ -8,8 +8,7 @@ body
 #site{
     display: grid;
     grid-template-columns: 2fr 28fr;
-    grid-auto-rows: 3.05vh;
-    background-color: grey;
+
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
     transition: 0.5s;
@@ -19,12 +18,7 @@ a{
     color:white;
 }
 
-.help_faq{
-	overflow:hidden;
-	
-	display:grid;
-	grid-template-column:auto auto;
-}
+
 
 $timing: .4s;
 $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
@@ -38,12 +32,9 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
 
 
 .content{
-	overflow:auto;
-	grid-column:2;
-	
+	//overflow:auto;
 	display:grid;
-	
-	grid-template-rows:2% 96% 1% 1%;
+	grid-template-rows:1vh 80vh 2vh; 
 
 	
 	
@@ -56,7 +47,7 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
 	font-family: Segoe UI Light, Georgia;
 }
 .accordion {
-	
+	overflow:auto;
   grid-row:2;
   position:relative;
   top:75%;
@@ -129,18 +120,10 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
 input[name='panel']:checked ~ .accordion__content.accordion__content--small {
   height: 100px;
 }
-.line{
-	grid-row:3;
-	position:relative;
-	color:#333333;
-	max_width:45%;
-	justify:center;
-	
-	
-}
+
 .bottom_msg{
 	
- grid-row:4;
+ grid-row:3;
  position:relative;
  justify:center;
  color:#333333;

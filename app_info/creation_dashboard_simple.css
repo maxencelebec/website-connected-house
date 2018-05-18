@@ -82,6 +82,7 @@ a{
     border: #2cc872 solid 2px;
     transition: 0.1s;
     cursor: pointer;
+    display: grid;
 }
 .modemaison:hover{
     transform: scale(1.02);

@@ -8,8 +8,7 @@ body
 #site{
     display: grid;
     grid-template-columns: 2fr 28fr;
-    grid-template-rows: auto auto;
-    background-color: grey;
+    background-color: white;
     grid-gap: auto 20px;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
@@ -63,9 +62,10 @@ a{
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     grid-template-columns:2fr 7fr;
+    height: 100px;
 
 }
-.piece{ 
+.piece{
     display: grid;
     grid-column: 1;
     grid-row: 1;
@@ -151,7 +151,7 @@ a{
     grid-row: 2;
     text-align: center;
     color:black;
-    overflow-y: scroll;
+    height: 51vh;
 }
 
 .info_capteurs{
@@ -159,12 +159,15 @@ a{
     font-size: 20px;
     padding-top: 5px;
     background-color:#2cc872;
+
 }
 
 .liste_capteurs{
     grid-row: 5/13;
     font-size: 20px;
     padding-top: 5px;
+    height: 43vh;
+    overflow: auto;
 }
 
 .suppr{
@@ -180,6 +183,8 @@ a{
     background-color: lightgrey;
     color:#2cc872;
     font-size: 36px;
+    height: 51vh;
+
 }
 .case_ajout1{
     text-align: center;
@@ -192,6 +197,8 @@ a{
 .case_ajout2{
     display: grid;
     grid-row: 5/45;
+    height: 100px;
+    font-size: 18px;
 }
 
 .boutonAjout {
