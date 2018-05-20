@@ -11,17 +11,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard_maison.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2088">
-              <caret line="171" column="60" lean-forward="true" selection-start-line="171" selection-start-column="60" selection-end-line="171" selection-end-column="60" />
+            <state relative-caret-position="528">
+              <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding>
-                <marker date="1526680196566" expanded="true" signature="1158:1195" ph="SELECT nom F... habitation" />
-                <marker date="1526680196566" expanded="true" signature="2265:2310" ph="SELECT name,... users" />
-                <marker date="1526680196566" expanded="true" signature="2554:2568" ph="..." />
-                <marker date="1526680196566" expanded="true" signature="3975:4009" ph="SELECT id FR... users" />
-                <marker date="1526680196566" expanded="true" signature="4351:4401" ph="SELECT type,... pieces" />
+                <marker date="1526808717133" expanded="true" signature="1158:1195" ph="SELECT nom F... habitation" />
+                <marker date="1526808717133" expanded="true" signature="2265:2310" ph="SELECT name,... users" />
+                <marker date="1526808717133" expanded="true" signature="2554:2568" ph="..." />
+                <marker date="1526808717133" expanded="true" signature="3975:4009" ph="SELECT id FR... users" />
+                <marker date="1526808717133" expanded="true" signature="4351:4401" ph="SELECT type,... pieces" />
               </folding>
             </state>
           </provider>
@@ -30,28 +30,27 @@
       <file leaf-file-name="ajout_piece.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajout_piece.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="50" column="34" lean-forward="false" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
               <folding>
-                <marker date="1526655170103" expanded="true" signature="366:411" ph="SELECT valeu... capteurs" />
-                <marker date="1526655170103" expanded="true" signature="2250:2297" ph="SELECT id, t... capteurs" />
+                <marker date="1526807686797" expanded="true" signature="366:411" ph="SELECT valeu... capteurs" />
+                <marker date="1526807686797" expanded="true" signature="2250:2297" ph="SELECT id, t... capteurs" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajout_capteur.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ajout_capteur.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ajout_capteur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="497">
+              <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
               <folding>
-                <element signature="e#842#2500#0#PHP" expanded="true" />
-                <marker date="1526679425887" expanded="true" signature="1400:1445" ph="SELECT valeu... capteurs" />
-                <marker date="1526679425887" expanded="true" signature="1625:1677" ph="..." />
-                <marker date="1526679425887" expanded="true" signature="1872:1903" ph="..." />
-                <marker date="1526679425887" expanded="true" signature="2098:2129" ph="..." />
-                <marker date="1526679425887" expanded="true" signature="2325:2343" ph="..." />
+                <marker date="1526808702494" expanded="true" signature="1825:1870" ph="SELECT valeu... capteurs" />
+                <marker date="1526808702494" expanded="true" signature="2050:2102" ph="..." />
+                <marker date="1526808702494" expanded="true" signature="2297:2328" ph="..." />
+                <marker date="1526808702494" expanded="true" signature="2523:2554" ph="..." />
+                <marker date="1526808702494" expanded="true" signature="2750:2768" ph="..." />
               </folding>
             </state>
           </provider>
@@ -60,10 +59,10 @@
       <file leaf-file-name="boutton.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boutton.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="260">
+              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
               <folding>
-                <marker date="1526680196590" expanded="true" signature="367:403" ph="SELECT etat capteurs" />
+                <marker date="1526808789277" expanded="true" signature="346:382" ph="SELECT etat capteurs" />
               </folding>
             </state>
           </provider>
@@ -72,15 +71,15 @@
       <file leaf-file-name="check.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/check.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="546">
+              <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding>
-                <marker date="1526649571289" expanded="true" signature="191:216" ph="SELECT etat capteurs" />
-                <marker date="1526649571289" expanded="true" signature="191:227" ph="SELECT etat capteurs" />
-                <marker date="1526649571289" expanded="true" signature="422:448" ph="UPDATE tbl_gender... " />
-                <marker date="1526649571289" expanded="true" signature="422:459" ph="UPDATE capteurs... " />
-                <marker date="1526649571289" expanded="true" signature="599:625" ph="UPDATE tbl_gender... " />
-                <marker date="1526649571289" expanded="true" signature="599:636" ph="UPDATE capteurs... " />
+                <marker date="1526680982806" expanded="true" signature="191:216" ph="SELECT etat capteurs" />
+                <marker date="1526680982806" expanded="true" signature="191:227" ph="SELECT etat capteurs" />
+                <marker date="1526680982806" expanded="true" signature="422:448" ph="UPDATE tbl_gender... " />
+                <marker date="1526680982806" expanded="true" signature="422:459" ph="UPDATE capteurs... " />
+                <marker date="1526680982806" expanded="true" signature="599:625" ph="UPDATE tbl_gender... " />
+                <marker date="1526680982806" expanded="true" signature="599:636" ph="UPDATE capteurs... " />
               </folding>
             </state>
           </provider>
@@ -123,8 +122,8 @@
         <option value="$PROJECT_DIR$/check.php" />
         <option value="$PROJECT_DIR$/ajout_piece.php" />
         <option value="$PROJECT_DIR$/ajout_capteur.php" />
-        <option value="$PROJECT_DIR$/boutton.php" />
         <option value="$PROJECT_DIR$/dashboard_maison.php" />
+        <option value="$PROJECT_DIR$/boutton.php" />
       </list>
     </option>
   </component>
@@ -290,12 +289,12 @@
       <workItem from="1526471556216" duration="263000" />
       <workItem from="1526471836119" duration="278000" />
       <workItem from="1526472132447" duration="73000" />
-      <workItem from="1526472222836" duration="33797000" />
+      <workItem from="1526472222836" duration="40508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48617000" />
+    <option name="totallyTimeSpent" value="55328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -806,67 +805,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajout_capteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#842#2500#0#PHP" expanded="true" />
-            <marker date="1526679425887" expanded="true" signature="1400:1445" ph="SELECT valeu... capteurs" />
-            <marker date="1526679425887" expanded="true" signature="1625:1677" ph="..." />
-            <marker date="1526679425887" expanded="true" signature="1872:1903" ph="..." />
-            <marker date="1526679425887" expanded="true" signature="2098:2129" ph="..." />
-            <marker date="1526679425887" expanded="true" signature="2325:2343" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boutton.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1526680196590" expanded="true" signature="367:403" ph="SELECT etat capteurs" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/check.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="546">
+          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding>
-            <marker date="1526649571289" expanded="true" signature="191:216" ph="SELECT etat capteurs" />
-            <marker date="1526649571289" expanded="true" signature="191:227" ph="SELECT etat capteurs" />
-            <marker date="1526649571289" expanded="true" signature="422:448" ph="UPDATE tbl_gender... " />
-            <marker date="1526649571289" expanded="true" signature="422:459" ph="UPDATE capteurs... " />
-            <marker date="1526649571289" expanded="true" signature="599:625" ph="UPDATE tbl_gender... " />
-            <marker date="1526649571289" expanded="true" signature="599:636" ph="UPDATE capteurs... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajout_piece.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1526655170103" expanded="true" signature="366:411" ph="SELECT valeu... capteurs" />
-            <marker date="1526655170103" expanded="true" signature="2250:2297" ph="SELECT id, t... capteurs" />
+            <marker date="1526680982806" expanded="true" signature="191:216" ph="SELECT etat capteurs" />
+            <marker date="1526680982806" expanded="true" signature="191:227" ph="SELECT etat capteurs" />
+            <marker date="1526680982806" expanded="true" signature="422:448" ph="UPDATE tbl_gender... " />
+            <marker date="1526680982806" expanded="true" signature="422:459" ph="UPDATE capteurs... " />
+            <marker date="1526680982806" expanded="true" signature="599:625" ph="UPDATE tbl_gender... " />
+            <marker date="1526680982806" expanded="true" signature="599:636" ph="UPDATE capteurs... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard_maison.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2088">
-          <caret line="171" column="60" lean-forward="true" selection-start-line="171" selection-start-column="60" selection-end-line="171" selection-end-column="60" />
+        <state relative-caret-position="528">
+          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
           <folding>
-            <marker date="1526680196566" expanded="true" signature="1158:1195" ph="SELECT nom F... habitation" />
-            <marker date="1526680196566" expanded="true" signature="2265:2310" ph="SELECT name,... users" />
-            <marker date="1526680196566" expanded="true" signature="2554:2568" ph="..." />
-            <marker date="1526680196566" expanded="true" signature="3975:4009" ph="SELECT id FR... users" />
-            <marker date="1526680196566" expanded="true" signature="4351:4401" ph="SELECT type,... pieces" />
+            <marker date="1526808717133" expanded="true" signature="1158:1195" ph="SELECT nom F... habitation" />
+            <marker date="1526808717133" expanded="true" signature="2265:2310" ph="SELECT name,... users" />
+            <marker date="1526808717133" expanded="true" signature="2554:2568" ph="..." />
+            <marker date="1526808717133" expanded="true" signature="3975:4009" ph="SELECT id FR... users" />
+            <marker date="1526808717133" expanded="true" signature="4351:4401" ph="SELECT type,... pieces" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajout_piece.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="50" column="34" lean-forward="false" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+          <folding>
+            <marker date="1526807686797" expanded="true" signature="366:411" ph="SELECT valeu... capteurs" />
+            <marker date="1526807686797" expanded="true" signature="2250:2297" ph="SELECT id, t... capteurs" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boutton.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding>
+            <marker date="1526808789277" expanded="true" signature="346:382" ph="SELECT etat capteurs" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajout_capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding>
+            <marker date="1526808702494" expanded="true" signature="1825:1870" ph="SELECT valeu... capteurs" />
+            <marker date="1526808702494" expanded="true" signature="2050:2102" ph="..." />
+            <marker date="1526808702494" expanded="true" signature="2297:2328" ph="..." />
+            <marker date="1526808702494" expanded="true" signature="2523:2554" ph="..." />
+            <marker date="1526808702494" expanded="true" signature="2750:2768" ph="..." />
           </folding>
         </state>
       </provider>

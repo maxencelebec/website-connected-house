@@ -26,13 +26,27 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
             }
         ?>
 
-        <br/>  </br>
+        <br/> <div id="result"></div> </br>
 
         <?php
             echo $id_capteur;
             include ('boutton.php');
+
         ?>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('input[type="checkbox"][value="<?php echo $id_capteur; ?>"]').click(function(){
+                var id_capt = <?= $id_capteur;?>;
+                $.ajax({
+                    url:"check.php",
+                    method:"POST",
+                    data:{id_capteur:id_capt}
+
+                });
+            });
+        });
+    </script>
 
     <?php
 

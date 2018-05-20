@@ -19,6 +19,7 @@ try
             $statement->execute(array( 0, $_POST['id_capteur'] ));
         }
     }
+    echo $_POST['id_capteur'];
 
 }
 catch(PDOException $error)
