@@ -54,41 +54,47 @@ session_start();
 				</div>
 				
 				<!-- Tab 1 : Profile -->
-				<div id="profile" class="tabcontent">
+				<div class="tabcontent" id="profile">
 				<form class="profile_form" action="parametres_post.php" method="post"> 
 					<!-- (Profile) Bloc 1 -->
 					<div class="bloc" id="bloc_profile_1">
 						<div id="name">
-							<span class="bold"> Name </span>
-							<input type="text"  name="name" value="<?php echo $name;?>" style="margin-left:15px ;margin-top: 10px;float: right; height:30%; text-align: center;">
+							<span class="bold"> Nom </span>
+							<input type="text"  name="name" value="<?php echo $name;?>">
 						</div>
 						<div id="firstname">
-							<span class="bold"> Firstname </span>
-							<input type="text" name="firstname" value="<?php echo $firstname;?>" style="margin-left:15px ;margin-top: 10px; float: right; height:30%; text-align: center;">
+							<span class="bold"> Prénom </span>
+							<input type="text" name="firstname" value="<?php echo $firstname;?>">
 						</div>
 					</div>
-					<div class="blocvide"></div>
 					<!-- (Profile) Bloc 2 -->
-					<div class="bloc" id="bloc_profile_1">
+					<div class="bloc" id="bloc_profile_2">
+						<div id="address">
+							<span class="bold"> Adresse de résidence </span>
+							<input type="text" name="address" value="<?php echo $address;?>">
+						</div>
 						<div id="country">
-							<span class="bold"> Country </span>
-							<input type="text" name="country" value="<?php echo $country;?>" style="margin-left:15px ;margin-top: 10px;float: right; height:30%; text-align: center;">
+							<span class="bold"> Ville </span>
+							<input type="text" name="country" value="<?php echo $country;?>">
 						</div>
 						<div id="city">
 							<span class="bold"> Code Postal </span>							
-							<input type="text" name="postal_code" value="<?php echo $postal_code;?>" style="margin-left:15px ;margin-top: 10px;float: right; height:30%; text-align: center;">
+							<input type="text" name="postal_code" value="<?php echo $postal_code;?>">
 						</div>
 					</div>
-					<div class="blocvide"></div>
 					<!-- (Profile) Bloc 3 -->
-					<div class="bloc" id="bloc_profile_1">
+					<div class="bloc" id="bloc_profile_3">
 						<div id="mail">
 							<span class="bold"> Adresse Mail </span>
-							<input type="text" name="mail" value="<?php echo $mail;?>" style="margin-left:15px;margin-top: 10px;float: right; height:30%; text-align: center;">
+							<input type="text" name="mail" value="<?php echo $mail;?>">
+						</div>
+						<div id="fixe">
+							<span class="bold"> Numéro fixe </span>
+							<input type="text" name="number_home" value="<?php echo $phone_number_home?>">
 						</div>
 						<div id="phone">
-							<span class="bold"> Phone number </span>
-							<input type="text" name="phone_number" value="<?php echo $phone_number_portable;?>" style="margin-left:15px;margin-top: 10px;float: right; height:30%; text-align: center;">
+							<span class="bold"> Numéro portable </span>
+							<input type="text" name="number_portable" value="<?php echo $phone_number_portable;?>">
 						</div>
 					</div>
 					<input class="enregistrer" type="submit" value="Enregistrer">												
@@ -96,13 +102,13 @@ session_start();
 				</div>			
 				<!-- ---------------------------------------------------- -->
 				<!-- Tab 2 : Compte -->
-				<div id="compte" class="tabcontent"> Test2 </div>		
+				<div class="tabcontent" id="compte"> Test2 </div>		
 				<!-- ---------------------------------------------------- -->		
 				<!-- Tab 3 : Confidentialit� -->
-				<div id="confidentialite" class="tabcontent"> Test3 </div>		
+				<div class="tabcontent" id="confidentialite"> Test3 </div>		
 				<!-- ---------------------------------------------------- -->		
 				<!-- Tab 4 : Notifications -->
-				<div id="notifications" class="tabcontent"> Test4 </div>
+				<div class="tabcontent" id="notifications"> Test4 </div>
 			<?php
 				include "footer.php";
 			?>
