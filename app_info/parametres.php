@@ -59,41 +59,45 @@ session_start();
 					<!-- (Profile) Bloc 1 -->
 					<div class="bloc" id="bloc_profile_1">
 						<div id="name">
-							<span class="bold"> Nom </span>
+							<span class="tag"> Nom </span>
 							<input type="text"  name="name" value="<?php echo $name;?>">
 						</div>
 						<div id="firstname">
-							<span class="bold"> Prénom </span>
+							<span class="tag"> Prénom </span>
 							<input type="text" name="firstname" value="<?php echo $firstname;?>">
 						</div>
 					</div>
 					<!-- (Profile) Bloc 2 -->
 					<div class="bloc" id="bloc_profile_2">
-						<div id="address">
-							<span class="bold"> Adresse de résidence </span>
-							<input type="text" name="address" value="<?php echo $address;?>">
-						</div>
-						<div id="country">
-							<span class="bold"> Ville </span>
-							<input type="text" name="country" value="<?php echo $country;?>">
-						</div>
-						<div id="city">
-							<span class="bold"> Code Postal </span>							
-							<input type="text" name="postal_code" value="<?php echo $postal_code;?>">
-						</div>
+						<div class="row" id="bloc_profile_2_row_1">
+    						<div id="address">
+    							<span class="tag"> Adresse de résidence </span>
+    							<input type="text" name="address" value="<?php echo $address;?>">
+    						</div>
+    					</div>
+						<div class="row" id="bloc_profile_2_row_2">
+    						<div id="country">
+    							<span class="tag"> Ville </span>
+    							<input type="text" name="country" value="<?php echo $country;?>">
+    						</div>
+    						<div id="city">
+    							<span class="tag"> Code Postal </span>							
+    							<input type="text" name="postal_code" value="<?php echo $postal_code;?>">
+    						</div>
+    					</div>
 					</div>
 					<!-- (Profile) Bloc 3 -->
 					<div class="bloc" id="bloc_profile_3">
 						<div id="mail">
-							<span class="bold"> Adresse Mail </span>
+							<span class="tag"> Adresse Mail </span>
 							<input type="text" name="mail" value="<?php echo $mail;?>">
 						</div>
 						<div id="fixe">
-							<span class="bold"> Numéro fixe </span>
+							<span class="tag"> Numéro fixe </span>
 							<input type="text" name="number_home" value="<?php echo $phone_number_home?>">
 						</div>
 						<div id="phone">
-							<span class="bold"> Numéro portable </span>
+							<span class="tag"> Numéro portable </span>
 							<input type="text" name="number_portable" value="<?php echo $phone_number_portable;?>">
 						</div>
 					</div>

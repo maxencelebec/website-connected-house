@@ -24,12 +24,14 @@ curl_close($ch);
 
 <html>
 <head>
-<meta charset="utf-8" /> <link rel="stylesheet" href="#"
+    <meta charset="utf-8" /> 
+    <link rel="stylesheet" href="#"/>
     <title>traitement trame</title>
 </head>
 <body>        
 	<form method="post" action="">    
-    	<input type="submit" name="envoyer">
+    	<input type="submit" name="BDD" value="Server->BDD">
+    	<input type="submit" name="test" value="BDD->Server">
     </form>
 </body>
 </html>
@@ -38,7 +40,7 @@ curl_close($ch);
 /* Stockage des trames dans un array */
 $data_tab = preg_split("/([0-9]009D)/", $data, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
 
-if(isset($_POST['envoyer'])) {
+if(isset($_POST['BDD'])) {
     for($i=0, $size_demi=round(count($data_tab)/2); $i<$size_demi; $i++) {
         
         /* Récupération de la trame dans data_tab */
@@ -93,5 +95,34 @@ if(isset($_POST['envoyer'])) {
             echo "Erreur longueur de la trame rapide <br /><br />";
         }
     }        
+}
+if(isset($_POST['test'])) {
+    $req = $bdd->prepare('SELECT type_trame, num_objet, type_req, type_capteur, num_capteur, valeur, tim, checksum, timestamp FROM trame_courante AS t1
+                         WHERE timestamp = (SELECT MAX(timestamp) FROM trame_courante AS t2 WHERE t1.num_capteur = t2.num_capteur) GROUP BY num_capteur');
+    $req->execute();
+    while($recup = $req->fetch()) {
+        $trame = $recup['type_trame'];
+        $trame .= $recup['num_objet'];
+        $trame .= $recup['type_capteur'];
+        $trame .= $recup['num_capteur'];
+        $trame .= $recup['valeur'];
+        $trame .= $recup['tim'];
+        $trame .= $recup['checksum'];
+        $trame .= $recup['timestamp'];
+        $new[] = $trame;
+    }
+    for($i=0, $size=count($new); $i<$size; $i++) {
+        echo "$new[$i] <br />";
+    }
+    $url = "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009D";
+    $sh = curl_init($url);
+    curl_setopt($sh, CURLOPT_POST, 1);
+    curl_setopt($sh, CURLOPT_POSTFIELDS, $new);
+    curl_setopt($sh, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($sh, CURLOPT_HEADER, 0);
+    curl_setopt($sh, CURLOPT_RETURNTRANSFER, 1);
+    curl_exec($sh);
+    curl_close($sh);
+    echo "Envoyé au serveur !";
 }
 ?>  
