@@ -1,4 +1,5 @@
 <?php
+/*$_SESSION['salut']=$salut;*/
 /* Connection à la BDD */
 try
 {
@@ -12,12 +13,22 @@ catch(Exception $e)
 }
 
 /* Récupération des données sur le site fourni */
+$url = "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=009D";
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=009D");
+curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);
+$file_size = curl_getinfo($ch, CURLINFO_SIZE_DOWNLOAD);
 curl_close($ch);
+
+/* Emondé un peu la BDD */
+date_default_timezone_set('Europe/Paris');
+$time = date("YmdHis");
+$time = $time - 500;
+
+$req = $bdd->prepare('DELETE FROM trame_courante WHERE timestamp<?');
+$req->execute(array($time));
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +56,7 @@ if(isset($_POST['BDD'])) {
         
         /* Récupération de la trame dans data_tab */
         $j = 2 * $i;
-        $k = 2 * $i +1;
+        $k = 2 * $i+1;
         $trame = "$data_tab[$j]$data_tab[$k]";
         echo "$trame <br />";
         
@@ -114,14 +125,5 @@ if(isset($_POST['test'])) {
     for($i=0, $size=count($new); $i<$size; $i++) {
         echo "$new[$i] <br />";
     }
-    $sh = curl_init();
-    curl_setopt($sh, CURLOPT_URL, "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=009D");
-    curl_setopt($sh, CURLOPT_PORT, 8080);
-    curl_setopt($sh, CURLOPT_HEADER, FALSE);
-    curl_setopt($sh, CURLOPT_RETURNTRANSFER, TRUE);
-    curl_setopt($sh, CURLOPT_POST, TRUE);
-    curl_setopt($sh, CURLOPT_POSTFIELDS, $new);
-    curl_setopt($sh, CURLOPT_RETURNTRANSFER, TRUE);
-    curl_exec($sh);
 }
 ?>  
