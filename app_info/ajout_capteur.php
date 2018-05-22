@@ -26,10 +26,33 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
             }
         ?>
 
-        <br/> <div id="result"></div> </br>
+        <br/> <div class="result">
+        <?php
+
+        $connect = new PDO("mysql:host=localapp;dbname=virifocus","root", "");
+        $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $req = $connect->prepare("SELECT etat FROM capteurs WHERE id=? ");
+        $req->execute(array($id_capteur));
+
+        while ($donnees = $req->fetch())
+        {
+            $etat=$donnees['etat'];
+            if($etat==1 && $capteur_actionneur=="temperature" ) {
+                echo "23";
+            }
+            if ($etat==0 && $capteur_actionneur=="temperature" ) {
+                echo "";
+            }
+
+        }
+
+
+        ?>
+        </div>
 
         <?php
-            echo $id_capteur;
+            $boutton = 1;
             include ('boutton.php');
 
         ?>
@@ -41,7 +64,13 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
                 $.ajax({
                     url:"check.php",
                     method:"POST",
-                    data:{id_capteur:id_capt}
+                    data:{id_capteur:id_capt},
+                    /*
+                    success:function(data){
+                        $('.result').html(data);
+                    }
+                    */
+
 
                 });
             });

@@ -48,7 +48,8 @@ function ajout_piece($piece,$id)
                         <div class="lum_img"></div>
                         <div class="lum_txt">
                             <?php
-                                //include 'boutton.php';
+                                $boutton = 2;
+                                include 'boutton.php';
                             ?>
                         </div>
                     </div>
