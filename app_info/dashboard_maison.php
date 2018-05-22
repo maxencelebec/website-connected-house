@@ -60,7 +60,8 @@ session_start();
 				<div class="securite">
 					<div class="boutton_onoff">
                                 <?php
-                                //include "boutton.php";
+                                $boutton = 2;
+                                include "boutton.php";
                                 ?>
                                 <br>ON/OFF
 					</div>
@@ -165,6 +166,7 @@ session_start();
 	</div>
 </body>
 <script src="dashboard_maison.js"></script>
+
 
 
 </html>
