@@ -3,9 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
-
--- Généré le :  ven. 18 mai 2018 à 12:59
-
+-- Généré le :  mar. 22 mai 2018 à 08:25
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -43,9 +41,7 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
   `id_capteur` varchar(30) DEFAULT NULL,
   `valeur` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-
-) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
-
+) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `capteurs`
@@ -65,7 +61,6 @@ INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece
 (12, '2018-05-10 11:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
 (13, '2018-05-10 12:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
 (17, '2018-05-10 16:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 24),
-
 (43, NULL, 27, 7, 53, 'porte', 'Porte 2', 1, '', NULL),
 (42, NULL, 27, 7, 53, 'luminosite', 'Luminosité', 1, 'xxx', NULL),
 (41, NULL, 27, 7, 53, 'temperature', 'Temp1', 1, 'xxx', NULL),
@@ -76,60 +71,36 @@ INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece
 (37, NULL, 27, 7, 52, 'humidite', 'hum', 1, 'XXX', NULL),
 (38, NULL, 27, 7, 52, 'temperature', 'hejhe', 1, 'xx', NULL),
 (39, NULL, 27, 7, 52, 'temperature', 'jhfkjhdf', 1, 'dsf', NULL),
-(40, NULL, 27, 7, 39, 'fenetre', 'z', 1, 'jhgh', NULL);
+(40, NULL, 27, 7, 39, 'fenetre', 'z', 1, 'jhgh', NULL),
+(44, NULL, 30, 18, 57, 'porte', 'Lumière', 1, '3', NULL),
+(46, NULL, 31, 19, 59, 'temperature', 'Froid', 1, '1234', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `capteurs_logs`
+-- Structure de la table `comments`
 --
 
-DROP TABLE IF EXISTS `capteurs_logs`;
-CREATE TABLE IF NOT EXISTS `capteurs_logs` (
-  `id` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `id_habitation` int(11) NOT NULL,
-  `id_piece` int(11) NOT NULL,
-  `type_trame` int(1) NOT NULL,
-  `num_objet` varchar(4) NOT NULL,
-  `type_req` int(1) NOT NULL,
-  `type_capteur` int(1) NOT NULL,
-  `num_capteur` varchar(2) NOT NULL,
-  `valeur` varchar(4) NOT NULL,
-  `checksum` varchar(2) NOT NULL,
-  `timestamp` varchar(14) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
-
--- --------------------------------------------------------
-
---
--- Structure de la table `graph_test`
---
-
-DROP TABLE IF EXISTS `graph_test`;
-CREATE TABLE IF NOT EXISTS `graph_test` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `timestamp` datetime DEFAULT NULL,
-  `type` varchar(30) DEFAULT NULL,
-  `nom` varchar(30) DEFAULT NULL,
-  `valeur` int(10) DEFAULT NULL,
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `post_id` int(11) NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `comment` text NOT NULL,
+  `comment_date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `graph_test`
+-- Déchargement des données de la table `comments`
 --
 
-INSERT INTO `graph_test` (`id`, `timestamp`, `type`, `nom`, `valeur`) VALUES
-(1, '2018-05-15 08:00:00', 'temperature', 'temp1', 23),
-(2, '2018-05-15 09:00:00', 'temperature', 'temp1', 23),
-(3, '2018-05-15 10:00:00', 'temperature', 'temp1', 24),
-(4, '2018-05-15 11:00:00', 'temperature', 'temp1', 25),
-(5, '2018-05-15 12:00:00', 'temperature', 'temp1', 25),
-(6, '2018-05-15 13:00:00', 'temperature', 'temp1', 22),
-(7, '2018-05-15 14:00:00', 'temperature', 'temp1', 21),
-(8, '2018-05-15 15:00:00', 'temperature', 'temp1', 19);
+INSERT INTO `comments` (`id`, `post_id`, `author`, `comment`, `comment_date`) VALUES
+(1, 1, 'M@teo21', 'Un peu court ce billet !', '2010-03-25 16:49:53'),
+(2, 1, 'Maxime', 'Oui, ça commence pas très fort ce blog...', '2010-03-25 16:57:16'),
+(3, 1, 'MultiKiller', '+1 !', '2010-03-25 17:12:52'),
+(4, 2, 'John', 'Preum\'s !', '2010-03-27 18:59:49'),
+(5, 2, 'Maxime', 'Excellente analyse de la situation !\r\nIl y arrivera plus tôt qu\'on ne le pense !', '2010-03-27 22:02:13');
 
 -- --------------------------------------------------------
 
@@ -150,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `mode` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `habitation`
@@ -173,8 +144,9 @@ INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type
 (14, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
 (15, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
 (16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29);
-
+(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29),
+(18, 'Panam', 'Cachannary', 94230, 'appart 38', NULL, 'Nexity', 999999999, NULL, 30),
+(19, 'France', 'Nantes', 44800, '3A Rue de la Jaloterie', NULL, 'Maison 1', 200, NULL, 31);
 
 -- --------------------------------------------------------
 
@@ -294,7 +266,6 @@ CREATE TABLE IF NOT EXISTS `minichat` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 
-
 -- --------------------------------------------------------
 
 --
@@ -310,7 +281,7 @@ CREATE TABLE IF NOT EXISTS `pieces` (
   `id_user` int(20) NOT NULL,
   `id_habitation` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `pieces`
@@ -335,8 +306,16 @@ INSERT INTO `pieces` (`id`, `type`, `nom`, `surface`, `id_user`, `id_habitation`
 (47, 'salon', 'grezdfz', 23, 28, 16),
 (48, 'toilettes', 'fdfz', 43, 28, 16),
 (49, 'chambre', 'C1', 34, 29, 17),
-
-(52, 'salle_de_bain', 'Test', 12, 27, 7);
+(52, 'salle_de_bain', 'Test', 12, 27, 7),
+(54, 'cave', 'Man Cave', 0, 30, 18),
+(55, 'toilettes', 'Water closet', 41, 30, 18),
+(56, 'salle_de_bain', 'Salle à Manger', 10, 30, 18),
+(57, 'cave', 'Grenier', 8888, 30, 18),
+(58, 'grenier', 'Cave', 8888, 30, 18),
+(59, 'entree', 'Mot Elfique', 5, 31, 19),
+(60, 'salon', 'Lounge', 50, 31, 19),
+(61, 'salle_de_bain', 'H2O', 28, 31, 19),
+(62, 'cuisine', 'Kuisine', 45, 31, 19);
 
 -- --------------------------------------------------------
 
@@ -360,7 +339,6 @@ CREATE TABLE IF NOT EXISTS `posts` (
 INSERT INTO `posts` (`id`, `title`, `content`, `creation_date`) VALUES
 (1, 'Bienvenue sur mon blog !', 'Je vous souhaite à toutes et à tous la bienvenue sur mon blog qui parlera de... PHP bien sûr !', '2010-03-25 16:28:41'),
 (2, 'Le PHP à la conquête du monde !', 'C\'est officiel, l\'éléPHPant a annoncé à la radio hier soir \"J\'ai l\'intention de conquérir le monde !\".\r\nIl a en outre précisé que le monde serait à sa botte en moins de temps qu\'il n\'en fallait pour dire \"éléPHPant\". Pas dur, ceci dit entre nous...', '2010-03-27 18:31:11');
-
 
 -- --------------------------------------------------------
 
@@ -388,6 +366,51 @@ INSERT INTO `test` (`id`, `essai`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `trame_courante`
+--
+
+DROP TABLE IF EXISTS `trame_courante`;
+CREATE TABLE IF NOT EXISTS `trame_courante` (
+  `id` int(11) DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `id_habitation` int(11) DEFAULT NULL,
+  `id_piece` int(11) DEFAULT NULL,
+  `type_trame` int(1) NOT NULL,
+  `num_objet` varchar(4) NOT NULL,
+  `type_req` int(1) NOT NULL,
+  `type_capteur` int(1) NOT NULL,
+  `num_capteur` varchar(2) NOT NULL,
+  `valeur` varchar(4) NOT NULL,
+  `tim` varchar(4) NOT NULL,
+  `checksum` varchar(2) NOT NULL,
+  `timestamp` varchar(14) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `trame_rapide`
+--
+
+DROP TABLE IF EXISTS `trame_rapide`;
+CREATE TABLE IF NOT EXISTS `trame_rapide` (
+  `id` int(11) DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `id_habitation` int(11) DEFAULT NULL,
+  `id_piece` int(11) DEFAULT NULL,
+  `type_trame` int(1) DEFAULT NULL,
+  `num_objet` varchar(4) DEFAULT NULL,
+  `type_req` int(1) DEFAULT NULL,
+  `type_capteur` int(1) DEFAULT NULL,
+  `nbr` int(1) DEFAULT NULL,
+  `donnees` int(1) DEFAULT NULL,
+  `checksum` varchar(2) DEFAULT NULL,
+  `timestamp` varchar(14) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `users`
 --
 
@@ -405,13 +428,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone_number_home` int(20) DEFAULT NULL,
   `phone_number_portable` int(20) DEFAULT NULL,
   `type` varchar(20) DEFAULT NULL,
+  `pass_token` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
 --
-
 
 INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `postal_code`, `city`, `country`, `phone_number_home`, `phone_number_portable`, `type`, `pass_token`) VALUES
 (15, 'thierry.lincoln@isep.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lincoln', 'Thierry', '12 de mon cul', 92600, 'Asnières-sur-Seine', 'France', 1831931, 19391939, NULL, NULL),
@@ -421,7 +444,9 @@ INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `
 (26, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101010, NULL, NULL),
 (27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL, NULL),
 (28, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL, NULL),
-(29, 'tlincoln@isep.fr', '5ed25af7b1ed23fb00122e13d7f74c4d8262acd8', 'Lincoln', 'Thierry', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL, NULL);
+(29, 'tlincoln@isep.fr', '5ed25af7b1ed23fb00122e13d7f74c4d8262acd8', 'Lincoln', 'Thierry', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, NULL, NULL),
+(31, 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Nguyen', 'Test', NULL, 44800, NULL, 'France', NULL, NULL, NULL, NULL),
+(32, 'clmes43@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -437,7 +462,6 @@ CREATE TABLE IF NOT EXISTS `visiteurs` (
   `age` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

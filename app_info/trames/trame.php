@@ -114,15 +114,14 @@ if(isset($_POST['test'])) {
     for($i=0, $size=count($new); $i<$size; $i++) {
         echo "$new[$i] <br />";
     }
-    $url = "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009D";
-    $sh = curl_init($url);
-    curl_setopt($sh, CURLOPT_POST, 1);
+    $sh = curl_init();
+    curl_setopt($sh, CURLOPT_URL, "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=009D");
+    curl_setopt($sh, CURLOPT_PORT, 8080);
+    curl_setopt($sh, CURLOPT_HEADER, FALSE);
+    curl_setopt($sh, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($sh, CURLOPT_POST, TRUE);
     curl_setopt($sh, CURLOPT_POSTFIELDS, $new);
-    curl_setopt($sh, CURLOPT_FOLLOWLOCATION, 1);
-    curl_setopt($sh, CURLOPT_HEADER, 0);
-    curl_setopt($sh, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($sh, CURLOPT_RETURNTRANSFER, TRUE);
     curl_exec($sh);
-    curl_close($sh);
-    echo "Envoyé au serveur !";
 }
 ?>  
