@@ -32,7 +32,7 @@
 		}
 	}
 	if ($counter==0){
-		header('Location: index.php');
+		header('Location: index.php?erreur=Probleme de mail ou de mot de passe');
 	}
 
 	// Redirection du visiteur vers la page suivante

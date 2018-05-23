@@ -27,11 +27,17 @@
         <form action="connexion_post.php" method="post">
             <div class="txtIdentifiant"> Identifiant ou Adresse email </div>
             <input type="email" name="mail" size="35" maxlength="25" class="cadreID" style="text-align: center" required>
-            <div class="txtMdp">Mot de passe <div>
+            <div class="txtMdp">Mot de passe </div>
             <input type="password" name="password" size="35" maxlength="25" class="cadreMdp" style="text-align: center" required>
 			<br/>
 			<a class="mdpoublie" href="mdp_oublie.php"> Mot de passe oubli&eacute; ? </a>
-            <br/>
+            <br>
+            <div style="color: #2cc872;"><?php
+                if (isset($_GET['erreur'])) {
+                    echo $_GET['erreur'];
+                }
+                ?>
+            </div>
             <input class="valider" type="submit" value="Se connecter">
         </form>
 
