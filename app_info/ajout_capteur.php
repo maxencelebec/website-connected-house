@@ -32,19 +32,48 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
         $connect = new PDO("mysql:host=localapp;dbname=virifocus","root", "");
         $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $req = $connect->prepare("SELECT etat FROM capteurs WHERE id=? ");
-        $req->execute(array($id_capteur));
+        $req = $connect->prepare('SELECT type_capteur, num_capteur, valeur, timestamp FROM trame_courante AS t1
+                         WHERE timestamp = (SELECT MAX(timestamp) FROM trame_courante AS t2 WHERE t1.num_capteur = t2.num_capteur) GROUP BY num_capteur');
+        $req->execute();
 
-        while ($donnees = $req->fetch())
-        {
-            $etat=$donnees['etat'];
-            if($etat==1 && $capteur_actionneur=="temperature" ) {
-                echo "23";
-            }
-            if ($etat==0 && $capteur_actionneur=="temperature" ) {
-                echo "";
-            }
+        while($recup = $req->fetch()) {
+            $num_capteur = $recup['num_capteur'];
+            $valeur = $recup['valeur'];
+            $timestamp = $recup['timestamp'];
 
+
+            $req = $connect->prepare("SELECT etat, valeur, id_capteur FROM capteurs WHERE id=? ");
+            $req->execute(array($id_capteur));
+
+            while ($donnees = $req->fetch()) {
+                $etat = $donnees['etat'];
+                if ($etat == 1 && $capteur_actionneur == "temperature" && $num_capteur==$donnees['id_capteur']) {
+                    $update = $connect->prepare("UPDATE capteurs set valeur=$valeur WHERE id=?");
+                    $update->execute(array($id_capteur));
+                    echo $donnees['valeur'];
+
+                }
+                if ($etat == 1 && $capteur_actionneur == "luminosite") {
+                    echo "220lux";
+                }
+                if ($etat == 1 && $capteur_actionneur == "porte") {
+                    echo "open";
+                } elseif ($etat == 0 && $capteur_actionneur == "porte") {
+                    echo "close";
+                }
+                if ($etat == 1 && $capteur_actionneur == "presence") {
+                    echo "on";
+                } elseif ($etat == 0 && $capteur_actionneur == "presence") {
+                    echo "off";
+                }
+                if ($etat == 1 && $capteur_actionneur == "humidite") {
+                    echo "30%";
+                }
+                if ($etat == 0) {
+                    echo "";
+                }
+
+            }
         }
 
 
