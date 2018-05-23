@@ -385,9 +385,9 @@ a{
     cursor: pointer;
     font-size: 30px;
     outline: none;
-    padding: 10px;
+    padding: 2vh;
     border: #2cc872 solid 3px;
-    transition: 0.2s;
+    transition:0.1s;
     margin-left: 5vw;
 }
 .ajouterpiece:hover{

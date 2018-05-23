@@ -61,7 +61,6 @@
                         ?>
 
 		</div>
-        <div>salut</div>
 		<?php
 			include "footer.php";
 		?>

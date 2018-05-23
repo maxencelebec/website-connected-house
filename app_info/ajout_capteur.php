@@ -50,7 +50,7 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
                 if ($etat == 1 && $capteur_actionneur == "temperature" && $num_capteur==$donnees['id_capteur']) {
                     $update = $connect->prepare("UPDATE capteurs set valeur=$valeur WHERE id=?");
                     $update->execute(array($id_capteur));
-                    echo $donnees['valeur'];
+                    echo $donnees['valeur']."°C";
 
                 }
                 if ($etat == 1 && $capteur_actionneur == "luminosite") {
