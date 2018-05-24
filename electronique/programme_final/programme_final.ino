@@ -186,10 +186,32 @@ char toText(char text) {
   return text;
 }
 
+void scoutTrame() {
+	char trame[18]
+	
+	for(int i=0; i<19; i++) {
+		trame[i] = Serial1.read();		// Lecture de la trame
+	}
+	Serial.print(trame)		//Copie dans la console
+	
+	if(trame[5]=='2') {		//Si requête en lecture (l'objet reçoit l'info)
+		char TYP = trame[6];
+		char NUM = trame[7] + trame[8];
+		char VAL = trame[9] + trame[10] + trame[11] + trame[12];
+		action(TYP, NUM, VAL);
+	}
+}
 
+void action(char TYP, char NUM, char VAL) {
+	if(VAL==='0000') {
+		//LOW
+	}
+	else if(VAL==='0001') {
+		//HIGH
+	}
+}
 
-void sendTrame(char VAL, char NUM, char TYP) {
-
+void sendTrame(float VAL, char NUM, char TYP) {
 	char trame[18];
 	
 	/* Ecriture de la trame (sans la checksum) */
@@ -202,10 +224,10 @@ void sendTrame(char VAL, char NUM, char TYP) {
 	trame[6] = TYP;		//TYP
 	trame[7] = NUM[0];	//NUM
 	trame[8] = NUM[1];	//NUM
-	trame[9] = VAL[0];	//VAL
-	trame[10] = VAL[1];	//VAL
-	trame[11] = VAL[2];	//VAL
-	trame[12] = VAL[3];	//VAL
+	trame[9] = toText((VAL >> 12) & 0x0f);	
+    trame[10] = toText((VAL >> 8) & 0x0f);
+    trame[11] = toText((VAL >> 4) & 0x0f);
+    trame[12] = toText(VAL & 0x0f);
 	trame[13] = '0';	//TIM
 	trame[14] = 'E';	//TIM
 	trame[15] = 'C';	//TIM
