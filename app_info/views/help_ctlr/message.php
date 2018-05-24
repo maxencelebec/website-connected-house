@@ -1,7 +1,8 @@
 <div class="container">
-	 
+<div id="canvas-map"></div>
 
 	<div class="infobox"></div>
+    
     <form>
     
         <!-- Ici il faudra voir les utilisateur dispo avec la BDD -->
@@ -23,7 +24,7 @@
         <label for="msg">Message</label>
         <textarea id="msg" name="msg" placeholder="Dites nous tout..." ></textarea>
         
-        <input id="submit" type="submit" value="Envoyer">
+        <input id="submit" href="index_mvc.php?p=help_ctlr/message_center" type="submit" value="Envoyer">
         
     </form>
 </div> 

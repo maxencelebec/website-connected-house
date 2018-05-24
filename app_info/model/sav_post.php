@@ -39,13 +39,13 @@ function execute_sav($message){
 	
 	$req = $bdd->prepare('INSERT INTO message (id_type_msg,contenu_msg, id_utilisateur, id_habitation) VALUES (?, ?, ?, ?)');
 	$req->execute(array($id_type_message,$message,$id_user,$id_habitation));
-	
+	header('Location:../index_mvc.php?p=help_ctlr/message_center');
 }
 	
 	
 	
 	// Redirection vers la page suivante
-	//header('Location:../index_mvc.php?p=help_ctlr');
+	
 	
 
  }?>

@@ -10,7 +10,6 @@ a{
     color:white;
 }
 
-@charset "utf-8";
 
 .help_msgs{
 	
@@ -34,19 +33,23 @@ footer{
 .container{
 	grid-column:2;
 	display: grid;
-	grid-templates-columns:60% 40%;
+	grid-template-columns:40% 60%;
 	background-color:#333333;
 	color:#2cc872;
 	
 }
 
 .container .infobox{
-	grid-column:1;
-	background-image: url("image/isepaddress.png");
-    background-size: cover;
-    max-height:100vh;
-    background-position: center;
+
     
+}
+.container .img{
+	grid-column:1;
+	
+    background-size: cover;
+   
+    background-position: center;
+
 }
 
 
