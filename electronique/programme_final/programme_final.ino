@@ -47,7 +47,7 @@ void setup() {
 void loop()
 {
   //readIRsensor();
-  trameAnswers();
+  sendTrame(readIRsensor(0), '01', '1');	//VAL,NUM,TYP
 }
 
 void turnLedOn(int outputPin)
@@ -188,7 +188,7 @@ char toText(char text) {
 
 
 
-void sendTrame(char VAL, char NUM, int TYP) {
+void sendTrame(char VAL, char NUM, char TYP) {
 
 	char trame[18];
 	
@@ -206,18 +206,18 @@ void sendTrame(char VAL, char NUM, int TYP) {
 	trame[10] = VAL[1];	//VAL
 	trame[11] = VAL[2];	//VAL
 	trame[12] = VAL[3];	//VAL
-	trame[13] = '2';	//TIM
-	trame[14] = '6';	//TIM
-	trame[15] = '0';	//TIM
-	trame[16] = '5';	//TIM
+	trame[13] = '0';	//TIM
+	trame[14] = 'E';	//TIM
+	trame[15] = 'C';	//TIM
+	trame[16] = 'R';	//TIM
 	
-	/* Calcul de la checksum avec les valeurs présentes */
-	int CHK = 00;
-	CHK = checksum(trame);
+	// Calcul de la checksum avec les valeurs présentes 
+/*	int CHK = 00;
+	CHK = checksum(trame);*/
 	
 	/* Insertion checksum dans la trame */
-	trame[17] = CHK;	//CHK
-	trame[18] = CHK;	//CHK
+	trame[17] = '0';	//CHK
+	trame[18] = 'B';	//CHK
 	
 	/* Système d'envoie de la trame */
 	int pot = analogRead(28);
@@ -233,6 +233,7 @@ void sendTrame(char VAL, char NUM, int TYP) {
 	}
 }
 
+/*
 int checksum(char trame) {
 	int res = 0x00;
 	for(int i=0; i<17; i++) {
@@ -289,4 +290,4 @@ int checksum(char trame) {
 	}
 	return res;
 }
-
+*/
