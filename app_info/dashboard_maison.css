@@ -296,7 +296,6 @@ a{
 }
 
 .informations_graphe{
-    background-color: #333333;
     display: grid;
     grid-auto-rows: 8vh;
     border-top: #2cc872 solid 3px;
