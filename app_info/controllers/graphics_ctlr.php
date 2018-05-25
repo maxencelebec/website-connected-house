@@ -1,7 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: victo
- * Date: 18/05/2018
- * Time: 14:22
- */
+
+class graphics_ctlr extends Controller{
+
+    function index_mvc() {
+
+        $this->render('index');
+
+    }
+
+    function graphics() {
+        $this->render('graphics');
+    }
+
+}
+
+?>
