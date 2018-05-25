@@ -106,7 +106,9 @@ session_start();
 				<div class="informations_graphe">
 					<div id="triangle1"></div>
 				</div>
-				<div class="fond_triangle"></div>
+				<div class="fond_triangle"><?php
+                    include "trames/trame.php";
+                    ?></div>
 			</div>
 			<div class="control_pieces">
 
