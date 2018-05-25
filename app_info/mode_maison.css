@@ -9,13 +9,13 @@ body
 
 #site{
     display: grid;
-    grid-template-columns: 2fr 7fr 25fr 8fr ;
+    grid-template-columns: 2fr 6fr 25fr 6fr ;
     grid-template-rows: auto auto;
-    grid-gap: auto 15px;
+    grid-gap: 20px;
     font-family: Segoe UI Light, Georgia;
     text-decoration:none;
     position: fixed;
-    background-color: lightgrey;
+    background-color: #333333;
 }
 
 a{
@@ -40,7 +40,6 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
 }
 
 .content{
-    overflow:auto;
     display:grid;
     grid-column:3;
     background-color: lightgrey;
@@ -48,16 +47,17 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
 
 .main1{
     display: grid;
-    background-color: lightgrey;
+    background-color: #333333;
     font-family: Segoe UI Light, Georgia;
-    grid-row-gap: 200px;
-    grid-template-rows: 5fr 10fr 5fr ;
+    grid-row-gap: 90px;
+    grid-template-rows: 5fr 12fr 5fr 5fr ;
 }
 .title {
 	grid-row:1;
     text-align:center;
     font-size:1em;
     font-family: Segoe UI Light, Georgia;
+    color: #2cc872 ;
   -webkit-transition:all 0.5s ease-out;
   -moz-transition:all 0.5s ease-out;
   -ms-transition:all 0.5s ease-out;
@@ -89,46 +89,31 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
 }
 
 .eco_mode{
-	display: block;
+	display: grid;
     grid-column: 1;
-    background-color: #40495e;
+    grid-template-rows:2fr 5fr 1fr;
+    grid-template-columns:8fr 3fr 2fr;
+    background-color: #343c44;
     border-radius: 10px;
     box-shadow: 0px 4px 20px #212122;
     align-items: center;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 20px;        
+    font-size: 20px; 
     background-image: url("image/eco_mode.png");
-    background-size: cover;
+    text-align:center;
     background-position: center;
-
-}
-.overlay {
-    border-radius: 10px;
-	height: 100%;
-    width: 100%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color: #40495e;
-	display: grid;
-	grid-template-columns: 2fr 5fr 2fr;
+    background-size: cover;
 
 }
 
-.eco_mode:hover .overlay {
-  	opacity: 1;
-}
 
-.text {
-	grid-column: 2;
-	color: #2cc872;
-	margin-top: 70px;
-	text-align: center;
-}
 .mon_mode{
-	display: block;
+	display: grid;
     grid-column: 3;
-    background-color: #40495e;
+    grid-template-rows:2fr 5fr  1fr;
+    grid-template-columns:8fr 3fr 2fr;
+    background-color: #343c44;
     border-radius: 10px;
     box-shadow: 0px 4px 20px #212122;
     align-items: center;
@@ -138,9 +123,60 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
     background-image: url("image/moyen_mode.png");
     background-size: cover;
     background-position: center;
+    text-align:center;
+
 }
 
 
-.mon_mode:hover .overlay {
-  	opacity: 1;
+.boutton_onoff{
+    grid-row: 2;
+    grid-column: 2;
+    background-color: #343c44;
+    color:#2cc872;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 150px; /* Location of the box */
+    padding-left: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color:#343c44;
+    border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 20px grey;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 70%;
+    height: 40%;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #2cc872;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
 }
