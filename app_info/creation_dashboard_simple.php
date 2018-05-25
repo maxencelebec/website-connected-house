@@ -30,6 +30,8 @@ catch(Exception $e)
                 <div class="maison_conso">
                     <div class="maison">
 
+
+
                         <?php
                         $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
                         $req->execute(array($_SESSION['mail']));
@@ -53,6 +55,12 @@ catch(Exception $e)
                     </div>
 
                     <div class="chartContainer">
+
+                        <?php
+
+                        require ('./views/graphics_ctlr/graphtest.php');
+
+                        ?>
 
                     </div>
 
