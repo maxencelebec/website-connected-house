@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 22 mai 2018 à 08:25
+-- Généré le :  ven. 25 mai 2018 à 14:39
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -101,6 +101,36 @@ INSERT INTO `comments` (`id`, `post_id`, `author`, `comment`, `comment_date`) VA
 (3, 1, 'MultiKiller', '+1 !', '2010-03-25 17:12:52'),
 (4, 2, 'John', 'Preum\'s !', '2010-03-27 18:59:49'),
 (5, 2, 'Maxime', 'Excellente analyse de la situation !\r\nIl y arrivera plus tôt qu\'on ne le pense !', '2010-03-27 22:02:13');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `graph_test`
+--
+
+DROP TABLE IF EXISTS `graph_test`;
+CREATE TABLE IF NOT EXISTS `graph_test` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `timestamp` datetime DEFAULT NULL,
+  `type` varchar(30) DEFAULT NULL,
+  `nom` varchar(30) DEFAULT NULL,
+  `valeur` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `graph_test`
+--
+
+INSERT INTO `graph_test` (`id`, `timestamp`, `type`, `nom`, `valeur`) VALUES
+(1, '2018-05-15 08:00:00', 'temperature', 'temp1', 23),
+(2, '2018-05-15 09:00:00', 'temperature', 'temp1', 23),
+(3, '2018-05-15 10:00:00', 'temperature', 'temp1', 24),
+(4, '2018-05-15 11:00:00', 'temperature', 'temp1', 25),
+(5, '2018-05-15 12:00:00', 'temperature', 'temp1', 25),
+(6, '2018-05-15 13:00:00', 'temperature', 'temp1', 22),
+(7, '2018-05-15 14:00:00', 'temperature', 'temp1', 21),
+(8, '2018-05-15 15:00:00', 'temperature', 'temp1', 19);
 
 -- --------------------------------------------------------
 
