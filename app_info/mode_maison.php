@@ -23,16 +23,53 @@ session_start();
 
 			    <div class="mode">
 			    	<div class="eco_mode"onclick="mode_eco()">
-			    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mode Economiseur
-				    	<div class="overlay">
-	    					<div class="text">Le mode économie d’énergie réduit la quantité d’énergie utilisé en etteingnant les capteurs suivants (1,2,3...)</div>
-	    				</div>
+			    		Mode Economiseur
+						<button id="myBtn">informations</button>
+
+						<div id="myModal" class="modal">
+
+					 	<div class="modal-content"> 
+					  			<br>
+					  			<br>
+					  			Le mode économie d’énergie réduit la quantité d’énergie utilisée par votre domicile lorsque la consomation dépasse 70% 
+					  			<br>
+					  			Une fois ce mode activé, les actionneurs( lumière, chauffage,) dans les pieces sans présence seront éteints
+							
+						  		
+					    	<span class="close">&times;</span>
+					  	</div>
+
+						</div>
+			    			    	
+    					<div class="boutton_onoff">
+                         	    <?php
+                            	$boutton = 2;
+                            	include "boutton.php";
+                            	?>
+                            	<br>ON/OFF
+						</div>
 	    			</div>
-			    	<div class="mon_mode" onclick="mon_moyen()">
-			    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon Mode
-				    	<div class="overlay">
-	    					<div class="text">&nbsp;&nbsp;&nbsp;les capteurs que vous allez sélectionner seront éteind automatiquement quand ce mode est activé </div>
-	    				</div>
+
+			    	<div class="mon_mode" onclick="mon_mode()">
+			    		Mon Mode
+			    		<button id="myBtn">modifier</button>
+
+						<div id="myModal" class="modal">
+
+						<div class="modal-content">
+							<span class="close">&times;</span>
+						</div>
+
+						</div>
+
+
+			   		 	<div class="boutton_onoff">
+                      		    <?php
+                       		    $boutton = 2;
+                       		    include "boutton.php";
+                        		?>
+                         		<br>ON/OFF
+						</div>   	
 			    	</div>
 			    </div>
 			    <div class="comment"></div>
@@ -43,5 +80,33 @@ session_start();
 	        include "footer.php";
 	    ?>
 	</div>
+	
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 </body>
 </html>
