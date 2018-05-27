@@ -47,7 +47,7 @@ void setup() {
 void loop()
 {
   //readIRsensor();
-  sendTrame(readIRsensor(0), '01', '1');	//VAL,NUM,TYP
+  sendTrame(readIRsensor(0),'01', '1');	//VAL,NUM,TYP
 }
 
 void turnLedOn(int outputPin)
@@ -186,15 +186,15 @@ char toText(char text) {
   return text;
 }
 
-void scoutTrame() {
-	char trame[18]
+void scoutTrame(){
+	char trame[18];
 	
 	for(int i=0; i<19; i++) {
 		trame[i] = Serial1.read();		// Lecture de la trame
 	}
-	Serial.print(trame)		//Copie dans la console
+	Serial.print(trame);		//Copie dans la console
 	
-	if(trame[5]=='2') {		//Si requête en lecture (l'objet reçoit l'info)
+	if(trame[5]=='2'){		//Si requête en lecture (l'objet reçoit l'info)
 		char TYP = trame[6];
 		char NUM = trame[7] + trame[8];
 		char VAL = trame[9] + trame[10] + trame[11] + trame[12];
@@ -203,18 +203,18 @@ void scoutTrame() {
 }
 
 void action(char TYP, char NUM, char VAL) {
-	if(VAL==='0000') {
+	if(VAL=='0000') {
 		//LOW
 	}
-	else if(VAL==='0001') {
+	else if(VAL=='0001') {
 		//HIGH
 	}
 }
 
-void sendTrame(float VAL, char NUM, char TYP) {
+void sendTrame(int VAL, char NUM, char TYP) {
 	char trame[18];
 	
-	/* Ecriture de la trame (sans la checksum) */
+	// Ecriture de la trame (sans la checksum)
 	trame[0] = '1';		//TRA
 	trame[1] = '0';		//OBJ
 	trame[2] = '0'; 	//OBJ
@@ -222,17 +222,19 @@ void sendTrame(float VAL, char NUM, char TYP) {
 	trame[4] = 'D';		//OBJ
 	trame[5] = '1';		//REQ
 	trame[6] = TYP;		//TYP
-	trame[7] = NUM[0];	//NUM
-	trame[8] = NUM[1];	//NUM
+	trame[7] = toText((NUM >> 4) & 0x0f);	//NUM
+	trame[8] = toText(NUM & 0x0f);	//NUM
+	
 	trame[9] = toText((VAL >> 12) & 0x0f);	
-    trame[10] = toText((VAL >> 8) & 0x0f);
-    trame[11] = toText((VAL >> 4) & 0x0f);
-    trame[12] = toText(VAL & 0x0f);
+  trame[10] = toText((VAL >> 8) & 0x0f);
+  trame[11] = toText((VAL >> 4) & 0x0f);
+  trame[12] = toText(VAL & 0x0f);
 	trame[13] = '0';	//TIM
 	trame[14] = 'E';	//TIM
 	trame[15] = 'C';	//TIM
 	trame[16] = 'R';	//TIM
-	
+
+
 	// Calcul de la checksum avec les valeurs présentes 
 /*	int CHK = 00;
 	CHK = checksum(trame);*/
