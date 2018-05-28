@@ -192,7 +192,15 @@ $req->execute(array($time));
 				<div class="informations_graphe">
 					<div id="triangle1"></div>
 				</div>
-				<div class="fond_triangle"></div>
+				<div class="fond_triangle">
+
+                    <?php
+
+                    require ('./views/graphics_ctlr/graphdashboard.php');
+
+                    ?>
+
+                </div>
 			</div>
 			<div class="control_pieces">
 

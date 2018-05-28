@@ -296,14 +296,14 @@ a{
 }
 
 .informations_graphe{
-    background-color: #333333;
     display: grid;
     grid-auto-rows: 8vh;
     border-top: #2cc872 solid 3px;
     border-bottom: #2cc872 solid 3px;
 }
 #triangle1{
-    grid-row: 1/2;
+    grid-row: 2/3;
+    top: 16px;
     background-color: lightgrey ;
     clip-path: polygon(0 50%, 100% 0, 100% 100%);
     transition: 10s;

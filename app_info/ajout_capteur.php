@@ -35,7 +35,6 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
         $req = $connect->prepare('SELECT type_capteur, num_capteur, valeur, timestamp FROM trame_courante AS t1
                          WHERE timestamp = (SELECT MAX(timestamp) FROM trame_courante AS t2 WHERE t1.num_capteur = t2.num_capteur) GROUP BY num_capteur');
         $req->execute();
-
         while($recup = $req->fetch()) {
             $num_capteur = $recup['num_capteur'];
             $valeur = $recup['valeur'];
@@ -44,7 +43,6 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
 
             $req = $connect->prepare("SELECT etat, valeur, id_capteur FROM capteurs WHERE id=? ");
             $req->execute(array($id_capteur));
-
             while ($donnees = $req->fetch()) {
                 $etat = $donnees['etat'];
                 if ($etat == 1 && $capteur_actionneur == "temperature" && $num_capteur==$donnees['id_capteur']) {
