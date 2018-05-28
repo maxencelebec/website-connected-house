@@ -273,6 +273,7 @@ CREATE TABLE IF NOT EXISTS `trame_courante` (
   `tim` varchar(4) NOT NULL,
   `checksum` varchar(2) NOT NULL,
   `timestamp` varchar(14) NOT NULL
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -295,6 +296,7 @@ CREATE TABLE IF NOT EXISTS `trame_rapide` (
   `donnees` int(1) DEFAULT NULL,
   `checksum` varchar(2) DEFAULT NULL,
   `timestamp` varchar(14) DEFAULT NULL
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
