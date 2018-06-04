@@ -1,0 +1,120 @@
+body
+{
+    padding:0;
+    margin:0;
+    width:auto;
+
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+.home{
+    background-color: #486454;
+    border-left: #2cc872 solid 3px;
+}
+
+
+#site{
+    display: grid;
+    grid-template-columns:2fr 28fr;
+    font-family: Segoe UI Light, Georgia;
+    text-decoration:none;
+    grid-template-rows:100vh;
+
+}
+.main{
+    overflow:auto;
+    color:black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3vw;
+    margin: 10px;
+}
+
+.infos1, .infos2{
+    display: grid;
+    border: #40495E solid 2px;
+    border-radius: 3px;
+    grid-template-rows:6vh;
+}
+.titre{
+    color: white;
+    grid-row: 1/2;
+    display: flex;
+    font-size: 3.5vh;
+    justify-content: center;
+    background-color:#40495E;
+}
+.graphe1{
+}
+
+.graphe2{
+}
+
+
+
+
+
+
+.liste{
+    border: none;
+    cursor: pointer;
+    color: #2CC872;
+    background-color: white;
+    border: #2CC872 solid 2px;
+    border-radius: 3px;
+    font-size: 30px;
+    transition: 0.4s;
+    margin-left: 10vw;
+}
+.liste:hover{
+    background-color: #2CC872;
+    color: white;
+}
+#fenetre{
+    position: absolute;
+    background-color: white;
+    font-size:0px;
+    width: 0px;
+    height: 0px;
+    border-radius: 5px;
+    left:7vw;
+    top:1vh;
+    visibility: hidden;
+    overflow: auto;
+}
+#close{
+    position: absolute;
+    color: #2cc872;
+    border: none;
+    cursor: pointer;
+    top:1vh;
+    right: 1vw;
+    background-color:white;
+    font-size: 40px;
+    border: #2cc872 solid 3px;
+    border-radius:50%;
+}
+td{
+    font-size: 1.6vw;
+    padding: 5px;
+}
+th{
+    background-color: #40495E;
+    font-size: 20px;
+    color: white;
+}
+table, th, td{
+    border-collapse:collapse;
+    border:#40495E solid 2px;
+}
+.clean{
+    color: black;
+}
+.clean:hover{
+    background-color: #2CC872;
+    color: white;
+}
