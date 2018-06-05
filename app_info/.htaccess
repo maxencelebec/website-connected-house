@@ -1,3 +1,5 @@
 RewriteEngine on
 
 RedirectMatch 301 ^/help\.php$ /index_mvc.php?p=$1
+
+
