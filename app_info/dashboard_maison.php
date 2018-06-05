@@ -94,7 +94,17 @@ include 'fetch_trame.php';
 					</div>
 					<div id="consommation" onclick="consommation()">
 						<div class="case31131">Utilisation</div>
-						<div class="case31132">65%</div>
+						<div class="case31132">
+
+                            <?php
+                            $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE id=?');
+                            $req->execute(array($_GET['id']));
+                            while ($donnees = $req->fetch()) {
+                                echo $donnees["nom"];
+                            }
+                            ?>
+
+                        </div>
 					</div>
 				</div>
 				<div class="informations_graphe">
