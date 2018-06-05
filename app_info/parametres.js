@@ -26,6 +26,10 @@ function submitForms() {	/* Fonction qui submit tous les formulaires de la page 
 	}, 5000); 
 }
 
+function displayInput() {
+	document.getElementById("name_input").type = 'text';
+}
+
 /* Définition des évènements "onclick" */
 document.getElementById("tablink1").addEventListener("click", function(){
 	openTab(event, "profile");
@@ -39,6 +43,9 @@ document.getElementById("tablink3").addEventListener("click", function(){
 document.getElementById("tablink4").addEventListener("click", function(){
 	openTab(event, "notifications");
 }); 
+document.getElementById("tag_name").addEventListener("click", function(){
+	displayInput();
+});
 /*document.getElementsByClassName("enregistrer").addEventListener("click", function() {
 	submitForms();
 });*/
