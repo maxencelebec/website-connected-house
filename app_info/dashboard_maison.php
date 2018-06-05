@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'fetch_trame.php';
+include 'model/fetch_trame.php';
 ?>
 
 <!DOCTYPE html>
