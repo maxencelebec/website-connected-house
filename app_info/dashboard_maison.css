@@ -9,7 +9,6 @@ body
     display: grid;
     grid-template-columns: 2fr 5fr 23fr;
     grid-template-rows:100vh;
-	background-color:blue;
 	overflow:hidden;
 	
     font-family: Segoe UI Light, Georgia;

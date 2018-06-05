@@ -154,11 +154,10 @@ include 'fetch_trame.php';
                         
                         ?>
                         
-                        <div class="boutton1">
-					<a
-						href="inscription_habitant_5.php?id=<?php echo $_SESSION["id_habitation"]; ?>"
-						class="ajouterpiece"> + ajouter pièce </a> <a
-						href="choix_piece.php?id=<?php echo $id_habitation; ?>"
+                <div class="boutton1">
+                    <a href="inscription_habitant_5.php?id=<?php echo $_SESSION["id_habitation"]; ?>"
+						class="ajouterpiece"> + ajouter pièce </a>
+                    <a href="choix_piece.php?id=<?php echo $id_habitation; ?>"
 						class="ajouterpiece"> modifier pièce </a>
 				</div>
 
@@ -172,7 +171,7 @@ include 'fetch_trame.php';
                 include "footer.php";
                 ?>
 
-            </div>
+        </div>
 
 	<div id="fenetre">
 		<button id="close" data-ido="56" onclick="fermer()">x</button>
