@@ -1,36 +1,14 @@
 <?php
 session_start();
-<<<<<<< HEAD
+
 include 'fetch_trame.php';
-=======
->>>>>>> 593d23d9f3a04d93b64292abeb894a7d95186c4e
+
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Virifocus</title>
-    <meta charset="utf-8" />
-<<<<<<< HEAD
-    <link rel="stylesheet" href="dashboard_maison.css" />
-    <link rel="icon" type="image/png" href="image/logo.png" />
-    <script src="jQuery.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-</head>
-
-<body class="fond">
-	<div id="site">
-                
-        <?php
-        include "header.php";
-        ?>
-
-
-
-</body>
 
 </html>
-=======
+
     <link rel="stylesheet" href="dashboard_administrateur.css" />
     <link rel="icon" type="image/png" href="image/logo.png" />
     <script src="jQuery.js"></script>
@@ -118,4 +96,3 @@ include 'fetch_trame.php';
 
 </html>
 
->>>>>>> 593d23d9f3a04d93b64292abeb894a7d95186c4e
