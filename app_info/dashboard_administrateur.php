@@ -26,7 +26,7 @@ $_SESSION['type']=1;
 
         <div class="infos1">
             <div class="titre">Informations du site</div>
-            <div class="graphe1">graphe 1 : nombre de connexions par jour</div>
+            <div class="graphe1">Nombre de connexions par jour :</div>
 
 
             <div id="chartConnexion">
@@ -39,7 +39,7 @@ $_SESSION['type']=1;
 
             </div>
 
-            <div class="graphe2">graphe 2 : nombre d'inscriptions par jour/semaine/mois</div>
+            <div class="graphe2">Nombre d'inscriptions par jour : </div>
 
             <div id="chartInscription">
 
@@ -57,7 +57,18 @@ $_SESSION['type']=1;
 
         <div class="infos2">
             <div class="titre">Informations habitations</div>
-            <div class="graphe3">graphe 3 : </div>
+            <div class="graphe3">Nombre d'habitations connectées par jour : </div>
+
+            <div id="chartNbHabitations">
+
+                <?php
+
+                require ('./graph_nbhabitation.php');
+
+                ?>
+
+            </div>
+
             <div class="graphe4">
 
                 <button class="liste" onclick="change()">Liste des utilisateurs</button>
