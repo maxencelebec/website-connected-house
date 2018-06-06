@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="141312a6-da42-4010-bdc4-6d60c53f3d55" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/graph_connexion.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/graph_inscription.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/model/fetch_max_value.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/model/send_trame.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/.htaccess" afterPath="$PROJECT_DIR$/app_info/.htaccess" />
-      <change beforePath="$PROJECT_DIR$/app_info/check.php" afterPath="$PROJECT_DIR$/app_info/check.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/connexion_post.php" afterPath="$PROJECT_DIR$/app_info/connexion_post.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/creation_dashboard_simple.php" afterPath="$PROJECT_DIR$/app_info/creation_dashboard_simple.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/dashboard_administrateur.css" afterPath="$PROJECT_DIR$/app_info/dashboard_administrateur.css" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app_info/dashboard_administrateur.php" afterPath="$PROJECT_DIR$/app_info/dashboard_administrateur.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/dashboard_maison.php" afterPath="$PROJECT_DIR$/app_info/dashboard_maison.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/fetch_trame.php" afterPath="$PROJECT_DIR$/app_info/model/fetch_trame.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/inscription_1_post.php" afterPath="$PROJECT_DIR$/app_info/inscription_1_post.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/inscription_habitant_1_post.php" afterPath="$PROJECT_DIR$/app_info/inscription_habitant_1_post.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/inscription_technicien_1.php" afterPath="$PROJECT_DIR$/app_info/inscription_technicien_1.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/trames/trame.php" afterPath="$PROJECT_DIR$/app_info/trames/trame.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/views/graphics_ctlr/graphtest.php" afterPath="$PROJECT_DIR$/app_info/views/graphics_ctlr/graphtest.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/virifocus.sql" afterPath="$PROJECT_DIR$/app_info/virifocus.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription_1_post.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inscription_1_post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/inscription_1_post.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="603">
@@ -81,6 +65,18 @@
               <folding>
                 <marker date="1528287051696" expanded="true" signature="491:717" ph="INSERT INTO users... " />
                 <marker date="1528287051696" expanded="true" signature="963:1189" ph="INSERT INTO users... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard_administrateur.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+              <folding>
+                <marker date="1528287741108" expanded="true" signature="2251:2319" ph="SELECT id, m... users" />
               </folding>
             </state>
           </provider>
@@ -157,7 +153,6 @@
         <option value="$PROJECT_DIR$/app_info/Inscription_1.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_habitant_2_post.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_habitant_1.php" />
-        <option value="$PROJECT_DIR$/app_info/dashboard_administrateur.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_simple.php" />
         <option value="$PROJECT_DIR$/app_info/index_mvc.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_technicien_2_post.php" />
@@ -169,6 +164,7 @@
         <option value="$PROJECT_DIR$/app_info/inscription_habitant_1_post.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_technicien_1.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_1_post.php" />
+        <option value="$PROJECT_DIR$/app_info/dashboard_administrateur.php" />
       </list>
     </option>
   </component>
@@ -384,12 +380,12 @@
       <workItem from="1527201046539" duration="2680000" />
       <workItem from="1527240106802" duration="3490000" />
       <workItem from="1527254296838" duration="5300000" />
-      <workItem from="1528103456548" duration="33550000" />
+      <workItem from="1528103456548" duration="34015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96563000" />
+    <option name="totallyTimeSpent" value="97028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -717,16 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding>
-            <marker date="1528285183031" expanded="true" signature="2001:2069" ph="SELECT id, m... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_simple.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
@@ -862,6 +848,16 @@
           <folding>
             <marker date="1528287051696" expanded="true" signature="491:717" ph="INSERT INTO users... " />
             <marker date="1528287051696" expanded="true" signature="963:1189" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <marker date="1528287741108" expanded="true" signature="2251:2319" ph="SELECT id, m... users" />
           </folding>
         </state>
       </provider>

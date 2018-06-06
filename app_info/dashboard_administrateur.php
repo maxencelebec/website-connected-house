@@ -1,11 +1,8 @@
 <?php
 session_start();
-<<<<<<< HEAD
-$_SESSION['type']=1;
-=======
+$_SESSION['type']=1;    
 
 
->>>>>>> 154528d747fabd0b40487eba7a76622a9321593c
 ?>
 
 <!DOCTYPE html>

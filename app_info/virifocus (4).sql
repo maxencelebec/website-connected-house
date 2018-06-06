@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 06 juin 2018 à 11:27
+-- Généré le :  mer. 06 juin 2018 à 12:22
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -98,6 +98,26 @@ CREATE TABLE IF NOT EXISTS `capteurs_liste` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `code_technicien`
+--
+
+DROP TABLE IF EXISTS `code_technicien`;
+CREATE TABLE IF NOT EXISTS `code_technicien` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `code_technicien`
+--
+
+INSERT INTO `code_technicien` (`id`, `code`) VALUES
+(1, 'azerty123456');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `comments`
 --
 
@@ -171,7 +191,7 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `mode` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `habitation`
@@ -197,7 +217,8 @@ INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type
 (17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29),
 (18, 'Panam', 'Cachannary', 94230, 'appart 38', NULL, 'Nexity', 999999999, NULL, 30),
 (19, 'France', 'Nantes', 44800, '3A Rue de la Jaloterie', NULL, 'Maison 1', 200, NULL, 31),
-(20, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'La Villa', 3000, NULL, 33);
+(20, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'La Villa', 3000, NULL, 33),
+(21, 'France', 'Asnières-sur-Seine', 92600, '12 rue waldeck rousseau', NULL, 'charo', 300, NULL, 19);
 
 -- --------------------------------------------------------
 
@@ -406,7 +427,7 @@ CREATE TABLE IF NOT EXISTS `stats` (
   `type` varchar(50) NOT NULL,
   `date` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `stats`
@@ -428,7 +449,11 @@ INSERT INTO `stats` (`id`, `type`, `date`) VALUES
 (13, 'connexion', '2018-06-10 07:33:45.000000'),
 (14, 'connexion', '2018-06-06 09:06:52.000000'),
 (15, 'connexion', '2018-06-06 09:35:02.000000'),
-(16, 'connexion', '2018-06-06 09:41:37.000000');
+(16, 'connexion', '2018-06-06 09:41:37.000000'),
+(17, 'connexion', '2018-06-06 12:20:16.000000'),
+(18, 'connexion', '2018-06-06 12:21:14.000000'),
+(19, 'connexion', '2018-06-06 12:21:29.000000'),
+(20, 'connexion', '2018-06-06 12:21:50.000000');
 
 -- --------------------------------------------------------
 
@@ -1241,23 +1266,25 @@ CREATE TABLE IF NOT EXISTS `users` (
   `pass_token` varchar(10) DEFAULT NULL,
   `date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `postal_code`, `city`, `country`, `phone_number_home`, `phone_number_portable`, `type`, `pass_token`, `date`) VALUES
-(20, 'famille.lebec@wanadoo.fr', '558e62b37930a34393f7f997985186b167d3321a', 'Lebec', 'Aude', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 22929229, 92929292, 'utilisateur', NULL, '2018-06-01 11:15:28'),
-(19, 'maxence.lbc@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 101010101, 101010101, 'utilisateur', NULL, '2018-06-02 11:15:28'),
-(22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, 'utilisateur', NULL, '2018-06-03 11:15:28'),
-(26, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101010, 'utilisateur', NULL, '2018-06-03 11:15:28'),
-(27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, 'utilisateur', NULL, '2018-06-03 11:15:28'),
-(28, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, 'utilisateur', NULL, '2018-06-03 11:15:28'),
-(29, 'tlincoln@isep.fr', '5ed25af7b1ed23fb00122e13d7f74c4d8262acd8', 'Lincoln', 'Thierry', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, 'utilisateur', NULL, '2018-06-03 11:15:28'),
-(31, 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Nguyen', 'Test', NULL, 44800, NULL, 'France', NULL, NULL, 'utilisateur', NULL, '2018-06-05 11:15:28'),
-(32, 'clmes43@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'utilisateur', NULL, '2018-06-06 11:12:28'),
-(33, 'victorlebrun@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 100000000, 625757865, NULL, NULL, '2018-06-06 11:15:28');
+(20, 'famille.lebec@wanadoo.fr', '558e62b37930a34393f7f997985186b167d3321a', 'Lebec', 'Aude', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 22929229, 92929292, '2', NULL, '2018-06-01 11:15:28'),
+(19, 'maxence.lbc@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 101010101, 101010101, '2', NULL, '2018-06-02 11:15:28'),
+(22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, '2', NULL, '2018-06-03 11:15:28'),
+(26, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101010, '2', NULL, '2018-06-03 11:15:28'),
+(27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, '2', NULL, '2018-06-03 11:15:28'),
+(28, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, '2', NULL, '2018-06-03 11:15:28'),
+(29, 'tlincoln@isep.fr', '5ed25af7b1ed23fb00122e13d7f74c4d8262acd8', 'Lincoln', 'Thierry', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, '2', NULL, '2018-06-03 11:15:28'),
+(31, 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Nguyen', 'Test', NULL, 44800, NULL, 'France', NULL, NULL, '2', NULL, '2018-06-05 11:15:28'),
+(32, 'clmes43@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', NULL, '2018-06-06 11:12:28'),
+(33, 'victorlebrun@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 100000000, 625757865, '2', NULL, '2018-06-06 11:15:28'),
+(34, 'maxence.lebec@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', NULL, NULL, NULL, NULL, NULL, NULL, '1', NULL, '2018-06-06 14:19:15'),
+(35, 'maxence.lebec@gmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '3', NULL, '2018-06-06 14:19:50');
 
 -- --------------------------------------------------------
 
