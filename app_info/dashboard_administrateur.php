@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-include 'fetch_trame.php';
 
 ?>
 
@@ -25,8 +24,20 @@ include 'fetch_trame.php';
 
         <div class="infos1">
             <div class="titre">Informations du site</div>
-            <div class="graphe1">graphe 1 : nombre de connexions par jour
+            <div class="graphe1">graphe 1 : nombre de connexions par jour</div>
+
+
+            <div class="chartContainer">
+
+                <?php
+
+                    require ('./graph_connexion.php');
+
+                ?>
+
             </div>
+
+
 
             <div class="graphe2">graphe 2 : nombre d'inscriptions par jour/semaine/mois</div>
         </div>
@@ -73,7 +84,6 @@ include 'fetch_trame.php';
                         <?php
                         }
                         ?>
-
                     </table>
                 </div>
 
