@@ -54,11 +54,6 @@ a{
 .graphe2{
 }
 
-
-
-
-
-
 .liste{
     border: none;
     cursor: pointer;
@@ -117,4 +112,12 @@ table, th, td{
 .clean:hover{
     background-color: #2CC872;
     color: white;
+}
+
+.ct-perfect-fourth:before {
+    display: block;
+    float: left;
+    content: "";
+    width: 0;
+    height: 0;
 }

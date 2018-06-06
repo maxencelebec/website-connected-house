@@ -27,7 +27,17 @@
             stroke: white;
         }
 
-        .ct-chart, .ct-label {
+        .ct-label.ct-label.ct-horizontal {
+            color: white;
+            position: fixed;
+            justify-content: flex-end;
+            text-align: right;
+            transform-origin: 100% 0;
+            transform: translate(-100%) rotate(-45deg);
+            font-size: 15px;
+        }
+
+        .ct-label.ct-label.ct-vertical {
             color: white;
         }
 

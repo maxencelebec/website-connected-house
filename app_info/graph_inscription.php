@@ -16,6 +16,7 @@ catch(Exception $e)
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
 </head>
 
 <body>
@@ -136,7 +137,14 @@ while ($date_compteur2 < 7) {
 
     }
 
-
+    .ct-perfect-fourth:before {
+        display: block;
+        float: left;
+        content: "";
+        width: 0;
+        height: 0;
+        padding-bottom: 0%;
+    }
 
 
 </style>
@@ -158,7 +166,7 @@ while ($date_compteur2 < 7) {
         fullWidth : true,
     };
 
-    new Chartist.Line('#chartConnexion', data, options);
+    new Chartist.Line('#chartInscription', data, options);
 
 </script>
 

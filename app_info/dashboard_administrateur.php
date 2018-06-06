@@ -27,7 +27,7 @@ session_start();
             <div class="graphe1">graphe 1 : nombre de connexions par jour</div>
 
 
-            <div class="chartContainer">
+            <div id="chartConnexion">
 
                 <?php
 
@@ -38,6 +38,18 @@ session_start();
             </div>
 
             <div class="graphe2">graphe 2 : nombre d'inscriptions par jour/semaine/mois</div>
+
+            <div id="chartInscription">
+
+                <?php
+
+                require ('./graph_inscription.php');
+
+                ?>
+
+            </div>
+
+
         </div>
 
 
