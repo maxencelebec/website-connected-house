@@ -13,7 +13,7 @@ try
         $etat = $donnees['etat'];
         $type = $donnees['type'];
         $num = $donnees['id_capteur'];
-        if ($etat == 0) {
+        if ($etat==0) {
             $statement = $connect->prepare("UPDATE capteurs set etat=? WHERE id=? ");
             $statement->execute(array(1, $_POST['id_capteur']));
             
