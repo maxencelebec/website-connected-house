@@ -43,5 +43,11 @@
 		header('Location: index.php?erreur=Probleme de mail ou de mot de passe');
 	}
 
+    $date = date('Y-m-d H:i:s.u');
+
+    $reqstat = $bdd->prepare('INSERT INTO stats(type,date) VALUES (?,?)');
+    $reqstat->execute(array('connexion',$date));
+
+
 	// Redirection du visiteur vers la page suivante
 ?>

@@ -1,13 +1,17 @@
 <?php
 session_start();
+<<<<<<< HEAD
 $_SESSION['type']=1;
+=======
+
+
+>>>>>>> 154528d747fabd0b40487eba7a76622a9321593c
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Virifocus</title>
-    <meta charset="utf-8" />
+
+</html>
+
     <link rel="stylesheet" href="dashboard_administrateur.css" />
     <link rel="icon" type="image/png" href="image/logo.png" />
     <script src="jQuery.js"></script>
@@ -24,10 +28,32 @@ $_SESSION['type']=1;
 
         <div class="infos1">
             <div class="titre">Informations du site</div>
-            <div class="graphe1">graphe 1 : nombre de connexions par jour
+            <div class="graphe1">graphe 1 : nombre de connexions par jour</div>
+
+
+            <div id="chartConnexion">
+
+                <?php
+
+                    require ('./graph_connexion.php');
+
+                ?>
+
             </div>
 
             <div class="graphe2">graphe 2 : nombre d'inscriptions par jour/semaine/mois</div>
+
+            <div id="chartInscription">
+
+                <?php
+
+                require ('./graph_inscription.php');
+
+                ?>
+
+            </div>
+
+
         </div>
 
 
@@ -72,7 +98,6 @@ $_SESSION['type']=1;
                         <?php
                         }
                         ?>
-
                     </table>
                 </div>
 

@@ -1,6 +1,11 @@
 <?php
 session_start();
-include 'fetch_trame.php';
+/* Connection à la BDD */
+try {
+    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +31,7 @@ include 'fetch_trame.php';
         $_SESSION['id_habitation'] = $_GET['id'];
         $id_habitation = $_SESSION['id_habitation'];
         ?>
-
+		
           <div class="main1">
 			<div class="photo_nom">
 				<div class="photomaison"></div>
@@ -73,7 +78,14 @@ include 'fetch_trame.php';
                                 echo "<p style='color: #2cc872'>" . $donnees["firstname"] . " " . $donnees["name"] . "</p>";
                             }
                             ?>
-
+					<form method="POST">
+            		<input type="submit" name="actualiserBDD" value="Bouton temporaire">
+            		</form>
+            		<?php 
+            		if(isset($_POST['actualiserBDD'])) {
+            		    include 'model/fetch_trame.php';
+            		}
+            		?>
                         </div>
 			</div>
 		</div>
@@ -94,7 +106,17 @@ include 'fetch_trame.php';
 					</div>
 					<div id="consommation" onclick="consommation()">
 						<div class="case31131">Utilisation</div>
-						<div class="case31132">65%</div>
+						<div class="case31132">
+
+                            <?php
+                            $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE id=?');
+                            $req->execute(array($_GET['id']));
+                            while ($donnees = $req->fetch()) {
+                                echo $donnees["nom"];
+                            }
+                            ?>
+
+                        </div>
 					</div>
 				</div>
 				<div class="informations_graphe">

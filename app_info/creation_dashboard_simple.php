@@ -58,7 +58,16 @@ catch(Exception $e)
 
                         <?php
 
-                        require ('./views/graphics_ctlr/graphtest.php');
+                        $req = $bdd->prepare('SELECT id FROM habitation WHERE nom=?');
+                        $req->execute(array($nom_maison));
+                        while ($donnees = $req->fetch())
+                        {
+                            $id_habitation = $donnees['id'];
+                            require ('./views/graphics_ctlr/graphtest.php');
+
+                        }
+
+
 
                         ?>
 
@@ -121,8 +130,8 @@ catch(Exception $e)
                                 <?php
 
                                 $req = $bdd->prepare('SELECT etat FROM capteurs WHERE (id_habitation=?) AND (etat=?)');
-								$req->execute(array($id_habitation, 1));
-								$cap_actif=0;
+                                $req->execute(array($id_habitation, 1));
+                                $cap_actif=0;
                                 while ($donnees = $req->fetch())
                                 {
                                     $cap_actif++;

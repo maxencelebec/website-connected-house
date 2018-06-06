@@ -1,6 +1,6 @@
-<?php 
+<?php
 /* Récupération des données sur le site fourni */
-$url = 'projets-tomcat:8080/appService?ACTION=GETLOG&TEAM=009D';
+$url = 'projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=009D';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -9,18 +9,22 @@ curl_setopt($ch, CURLOPT_HEADER, 0);
 $data = curl_exec($ch);
 curl_close($ch);
 
+$req = $bdd->prepare('SELECT COUNT(id) FROM trame_courante');
+$req->execute();
+
+while ($data = $req->fetch()) {
+    $table = $data['COUNT(id)'];
+}
+
+if ($table == 0) {
+    $_SESSION['last_size'] = 0;
+}
+
 /* Stockage des trames dans un array */
 $data_tab = preg_split("/([0-9]009D)/", $data, - 1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
 
-/* Connection à la BDD */
-try {
-    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
-
 /* ####### ECRITURE DES TRAMES DANS LA BDD ######## */
-for ($i = 0, $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
+for ($i = $_SESSION['last_size'], $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
     
     /* Récupération de la trame dans data_tab */
     $j = 2 * $i;
@@ -43,14 +47,17 @@ for ($i = 0, $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
         $checksum = substr($trame, 17, 2);
         $timestamp = substr($trame, 19);
         
-        /* Envoie dans la BDD si la trame n'est déjà pas existante*/
+        /* Envoie dans la BDD si la trame n'est déjà pas existante */
         $req = $bdd->prepare('SELECT COUNT(id) FROM trame_courante WHERE timestamp=?');
-        $req->execute(array($timestamp));
-        while($donnees = $req->fetch()) {
+        $req->execute(array(
+            $timestamp
+        ));
+        while ($donnees = $req->fetch()) {
             $compteur = $donnees['COUNT(id)'];
         }
-        if($compteur==0) {
-            $req = $bdd->prepare('INSERT INTO trame_courante(type_trame, num_objet, type_req, type_capteur, num_capteur, valeur, tim, checksum, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+        if ($compteur == 0) {
+            $req = $bdd->prepare('INSERT INTO trame_courante(type_trame, num_objet, type_req, type_capteur, num_capteur, valeur, tim, checksum, timestamp)
+                                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
             $req->execute(array(
                 $type_trame,
                 $num_objet,
@@ -65,4 +72,8 @@ for ($i = 0, $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
         }
     }
 }
+    $total = $size_demi - $_SESSION['last_size'];
+    $_SESSION['last_size'] = $size_demi;
+
+
 ?>
