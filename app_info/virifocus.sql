@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 06 juin 2018 à 09:05
+-- Généré le :  mer. 06 juin 2018 à 11:27
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -61,7 +61,7 @@ INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece
 (12, '2018-05-10 11:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
 (13, '2018-05-10 12:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 23),
 (17, '2018-05-10 16:24:12.000000', 27, 7, 37, 'temperature', 'temp 1', 0, 'XXXX', 24),
-(43, NULL, 27, 7, 53, 'porte', 'Porte 2', 0, '', NULL),
+(43, NULL, 27, 7, 53, 'porte', 'Porte 2', 1, '', NULL),
 (42, NULL, 27, 7, 53, 'luminosite', 'Luminosité', 1, 'xxx', NULL),
 (41, NULL, 27, 7, 53, 'temperature', 'Temp1', 1, 'xxx', NULL),
 (33, NULL, 27, 7, 50, 'temperature', 'temp1', 1, 'xxx', NULL),
@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `mode` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `habitation`
@@ -196,7 +196,8 @@ INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type
 (16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
 (17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29),
 (18, 'Panam', 'Cachannary', 94230, 'appart 38', NULL, 'Nexity', 999999999, NULL, 30),
-(19, 'France', 'Nantes', 44800, '3A Rue de la Jaloterie', NULL, 'Maison 1', 200, NULL, 31);
+(19, 'France', 'Nantes', 44800, '3A Rue de la Jaloterie', NULL, 'Maison 1', 200, NULL, 31),
+(20, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'La Villa', 3000, NULL, 33);
 
 -- --------------------------------------------------------
 
@@ -331,7 +332,7 @@ CREATE TABLE IF NOT EXISTS `pieces` (
   `id_user` int(20) NOT NULL,
   `id_habitation` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `pieces`
@@ -365,7 +366,10 @@ INSERT INTO `pieces` (`id`, `type`, `nom`, `surface`, `id_user`, `id_habitation`
 (59, 'entree', 'Mot Elfique', 5, 31, 19),
 (60, 'salon', 'Lounge', 50, 31, 19),
 (61, 'salle_de_bain', 'H2O', 28, 31, 19),
-(62, 'cuisine', 'Kuisine', 45, 31, 19);
+(62, 'cuisine', 'Kuisine', 45, 31, 19),
+(63, 'chambre', 'Grande Chambre', 45, 33, 20),
+(64, 'entree', 'Entrée', 30, 33, 20),
+(65, 'salle_de_bain', 'SdB 1', 20, 33, 20);
 
 -- --------------------------------------------------------
 
@@ -402,7 +406,7 @@ CREATE TABLE IF NOT EXISTS `stats` (
   `type` varchar(50) NOT NULL,
   `date` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `stats`
@@ -421,7 +425,10 @@ INSERT INTO `stats` (`id`, `type`, `date`) VALUES
 (10, 'connexion', '2018-06-01 00:00:00.000000'),
 (11, 'connexion', '2018-07-31 00:00:00.000000'),
 (12, 'connexion', '2018-06-06 07:12:22.000000'),
-(13, 'connexion', '2018-06-10 07:33:45.000000');
+(13, 'connexion', '2018-06-10 07:33:45.000000'),
+(14, 'connexion', '2018-06-06 09:06:52.000000'),
+(15, 'connexion', '2018-06-06 09:35:02.000000'),
+(16, 'connexion', '2018-06-06 09:41:37.000000');
 
 -- --------------------------------------------------------
 
@@ -1232,23 +1239,25 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone_number_portable` int(20) DEFAULT NULL,
   `type` varchar(20) DEFAULT NULL,
   `pass_token` varchar(10) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `postal_code`, `city`, `country`, `phone_number_home`, `phone_number_portable`, `type`, `pass_token`) VALUES
-(20, 'famille.lebec@wanadoo.fr', '558e62b37930a34393f7f997985186b167d3321a', 'Lebec', 'Aude', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 22929229, 92929292, 'utilisateur', NULL),
-(19, 'maxence.lbc@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 101010101, 101010101, 'utilisateur', NULL),
-(22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, 'utilisateur', NULL),
-(26, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101010, 'utilisateur', NULL),
-(27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, 'utilisateur', NULL),
-(28, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, 'utilisateur', NULL),
-(29, 'tlincoln@isep.fr', '5ed25af7b1ed23fb00122e13d7f74c4d8262acd8', 'Lincoln', 'Thierry', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, 'utilisateur', NULL),
-(31, 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Nguyen', 'Test', NULL, 44800, NULL, 'France', NULL, NULL, 'utilisateur', NULL),
-(32, 'clmes43@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'utilisateur', NULL);
+INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `postal_code`, `city`, `country`, `phone_number_home`, `phone_number_portable`, `type`, `pass_token`, `date`) VALUES
+(20, 'famille.lebec@wanadoo.fr', '558e62b37930a34393f7f997985186b167d3321a', 'Lebec', 'Aude', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 22929229, 92929292, 'utilisateur', NULL, '2018-06-01 11:15:28'),
+(19, 'maxence.lbc@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 101010101, 101010101, 'utilisateur', NULL, '2018-06-02 11:15:28'),
+(22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, 'utilisateur', NULL, '2018-06-03 11:15:28'),
+(26, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101010, 'utilisateur', NULL, '2018-06-03 11:15:28'),
+(27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, 'utilisateur', NULL, '2018-06-03 11:15:28'),
+(28, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, 'utilisateur', NULL, '2018-06-03 11:15:28'),
+(29, 'tlincoln@isep.fr', '5ed25af7b1ed23fb00122e13d7f74c4d8262acd8', 'Lincoln', 'Thierry', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, 'utilisateur', NULL, '2018-06-03 11:15:28'),
+(31, 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Nguyen', 'Test', NULL, 44800, NULL, 'France', NULL, NULL, 'utilisateur', NULL, '2018-06-05 11:15:28'),
+(32, 'clmes43@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'utilisateur', NULL, '2018-06-06 11:12:28'),
+(33, 'victorlebrun@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 100000000, 625757865, NULL, NULL, '2018-06-06 11:15:28');
 
 -- --------------------------------------------------------
 
