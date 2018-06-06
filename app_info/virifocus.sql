@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 06 juin 2018 à 11:27
+-- Généré le :  mer. 06 juin 2018 à 12:31
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -170,6 +170,7 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `surface` int(10) DEFAULT NULL,
   `mode` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
+  `date` datetime(6) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
@@ -177,27 +178,27 @@ CREATE TABLE IF NOT EXISTS `habitation` (
 -- Déchargement des données de la table `habitation`
 --
 
-INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `nom`, `surface`, `mode`, `id_user`) VALUES
-(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, NULL, 200, 0, 23),
-(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, NULL, 200, 0, 23),
-(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 2000, 0, 24),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24),
-(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 300, 0, 25),
-(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, NULL, 300, 0, 26),
-(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 1, 27),
-(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, 2, 27),
-(9, 'Italie', 'Venise', 29930, '23 rue de Paradis', NULL, 'Villa', 3940, NULL, 27),
-(10, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison Test', 2042, NULL, 28),
-(11, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(12, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(13, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(14, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(15, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29),
-(18, 'Panam', 'Cachannary', 94230, 'appart 38', NULL, 'Nexity', 999999999, NULL, 30),
-(19, 'France', 'Nantes', 44800, '3A Rue de la Jaloterie', NULL, 'Maison 1', 200, NULL, 31),
-(20, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'La Villa', 3000, NULL, 33);
+INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `nom`, `surface`, `mode`, `id_user`, `date`) VALUES
+(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue du marché, 200', NULL, NULL, 200, 0, 23, NULL),
+(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue du marché, 200', NULL, NULL, 200, 0, 23, NULL),
+(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 2000, 0, 24, NULL),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24, NULL),
+(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 300, 0, 25, NULL),
+(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue du marché', NULL, NULL, 300, 0, 26, NULL),
+(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 1, 27, NULL),
+(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, 2, 27, NULL),
+(9, 'Italie', 'Venise', 29930, '23 rue de Paradis', NULL, 'Villa', 3940, NULL, 27, NULL),
+(10, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison Test', 2042, NULL, 28, NULL),
+(11, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(12, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(13, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(14, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(15, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, '2018-06-05 02:00:00.000000'),
+(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29, '2018-06-05 04:00:00.000000'),
+(18, 'Panam', 'Cachannary', 94230, 'appart 38', NULL, 'Nexity', 9999, NULL, 30, '2018-06-06 06:00:00.000000'),
+(19, 'France', 'Nantes', 44800, '3A Rue de la Jaloterie', NULL, 'Maison 1', 200, NULL, 31, '2018-06-06 04:00:00.000000'),
+(20, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'La Villa', 3000, NULL, 33, '2018-06-06 04:08:00.000000');
 
 -- --------------------------------------------------------
 
