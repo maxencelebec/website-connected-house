@@ -1,4 +1,5 @@
 <?php
+session_start();
 define("WEBROOT",str_replace('index_mvc.php',"",$_SERVER['SCRIPT_NAME']));
 define("ROOT",str_replace('index_mvc.php',"",$_SERVER['SCRIPT_FILENAME']));
 

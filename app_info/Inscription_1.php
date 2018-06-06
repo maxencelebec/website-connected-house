@@ -36,9 +36,9 @@
             <div class="option3"><a class="lien" href="inscription_technicien_1.php">
                 <img class="option_image" src="image/gears.svg"></a></div>
                 
-                <div class="option1_text"><a class="lien" href="inscription_habitant_1.html">Définir votre habitation afin</br>de paramétrer vos capteurs</a></div>
-                <div class="option2_text"><a class="lien" href="inscription_gerant_1.html">Gérer un immeuble</br>ou une résidence</a></div>
-                <div class="option3_text"><a class="lien" href="inscription_technicien_1.html">Accéder aux fonctionnalités</br>techniques de la plateforme</a></div>
+                <div class="option1_text"><a class="lien" href="inscription_habitant_1.php">Définir votre habitation afin</br>de paramétrer vos capteurs</a></div>
+                <div class="option2_text"><a class="lien" href="inscription_gerant_1.php">Gérer un immeuble</br>ou une résidence</a></div>
+                <div class="option3_text"><a class="lien" href="inscription_technicien_1.php">Accéder aux fonctionnalités</br>techniques de la plateforme</a></div>
 
         </div>
 

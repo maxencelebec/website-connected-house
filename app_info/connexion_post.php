@@ -22,13 +22,21 @@
 
 	$counter = 0;
 
-	$req = $bdd->prepare('SELECT password FROM users WHERE mail=?');
+	$req = $bdd->prepare('SELECT password, type FROM users WHERE mail=?');
 	$req->execute(array($mail));
 	while ($donnees = $req->fetch())
 	{
 		if ($mdp==$donnees['password']){
 			$counter=1;
-			header('Location: dashboard_simple.php');
+			if ($donnees['type']==1) {
+                header('Location: dashboard_administrateur.php');
+            }
+            else if ($donnees['type']==2){
+                header('Location: dashboard_simple.php');
+            }
+            else if ($donnees['type']==3){
+                header('Location: dashboard_technicien.php');
+            }
 		}
 	}
 	if ($counter==0){

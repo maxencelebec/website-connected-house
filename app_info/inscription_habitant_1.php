@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION['type']=2;
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +34,7 @@
 
 <div class="Main">
 
-    <form class="infos" action="inscription_habitant_1_post.php" method="post">
+    <form class="infos" action="inscription_1_post.php" method="post">
 
         <div class="formulaire">
 

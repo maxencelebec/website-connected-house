@@ -84,6 +84,7 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
 
         ?>
     </div>
+
     <script>
         $(document).ready(function(){
             $('input[type="checkbox"][value="<?php echo $id_capteur; ?>"]').click(function(){
