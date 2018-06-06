@@ -14,8 +14,8 @@
       <file leaf-file-name="dashboard_administrateur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+            <state relative-caret-position="170">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -23,7 +23,7 @@
       <file leaf-file-name="dashboard_administrateur.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
+            <state relative-caret-position="1972">
               <caret line="116" selection-start-line="116" selection-end-line="122" selection-end-column="1" />
             </state>
           </provider>
@@ -32,8 +32,17 @@
       <file leaf-file-name="graph_inscription.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_info/graph_inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+            <state relative-caret-position="459">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inscription_habitant_1_post.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_1_post.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -41,8 +50,8 @@
       <file leaf-file-name="graphtest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/views/graphics_ctlr/graphtest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="28" />
+            <state relative-caret-position="442">
+              <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -118,6 +127,7 @@
         <option value="$PROJECT_DIR$/app_info/dashboard_administrateur.php" />
         <option value="$PROJECT_DIR$/app_info/graph_connexion.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_administrateur.css" />
+        <option value="$PROJECT_DIR$/app_info/inscription_habitant_1_post.php" />
         <option value="$PROJECT_DIR$/app_info/graph_inscription.php" />
       </list>
     </option>
@@ -134,8 +144,8 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -144,6 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,38 +191,10 @@
               <item name="app_info" type="462c0819:PsiDirectoryNode" />
               <item name="trames" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="website-connected-house" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website-connected-house" type="462c0819:PsiDirectoryNode" />
-              <item name="app_info" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="website-connected-house" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website-connected-house" type="462c0819:PsiDirectoryNode" />
-              <item name="app_info" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="graphics_ctlr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="website-connected-house" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website-connected-house" type="462c0819:PsiDirectoryNode" />
-              <item name="app_info" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="help_ctlr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="website-connected-house" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website-connected-house" type="462c0819:PsiDirectoryNode" />
-              <item name="app_info" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -277,28 +260,29 @@
       <workItem from="1528181946858" duration="5293000" />
       <workItem from="1528269185467" duration="462000" />
       <workItem from="1528270370155" duration="8454000" />
+      <workItem from="1528283228502" duration="1155000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82827000" />
+    <option name="totallyTimeSpent" value="83982000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15494792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31029987" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50065106" side_tool="true" visible="true" weight="0.0" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -471,13 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_1_post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/views/layout/graph.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -589,16 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="118" column="22" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/views/graphics_ctlr/graphtest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -616,6 +583,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" selection-start-line="116" selection-end-line="122" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/views/graphics_ctlr/graphtest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/graph_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -623,24 +611,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
+    <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_1_post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="116" selection-start-line="116" selection-end-line="122" selection-end-column="1" />
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/graph_inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+        <state relative-caret-position="459">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>

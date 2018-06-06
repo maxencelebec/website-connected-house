@@ -75,8 +75,8 @@ while ($date_compteur2 < 7) {
 
     $date_compteur2 = $date_compteur2 + 1;
 
-    $req = $bdd->prepare('SELECT COUNT(*) as total FROM stats WHERE ((type= ?) and (date >= ?) and (date < ?))');
-    $req->execute(array('connexion', $date_debut, $date_fin));
+    $req = $bdd->prepare('SELECT COUNT(*) as total FROM users WHERE ((date >= ?) and (date < ?))');
+    $req->execute(array($date_debut, $date_fin));
 
     while ($donnees = $req->fetch())
     {
