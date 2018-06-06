@@ -1,21 +1,22 @@
 <?php
 session_start();
-$_SESSION['type']=1;    
+$_SESSION['type']=1;
 
 
 ?>
 
 <!DOCTYPE html>
 
-</html>
-
+<html>
+<head>
+    <title> Virifocus </title>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" href="dashboard_administrateur.css" />
     <link rel="icon" type="image/png" href="image/logo.png" />
     <script src="jQuery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="chartist/chartist-js-master/dist/chartist.min.jsh"></script>
 
-</head>
 <body class="fond">
 <div id="site">
     <?php
