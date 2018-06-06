@@ -2,7 +2,17 @@
 
     <div class="header">
         <div class="home">
-             <a class="lien" href="dashboard_simple.php" >
+            <?php
+            if($_SESSION['type']==1){
+                ?><a class="lien" href="dashboard_administrateur.php" ><?php
+            }
+            else if($_SESSION['type']==2) {
+                 ?><a class="lien" href="dashboard_simple.php" ><?php
+            }
+            else if($_SESSION['type']==3) {
+                 ?><a class="lien" href="dashboard_technicien.php" ><?php
+            }
+            ?>
                 <div class="home_lien"><br><br>Home</div></a></div>
         <div class="compte">
                <a class="lien" href="compte.php">

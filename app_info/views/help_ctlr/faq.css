@@ -19,10 +19,10 @@ a{
 }
 
 
-
+/*
 $timing: .4s;
 $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
-
+*/
 *,
 *:before,
 *:after {

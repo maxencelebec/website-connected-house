@@ -1,9 +1,10 @@
 <?php
     session_start();
+    $_SESSION['type']=3;
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Virifocus | Inscription</title>
@@ -34,20 +35,20 @@
 
 <div class="Main">
 
-    <form class="infos" action="inscription_technicien_2" method="POST">
+    <form class="infos" action="inscription_1_post.php" method="POST">
 
         <div class="formulaire">
 
             <div class="titre"><h1>Entrez vos informations</h1></div>
 
             <div>Adresse email :</div>
-            <input type="text" id="email" style="text-align: center"/>
+            <input type="text" name="mail" id="email" style="text-align: center"/>
             <div>Confirmez votre addresse email :</div>
-            <input type="text" id="email_confirm" style="text-align: center"/>
+            <input type="text" name="mail_confirm" id="email_confirm" style="text-align: center"/>
             <div>Mot de passe :</div>
-            <input type="password" id="mdp" style="text-align: center"/>
+            <input type="password" name="password" id="mdp" style="text-align: center"/>
             <div>Confirmez votre mot de passe :</div>
-            <input type="password" id="mdp_confirm" style="text-align: center"/>
+            <input type="password" name="password_confirm" id="mdp_confirm" style="text-align: center"/>
 
         </div>
 

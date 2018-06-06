@@ -9,6 +9,7 @@
     }
 
     session_start();
+    $_SESSION['type']=2;
 ?>
 
 <!DOCTYPE html>
