@@ -92,6 +92,53 @@ while ($date_compteur2 < 7) {
     ?>
 
 
+<style>
+
+    .ct-series-a .ct-line {
+        /* Set the colour of this series line */
+        stroke: #2ecc71;
+        /* Control the thikness of your lines */
+        stroke-width: 4px;
+    }
+
+    .ct-series-a .ct-point {
+        /* Colour of your points */
+        stroke: #2ecc71;
+        /* Size of your points */
+        stroke-width: 12px;
+        /* Make your points appear as squares */
+        stroke-linecap: round;
+    }
+
+    .ct-grid {
+        stroke: grey;
+    }
+
+    .ct-label.ct-label.ct-horizontal {
+        color: grey;
+        position: fixed;
+        justify-content: flex-end;
+        text-align: right;
+        transform-origin: 100% 0;
+        transform: translate(-100%) rotate(-45deg);
+    }
+
+    }
+
+    .ct-chart, .ct-label.ct-vertical {
+        color: grey;
+
+    }
+
+    .ct-series-a .ct-area {
+        fill: grey;
+
+    }
+
+
+</style>
+
+
 <script>
 
     var data = {
@@ -104,6 +151,8 @@ while ($date_compteur2 < 7) {
     var options = {
         width: 500,
         height: 300,
+        showArea : true,
+        fullWidth : true,
     };
 
     new Chartist.Line('.ct-chart', data, options);

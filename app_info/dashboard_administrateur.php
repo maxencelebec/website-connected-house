@@ -37,8 +37,6 @@ session_start();
 
             </div>
 
-
-
             <div class="graphe2">graphe 2 : nombre d'inscriptions par jour/semaine/mois</div>
         </div>
 
