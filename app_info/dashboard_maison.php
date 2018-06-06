@@ -1,6 +1,11 @@
 <?php
 session_start();
-include 'model/fetch_trame.php';
+/* Connection à la BDD */
+try {
+    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +31,7 @@ include 'model/fetch_trame.php';
         $_SESSION['id_habitation'] = $_GET['id'];
         $id_habitation = $_SESSION['id_habitation'];
         ?>
-
+		
           <div class="main1">
 			<div class="photo_nom">
 				<div class="photomaison"></div>
@@ -73,7 +78,14 @@ include 'model/fetch_trame.php';
                                 echo "<p style='color: #2cc872'>" . $donnees["firstname"] . " " . $donnees["name"] . "</p>";
                             }
                             ?>
-
+					<form method="POST">
+            		<input type="submit" name="actualiserBDD" value="Bouton temporaire">
+            		</form>
+            		<?php 
+            		if(isset($_POST['actualiserBDD'])) {
+            		    include 'model/fetch_trame.php';
+            		}
+            		?>
                         </div>
 			</div>
 		</div>
