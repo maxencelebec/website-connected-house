@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 08 juin 2018 à 09:33
+-- Généré le :  ven. 08 juin 2018 à 09:36
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -120,33 +120,6 @@ INSERT INTO `code_technicien` (`id`, `code`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `comments`
---
-
-DROP TABLE IF EXISTS `comments`;
-CREATE TABLE IF NOT EXISTS `comments` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `post_id` int(11) NOT NULL,
-  `author` varchar(255) NOT NULL,
-  `comment` text NOT NULL,
-  `comment_date` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `comments`
---
-
-INSERT INTO `comments` (`id`, `post_id`, `author`, `comment`, `comment_date`) VALUES
-(1, 1, 'M@teo21', 'Un peu court ce billet !', '2010-03-25 16:49:53'),
-(2, 1, 'Maxime', 'Oui, ça commence pas très fort ce blog...', '2010-03-25 16:57:16'),
-(3, 1, 'MultiKiller', '+1 !', '2010-03-25 17:12:52'),
-(4, 2, 'John', 'Preum\'s !', '2010-03-27 18:59:49'),
-(5, 2, 'Maxime', 'Excellente analyse de la situation !\r\nIl y arrivera plus tôt qu\'on ne le pense !', '2010-03-27 22:02:13');
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `graph_test`
 --
 
@@ -192,65 +165,35 @@ CREATE TABLE IF NOT EXISTS `habitation` (
   `surface` int(10) DEFAULT NULL,
   `mode` int(10) DEFAULT NULL,
   `id_user` int(20) NOT NULL,
+  `date` datetime(6) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `habitation`
 --
 
-INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `nom`, `surface`, `mode`, `id_user`) VALUES
-(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, NULL, 200, 0, 23),
-(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue de mon cul, 200', NULL, NULL, 200, 0, 23),
-(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 2000, 0, 24),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24),
-(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 300, 0, 25),
-(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue de mon cul', NULL, NULL, 300, 0, 26),
-(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 1, 27),
-(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, 2, 27),
-(9, 'Italie', 'Venise', 29930, '23 rue de Paradis', NULL, 'Villa', 3940, NULL, 27),
-(10, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison Test', 2042, NULL, 28),
-(11, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(12, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(13, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(14, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(15, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28),
-(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29),
-(18, 'Panam', 'Cachannary', 94230, 'appart 38', NULL, 'Nexity', 999999999, NULL, 30),
-(19, 'France', 'Nantes', 44800, '3A Rue de la Jaloterie', NULL, 'Maison 1', 200, NULL, 31),
-(20, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'La Villa', 3000, NULL, 33),
-(21, 'France', 'Asnières-sur-Seine', 92600, '12 rue waldeck rousseau', NULL, 'charo', 300, NULL, 19);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `message`
---
-
-DROP TABLE IF EXISTS `message`;
-CREATE TABLE IF NOT EXISTS `message` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_type_msg` set('1','2') NOT NULL,
-  `Date_Heure` datetime DEFAULT CURRENT_TIMESTAMP,
-  `contenu_msg` text NOT NULL,
-  `id_utilisateur` int(11) NOT NULL,
-  `id_habitation` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `Date/Heure` (`Date_Heure`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `message`
---
-
-INSERT INTO `message` (`id`, `id_type_msg`, `Date_Heure`, `contenu_msg`, `id_utilisateur`, `id_habitation`) VALUES
-(5, '2', '2018-05-11 09:51:07', 'Excusez-moi, j\'ai un problème avec ce capteur, il ne s\'allume plus malheuresement. ', 27, 10),
-(3, '2', '2018-05-10 23:02:01', 'dw', 27, 10),
-(4, '2', '2018-05-10 23:43:09', 'mm', 27, 10),
-(6, '1', '2018-05-11 10:51:49', 'thurgghjj\r\n', 27, 9),
-(7, '2', '2018-05-11 11:29:50', 'j\'ai un problème avec mon capteur ', 27, 9),
-(8, '2', '2018-05-15 15:05:52', 'ce captenbfsdbfkj', 27, 9);
+INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `nom`, `surface`, `mode`, `id_user`, `date`) VALUES
+(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue du marché, 200', NULL, NULL, 200, 0, 23, NULL),
+(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue du marché, 200', NULL, NULL, 200, 0, 23, NULL),
+(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 2000, 0, 24, NULL),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24, NULL),
+(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 300, 0, 25, NULL),
+(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue du marché', NULL, NULL, 300, 0, 26, NULL),
+(7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 1, 27, NULL),
+(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, 2, 27, NULL),
+(9, 'Italie', 'Venise', 29930, '23 rue de Paradis', NULL, 'Villa', 3940, NULL, 27, NULL),
+(10, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison Test', 2042, NULL, 28, NULL),
+(11, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(12, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(13, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(14, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(15, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
+(16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, '2018-06-05 02:00:00.000000'),
+(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29, '2018-06-05 04:00:00.000000'),
+(18, 'Panam', 'Cachannary', 94230, 'appart 38', NULL, 'Nexity', 9999, NULL, 30, '2018-06-06 06:00:00.000000'),
+(19, 'France', 'Nantes', 44800, '3A Rue de la Jaloterie', NULL, 'Maison 1', 200, NULL, 31, '2018-06-06 04:00:00.000000'),
+(20, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'La Villa', 3000, NULL, 33, '2018-06-06 04:08:00.000000');
 
 -- --------------------------------------------------------
 
@@ -310,29 +253,6 @@ INSERT INTO `pieces` (`id`, `type`, `nom`, `surface`, `id_user`, `id_habitation`
 -- --------------------------------------------------------
 
 --
--- Structure de la table `posts`
---
-
-DROP TABLE IF EXISTS `posts`;
-CREATE TABLE IF NOT EXISTS `posts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `content` text NOT NULL,
-  `creation_date` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `posts`
---
-
-INSERT INTO `posts` (`id`, `title`, `content`, `creation_date`) VALUES
-(1, 'Bienvenue sur mon blog !', 'Je vous souhaite à toutes et à tous la bienvenue sur mon blog qui parlera de... PHP bien sûr !', '2010-03-25 16:28:41'),
-(2, 'Le PHP à la conquête du monde !', 'C\'est officiel, l\'éléPHPant a annoncé à la radio hier soir \"J\'ai l\'intention de conquérir le monde !\".\r\nIl a en outre précisé que le monde serait à sa botte en moins de temps qu\'il n\'en fallait pour dire \"éléPHPant\". Pas dur, ceci dit entre nous...', '2010-03-27 18:31:11');
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `stats`
 --
 
@@ -376,29 +296,6 @@ INSERT INTO `stats` (`id`, `type`, `date`) VALUES
 (25, 'connexion', '2018-06-06 13:36:50.000000'),
 (26, 'connexion', '2018-06-06 13:40:55.000000'),
 (27, 'connexion', '2018-06-06 13:40:58.000000');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `test`
---
-
-DROP TABLE IF EXISTS `test`;
-CREATE TABLE IF NOT EXISTS `test` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `essai` int(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `test`
---
-
-INSERT INTO `test` (`id`, `essai`) VALUES
-(1, 12),
-(2, 13),
-(9, 14),
-(8, NULL);
 
 -- --------------------------------------------------------
 
@@ -1207,21 +1104,6 @@ INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `
 (33, 'victorlebrun@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 100000000, 625757865, '2', NULL, '2018-06-06 11:15:28'),
 (34, 'maxence.lebec@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', NULL, NULL, NULL, NULL, NULL, NULL, '1', NULL, '2018-06-06 14:19:15'),
 (35, 'maxence.lebec@gmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '3', NULL, '2018-06-06 14:19:50');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `visiteurs`
---
-
-DROP TABLE IF EXISTS `visiteurs`;
-CREATE TABLE IF NOT EXISTS `visiteurs` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(30) NOT NULL,
-  `prenom` varchar(30) NOT NULL,
-  `age` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
