@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="141312a6-da42-4010-bdc4-6d60c53f3d55" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/test.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app_info/ajout_capteur.php" afterPath="$PROJECT_DIR$/app_info/ajout_capteur.php" />
+      <change beforePath="$PROJECT_DIR$/app_info/dashboard_maison.php" afterPath="$PROJECT_DIR$/app_info/dashboard_maison.php" />
+      <change beforePath="$PROJECT_DIR$/app_info/model/fetch_trame.php" afterPath="$PROJECT_DIR$/app_info/model/fetch_trame.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,16 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard_technicien.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="18" column="27" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="dashboard_technicien.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -33,14 +27,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard_administrateur.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard_administrateur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="494">
+              <caret line="19" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="19" />
               <folding>
                 <marker date="1528288489936" expanded="true" signature="2467:2535" ph="SELECT id, m... users" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajout_capteur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding>
+                <marker date="1528718619037" expanded="true" signature="925:1154" ph="SELECT type_... " />
+                <marker date="1528718619037" expanded="true" signature="1399:1455" ph="SELECT etat,... capteurs" />
+                <marker date="1528718619037" expanded="true" signature="1760:1805" ph="UPDATE capteurs... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fetch_trame.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_info/model/fetch_trame.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <folding>
+                <marker date="1528718848735" expanded="true" signature="493:529" ph="SELECT COUNT... trame_courante" />
+                <marker date="1528718848735" expanded="true" signature="1844:1898" ph="SELECT COUNT... trame_courante" />
+                <marker date="1528718848735" expanded="true" signature="2130:2323" ph="INSERT INTO trame_courante... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+              <folding>
+                <marker date="1528717925756" expanded="true" signature="988:1025" ph="SELECT nom F... habitation" />
+                <marker date="1528717925756" expanded="true" signature="2154:2199" ph="SELECT name,... users" />
+                <marker date="1528717925756" expanded="true" signature="2445:2459" ph="..." />
+                <marker date="1528717925756" expanded="true" signature="3516:3554" ph="SELECT valeu... capteurs" />
+                <marker date="1528717925756" expanded="true" signature="4621:4655" ph="SELECT id FR... users" />
+                <marker date="1528717925756" expanded="true" signature="5049:5099" ph="SELECT type,... pieces" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,11 +146,9 @@
         <option value="$PROJECT_DIR$/app_info/views/graphics_ctlr/graphdashboard.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_maison.css" />
         <option value="$PROJECT_DIR$/app_info/mode_maison.css" />
-        <option value="$PROJECT_DIR$/app_info/dashboard_maison.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_maison.js" />
         <option value="$PROJECT_DIR$/app_info/supprimer_utilisateur_post.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_administrateur.css" />
-        <option value="$PROJECT_DIR$/app_info/ajout_capteur.php" />
         <option value="$PROJECT_DIR$/app_info/connexion_post.php" />
         <option value="$PROJECT_DIR$/app_info/Inscription_1.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_habitant_2_post.php" />
@@ -118,6 +165,11 @@
         <option value="$PROJECT_DIR$/app_info/inscription_technicien_1.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_1_post.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_administrateur.php" />
+        <option value="$PROJECT_DIR$/app_info/test.php" />
+        <option value="$PROJECT_DIR$/app_info/test_ajax.php" />
+        <option value="$PROJECT_DIR$/app_info/dashboard_maison.php" />
+        <option value="$PROJECT_DIR$/app_info/ajout_capteur.php" />
+        <option value="$PROJECT_DIR$/app_info/model/fetch_trame.php" />
       </list>
     </option>
   </component>
@@ -155,6 +207,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -168,13 +222,17 @@
               <item name="projet APP" type="462c0819:PsiDirectoryNode" />
               <item name="app_info" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="projet APP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet APP" type="462c0819:PsiDirectoryNode" />
+              <item name="app_info" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,6 +241,10 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="plugin&#9;ACTION&#9;WelcomeScreen.Plugins" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -321,15 +383,17 @@
       <workItem from="1527240106802" duration="3490000" />
       <workItem from="1527254296838" duration="5300000" />
       <workItem from="1528103456548" duration="34962000" />
-      <workItem from="1528441383014" duration="1221000" />
+      <workItem from="1528441383014" duration="1888000" />
+      <workItem from="1528466519970" duration="7138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99196000" />
+    <option name="totallyTimeSpent" value="107001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -343,8 +407,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15104167" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15104167" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -372,34 +437,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app_info/model/message_center.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/model/graphics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/model/sav_post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_5_post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -526,13 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="121" column="60" lean-forward="false" selection-start-line="121" selection-start-column="60" selection-end-line="121" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/supprimer_utilisateur_post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -545,13 +575,6 @@
         <state relative-caret-position="104">
           <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -702,6 +725,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/graph_inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/check.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1528285182944" expanded="true" signature="223:285" ph="SELECT etat,... capteurs" />
+            <marker date="1528285182944" expanded="true" signature="552:589" ph="UPDATE capteurs... " />
+            <marker date="1528285182944" expanded="true" signature="944:981" ph="UPDATE capteurs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1014">
@@ -718,22 +760,145 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/graph_inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="494">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="19" />
           <folding>
             <marker date="1528288489936" expanded="true" signature="2467:2535" ph="SELECT id, m... users" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/test_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="27" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+          <folding>
+            <marker date="1528717925756" expanded="true" signature="988:1025" ph="SELECT nom F... habitation" />
+            <marker date="1528717925756" expanded="true" signature="2154:2199" ph="SELECT name,... users" />
+            <marker date="1528717925756" expanded="true" signature="2445:2459" ph="..." />
+            <marker date="1528717925756" expanded="true" signature="3516:3554" ph="SELECT valeu... capteurs" />
+            <marker date="1528717925756" expanded="true" signature="4621:4655" ph="SELECT id FR... users" />
+            <marker date="1528717925756" expanded="true" signature="5049:5099" ph="SELECT type,... pieces" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding>
+            <marker date="1528718619037" expanded="true" signature="925:1154" ph="SELECT type_... " />
+            <marker date="1528718619037" expanded="true" signature="1399:1455" ph="SELECT etat,... capteurs" />
+            <marker date="1528718619037" expanded="true" signature="1760:1805" ph="UPDATE capteurs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/model/fetch_trame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <marker date="1528718848735" expanded="true" signature="493:529" ph="SELECT COUNT... trame_courante" />
+            <marker date="1528718848735" expanded="true" signature="1844:1898" ph="SELECT COUNT... trame_courante" />
+            <marker date="1528718848735" expanded="true" signature="2130:2323" ph="INSERT INTO trame_courante... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>website-connected-house</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
