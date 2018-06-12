@@ -45,6 +45,7 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
             $req->execute(array($id_capteur));
             while ($donnees = $req->fetch()) {
                 $etat = $donnees['etat'];
+
                 if ($etat == 1 && $capteur_actionneur == "temperature" && $num_capteur==$donnees['id_capteur']) {
                     $update = $connect->prepare("UPDATE capteurs set valeur=$valeur WHERE id=?");
                     $update->execute(array($id_capteur));
@@ -70,6 +71,7 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
                 if ($etat == 0) {
                     echo "";
                 }
+
 
             }
         }
@@ -103,6 +105,18 @@ function ajout_capteur($capteur_actionneur,$id,$id_capteur)
                 });
             });
         });
+
+        setInterval(function(){
+            $.ajax({
+                url:"model/fetch_trame.php",
+                method:"POST",
+                /*
+                success:function(data){
+                    $('.result').html(data);
+                }
+                */
+            });
+        },3000);
     </script>
 
     <?php

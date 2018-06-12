@@ -59,6 +59,13 @@ $_SESSION['type']=1;
             <div class="titre">Informations habitations</div>
             <div class="graphe3">Nombre d'habitations connectées par jour : </div>
 
+            <div> Nombre total d'habitations : </div>
+            <?php
+
+            https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=
+
+            ?>
+
             <div id="chartNbHabitations">
 
                 <?php
@@ -104,13 +111,29 @@ $_SESSION['type']=1;
                                 <td><?= $donnees['country'];?></td>
                             </tr>
 
-                        <?php
+                            <?php
                         }
                         ?>
                     </table>
                 </div>
 
             </div>
+
+
+            <div class="cartehabitations">
+
+                <button class="liste" onclick="changemaphab()">Carte des habitations</button>
+                <div id="fenetre">
+                    <button id="close" data-ido="56" onclick="fermer()">=></button>
+                    <?php
+                    include "./geocode.php";
+                    ?>
+                </div>
+
+            </div>
+
+
+
         </div>
 
     </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 08 juin 2018 à 09:36
+-- Généré le :  mar. 12 juin 2018 à 07:50
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
   `id_capteur` varchar(30) DEFAULT NULL,
   `valeur` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `capteurs`
@@ -75,7 +75,9 @@ INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece
 (44, NULL, 30, 18, 57, 'porte', 'Lumière', 1, '3', NULL),
 (46, NULL, 31, 19, 59, 'temperature', 'Froid', 1, '1234', NULL),
 (47, NULL, 19, 21, 66, 'presence', 'faaf', 1, '01', NULL),
-(48, NULL, 19, 21, 66, 'temperature', 'Lebec', 1, '01', 31);
+(48, NULL, 19, 21, 66, 'temperature', 'Lebec', 1, '01', 31),
+(49, NULL, 31, 19, 60, 'presence', 'pres', 0, '01', NULL),
+(50, NULL, 31, 19, 60, 'presence', 'pres 2', 1, '02', NULL);
 
 -- --------------------------------------------------------
 
@@ -174,26 +176,19 @@ CREATE TABLE IF NOT EXISTS `habitation` (
 --
 
 INSERT INTO `habitation` (`id`, `pays`, `ville`, `code_postal`, `adresse`, `type`, `nom`, `surface`, `mode`, `id_user`, `date`) VALUES
-(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue du marché, 200', NULL, NULL, 200, 0, 23, NULL),
-(2, 'France', 'Asnières-sur-Seine', 92600, '12 rue du marché, 200', NULL, NULL, 200, 0, 23, NULL),
-(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 2000, 0, 24, NULL),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 24, NULL),
-(5, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, NULL, 300, 0, 25, NULL),
-(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue du marché', NULL, NULL, 300, 0, 26, NULL),
+(1, 'France', 'Asnières-sur-Seine', 92600, '12 rue du marché', NULL, 'Maison 1', 200, 0, 23, NULL),
+(3, 'France', 'Paris', 75006, '28 rue Notre Dame des Champs', NULL, 'Maison 3', 2000, 0, 24, NULL),
+(4, 'France', 'Paris', NULL, '34 avenue foch', NULL, 'Maison 4', NULL, 0, 24, NULL),
+(6, 'France', 'Asnières-sur-Seine', 92799, '13 rue du marché', NULL, 'Maison 6', 300, 0, 26, NULL),
 (7, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison 1 VL', 20000, 1, 27, NULL),
-(8, 'france', 'paris', 75016, 'test2', NULL, 'Maison 2 VL', 2042, 2, 27, NULL),
-(9, 'Italie', 'Venise', 29930, '23 rue de Paradis', NULL, 'Villa', 3940, NULL, 27, NULL),
-(10, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Maison Test', 2042, NULL, 28, NULL),
-(11, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
-(12, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
-(13, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
-(14, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
-(15, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, NULL),
-(16, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'Victor Lebrun', 2042, NULL, 28, '2018-06-05 02:00:00.000000'),
-(17, 'France', 'Mada', 29930, '23 rue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29, '2018-06-05 04:00:00.000000'),
-(18, 'Panam', 'Cachannary', 94230, 'appart 38', NULL, 'Nexity', 9999, NULL, 30, '2018-06-06 06:00:00.000000'),
+(8, 'France', 'Paris', 75016, '23 avenue mozart', NULL, 'Maison 2 VL', 2042, 2, 27, NULL),
+(9, 'France', 'Paris', 29930, '6 rue de Turin', NULL, 'Villa', 3940, NULL, 27, NULL),
+(10, 'France', 'Paris', 75016, '149 rue de la pompe', NULL, 'Maison Test', 2042, NULL, 28, NULL),
+(16, 'France', 'Paris', 75016, '68 rue monge', NULL, 'Victor Lebrun', 2042, NULL, 28, '2018-06-05 02:00:00.000000'),
+(17, 'France', 'Paris', 29930, '23 avenue de Paradis', NULL, 'Maison Maurice', 340, NULL, 29, '2018-06-05 04:00:00.000000'),
+(18, 'France', 'Paris', 75006, '18 rue Notre dame des champs', NULL, 'Nexity', 9999, NULL, 30, '2018-06-06 06:00:00.000000'),
 (19, 'France', 'Nantes', 44800, '3A Rue de la Jaloterie', NULL, 'Maison 1', 200, NULL, 31, '2018-06-06 04:00:00.000000'),
-(20, 'France', 'Paris', 75016, '54 rue du Ranelagh', NULL, 'La Villa', 3000, NULL, 33, '2018-06-06 04:08:00.000000');
+(20, 'France', 'Paris', 75016, '12 rue vavin', NULL, 'La Villa', 3000, NULL, 33, '2018-06-06 04:08:00.000000');
 
 -- --------------------------------------------------------
 
@@ -262,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `stats` (
   `type` varchar(50) NOT NULL,
   `date` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `stats`
@@ -295,7 +290,18 @@ INSERT INTO `stats` (`id`, `type`, `date`) VALUES
 (24, 'connexion', '2018-06-06 13:35:31.000000'),
 (25, 'connexion', '2018-06-06 13:36:50.000000'),
 (26, 'connexion', '2018-06-06 13:40:55.000000'),
-(27, 'connexion', '2018-06-06 13:40:58.000000');
+(27, 'connexion', '2018-06-06 13:40:58.000000'),
+(28, 'connexion', '2018-06-08 09:37:18.000000'),
+(29, 'connexion', '2018-06-08 09:37:48.000000'),
+(30, 'connexion', '2018-06-08 14:44:26.000000'),
+(31, 'connexion', '2018-06-11 07:21:30.000000'),
+(32, 'connexion', '2018-06-11 07:21:50.000000'),
+(33, 'connexion', '2018-06-11 07:22:29.000000'),
+(34, 'connexion', '2018-06-11 07:38:12.000000'),
+(35, 'connexion', '2018-06-11 07:46:10.000000'),
+(36, 'connexion', '2018-06-11 08:00:49.000000'),
+(37, 'connexion', '2018-06-11 12:49:53.000000'),
+(38, 'connexion', '2018-06-11 13:14:28.000000');
 
 -- --------------------------------------------------------
 
@@ -1096,7 +1102,7 @@ INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `
 (19, 'maxence.lbc@gmail.com', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Maxence', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 101010101, 101010101, '2', NULL, '2018-06-02 11:15:28'),
 (22, 'andreas365@hotmail.fr', 'e4ff4ad07cfd70e0f373b21ebfd575d144c34f9f', 'Lebec', 'Andreas', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101012, '2', NULL, '2018-06-03 11:15:28'),
 (26, 'cresc.lebec@hotmail.fr', 'cc973650fc0eb46f555fa7ad705b9b26793e24fe', 'Lebec', 'Cresc', '12 rue waldeck rousseau', 92600, 'Asnières-sur-Seine', 'France', 1010101010, 1010101010, '2', NULL, '2018-06-03 11:15:28'),
-(27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, '2', NULL, '2018-06-03 11:15:28'),
+(27, 'vlebrun@juniorisep.com', 'e78444dc0758cb0f6e3345e633dc16da0e4b7d9b', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, '1', NULL, '2018-06-03 11:15:28'),
 (28, 'pherisson@juniorisep.com', '65a4b98bb4f8b59adf3162b26e85b3b4cc36da18', 'Lebrun', 'Victor', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, '2', NULL, '2018-06-03 11:15:28'),
 (29, 'tlincoln@isep.fr', '5ed25af7b1ed23fb00122e13d7f74c4d8262acd8', 'Lincoln', 'Thierry', '54 rue du Ranelagh', 75016, 'Paris', 'France', 0, 625757865, '2', NULL, '2018-06-03 11:15:28'),
 (31, 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Nguyen', 'Test', NULL, 44800, NULL, 'France', NULL, NULL, '2', NULL, '2018-06-05 11:15:28'),
