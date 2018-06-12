@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="141312a6-da42-4010-bdc4-6d60c53f3d55" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/test.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/dashboard_technicien.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app_info/ajout_capteur.php" afterPath="$PROJECT_DIR$/app_info/ajout_capteur.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/dashboard_maison.php" afterPath="$PROJECT_DIR$/app_info/dashboard_maison.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/model/fetch_trame.php" afterPath="$PROJECT_DIR$/app_info/model/fetch_trame.php" />
+      <change beforePath="$PROJECT_DIR$/app_info/dashboard_administrateur.css" afterPath="$PROJECT_DIR$/app_info/dashboard_administrateur.css" />
+      <change beforePath="$PROJECT_DIR$/app_info/dashboard_technicien.css" afterPath="$PROJECT_DIR$/app_info/dashboard_technicien.css" />
+      <change beforePath="$PROJECT_DIR$/app_info/dashboard_technicien.php" afterPath="$PROJECT_DIR$/app_info/dashboard_technicien.php" />
+      <change beforePath="$PROJECT_DIR$/app_info/test.php" afterPath="$PROJECT_DIR$/app_info/test.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,69 +19,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard_technicien.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard_technicien.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="99" column="68" lean-forward="true" selection-start-line="99" selection-start-column="68" selection-end-line="99" selection-end-column="68" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1528740588165" expanded="true" signature="1210:1309" ph="SELECT id, D... message" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard_technicien.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1014">
-              <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+            <state relative-caret-position="156">
+              <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard_administrateur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="19" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="19" />
-              <folding>
-                <marker date="1528288489936" expanded="true" signature="2467:2535" ph="SELECT id, m... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajout_capteur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-              <folding>
-                <marker date="1528718619037" expanded="true" signature="925:1154" ph="SELECT type_... " />
-                <marker date="1528718619037" expanded="true" signature="1399:1455" ph="SELECT etat,... capteurs" />
-                <marker date="1528718619037" expanded="true" signature="1760:1805" ph="UPDATE capteurs... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fetch_trame.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app_info/model/fetch_trame.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-              <folding>
-                <marker date="1528718848735" expanded="true" signature="493:529" ph="SELECT COUNT... trame_courante" />
-                <marker date="1528718848735" expanded="true" signature="1844:1898" ph="SELECT COUNT... trame_courante" />
-                <marker date="1528718848735" expanded="true" signature="2130:2323" ph="INSERT INTO trame_courante... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-              <folding>
-                <marker date="1528717925756" expanded="true" signature="988:1025" ph="SELECT nom F... habitation" />
-                <marker date="1528717925756" expanded="true" signature="2154:2199" ph="SELECT name,... users" />
-                <marker date="1528717925756" expanded="true" signature="2445:2459" ph="..." />
-                <marker date="1528717925756" expanded="true" signature="3516:3554" ph="SELECT valeu... capteurs" />
-                <marker date="1528717925756" expanded="true" signature="4621:4655" ph="SELECT id FR... users" />
-                <marker date="1528717925756" expanded="true" signature="5049:5099" ph="SELECT type,... pieces" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +46,20 @@
       <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            <state relative-caret-position="338">
+              <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <folding>
+                <marker date="1528739377970" expanded="true" signature="221:280" ph="SELECT conte... message" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard_technicien.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,7 +119,6 @@
         <option value="$PROJECT_DIR$/app_info/mode_maison.css" />
         <option value="$PROJECT_DIR$/app_info/dashboard_maison.js" />
         <option value="$PROJECT_DIR$/app_info/supprimer_utilisateur_post.php" />
-        <option value="$PROJECT_DIR$/app_info/dashboard_administrateur.css" />
         <option value="$PROJECT_DIR$/app_info/connexion_post.php" />
         <option value="$PROJECT_DIR$/app_info/Inscription_1.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_habitant_2_post.php" />
@@ -159,17 +129,19 @@
         <option value="$PROJECT_DIR$/app_info/header.php" />
         <option value="$PROJECT_DIR$/app_info/views/help_ctlr/faq.css" />
         <option value="$PROJECT_DIR$/app_info/inscription_technicien_2.php" />
-        <option value="$PROJECT_DIR$/app_info/dashboard_technicien.php" />
-        <option value="$PROJECT_DIR$/app_info/dashboard_technicien.css" />
         <option value="$PROJECT_DIR$/app_info/inscription_habitant_1_post.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_technicien_1.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_1_post.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_administrateur.php" />
-        <option value="$PROJECT_DIR$/app_info/test.php" />
         <option value="$PROJECT_DIR$/app_info/test_ajax.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_maison.php" />
-        <option value="$PROJECT_DIR$/app_info/ajout_capteur.php" />
         <option value="$PROJECT_DIR$/app_info/model/fetch_trame.php" />
+        <option value="$PROJECT_DIR$/app_info/ajout_capteur.php" />
+        <option value="$PROJECT_DIR$/app_info/dashboard_administrateur.css" />
+        <option value="$PROJECT_DIR$/app_info/dashboard_technicien.js" />
+        <option value="$PROJECT_DIR$/app_info/test.php" />
+        <option value="$PROJECT_DIR$/app_info/dashboard_technicien.php" />
+        <option value="$PROJECT_DIR$/app_info/dashboard_technicien.css" />
       </list>
     </option>
   </component>
@@ -221,12 +193,6 @@
               <item name="projet APP" type="b2602c69:ProjectViewProjectNode" />
               <item name="projet APP" type="462c0819:PsiDirectoryNode" />
               <item name="app_info" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projet APP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projet APP" type="462c0819:PsiDirectoryNode" />
-              <item name="app_info" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -384,42 +350,42 @@
       <workItem from="1527254296838" duration="5300000" />
       <workItem from="1528103456548" duration="34962000" />
       <workItem from="1528441383014" duration="1888000" />
-      <workItem from="1528466519970" duration="7138000" />
+      <workItem from="1528466519970" duration="21120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107001000" />
+    <option name="totallyTimeSpent" value="120983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15104167" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
@@ -437,13 +403,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_5_post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/views/help_ctlr/message_center.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -570,14 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
@@ -683,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/inscription_technicien_2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -732,9 +676,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/test_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="27" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/model/fetch_trame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding>
+            <marker date="1528718858561" expanded="true" signature="335:371" ph="SELECT COUNT... trame_courante" />
+            <marker date="1528718858561" expanded="true" signature="1686:1740" ph="SELECT COUNT... trame_courante" />
+            <marker date="1528718858561" expanded="true" signature="1972:2165" ph="INSERT INTO trame_courante... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="94" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/check.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
+        <state relative-caret-position="-52">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1528285182944" expanded="true" signature="223:285" ph="SELECT etat,... capteurs" />
@@ -744,84 +732,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.css">
+    <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="18" column="27" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="97" column="22" lean-forward="true" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+          <folding>
+            <marker date="1528722202466" expanded="true" signature="925:1154" ph="SELECT type_... " />
+            <marker date="1528722202466" expanded="true" signature="1399:1455" ph="SELECT etat,... capteurs" />
+            <marker date="1528722202466" expanded="true" signature="1760:1805" ph="UPDATE capteurs... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="1222">
+          <caret line="75" column="83" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="83" />
           <folding>
             <marker date="1528288489936" expanded="true" signature="2467:2535" ph="SELECT id, m... users" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/test_ajax.php">
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="27" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="99" column="68" lean-forward="true" selection-start-line="99" selection-start-column="68" selection-end-line="99" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1528740588165" expanded="true" signature="1210:1309" ph="SELECT id, D... message" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state relative-caret-position="338">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding>
+            <marker date="1528739377970" expanded="true" signature="221:280" ph="SELECT conte... message" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-          <folding>
-            <marker date="1528717925756" expanded="true" signature="988:1025" ph="SELECT nom F... habitation" />
-            <marker date="1528717925756" expanded="true" signature="2154:2199" ph="SELECT name,... users" />
-            <marker date="1528717925756" expanded="true" signature="2445:2459" ph="..." />
-            <marker date="1528717925756" expanded="true" signature="3516:3554" ph="SELECT valeu... capteurs" />
-            <marker date="1528717925756" expanded="true" signature="4621:4655" ph="SELECT id FR... users" />
-            <marker date="1528717925756" expanded="true" signature="5049:5099" ph="SELECT type,... pieces" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <marker date="1528718619037" expanded="true" signature="925:1154" ph="SELECT type_... " />
-            <marker date="1528718619037" expanded="true" signature="1399:1455" ph="SELECT etat,... capteurs" />
-            <marker date="1528718619037" expanded="true" signature="1760:1805" ph="UPDATE capteurs... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/model/fetch_trame.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding>
-            <marker date="1528718848735" expanded="true" signature="493:529" ph="SELECT COUNT... trame_courante" />
-            <marker date="1528718848735" expanded="true" signature="1844:1898" ph="SELECT COUNT... trame_courante" />
-            <marker date="1528718848735" expanded="true" signature="2130:2323" ph="INSERT INTO trame_courante... " />
-          </folding>
+        <state relative-caret-position="156">
+          <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
