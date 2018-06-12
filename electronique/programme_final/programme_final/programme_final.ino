@@ -15,6 +15,9 @@ int toneVal;
 
 /// Variable for the
 
+char temp[1];
+
+
 
 
 
@@ -40,14 +43,28 @@ void setup() {
   pinMode(pin2, OUTPUT);
   Serial.begin(9600);
   Serial1.begin(9600);
+  
 
   myvolet.attach(PF_3); // pin 39 ceci est pour le volet.
+
+  //turnLedOn(7); // alume la 7 `eme LED ( qui n'existe pas et donc 'ca 'eteint les leds)
 }
 
 void loop()
 {
   //readIRsensor();
-  sendTrame(readIRsensor(0),'01', '1');	//VAL,NUM,TYP
+  
+  
+  
+  if(Serial1.available()<=0){
+    sendTrame(readIRsensor(0),0x0001, '1');  //VAL,NUM,TYP
+    delay(500);
+    sendTrame(readIRsensor(1),0x0002, '1');
+  }
+  else{
+    scoutTrame();
+  }
+  delay(200);
 }
 
 void turnLedOn(int outputPin)
@@ -155,7 +172,7 @@ float readIRsensor(bool i) {
 
     LIRsensorValue = analogRead(LIRsensorPin) * 0.0008056640625;
     LIRdistance = 13 * pow(LIRsensorValue, -1);
-    Serial.println(LIRdistance);
+    
 
     return LIRdistance;
   }
@@ -185,33 +202,45 @@ char toText(char text) {
   }
   return text;
 }
-
+////////////////////////////////////////////////////////////////////////////////////////////////////Scout
 void scoutTrame(){
 	char trame[18];
 	
 	for(int i=0; i<19; i++) {
 		trame[i] = Serial1.read();		// Lecture de la trame
 	}
-	Serial.print(trame);		//Copie dans la console
+	//Serial.print(trame);		//Copie dans la console
 	
 	if(trame[5]=='2'){		//Si requête en lecture (l'objet reçoit l'info)
-		char TYP = trame[6];
-		char NUM = trame[7] + trame[8];
-		char VAL = trame[9] + trame[10] + trame[11] + trame[12];
+		String TYP = String(trame[6]);
+
+    
+		String NUM = String(trame[7]) + String(trame[8]);
+    
+		String VAL = String(trame[9]) + String(trame[10]) + String(trame[11]) + String(trame[12]);
+
+    if(Serial1.read()<=0){Serial1.println(trame);}
 		action(TYP, NUM, VAL);
+    
 	}
 }
 
-void action(char TYP, char NUM, char VAL) {
-	if(VAL=='0000') {
+void action(String TYP, String NUM, String VAL) {
+	
+	
+	if(TYP=="3") {
+    int x = NUM.toInt();
+    
+    turnLedOn(x); 
 		//LOW
 	}
-	else if(VAL=='0001') {
+	else if(VAL=="0123") {
+    
 		//HIGH
 	}
 }
 
-void sendTrame(int VAL, char NUM, char TYP) {
+void sendTrame(int VAL, int NUM, char TYP) {
 	char trame[18];
 	
 	// Ecriture de la trame (sans la checksum)
@@ -222,13 +251,12 @@ void sendTrame(int VAL, char NUM, char TYP) {
 	trame[4] = 'D';		//OBJ
 	trame[5] = '1';		//REQ
 	trame[6] = TYP;		//TYP
-	trame[7] = toText((NUM >> 4) & 0x0f);	//NUM
-	trame[8] = toText(NUM & 0x0f);	//NUM
-	
-	trame[9] = toText((VAL >> 12) & 0x0f);	
-  trame[10] = toText((VAL >> 8) & 0x0f);
-  trame[11] = toText((VAL >> 4) & 0x0f);
-  trame[12] = toText(VAL & 0x0f);
+	trame[7] = toText((NUM >> 4) & 0x0f); 
+	trame[8] = toText(NUM & 0x0f);
+	trame[9] = toText((VAL >> 12) & 0x0f);// temp2[0];	
+  trame[10] = toText((VAL >> 8) & 0x0f);//temp2[1];
+  trame[11] = toText((VAL >> 4) & 0x0f);// temp2[2];
+  trame[12] = toText(VAL & 0x0f);// temp2[3];
 	trame[13] = '0';	//TIM
 	trame[14] = 'E';	//TIM
 	trame[15] = 'C';	//TIM
@@ -247,10 +275,8 @@ void sendTrame(int VAL, char NUM, char TYP) {
 	int pot = analogRead(28);
 	if(pot>1000) {
 		for(int i=0; i<19; i++) {
-			Serial1.print(trame[i]);	//Envoie à la passerelle
-			Serial.print(trame[i]);		//Copie à la console
-			Serial.println();
-		}
+      Serial1.print(trame[i]);  //Envoie à la passerelle
+    }
 	}
 	else {
 		Serial.println("Switch(pot) is OFF!");
