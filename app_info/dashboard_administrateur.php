@@ -111,13 +111,29 @@ $_SESSION['type']=1;
                                 <td><?= $donnees['country'];?></td>
                             </tr>
 
-                        <?php
+                            <?php
                         }
                         ?>
                     </table>
                 </div>
 
             </div>
+
+
+            <div class="cartehabitations">
+
+                <button class="liste" onclick="changemaphab()">Carte des habitations</button>
+                <div id="fenetre">
+                    <button id="close" data-ido="56" onclick="fermer()">=></button>
+                    <?php
+                    include "./geocode.php";
+                    ?>
+                </div>
+
+            </div>
+
+
+
         </div>
 
     </div>

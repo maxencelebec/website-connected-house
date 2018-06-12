@@ -1,9 +1,16 @@
-function change(){
-	document.getElementById("fenetre").style.fontSize="30px";
-	document.getElementById("fenetre").style.visibility="visible";
-	document.getElementById("fenetre").style.width="93vw";
-	document.getElementById("fenetre").style.height="98vh";
-	document.getElementById("fenetre").style.padding="0px";
+function change() {
+    document.getElementById("fenetre").style.fontSize = "30px";
+    document.getElementById("fenetre").style.visibility = "visible";
+    document.getElementById("fenetre").style.width = "93vw";
+    document.getElementById("fenetre").style.height = "98vh";
+    document.getElementById("fenetre").style.padding = "0px";
+}
+function changemaphab(){
+    document.getElementById("fenetre").style.fontSize="30px";
+    document.getElementById("fenetre").style.visibility="visible";
+    document.getElementById("fenetre").style.width="93vw";
+    document.getElementById("fenetre").style.height="98vh";
+    document.getElementById("fenetre").style.padding="0px";
 }
 
 function fermer(){
