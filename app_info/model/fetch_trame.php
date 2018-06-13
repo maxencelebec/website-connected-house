@@ -11,6 +11,10 @@
     
     /* Stockage des trames dans un array */
     $data_tab = preg_split("/([0-9]009D)/", $data, - 1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> master
     /* ####### ECRITURE DES TRAMES DANS LA BDD ######## */
     /* Connection à la BDD */
     try {

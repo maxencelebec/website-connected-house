@@ -43,6 +43,7 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
         
         while($recup = $req->fetch()) {
             $valeur = $recup['valeur'];
+<<<<<<< HEAD
             $num_capteur = $recup['num_capteur'];
         
         if ($etat == 1 && $capteur_actionneur == "temperature" && $num_capteur == $donnees['id_capteur']) {
@@ -51,6 +52,44 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
                 $id_capteur
             ));
             echo $valeur . "°C";
+=======
+            $timestamp = $recup['timestamp'];
+
+
+            $req = $connect->prepare("SELECT etat, valeur, id_capteur FROM capteurs WHERE id=? ");
+            $req->execute(array($id_capteur));
+            while ($donnees = $req->fetch()) {
+                $etat = $donnees['etat'];
+
+                if ($etat == 1 && $capteur_actionneur == "temperature" && $num_capteur==$donnees['id_capteur']) {
+                    $update = $connect->prepare("UPDATE capteurs set valeur=$valeur WHERE id=?");
+                    $update->execute(array($id_capteur));
+                    echo $donnees['valeur']."°C";
+
+                }
+                if ($etat == 1 && $capteur_actionneur == "luminosite") {
+                    echo "220lux";
+                }
+                if ($etat == 1 && $capteur_actionneur == "porte") {
+                    echo "open";
+                } elseif ($etat == 0 && $capteur_actionneur == "porte") {
+                    echo "close";
+                }
+                if ($etat == 1 && $capteur_actionneur == "presence") {
+                    echo "on";
+                } elseif ($etat == 0 && $capteur_actionneur == "presence") {
+                    echo "off";
+                }
+                if ($etat == 1 && $capteur_actionneur == "humidite") {
+                    echo "30%";
+                }
+                if ($etat == 0) {
+                    echo "";
+                }
+
+
+            }
+>>>>>>> master
         }
         if ($etat == 1 && $capteur_actionneur == "luminosite") {
             echo "220lux";
@@ -101,6 +140,18 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
                 });
             });
         });
+
+        setInterval(function(){
+            $.ajax({
+                url:"model/fetch_trame.php",
+                method:"POST",
+                /*
+                success:function(data){
+                    $('.result').html(data);
+                }
+                */
+            });
+        },3000);
     </script>
 <?php 
 }

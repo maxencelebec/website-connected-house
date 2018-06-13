@@ -114,10 +114,3 @@ table, th, td{
     color: white;
 }
 
-.ct-perfect-fourth:before {
-    display: block;
-    float: left;
-    content: "";
-    width: 0;
-    height: 0;
-}
