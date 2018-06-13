@@ -73,7 +73,6 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
         }
     }
 }
-}
 
 ?>
         </div>
@@ -81,7 +80,6 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
         <?php
         $boutton = 1;
         include ('boutton.php');
-        
         ?>
     </div>
 
@@ -104,7 +102,9 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
             });
         });
     </script>
-
+<?php 
+}
+?>
 
 <?php /*
 
