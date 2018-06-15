@@ -44,7 +44,7 @@ for ($i = 0, $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
         $timestamp = substr($trame, 19);
         
         /* Envoie dans la BDD si la trame n'est déjà pas existante */
-        $req = $bdd->prepare('SELECT COUNT(id) FROM trame_courante WHERE timestamp=?');
+        $req = $bdd->prepare('SELECT COUNT(id) FROM logs WHERE timestamp=?');
         $req->execute(array(
             $timestamp
         ));
@@ -53,7 +53,7 @@ for ($i = 0, $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
         }
         if ($compteur == 0) {
             $id_capteur = "$num_objet$type_capteur$num_capteur";
-            $req = $bdd->prepare('INSERT INTO trame_courante(id_capteur, type_trame, num_objet, type_req, type_capteur, num_capteur, valeur, tim, checksum, timestamp)
+            $req = $bdd->prepare('INSERT INTO logs(id_capteur, type_trame, num_objet, type_req, type_capteur, num_capteur, valeur, tim, checksum, timestamp)
                                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
             $req->execute(array(
                 $id_capteur,

@@ -144,6 +144,7 @@ if(isset($_POST['actu'])) {
                     $checksum,
                     $timestamp
                 ));
+                var_dump($req);
             }
         }
     }
