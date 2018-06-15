@@ -136,7 +136,7 @@ catch(Exception $e)
 
             <div class="cartehabitations">
 
-                <button class="liste" onclick="changemaphab()">Carte des habitations</button>
+                <a href="geocode.php"><button class="liste" onclick="changemaphab()">Carte des habitations</button></a>
                 <div id="fenetre">
                     <button id="close" data-ido="56" onclick="fermer()">=></button>
                     <?php
