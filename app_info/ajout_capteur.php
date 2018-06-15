@@ -37,7 +37,7 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
     while ($donnees = $req->fetch()) {
         $etat = $donnees['etat'];
         
-        $req = $connect->prepare('SELECT num_capteur, valeur FROM trame_courante WHERE num_capteur=?
+        $req = $connect->prepare('SELECT num_capteur, valeur FROM logs WHERE num_capteur=?
                           ORDER BY timestamp DESC LIMIT 1');
         $req->execute(array(
             $donnees['id_capteur']

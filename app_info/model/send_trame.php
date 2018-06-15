@@ -7,7 +7,7 @@ function send_trame($id_capteur, $etat, $type) {
     $time = date("YmdHis");
     
     /* Ecriture de la trame */
-    $trame = "1009D2".$type.$id_capteur.'000'.$etat."0LEC5d".$time;
+    $trame = "1009D2".$type.$id_capteur.'000'.$etat."0LEC50".$time;
     
     /* Envoie de la trame vers le serveur */
     $url = 'projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009D&TRAME='.$trame;

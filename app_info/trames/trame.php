@@ -29,7 +29,7 @@ try {
 if(isset($_POST['BDD'])) {
     $starttime = microtime(true);
     
-    $req = $bdd->prepare('SELECT DISTINCT num_capteur FROM trame_courante');
+    $req = $bdd->prepare('SELECT DISTINCT num_capteur FROM logs');
     $req->execute();
     
     while($data = $req->fetch()) {
@@ -37,7 +37,7 @@ if(isset($_POST['BDD'])) {
     }
     
     foreach($tmp as $c) {
-        $req = $bdd->prepare('SELECT id, num_capteur, valeur, timestamp FROM trame_courante WHERE num_capteur=?
+        $req = $bdd->prepare('SELECT id, num_capteur, valeur, timestamp FROM logs WHERE num_capteur=?
                           ORDER BY timestamp DESC LIMIT 1');
         $req->execute(array($c));
         
@@ -63,8 +63,8 @@ if(isset($_POST['BDD'])) {
 }
 if(isset($_POST['test'])) {
     $starttime = microtime(true);
-    $req = $bdd->prepare('SELECT id, num_capteur, valeur, timestamp FROM trame_courante AS t1
-                         WHERE timestamp = (SELECT MAX(timestamp) FROM trame_courante AS t2 WHERE t1.num_capteur = t2.num_capteur) GROUP BY num_capteur');
+    $req = $bdd->prepare('SELECT id, num_capteur, valeur, timestamp FROM logs AS t1
+                         WHERE timestamp = (SELECT MAX(timestamp) FROM logs AS t2 WHERE t1.num_capteur = t2.num_capteur) GROUP BY num_capteur');
     $req->execute();
     while($recup = $req->fetch()) {
         $id[] = $recup['id'];
@@ -125,13 +125,13 @@ if(isset($_POST['actu'])) {
             $timestamp = substr($trame, 19);
             
             /* Envoie dans la BDD si la trame n'est déjà pas existante*/
-            $req = $bdd->prepare('SELECT COUNT(id) FROM trame_courante WHERE timestamp=?');
+            $req = $bdd->prepare('SELECT COUNT(id) FROM logs WHERE timestamp=?');
             $req->execute(array($timestamp));
             while($donnees = $req->fetch()) {
                 $compteur = $donnees['COUNT(id)'];
             }
             if($compteur==0) {
-                $req = $bdd->prepare('INSERT INTO trame_courante(type_trame, num_objet, type_req, type_capteur, num_capteur, valeur, tim, checksum, timestamp)
+                $req = $bdd->prepare('INSERT INTO logs(type_trame, num_objet, type_req, type_capteur, num_capteur, valeur, tim, checksum, timestamp)
                                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
                 $req->execute(array(
                     $type_trame,
