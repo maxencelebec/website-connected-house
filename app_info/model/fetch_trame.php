@@ -52,9 +52,11 @@ for ($i = 0, $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
             $compteur = $donnees['COUNT(id)'];
         }
         if ($compteur == 0) {
-            $req = $bdd->prepare('INSERT INTO trame_courante(type_trame, num_objet, type_req, type_capteur, num_capteur, valeur, tim, checksum, timestamp)
-                                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+            $id_capteur = "$num_objet$type_capteur$num_capteur";
+            $req = $bdd->prepare('INSERT INTO trame_courante(id_capteur, type_trame, num_objet, type_req, type_capteur, num_capteur, valeur, tim, checksum, timestamp)
+                                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
             $req->execute(array(
+                $id_capteur,
                 $type_trame,
                 $num_objet,
                 $type_req,
