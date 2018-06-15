@@ -40,14 +40,14 @@
 
             <div class="titre"><h1>Entrez vos informations</h1></div>
 
-            <div>Adresse email :</div>
-            <input type="text" name="mail" maxlenght="255" style="text-align: center"/>
-            <div>Confirmez votre addresse email :</div>
-            <input type="text" name="mail_confirm" maxlenght="255" style="text-align: center"/>
-            <div>Mot de passe :</div>
-            <input type="password" name="password" minlenght="6" maxlenght="255" style="text-align: center"/>
-            <div>Confirmez votre mot de passe :</div>
-            <input type="password" name="password_confirm" minlenght="6" maxlenght="255" style="text-align: center"/>
+            <label>Adresse email :</label>
+            <input type="text" name="mail" maxlenght="255" style="text-align: center" required/>
+            <label>Confirmez votre addresse email :</label>
+            <input type="text" name="mail_confirm" maxlenght="255" style="text-align: center" required/>
+            <label>Mot de passe :</label>
+            <input type="password" name="password" minlenght="6" maxlenght="255" style="text-align: center" required/>
+            <label>Confirmez votre mot de passe :</label>
+            <input type="password" name="password_confirm" minlenght="6" maxlenght="255" style="text-align: center" required/>
 
         </div>
 
