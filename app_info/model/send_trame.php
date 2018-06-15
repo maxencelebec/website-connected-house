@@ -8,11 +8,9 @@ function send_trame($id_capteur, $etat, $type) {
     
     /* Ecriture de la trame */
     $trame = "1009D2".$type.$id_capteur.'000'.$etat."0LEC5d".$time;
-    echo $id_capteur;
     
     /* Envoie de la trame vers le serveur */
     $url = 'projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009D&TRAME='.$trame;
-    echo $url;
     
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);

@@ -78,14 +78,6 @@ try {
                                 echo "<p style='color: #2cc872'>" . $donnees["firstname"] . " " . $donnees["name"] . "</p>";
                             }
                             ?>
-					<form method="POST">
-            		<input type="submit" name="actualiserBDD" value="Bouton temporaire">
-            		</form>
-            		<?php 
-            		if(isset($_POST['actualiserBDD'])) {
-            		    include 'model/fetch_trame.php';
-            		}
-            		?>
                         </div>
 			</div>
 		</div>
@@ -112,7 +104,7 @@ try {
                             $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE id=?');
                             $req->execute(array($_GET['id']));
                             while ($donnees = $req->fetch()) {
-                                echo $donnees["nom"];
+                                echo $donnees["valeur"];
                             }
                             ?>
 
@@ -138,11 +130,7 @@ try {
                         
                         include_once "ajout_piece.php";
                         
-                        try {
-                            $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-                        } catch (Exception $e) {
-                            die('Erreur : ' . $e->getMessage());
-                        }
+                       
                         $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
                         $req->execute(array(
                             $_SESSION["mail"]

@@ -1,35 +1,28 @@
 <?php 
-/* Connection à la BDD */
-try
-{
-    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-    echo "Connecté à la BDD <br /> <br />";
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-    echo "ERREUR BDD ERREUR BDD ERREUR BDD";
-}
+/* Connection BDD */
+$connect = new PDO("mysql:host=localapp;dbname=virifocus","root", "");
+$connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$id_capteur = "01";
+$capteur_actionneur = "temperature";
 
-/* Requête: SELECT num_capteur, valeur WHERE plus récent PAR num_capteur */
-$req = $bdd->prepare('SELECT num_capteur, valeur, timestamp FROM trame_courante AS t1
-                         WHERE timestamp = (SELECT MAX(timestamp) FROM trame_courante AS t2 WHERE t1.num_capteur = t2.num_capteur) GROUP BY num_capteur');
-$req->execute();
-    
-    
+$req = $connect->prepare('SELECT num_capteur, valeur, timestamp FROM trame_courante WHERE num_capteur=?
+                          ORDER BY timestamp DESC LIMIT 1');
+$req->execute(array($id_capteur));
+            
 while($recup = $req->fetch()) {
-    $num_capteur_tab[] = $recup['num_capteur'];
-    $valeur_tab[] = $recup['valeur'];        
-    $timestamp_tab[] = $recup['timestamp'];
-    }
-    
-/* Vérification du contenu des tabs avant echo */
-if($num_capteur_tab==null) {
-    echo "La BDD est vide!";
-}
-else {
-    for($i=0, $size=count($num_capteur_tab); $i<$size; $i++) {
-    echo "Capteur $num_capteur_tab[$i] de valeur $valeur_tab[$i] à $timestamp_tab[$i] <br />";
-    }
+    $valeur = $recup['valeur'];
+    $timestamp = $recup['timestamp'];
+    $num_capteur = $recup['num_capteur'];
+
+    $req = $connect->prepare("SELECT etat, valeur, id_capteur FROM capteurs WHERE id_capteur=? ");
+    $req->execute(array($id_capteur));
+        while ($donnees = $req->fetch()) {
+            $etat = $donnees['etat'];
+            if ($etat == 1 && $capteur_actionneur == "temperature" && $num_capteur==$donnees['id_capteur']) {
+                $update = $connect->prepare("UPDATE capteurs set valeur=$valeur WHERE id_capteur=?");
+                $update->execute(array($num_capteur));
+                echo $donnees['valeur']."°C";
+            }
+        }
 }
 ?>
