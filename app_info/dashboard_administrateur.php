@@ -2,7 +2,14 @@
 session_start();
 $_SESSION['type']=1;
 
-
+try
+{
+    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
 ?>
 
 <!DOCTYPE html>
@@ -57,14 +64,21 @@ $_SESSION['type']=1;
 
         <div class="infos2">
             <div class="titre">Informations habitations</div>
-            <div class="graphe3">Nombre d'habitations connectées par jour : </div>
 
-            <div> Nombre total d'habitations : </div>
+
             <?php
 
-            https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=
+            $req = $bdd->prepare('SELECT COUNT(*) as total FROM habitation');
+            $req->execute();
 
+            while ($donnees = $req->fetch())
+            {
+                $val = $donnees['total'];}
             ?>
+
+            <div> Nombre total d'habitations : <?php echo $val; ?></div>
+
+            <div class="graphe3">Nombre d'habitations connectées par jour : </div>
 
             <div id="chartNbHabitations">
 
