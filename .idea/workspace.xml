@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3012">
-              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="286">
+              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
               </folding>
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_post.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="image_post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/image_post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+            <state relative-caret-position="354">
+              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/photoeditjs.php" />
         <option value="$PROJECT_DIR$/app_info/photoeditjs.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_maison.css" />
-        <option value="$PROJECT_DIR$/app_info/dashboard_maison.php" />
         <option value="$PROJECT_DIR$/app_info/image_post.php" />
+        <option value="$PROJECT_DIR$/app_info/dashboard_maison.php" />
       </list>
     </option>
   </component>
@@ -388,12 +388,12 @@
       <workItem from="1528790615232" duration="77000" />
       <workItem from="1529047191130" duration="3473000" />
       <workItem from="1529052167622" duration="4883000" />
-      <workItem from="1529061515740" duration="5147000" />
+      <workItem from="1529061515740" duration="5658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131505000" />
+    <option name="totallyTimeSpent" value="132016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -759,16 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3012">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_4_post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -785,8 +775,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/image_post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+        <state relative-caret-position="354">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
