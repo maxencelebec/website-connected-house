@@ -64,9 +64,7 @@ try {
                     <?php
                     
                     $req = $bdd->prepare('SELECT nom FROM habitation WHERE id=?');
-                    $req->execute(array(
-                        $_GET['id']
-                    ));
+                    $req->execute(array($_GET['id']));
                     while ($donnees = $req->fetch()) {
                         echo $donnees["nom"];
                     }
