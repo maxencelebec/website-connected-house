@@ -37,8 +37,8 @@
       <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+            <state relative-caret-position="422">
+              <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
               </folding>
@@ -224,6 +224,12 @@
               <item name="website-connected-house" type="462c0819:PsiDirectoryNode" />
               <item name="app_info" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="website-connected-house" type="b2602c69:ProjectViewProjectNode" />
+              <item name="website-connected-house" type="462c0819:PsiDirectoryNode" />
+              <item name="app_info" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -388,12 +394,12 @@
       <workItem from="1528790615232" duration="77000" />
       <workItem from="1529047191130" duration="3473000" />
       <workItem from="1529052167622" duration="4883000" />
-      <workItem from="1529061515740" duration="5658000" />
+      <workItem from="1529061515740" duration="5777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132016000" />
+    <option name="totallyTimeSpent" value="132135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -782,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+        <state relative-caret-position="422">
+          <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
           </folding>
