@@ -428,7 +428,10 @@ a{
 }
 
 .gears{
-
+    border: none;
+    outline: 0;
+    background-color: #333333;
+    cursor: pointer;
     background-image: url("image/parametre.png");
     background-size:100%;
     background-repeat:no-repeat;
@@ -436,10 +439,15 @@ a{
     text-decoration:none;
     justify-self: end;
     color:white;
+    border: #2ecc71 1px solid;
+    border-radius: 50%;
     height: 30px;
     width: 30px;
     z-index: 2;
+    transform: scale(0.80);
 }
+
+
 
 #selectphoto{
     position: absolute;

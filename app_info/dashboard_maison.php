@@ -31,7 +31,9 @@ try {
         ?>
 
         <?php
-        $_SESSION['id_habitation'] = $_GET['id'];
+        if (isset($_GET['id'])) {
+            $_SESSION['id_habitation'] = $_GET['id'];
+        }
         $id_habitation = $_SESSION['id_habitation'];
         ?>
 		
@@ -64,7 +66,7 @@ try {
                     <?php
                     
                     $req = $bdd->prepare('SELECT nom FROM habitation WHERE id=?');
-                    $req->execute(array($_GET['id']));
+                    $req->execute(array($id_habitation));
                     while ($donnees = $req->fetch()) {
                         echo $donnees["nom"];
                     }
