@@ -64,8 +64,7 @@
             <br>
 
             <div class="piece">
-                <?php echo $piece 
-                ?>
+                
                 <img class="image" src="image/<?php echo"$piece"?>.jpg"/>
                 <div class="nom_piece">
                     <?php

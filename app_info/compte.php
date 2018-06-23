@@ -101,14 +101,14 @@
                     <img id="fixe-icon" src="image/telephone-of-old-design.png">
                     <div class="text" id="phone_number_home">
                         <span class="label"> Numéro fixe: </span>
-                        <?php echo $phone_number_home; ?>
+                        <?php echo "0".$phone_number_home; ?>
                     </div>
                 </div>
                 <div class="case" id="ligne7">
                     <img id="phone-icon" src="image/smartphone-call.png">
                     <div class="text" id="phone_number_portable">
                         <span class="label"> Numéro Portable:   </span>
-                        <?php echo $phone_number_portable; ?>
+                        <?php echo "0".$phone_number_portable; ?>
                     </div>
                     <div class="case" id="ligne_modif">
                         <a class="modif" href="parametres.php"> Modifier Informations </a>

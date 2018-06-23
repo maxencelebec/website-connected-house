@@ -456,13 +456,35 @@ a{
     width: 0px;
     height: 0px;
     border-radius: 5px;
-    top : 25vh;
-    left:25vw;
+    top : 0vh;
+    left:23.2vw;
     visibility: hidden;
     overflow: auto;
     z-index: 2;
+    border:#2ecc71 2px solid;
 }
 
 #picbutton {
     border-radius: 8px;
+}
+
+.file{
+    margin-top: 10vh;
+    color: #2CC872;
+}
+.upload{
+    margin-top: 10vh;
+    border: none;
+    cursor: pointer;
+    color: #2CC872;
+    background-color: white;
+    border: #2CC872 solid 2px;
+    border-radius: 3px;
+    font-size: 25px;
+    transition: 0.4s;
+    padding: 1vh;
+}
+.upload:hover{
+    color: white;
+    background-color:#2CC872;
 }

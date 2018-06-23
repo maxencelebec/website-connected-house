@@ -8,8 +8,8 @@ function change() {
 function selectimage() {
     document.getElementById("selectphoto").style.fontSize = "30px";
     document.getElementById("selectphoto").style.visibility = "visible";
-    document.getElementById("selectphoto").style.width = "50vw";
-    document.getElementById("selectphoto").style.height = "50vh";
+    document.getElementById("selectphoto").style.width = "40vw";
+    document.getElementById("selectphoto").style.height = "30vh";
     document.getElementById("selectphoto").style.padding = "0px";
 }
 function changemaphab(){

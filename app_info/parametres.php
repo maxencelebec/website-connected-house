@@ -60,7 +60,7 @@ session_start();
 					<div class="bloc" id="bloc_profile_1">
 						<div id="name">
 							<span class="tag" id="tag_name"> Nom </span>
-							<input type="hidden" id="name" name="name_input" value="<?php echo $name;?>">
+							<input type="text" id="name" name="name_input" value="<?php echo $name;?>">
 						</div>
 						<div id="firstname">
 							<span class="tag"> Prénom </span>

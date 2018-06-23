@@ -78,10 +78,10 @@ try {
                 <div class="changephoto">
                     <button class="gears" onclick="selectimage()"></button>
                     <div id="selectphoto">
-                        <button id="close" data-ido="56" onclick="fermerselectimage()">=></button>
+                        <button id="close" data-ido="56" onclick="fermerselectimage()">x</button>
                         <form action="image_post.php" method="post" enctype="multipart/form-data">
-                            <input type="file" name="fileToUpload" id="fileToUpload">
-                            <input type="submit" value="Upload Image" name="submit">
+                            <input class="file" type="file" name="fileToUpload" id="fileToUpload">
+                            <input class="upload" type="submit" value="Upload Image" name="submit">
                         </form>
                     </div>
                 </div>
@@ -131,22 +131,24 @@ try {
 				<div class="informations_valeur">
 					<div id="eau" onclick="eau()">
 						<div class="case31111">Luminosité</div>
-						<div class="case31112">1000L</div>
+						<div class="case31112"></div>
 					</div>
 					<div id="temperature" onclick="temperature()">
 						<div class="case31121">Température</div>
-						<div class="case31122">23°C</div>
+						<div class="case31122"></div>
 					</div>
 					<div id="consommation" onclick="consommation()">
 						<div class="case31131">Utilisation</div>
 						<div class="case31132">
 
                             <?php
+                            /*
                             $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE id=?');
                             $req->execute(array($_GET['id']));
                             while ($donnees = $req->fetch()) {
                                 echo $donnees["valeur"];
                             }
+                            */
                             ?>
 
                         </div>
