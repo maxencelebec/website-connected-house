@@ -18,8 +18,8 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
         echo "Présence";
     } elseif ($capteur_actionneur == "humidite") {
         echo "Humidité";
-    } elseif ($capteur_actionneur == "porte") {
-        echo "Porte";
+    } elseif ($capteur_actionneur == "led") {
+        echo "Led";
     }
     ?>
 
@@ -37,33 +37,37 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
     while ($donnees = $req->fetch()) {
         $etat = $donnees['etat'];
         
-        $req = $connect->prepare('SELECT num_capteur, valeur FROM logs WHERE num_capteur=?
+        $req = $connect->prepare('SELECT id_capteur, valeur FROM logs WHERE id_capteur=?
                           ORDER BY timestamp DESC LIMIT 1');
         $req->execute(array($donnees['id_capteur']));
         while ($recup = $req->fetch()) {
             $valeur = $recup['valeur'];
             
-            $num_capteur = $recup['num_capteur'];
+            $id_capteur_logs = $recup['id_capteur'];
             
-            if ($etat == 1 && $capteur_actionneur == "temperature" && $num_capteur == $donnees['id_capteur']) {
-                $update = $connect->prepare("UPDATE capteurs set valeur=$valeur WHERE id=?");
+            if ($etat == 1 && $capteur_actionneur == "temperature" && $id_capteur_logs == $donnees['id_capteur']) {
+                $update = $connect->prepare("UPDATE capteurs set valeur=0001 WHERE id=?");
                 $update->execute(array(
                     $id_capteur
                 ));
+                
                 echo $valeur . "°C";
             }
-            if ($etat == 1 && $capteur_actionneur == "luminosite") {
-                echo "220lux";
+            if ($etat == 1 && $capteur_actionneur == "luminosite" && $id_capteur_logs == $donnees['id_capteur']) {
+                $update = $connect->prepare("UPDATE capteurs set valeur=0001 WHERE id=?");
+                $update->execute(array(
+                    $id_capteur
+                ));
+                
+                echo $valeur . " lux";
             }
-            if ($etat == 1 && $capteur_actionneur == "porte") {
-                echo "open";
-            } elseif ($etat == 0 && $capteur_actionneur == "porte") {
-                echo "close";
-            }
-            if ($etat == 1 && $capteur_actionneur == "presence") {
-                echo "on";
-            } elseif ($etat == 0 && $capteur_actionneur == "presence") {
-                echo "off";
+            if ($etat == 1 && $capteur_actionneur == "presence" && $id_capteur_logs == $donnees['id_capteur']) {
+                $update = $connect->prepare("UPDATE capteurs set valeur=0001 WHERE id=?");
+                $update->execute(array(
+                    $id_capteur
+                ));
+                
+                echo $valeur . " cm";
             }
             if ($etat == 1 && $capteur_actionneur == "humidite") {
                 echo "30%";
@@ -105,7 +109,7 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
             });
         });
 
-        setInterval(function(){
+        /*setInterval(function(){
             $.ajax({
                 url:"model/fetch_trame.php",
                 method:"POST",
@@ -114,8 +118,8 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
                     $('.result').html(data);
                 }
                 */
-            });
-        },3000);
+          /*  });
+        },3000);*/
     </script>
 <?php 
 }
