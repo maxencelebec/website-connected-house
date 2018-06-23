@@ -2,7 +2,14 @@
 session_start();
 $_SESSION['type']=1;
 
-
+try
+{
+    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
 ?>
 
 <!DOCTYPE html>
@@ -57,6 +64,20 @@ $_SESSION['type']=1;
 
         <div class="infos2">
             <div class="titre">Informations habitations</div>
+
+
+            <?php
+
+            $req = $bdd->prepare('SELECT COUNT(*) as total FROM habitation');
+            $req->execute();
+
+            while ($donnees = $req->fetch())
+            {
+                $val = $donnees['total'];}
+            ?>
+
+            <div> Nombre total d'habitations : <?php echo $val; ?></div>
+
             <div class="graphe3">Nombre d'habitations connectées par jour : </div>
 
             <div id="chartNbHabitations">
@@ -104,13 +125,29 @@ $_SESSION['type']=1;
                                 <td><?= $donnees['country'];?></td>
                             </tr>
 
-                        <?php
+                            <?php
                         }
                         ?>
                     </table>
                 </div>
 
             </div>
+
+
+            <div class="cartehabitations">
+
+                <a href="geocode.php"><button class="liste" onclick="changemaphab()">Carte des habitations</button></a>
+                <div id="fenetre">
+                    <button id="close" data-ido="56" onclick="fermer()">=></button>
+                    <?php
+                    include "./geocode.php";
+                    ?>
+                </div>
+
+            </div>
+
+
+
         </div>
 
     </div>

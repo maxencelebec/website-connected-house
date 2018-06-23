@@ -16,19 +16,15 @@ try
         if ($etat==0) {
             $statement = $connect->prepare("UPDATE capteurs set etat=? WHERE id=? ");
             $statement->execute(array(1, $_POST['id_capteur']));
-            
             /* Traduction du type en valeur numérique puis envoie de la trame */
             $type = type_translate($type);
             send_trame($num, 0, $type);
-            
-            echo 'trame envoyée';
         } else {
             $statement = $connect->prepare("UPDATE capteurs set etat=? WHERE id=?");
             $statement->execute(array(0, $_POST['id_capteur']));
             /* Traduction du type en valeur numérique puis envoie de la trame */
             $type = type_translate($type);
             send_trame($num, 1, $type);
-            echo 'éteint';
         }
     }
 

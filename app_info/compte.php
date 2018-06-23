@@ -79,7 +79,7 @@
                     </div>
                     <div class="text" id="postal_code">
                         <img id="postal-icon" src="image/mailbox.png">
-                        <span class="label"> Code Postale: </span>
+                        <span class="label"> Code Postal: </span>
                         <?php echo $postal_code; ?>
                     </div>
                 </div>

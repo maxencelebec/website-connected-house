@@ -26,28 +26,85 @@ a{
 
 }
 .main{
-    overflow:auto;
     color:black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3vw;
-    margin: 10px;
 }
-.loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 1s linear infinite; /* Safari */
-    animation: spin 1s linear infinite;
+.info{
+    display: grid;
+    overflow:auto;
 }
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+td{
+    font-size: 1.6vw;
+    padding: 5px;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+th{
+    background-color: #40495E;
+    font-size: 20px;
+    color: white;
+}
+table, th, td{
+    border-collapse:collapse;
+    border:#40495E solid 2px;
+}
+.bouton{
+    color: #2cc872;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-color:white;
+    font-size: 30px;
+    outline: 0;
+}
+.bouton:hover{
+    color: darkorange;
+}
+#message{
+    font-size:0px;
+    width: 0px;
+    height: 0px;
+    border-radius: 5px;
+    visibility: hidden;
+    overflow: auto;
+}
+#contenu{
+    padding: 2px;
+    font-size: 15px;
+    width: 38vw;
+    height: 30vh;
+    border: #40495E 2px solid;
+    border-radius: 10px;
+}
+
+#repondre{
+    padding: 2px;
+    width: 38vw;
+    height: 30vh;
+    border: #40495E 2px solid;
+    border-radius: 10px;
+    outline: 0;
+}
+#close{
+    position: absolute;
+    color: #2cc872;
+    border: none;
+    cursor: pointer;
+    top:1vh;
+    right: 1vw;
+    background-color:white;
+    font-size: 20px;
+    border: #2cc872 solid 3px;
+}
+.envoie{
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    background-color: #40495e;
+    color: white;
+    font-size: 1.6vw;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 31vw;
 }

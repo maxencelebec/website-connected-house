@@ -6,7 +6,9 @@ try {
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -16,6 +18,7 @@ try {
 <link rel="stylesheet" href="dashboard_maison.css" />
 <link rel="icon" type="image/png" href="image/logo.png" />
 <script src="jQuery.js"></script>
+<script src="dashboard_maison.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
@@ -28,27 +31,65 @@ try {
         ?>
 
         <?php
-        $_SESSION['id_habitation'] = $_GET['id'];
+        if (isset($_GET['id'])) {
+            $_SESSION['id_habitation'] = $_GET['id'];
+        }
         $id_habitation = $_SESSION['id_habitation'];
         ?>
 		
           <div class="main1">
 			<div class="photo_nom">
-				<div class="photomaison"></div>
+				<div class="photomaison">
+
+                    <?php
+                    $id_hab = $_SESSION['id_habitation'];
+                    $req = $bdd->prepare("SELECT image FROM habitation WHERE id= '$id_hab'");
+                    $req->execute();
+                    while ($donnees = $req->fetch()) {
+                        $path = $donnees['image'];
+                    }
+                    ?>
+
+
+                    <style>
+                        .photomaison {
+                            background-image:url("<?php echo $path; ?>");
+                            background-size: cover;
+                            background-position: center;
+                            grid-row: 1/11;
+                            grid-column: 1/3;
+                        }
+                    </style>
+                    
+                </div>
 				<div class="nommaison">
                     <?php
                     
                     $req = $bdd->prepare('SELECT nom FROM habitation WHERE id=?');
-                    $req->execute(array(
-                        $_GET['id']
-                    ));
+                    $req->execute(array($id_habitation));
                     while ($donnees = $req->fetch()) {
                         echo $donnees["nom"];
                     }
+
                     ?>
 
                 </div>
-			</div>
+
+                <div class="changephoto">
+                    <button class="gears" onclick="selectimage()"></button>
+                    <div id="selectphoto">
+                        <button id="close" data-ido="56" onclick="fermerselectimage()">=></button>
+                        <form action="image_post.php" method="post" enctype="multipart/form-data">
+                            <input type="file" name="fileToUpload" id="fileToUpload">
+                            <input type="submit" value="Upload Image" name="submit">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+
+
 			<div class="cadre_info_fixe">
 				<div class="home_mode_titre">Home Mode</div>
 				<div class="home_mode">
@@ -78,14 +119,6 @@ try {
                                 echo "<p style='color: #2cc872'>" . $donnees["firstname"] . " " . $donnees["name"] . "</p>";
                             }
                             ?>
-					<form method="POST">
-            		<input type="submit" name="actualiserBDD" value="Bouton temporaire">
-            		</form>
-            		<?php 
-            		if(isset($_POST['actualiserBDD'])) {
-            		    include 'model/fetch_trame.php';
-            		}
-            		?>
                         </div>
 			</div>
 		</div>
@@ -112,7 +145,7 @@ try {
                             $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE id=?');
                             $req->execute(array($_GET['id']));
                             while ($donnees = $req->fetch()) {
-                                echo $donnees["nom"];
+                                echo $donnees["valeur"];
                             }
                             ?>
 
@@ -138,11 +171,7 @@ try {
                         
                         include_once "ajout_piece.php";
                         
-                        try {
-                            $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
-                        } catch (Exception $e) {
-                            die('Erreur : ' . $e->getMessage());
-                        }
+                       
                         $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
                         $req->execute(array(
                             $_SESSION["mail"]

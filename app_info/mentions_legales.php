@@ -1,3 +1,13 @@
+<?php
+session_start();
+/* Connection à la BDD */
+try {
+    $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+?>
+
 <!DOCTYPE html>
 
 <head>
@@ -36,7 +46,7 @@
 		<div> 
 		    <ul>
 			    <li> Auteur : ESN9D</li>
-				<li> Adresse : </li>
+				<li> Adresse : 28 rue Notre Dame des Champs, 75006, Paris</li>
 				<li> Contact : contact@ESN9D.fr </li>
 			</ul>
 		
