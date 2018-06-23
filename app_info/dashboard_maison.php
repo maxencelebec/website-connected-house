@@ -142,13 +142,11 @@ try {
 						<div class="case31132">
 
                             <?php
-                            /*
                             $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE id=?');
                             $req->execute(array($_GET['id']));
                             while ($donnees = $req->fetch()) {
                                 echo $donnees["valeur"];
                             }
-                            */
                             ?>
 
                         </div>

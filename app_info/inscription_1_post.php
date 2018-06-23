@@ -14,8 +14,9 @@
 	{
 	        die('Erreur : '.$e->getMessage());
 	}
-	$mdp1 = $_POST['password'];
-    $mdp2 = $_POST['password_confirm'];
+	$mdp1 = sha1($_POST['password']);
+    $mdp2 = sha1($_POST['password_confirm']);
+    echo $mdp1;
     $mail1 = htmlspecialchars($_POST['mail']);
     $mail2 = htmlspecialchars($_POST['mail_confirm']);
     echo $mail1.$mail2.$mdp1.$mdp2;
