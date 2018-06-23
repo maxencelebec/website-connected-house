@@ -31,6 +31,7 @@
           <th class="fixed-side"><?php echo $value['id'];?></th>
           <td><?php echo $value['id_type_msg'];?></td>
           <td><?php echo $value['Date_Heure'];?></td>
+          
           <td><?php echo $value['contenu_msg'];?></td>
           </tr>
         <?php }?>

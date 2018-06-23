@@ -32,8 +32,18 @@ class help_ctlr extends Controller{
     }
     function sav_post(){
         $message = $_POST["msg"];
+        $id_habitation=$_POST["maison"];
         $this->loadModel("Sav_Post");
-        $this->Sav_Post->execute_sav($message);
+        $this->Sav_Post->execute_sav($message,$id_habitation);
+        
+        
+
+    }
+    function msg_post(){
+        $message = $_POST["msg"];
+        $id_habitation=$_POST["maison"];
+        $this->loadModel("Msg_Post");
+        $this->Msg_Post->execute_msg($message,$id_habitation);
         
         
 

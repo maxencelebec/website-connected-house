@@ -1,7 +1,29 @@
 <?php
-$link = mysqli_connect("localhost", "root", ""); // define the login and password
-mysqli_select_db($link, "virifocus"); // select the database
-mysqli_set_charset($link,"utf8");
+//session_start();
+
+try
+    {
+        $bdd = new PDO('mysql:host=localapp;dbname=virifocus;charset=utf8', 'root', '');
+    }
+    catch(Exception $e)
+    {
+        die('Erreur : '.$e->getMessage());
+    }
+
+    //session_start();
+
+
+$req = $bdd->prepare('SELECT id FROM users WHERE mail=?');
+$req->execute(array($_SESSION["mail"]));
+while ($donnees = $req->fetch())
+{
+	$id_user = $donnees['id'];
+}
+
+                    
+
+
+
 ?>
 
 
@@ -19,22 +41,26 @@ mysqli_set_charset($link,"utf8");
 		<form id="ticketsav" action="<?php echo WEBROOT;?>index_mvc.php?p=help_ctlr/sav_post" method="post">
 
 
-			<label for="maison">Maison</label> <select id="maison" name="maison">
-				<option value="">Sélectionner...</option>
-				
-				 <?php
-        $res = mysqli_query($link, "select * from habitation");
-        while ($row = mysqli_fetch_array($res)) {
+			<label for="maison">Maison</label> 
+			
+			<select id="maison" name="maison">
+          <option value="">Selectionner</option>
+          <?php
+          $req = $bdd->prepare('SELECT nom,id FROM habitation WHERE id_user=?');
+        $req->execute(array($id_user));
+        while ($donnees = $req->fetch())
+                    {
+						
+            $nom_maison = $donnees['nom'];
+            $id_habitation=$donnees['id'];
+						?>
+						<option value="<?php echo $id_habitation?>"><?php echo $nom_maison;?></option>
             
-           
-            ?>
-            <option><?php echo $row["nom"];?></option>
-            
-            <?php
-        }
+					<?php } ?>
+        </select>
         
-        ?>
-			</select> <label for="device">Type de matériel défectieux</label> <select
+       
+			<label for="device">Type de matériel défectieux</label> <select
 				id="device" name="device">
 				<option value="">Sélectionner...</option>
 				<option value="cemac">CeMac</option>
@@ -51,14 +77,18 @@ mysqli_set_charset($link,"utf8");
 				name="capteur">
 				<option value="">Sélectionner...</option>
           <?php
-        $res = mysqli_query($link, "select * from capteurs");
-        while ($row = mysqli_fetch_array($res)) {
-            ?>
-            <option><?php echo $row["nom"];?></option>
-            <?php
-        }
-			
-        ?>
+		$res = mysqli_query($link, "select * from capteurs WHERE id_habitation=$id_habitation");
+		
+		$req = $bdd->prepare('SELECT nom FROM capteurs WHERE id_user=?');
+        $req->execute(array($id_user));
+        while ($donnees = $req->fetch())
+                    {
+						
+						$nom_capteur = $donnees['nom'];
+						?>
+						<option><?php echo $nom_capteur;?></option>
+            
+					<?php } ?>
      
         
    
@@ -73,6 +103,8 @@ mysqli_set_charset($link,"utf8");
 
 		</form>
 	</div>
+
+	
 
 
 

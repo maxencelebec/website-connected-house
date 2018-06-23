@@ -33,44 +33,36 @@ footer{
 .container{
 	grid-column:2;
 	display: grid;
-	grid-template-columns:40% 60%;
+	grid-template-columns:100%;
+	grid-template-rows:100%;
 	background-color:#333333;
 	color:#2cc872;
 	
-}
-
-.container .infobox{
-
-    
-}
-.container .img{
-	grid-column:1;
 	
-    background-size: cover;
-   
-    background-position: center;
-
 }
-
 
 .container form{
 	
-	grid-column:2;
+	grid-column:1;
+	grid-row:1;
+	margin-top:5%;
+	margin-left:20%;
+	margin-right:20%;
 	display:grid;
-	grid-template-rows:repeat(4,auto);
-	margin-right: 5%;
+	grid-template-rows:3vh 15vh 3vh 40vh 20vh;
+	margin-right: 15%;
 	border:#2cc872 solid 1px;
     border-radius: 5px;
-	max-width:75%;
 	
-	margin:10%;
+	
 	
 	
 }
 
+
+
 #submit{
-	display: block;
-	
+
 	text-decoration:none;
     color:white;
     background-color:#333333;
@@ -89,50 +81,43 @@ footer{
 }
 
 #maison{
-	display: block;
+	
 	border:#2cc872 solid 1px;
 	background-color:#333333;
 	font-family: Segoe UI Light;
 	color:white;
 	border-radius: 5px;
-	margin:10%;
+	margin-left:6vw;
+	margin-right:6vw;
+	margin-top:6vh;
+
 	
 }
 
 #msg{
-	display: block;
+	
 	resize:none;
 	border:#2cc872 solid 1px;
 	background-color:#333333;
 	font-family: Segoe UI Light;
 	color:white;
 	border-radius: 5px;
-	margin:10%;
+	border-radius: 5px;
+	margin-left:6vw;
+	margin-right:6vw;
+	margin-top:6vh;
+
 	
 }
 
-#utilisateur{
-	display: block;
-	resize:none;
-	border:#2cc872 solid 1px;
-	background-color:#333333;
-	font-family: Segoe UI Light;
-	color:white;
-	border-radius: 5px;
-	margin:10%;
-	
-}
+
 
 .container form label{
 	
 	transform:translate(10%,50%);
 	
 }
-#submit:hover{
-	
-	transform:scale(1.1);
-	background-color:#2cc872;
-}
+
 
 
 

@@ -13,7 +13,7 @@ $params=explode('/',$_GET['p']);
 $controller=$params[0]; // ceci conrrespond au premier élément dans les liens /help/
 $action=isset($params[1]) ? $params[1]:'index_mvc'; //ceci conrrespond au second élément dans les liens /help/action par exemple help.php
 
-require('/controllers/'.$controller.'.php');
+require(ROOT.'/controllers/'.$controller.'.php');
 $controller= new $controller();
 
 if(method_exists($controller,$action)){

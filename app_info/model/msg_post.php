@@ -1,9 +1,9 @@
 
 <?php session_start();?>
-<?php class sav_post extends Model
+<?php class msg_post extends Model
 {
 
-    public function execute_sav($message,$id_habitation)
+    public function execute_msg($message,$id_habitation)
     {
 // Connexion à la base de données
 
@@ -22,13 +22,11 @@
             $id_user = $donnees['id'];
         }
 
-        $req = $bdd->prepare('SELECT id FROM habitation WHERE id_user= ? ');
-        $req->execute(array($id_user));
-
         
+
     
 
-        $id_type_message = 2;
+        $id_type_message = 1;
 
         $req = $bdd->prepare('INSERT INTO message (id_type_msg,contenu_msg, id_utilisateur, id_habitation) VALUES (?, ?, ?, ?)');
         $req->execute(array($id_type_message, $message, $id_user, $id_habitation));
