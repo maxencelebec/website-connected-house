@@ -161,7 +161,7 @@
                         <option value="temperature"> Température </option>
                         <option value="luminosite"> Luminosité </option>
                         <option value="presence"> Présence </option>
-                        <option value="porte"> Porte </option>
+                        <option value="led"> Led </option>
                         <option value="humidite"> Humidité </option>
                         <option value="fenetre"> Fenêtre </option>
                         <option value="sonore"> Sonore </option>
