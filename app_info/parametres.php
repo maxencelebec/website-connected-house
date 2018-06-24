@@ -60,7 +60,7 @@ session_start();
 					<div class="bloc" id="bloc_profile_1">
 						<div id="name">
 							<span class="tag" id="tag_name"> Nom </span>
-							<input type="text" id="name" name="name_input" value="<?php echo $name;?>">
+							<input type="text" id="name" name="name" value="<?php echo $name;?>">
 						</div>
 						<div id="firstname">
 							<span class="tag"> Prénom </span>
@@ -98,7 +98,7 @@ session_start();
 						</div>
 						<div id="phone">
 							<span class="tag"> Numéro portable </span>
-							<input type="text" name="number_portable" value="<?php echo $phone_number_portable;?>">
+							<input type="text" name="phone_number" value="<?php echo $phone_number_portable;?>">
 						</div>
 					</div>
 					<input class="enregistrer" type="submit" value="Enregistrer">												

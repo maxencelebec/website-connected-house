@@ -37,11 +37,11 @@
 	
 	
 
-	$req = $bdd->prepare('UPDATE users SET name = ?, firstname = ? , postal_code = ?  , country = ?  , phone_number_portable = ? , mail = ?  WHERE mail= ? ');
+	$req = $bdd->prepare('UPDATE users SET name=?, firstname=? , postal_code =?  , country =?  , phone_number_portable=? , mail=?  WHERE mail=? ');
 	$req->execute(array($_POST["name"],$_POST["firstname"],$_POST["postal_code"],$_POST["country"],
 		 $_POST["phone_number"], $_POST["mail"], $_SESSION["mail"]));
 
 
 	// Redirection du visiteur vers la page suivante
-	header('Location: compte.php');
+	//header('Location: compte.php');
 ?>

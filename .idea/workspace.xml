@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="141312a6-da42-4010-bdc4-6d60c53f3d55" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app_info/dashboard_administrateur.php" afterPath="$PROJECT_DIR$/app_info/dashboard_administrateur.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/dashboard_technicien.css" afterPath="$PROJECT_DIR$/app_info/dashboard_technicien.css" />
-      <change beforePath="$PROJECT_DIR$/app_info/dashboard_technicien.js" afterPath="$PROJECT_DIR$/app_info/dashboard_technicien.js" />
-      <change beforePath="$PROJECT_DIR$/app_info/dashboard_technicien.php" afterPath="$PROJECT_DIR$/app_info/dashboard_technicien.php" />
+      <change beforePath="$PROJECT_DIR$/app_info/parametres.php" afterPath="$PROJECT_DIR$/app_info/parametres.php" />
+      <change beforePath="$PROJECT_DIR$/app_info/parametres_post.php" afterPath="$PROJECT_DIR$/app_info/parametres_post.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard_technicien.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard_technicien.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
@@ -46,21 +43,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="parametres.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_info/parametres.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="676">
+              <caret line="98" column="40" lean-forward="true" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="40" />
+              <folding>
+                <marker date="1529835241782" expanded="true" signature="525:557" ph="SELECT * FRO... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parametres_post.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/parametres_post.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="29" />
+              <folding>
+                <marker date="1529835158293" expanded="true" signature="790:830" ph="UPDATE users... " />
+                <marker date="1529835158293" expanded="true" signature="1088:1205" ph="UPDATE users... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dashboard_technicien.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="26">
               <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_mvc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_info/index_mvc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -79,18 +91,6 @@
                 <marker date="1529769021026" expanded="true" signature="4728:4766" ph="SELECT valeu... capteurs" />
                 <marker date="1529769021026" expanded="true" signature="5581:5615" ph="SELECT id FR... users" />
                 <marker date="1529769021026" expanded="true" signature="6009:6059" ph="SELECT type,... pieces" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_post.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_info/image_post.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-              <folding>
-                <marker date="1529066878521" expanded="true" signature="554:627" ph="UPDATE habitation... " />
               </folding>
             </state>
           </provider>
@@ -136,22 +136,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription_1_post.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_info/inscription_1_post.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1123">
-              <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-              <folding>
-                <marker date="1529771812396" expanded="true" signature="602:624" ph="SELECT mail users" />
-                <marker date="1529771812396" expanded="true" signature="1201:1427" ph="INSERT INTO users... " />
-                <marker date="1529771812396" expanded="true" signature="1722:1744" ph="SELECT mail users" />
-                <marker date="1529771812396" expanded="true" signature="2321:2536" ph="INSERT INTO users... " />
-                <marker date="1529771812396" expanded="true" signature="2321:2547" ph="INSERT INTO users... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -183,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app_info/modification_piece.css" />
         <option value="$PROJECT_DIR$/app_info/dashboard_simple_ajouter.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_simple_ajouter.css" />
         <option value="$PROJECT_DIR$/app_info/creation_dashboar_simple.css" />
@@ -225,7 +208,6 @@
         <option value="$PROJECT_DIR$/app_info/dashboard_maison.js" />
         <option value="$PROJECT_DIR$/app_info/dashboard_maison.css" />
         <option value="$PROJECT_DIR$/app_info/compte.php" />
-        <option value="$PROJECT_DIR$/app_info/parametres.php" />
         <option value="$PROJECT_DIR$/app_info/modification_piece(abd).php" />
         <option value="$PROJECT_DIR$/app_info/ajout_capteur.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_1_post.php" />
@@ -234,6 +216,8 @@
         <option value="$PROJECT_DIR$/app_info/dashboard_technicien.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_technicien.js" />
         <option value="$PROJECT_DIR$/app_info/dashboard_technicien.css" />
+        <option value="$PROJECT_DIR$/app_info/parametres_post.php" />
+        <option value="$PROJECT_DIR$/app_info/parametres.php" />
       </list>
     </option>
   </component>
@@ -461,7 +445,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148188000" />
+    <option name="totallyTimeSpent" value="149357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -509,13 +493,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app_info/graphtest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="80" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/views/graphics_ctlr/graphtest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -783,16 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/parametres.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="64" column="44" lean-forward="false" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-          <folding>
-            <marker date="1529759884623" expanded="true" signature="525:557" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/modification_piece(abd).php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -904,6 +871,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -921,19 +896,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_technicien.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/parametres_post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="29" />
+          <folding>
+            <marker date="1529835158293" expanded="true" signature="790:830" ph="UPDATE users... " />
+            <marker date="1529835158293" expanded="true" signature="1088:1205" ph="UPDATE users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/parametres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="98" column="40" lean-forward="true" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="40" />
+          <folding>
+            <marker date="1529835241782" expanded="true" signature="525:557" ph="SELECT * FRO... users" />
+          </folding>
         </state>
       </provider>
     </entry>
