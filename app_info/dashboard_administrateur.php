@@ -104,6 +104,7 @@ catch(Exception $e)
                             <th>Adresse</th>
                             <th>Pays</th>
                             <th>Ville</th>
+                            <th>Type</th>
 
                         </tr>
                         <?php
@@ -112,7 +113,7 @@ catch(Exception $e)
                         } catch (Exception $e) {
                             die('Erreur : ' . $e->getMessage());
                         }
-                        $req = $bdd->prepare('SELECT id, mail, name, firstname, address, city, country  FROM users');
+                        $req = $bdd->prepare('SELECT id, mail, name, firstname, address, city, country, type  FROM users WHERE type=2 || type=3');
                         $req->execute(array($_SESSION["mail"]));
                         while ($donnees = $req->fetch()) {?>
                             <tr>
@@ -123,6 +124,7 @@ catch(Exception $e)
                                 <td><?= $donnees['address'];?></td>
                                 <td><?= $donnees['city'];?></td>
                                 <td><?= $donnees['country'];?></td>
+                                <td><?php if ($donnees['type']==2){ echo "utilisateur";} else {echo "technicien"; };?></td>
                             </tr>
 
                             <?php

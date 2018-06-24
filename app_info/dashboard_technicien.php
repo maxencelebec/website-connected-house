@@ -39,7 +39,9 @@ $_SESSION['type']=3;
                     <tr>
                         <th>Date</th>
                         <th>Heure</th>
-                        <th>Id Utilisateur</th>
+                        <th>Utilisateur</th>
+                        <th>Mail</th>
+                        <th>Type message</th>
                         <th>Plus</th>
                     </tr>
                     <?php
@@ -48,7 +50,7 @@ $_SESSION['type']=3;
                     } catch (Exception $e) {
                         die('Erreur : ' . $e->getMessage());
                     }
-                    $req = $bdd->prepare('SELECT id, Date_Heure, id_utilisateur, contenu_msg, id_habitation  FROM message ORDER BY Date_Heure');
+                    $req = $bdd->prepare('SELECT id, Date_Heure, id_utilisateur, id_type_msg, contenu_msg, id_habitation  FROM message ORDER BY Date_Heure DESC ');
                     $req->execute();
                     while ($donnees = $req->fetch()) {
                         $id=$donnees['id'];?>
@@ -66,7 +68,25 @@ $_SESSION['type']=3;
                                 echo $time;
                                 ?>
                             </td>
-                            <td><?= $donnees['id_utilisateur'];?></td>
+                            <td><?php
+                                $id_habitation=$donnees['id_habitation'];
+                                $ask = $bdd->prepare('SELECT name FROM users WHERE id=?');
+                                $ask->execute(array($id_habitation));
+                                while ($infos = $ask->fetch()) {
+                                    echo $infos['name'];
+                                }
+                                ?>
+                            </td>
+                            <td><?php
+                                $id_habitation=$donnees['id_habitation'];
+                                $ask = $bdd->prepare('SELECT mail FROM users WHERE id=?');
+                                $ask->execute(array($id_habitation));
+                                while ($infos = $ask->fetch()) {
+                                    echo $infos['mail'];
+                                }
+                                ?>
+                            </td>
+                            <td> <?php if ($donnees['id_type_msg']==1){ echo "question";}else{echo "problème technique";}  ?></td>
                             <td><button id="<?= $donnees['id']; ?>" class="bouton" onclick="message()">+</button></td>
                         </tr>
                         <script>
@@ -80,7 +100,6 @@ $_SESSION['type']=3;
                                         success:function(data){
                                             $('#contenu').html(data);
                                         }
-
                                     });
                                 });
                             });

@@ -1,5 +1,5 @@
 function message(){
-    document.getElementById("message").style.fontSize="30px";
+    document.getElementById("message").style.fontSize="20px";
     document.getElementById("message").style.visibility="visible";
     document.getElementById("message").style.width="100%";
     document.getElementById("message").style.height="100%";

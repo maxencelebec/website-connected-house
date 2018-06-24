@@ -28,8 +28,8 @@ a{
 .main{
     color:black;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3vw;
+    grid-template-columns: 6fr 5fr;
+    grid-gap: 2vw;
 }
 .info{
     display: grid;
