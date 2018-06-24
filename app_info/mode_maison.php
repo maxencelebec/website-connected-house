@@ -42,16 +42,18 @@ session_start();
 						</div>
 			    			    	
     					<div class="boutton_onoff">
-                         	    <?php
-                            	$boutton = 2;
-                            	include "boutton.php";
+    						
+                         	  	<?php
+                         	  	$boutton=2;
+                       		    include "boutton-mode_eco.php";
                             	?>
+
                             	<br>ON/OFF
 						</div>
 	    			</div>
 
 			    	<div class="mon_mode" onclick="mon_mode()">
-			    		Mon Mode
+			    		 Mode Max
 			    		<button id="myBtn">modifier</button>
 
 						<div id="myModal" class="modal">
@@ -64,9 +66,10 @@ session_start();
 
 
 			   		 	<div class="boutton_onoff">
+			   		 		
                       		    <?php
-                       		    $boutton = 2;
-                       		    include "boutton.php";
+                      		    $boutton=1;
+                       		    include "boutton_mode_max.php";
                         		?>
                          		<br>ON/OFF
 						</div>   	
@@ -82,6 +85,9 @@ session_start();
 	</div>
 	
 <script>
+
+
+
 // Get the modal
 var modal = document.getElementById('myModal');
 
