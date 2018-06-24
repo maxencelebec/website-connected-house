@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="141312a6-da42-4010-bdc4-6d60c53f3d55" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/parametres_administrateur.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/parametres_administrateur.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/parametres_administrateur_post.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app_info/dashboard_administrateur.php" afterPath="$PROJECT_DIR$/app_info/dashboard_administrateur.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/header.php" afterPath="$PROJECT_DIR$/app_info/header.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/parametres_post.php" afterPath="$PROJECT_DIR$/app_info/parametres_post.php" />
-    </list>
+    <list default="true" id="141312a6-da42-4010-bdc4-6d60c53f3d55" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +33,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="dashboard_administrateur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2033">
+              <caret line="114" column="25" lean-forward="true" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+              <folding>
+                <marker date="1529853921764" expanded="true" signature="1451:1491" ph="SELECT COUNT... habitation" />
+                <marker date="1529853921764" expanded="true" signature="2985:3059" ph="SELECT id, m... users" />
+                <marker date="1529853921764" expanded="true" signature="2985:3060" ph="SELECT id, m... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="parametres_administrateur_post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/parametres_administrateur_post.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,6 +56,16 @@
                 <marker date="1529853779228" expanded="true" signature="349:397" ph="UPDATE users... " />
                 <marker date="1529853779228" expanded="true" signature="636:862" ph="INSERT INTO users... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graph_connexion.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_info/graph_connexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1976">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="89" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parametres_administrateur.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parametres_administrateur.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/parametres_administrateur.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
@@ -386,7 +402,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156399000" />
+    <option name="totallyTimeSpent" value="157045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -575,14 +591,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/geocode.php" />
-    <entry file="file://$PROJECT_DIR$/app_info/graph_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="89" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_1.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
@@ -823,18 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="114" column="25" lean-forward="true" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
-          <folding>
-            <marker date="1529853921764" expanded="true" signature="1451:1491" ph="SELECT COUNT... habitation" />
-            <marker date="1529853921764" expanded="true" signature="2985:3059" ph="SELECT id, m... users" />
-            <marker date="1529853921764" expanded="true" signature="2985:3060" ph="SELECT id, m... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/parametres.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -877,6 +873,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2033">
+          <caret line="114" column="25" lean-forward="true" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+          <folding>
+            <marker date="1529853921764" expanded="true" signature="1451:1491" ph="SELECT COUNT... habitation" />
+            <marker date="1529853921764" expanded="true" signature="2985:3059" ph="SELECT id, m... users" />
+            <marker date="1529853921764" expanded="true" signature="2985:3060" ph="SELECT id, m... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/graph_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1976">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="89" selection-end-column="5" />
           <folding />
         </state>
       </provider>
