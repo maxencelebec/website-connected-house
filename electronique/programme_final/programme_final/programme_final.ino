@@ -30,12 +30,12 @@ char temp[1];
 int RIRsensorPin = 24;    // Pin for the right IR Sensor
 float RIRsensorValue = 0;  // variable to store the value coming from the sensor
 int RIRdistance = 0; // distance for the right sensor
-bool RIR;
+bool RIR=true;
  
 int LIRsensorPin = 25;    // Pin for the right IR Sensor
 float LIRsensorValue = 0;  // variable to store the value coming from the sensor
 int LIRdistance = 0; // distance for the right sensor
-bool LIR;
+bool LIR; // not working properly
  
 ////
  
@@ -55,7 +55,7 @@ bool TEMP3;
  
 int TEMP4sensorPin = PD_0;    // Pin for the 4 Temp sensor
 float TEMP4sensorValue = 0;  // variable to store the value coming from the sensor
-bool TEMP4;
+bool TEMP4; // not working properly 
  
  
  
@@ -76,6 +76,7 @@ bool L4;
 
  
 Servo myvolet;
+bool alarmonoff=true;
  
 void setup() {
  
@@ -86,7 +87,9 @@ void setup() {
   Serial.begin(9600);
   Serial1.begin(9600);
   
- 
+  ledVal[5]=true;
+  
+  
   myvolet.attach(PF_3); // pin 39 ceci est pour le volet.
  
   //turnLedOn(7); // alume la 7 `eme LED ( qui n'existe pas et donc 'ca 'eteint les leds)
@@ -94,54 +97,80 @@ void setup() {
  
 void loop()
 {
+  float timess=micros();
   //readIRsensor();
   
-  turnLed(500000); // turn on the leds for 2 seconds
-
-  capteur_push(RIR,0x0001,'1'); // proximité gauche 
-  capteur_push(LIR,0x0002,'1'); // proximité droit
-
-  turnLed(500000); // turn on the leds for 2 seconds
+  turnLed(650000); // turn on the leds for 2 seconds
   
-  capteur_push(TEMP1,0x0001,'3'); // température 1
-  capteur_push(TEMP2,0x0002,'3'); // température 2
-  capteur_push(TEMP3,0x0003,'3'); // température 3
-  capteur_push(TEMP4,0x0004,'3'); // température 2
+  capteur_push(LIR,'0x0001','1'); // proximité gauche
+  capteur_push(RIR,'0x0002','1'); // proximité droit
 
-  turnLed(500000); // turn on the leds for 2 seconds
+  turnLed(650000); // turn on the leds for 2 seconds
+  
+  capteur_push(TEMP1,'0x0001','3'); // température 1
+  capteur_push(TEMP2,'0x0002','3'); // température 2
+  capteur_push(TEMP3,'0x0003','3'); // température 3
+  capteur_push(TEMP4,'0x0004','3'); // température 2
 
-  capteur_push(L1,0x0001,'5'); // Lumière 1
-  capteur_push(L2,0x0002,'5'); // Lumière 2 
-  capteur_push(L3,0x0003,'5'); // Lumière 3 
-  capteur_push(L4,0x0004,'5'); // Lumière 4 
+  turnLed(650000); // turn on the leds for 2 seconds
+
+  capteur_push(L1,'0x0001','5'); // Lumière 1
+  capteur_push(L2,'0x0002','5'); // Lumière 2 
+  capteur_push(L3,'0x0003','5'); // Lumière 3 
+  capteur_push(L4,'0x0004','5'); // Lumière 4 
+
+  float finalloop=micros()-timess;
+  //Serial.println(finalloop);
+  
+  
+
+  
+ 
+  
+  
   
 }
 
 void capteur_push(bool STATE,char NUM,char TYP){
-
+  
   if(Serial1.available()<=0){
-
-      if(STATE){
-        switch(TYP){
+      
+      if(STATE==true){
+        TYP=String(TYP).toInt();
+        int valueIR=readIRsensor(NUM);
+        int valueTEMP=readTempSensor(NUM);
+        int valueL=readLSensor(NUM);
+        switch (TYP) 
+        {
+          
+          
     
           case 1:
-            sendTrame(readIRsensor(NUM),NUM, '1');
+            
+            sendTrame(valueIR,NUM, '1');
+            Serial.println("Sensor IR n0 " + String(NUM) + " Sensor value " +valueIR);
             break;
           case 3:
             sendTrame(readTempSensor(NUM),NUM, '2');
+            Serial.println("Sensor TEMP n0 " + String(NUM) + " Sensor value " +String(valueTEMP));
             break;
           case 5:
             sendTrame(readLSensor(NUM),NUM, '3');
+            Serial.println("Sensor Light n0 " + String(NUM) + " Sensor value " +valueL);
             break;
+
+          
           
         }
         
       }
+      
 
   }
   else{
-    scoutTrame();
-  }
+        scoutTrame();
+      }
+  
 
   
 }
@@ -152,7 +181,7 @@ void turnLed(int x){
     for (count=0;count<6;count++) {
       if(ledVal[count]==true){
         turnLedOn(count);
-        Serial.println(count);
+        
       }
       else if (ledVal[count]==false){
         //turnLedOn(7);
@@ -160,9 +189,9 @@ void turnLed(int x){
     }
 
     i++;
-    if(Serial1.available()>0){
-      i=x+1; /// si on recoit une info on break directement la loop pour la lire. 
-    }
+    //if(Serial1.available()>0){
+      //i=x+1; /// si on recoit une info on break directement la loop pour la lire. 
+    //}
   }
 
 }
@@ -171,6 +200,7 @@ void turnLed(int x){
 void turnLedOn(int outputPin)
 // turns on output at pin 'outputPin'
 {
+  
   switch (outputPin)
   {
     case 0:
@@ -252,13 +282,15 @@ void allLedOn(int dd)
    Read the value for the IR sensor, and store it in the corresponding variables
    0 == left sensor, 1== right sensor
 */
-float readIRsensor(char i) {
- 
-  if (i == 0x0002) {
+float readIRsensor(char j) {
+  int i=String(j).toInt();
+  
+  if (i == 2) {
+    
     RIRsensorValue = analogRead(RIRsensorPin) * 0.0008056640625;
     RIRdistance = 13 * pow(RIRsensorValue, -1);
  
-    if (RIRdistance < 7) {
+    if (RIRdistance < 7 && alarmonoff) {
       alarm();
     }
     else {
@@ -268,7 +300,8 @@ float readIRsensor(char i) {
  
   }
  
-  else if(i == 0x0001) {
+  else if(i == 1) {
+    
  
     LIRsensorValue = analogRead(LIRsensorPin) * 0.0008056640625;
     LIRdistance = 13 * pow(LIRsensorValue, -1);
@@ -278,46 +311,47 @@ float readIRsensor(char i) {
   }
 }
 
-float readTempSensor(char i){
- 
+float readTempSensor(char j){
+ int i=String(j).toInt();
  
   if (i == 0x0001) {
-    TEMP1sensorValue = analogRead(TEMP1sensorPin);
+    TEMP1sensorValue = analogRead(TEMP1sensorPin)* 0.0008056640625*100;
     return TEMP1sensorValue;
   }
   else if (i == 0x0002) {
-    TEMP2sensorValue = analogRead(TEMP2sensorPin);
+    TEMP2sensorValue = analogRead(TEMP2sensorPin)* 0.0008056640625*100;
     return TEMP2sensorValue;
   }
   else if (i == 0x0003) {
-    TEMP3sensorValue = analogRead(TEMP3sensorPin);
+    TEMP3sensorValue = analogRead(TEMP3sensorPin)* 0.0008056640625*100;
     return TEMP3sensorValue;
   }
-  else if (i == 0x0004) {
-    TEMP4sensorValue = analogRead(TEMP4sensorPin);
-    return TEMP4sensorValue;
+  else { //if (i == 0x0004) {
+    ///TEMP4sensorValue = analogRead(TEMP4sensorPin);
+    return 0;
   }
   
   
 }
 
-float readLSensor(char i){
+float readLSensor(char j){
+  int i=String(j).toInt();
  
  
   if (i == 0x0001) {
-    L1sensorValue = analogRead(L1sensorPin);
+    L1sensorValue = analogRead(L1sensorPin)* 0.0008056640625*100;
     return L1sensorValue;
   }
   else if (i == 0x0002) {
-    L2sensorValue = analogRead(L2sensorPin);
+    L2sensorValue = analogRead(L2sensorPin)* 0.0008056640625*100;
     return L2sensorValue;
   }
   else if (i == 0x0003) {
-    L3sensorValue = analogRead(L3sensorPin);
+    L3sensorValue = analogRead(L3sensorPin)* 0.0008056640625*100;
     return L3sensorValue;
   }
   else if (i == 0x0004) {
-    L4sensorValue = analogRead(L4sensorPin);
+    L4sensorValue = analogRead(L4sensorPin)* 0.0008056640625*100;
     return L4sensorValue;
   }
   
@@ -336,7 +370,7 @@ void alarm() {
     // generate a frequency from the sin value
     toneVal = 2000 + (int(sinVal * 1000));
 
-analogWrite(PB_4, toneVal);
+    analogWrite(PB_4, toneVal);
   }
 }
  
@@ -351,6 +385,7 @@ char toText(char text) {
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////Scout
 void scoutTrame(){
+  
   char trame[18];
   
   for(int i=0; i<19; i++) {
@@ -359,13 +394,14 @@ void scoutTrame(){
   //Serial.print(trame);    //Copie dans la console
 if(trame[5]=='2'){    //Si requête en lecture (l'objet reçoit l'info)
     String TYP = String(trame[6]);
+    
  
     
     String NUM = String(trame[7]) + String(trame[8]);
     
     String VAL = String(trame[9]) + String(trame[10]) + String(trame[11]) + String(trame[12]);
  
-    if(Serial1.read()<=0){Serial1.println(trame);}
+    
     action(TYP, NUM, VAL);
     
   }
@@ -375,15 +411,43 @@ void action(String TYP, String NUM, String VAL) {
  
   // Actions neccessaire pour les leds
   int x = NUM.toInt();
-  if(TYP=="3" && VAL=="0001") {
+  
+  if(TYP=="A" && VAL=="0001") { // for leds
     
     ledVal[x]=true;
     Serial.println("imhere");
     //LOW
   }
-  else if(TYP=="3" && VAL=="0000") {
+  else if(TYP=="A" && VAL=="0000") {
     //HIGH
     ledVal[x]=false;
+  }
+  
+  else if(TYP == "1"){
+    Serial.println(VAL);
+    
+    if(VAL=="0001"){
+      if(NUM == "1"){
+        LIR=true;
+      }
+      else if(NUM == "2"){
+        RIR=true;
+      }
+    }
+    else if(VAL=="0000"){
+      Serial.println(NUM);
+      
+      if(NUM == "01"){
+        Serial.println("im workink1");
+        LIR=false;
+      }
+      else if(NUM =="02"){
+        Serial.println("im workink2");
+        RIR=false;
+        
+      }
+    }
+    
   }
  
  ///// 
@@ -432,7 +496,7 @@ void sendTrame(int VAL, int NUM, char TYP) {
   if(pot>1000) {
     for(int i=0; i<19; i++) {
       Serial1.print(trame[i]);  //Envoie à la passerelle
-      Serial.print(trame[i]);
+      //Serial.print(trame[i]);
     }
   }
   else {
