@@ -27,7 +27,7 @@ function send_trame($id_capteur, $etat, $type) {
 }
 
 function type_translate($type) {
-    $req = $connect->prepare("SELECT id FROM type_capteurs WHERE type=$type ");
+    $req = $connect->prepare("SELECT id FROM type_capteur WHERE type=$type ");
     $req->execute();
     while($donnees = $req->fetch()) {
         $id_type = $donnees['id'];
