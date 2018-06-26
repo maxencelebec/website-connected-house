@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 23 juin 2018 à 14:22
+-- Généré le :  mar. 26 juin 2018 à 13:27
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
   `id_capteur` varchar(30) DEFAULT NULL,
   `valeur` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `capteurs`
@@ -55,7 +55,28 @@ INSERT INTO `capteurs` (`id`, `timestamp`, `id_user`, `id_habitation`, `id_piece
 (7, NULL, 1, 1, 2, 'luminosite', 'lum1', 1, '009D501', '1'),
 (10, NULL, 1, 1, 3, 'presence', 'pres1', 1, '009D101', '1'),
 (9, NULL, 1, 1, 2, 'luminosite', 'lum2', 1, '009D502', '1'),
-(11, NULL, 1, 1, 3, 'led', 'action1', 1, '009D201', NULL);
+(12, NULL, 1, 1, 3, 'led', 'action1', 1, '009DA02', NULL),
+(13, NULL, 1, 1, 3, 'temperature', 'tempdebug', 1, '009D305', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `capteurs_liste`
+--
+
+DROP TABLE IF EXISTS `capteurs_liste`;
+CREATE TABLE IF NOT EXISTS `capteurs_liste` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(10) NOT NULL,
+  `id_habitation` int(10) NOT NULL,
+  `id_piece` int(10) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `nom` varchar(20) NOT NULL,
+  `etat` int(10) NOT NULL,
+  `id_capteur` varchar(30) NOT NULL,
+  `valeur` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -3170,7 +3191,7 @@ CREATE TABLE IF NOT EXISTS `stats` (
   `type` varchar(50) NOT NULL,
   `date` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `stats`
@@ -3229,29 +3250,32 @@ INSERT INTO `stats` (`id`, `type`, `date`) VALUES
 (50, 'connexion', '2018-06-21 11:45:51.000000'),
 (51, 'connexion', '2018-06-21 12:05:45.000000'),
 (52, 'connexion', '2018-06-21 12:11:40.000000'),
-(53, 'connexion', '2018-06-21 12:18:41.000000');
+(53, 'connexion', '2018-06-21 12:18:41.000000'),
+(54, 'connexion', '2018-06-26 12:24:01.000000'),
+(55, 'connexion', '2018-06-26 12:24:08.000000'),
+(56, 'connexion', '2018-06-26 12:26:22.000000');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `type_capteurs`
+-- Structure de la table `type_capteur`
 --
 
-DROP TABLE IF EXISTS `type_capteurs`;
-CREATE TABLE IF NOT EXISTS `type_capteurs` (
-  `id` int(11) NOT NULL,
-  `type` varchar(40) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+DROP TABLE IF EXISTS `type_capteur`;
+CREATE TABLE IF NOT EXISTS `type_capteur` (
+  `id` varchar(2) NOT NULL,
+  `type` varchar(15) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `type_capteurs`
+-- Déchargement des données de la table `type_capteur`
 --
 
-INSERT INTO `type_capteurs` (`id`, `type`) VALUES
-(1, 'presence'),
-(3, 'temperature'),
-(5, 'luminosite'),
-(2, 'led');
+INSERT INTO `type_capteur` (`id`, `type`) VALUES
+('1', 'presence'),
+('3', 'temperature'),
+('5', 'luminosite'),
+('A', 'led');
 
 -- --------------------------------------------------------
 
@@ -3276,14 +3300,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `pass_token` varchar(10) DEFAULT NULL,
   `date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`id`, `mail`, `password`, `name`, `firstname`, `address`, `postal_code`, `city`, `country`, `phone_number_home`, `phone_number_portable`, `type`, `pass_token`, `date`) VALUES
-(1, 'test@test.com', 'test', 'Nom', 'Prénom', '54 Rue du Debug', 92140, 'Clamart', 'France', 240656565, 612234556, '2', NULL, '2018-06-23 12:34:48');
+(1, 'test@test.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'Lebec', 'Prénom', '12 rue waldeck rousseau', 92600, 'Asnière-sur-seine', 'France', 240656565, 658856338, '2', NULL, '2018-06-23 12:34:48'),
+(5, 'admin@isep.fr', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Lebec', 'Maxence', '12 rue waldeck rousseau', 92600, NULL, 'France', 147937821, 658856338, '1', NULL, '2018-06-23 17:27:36'),
+(6, 'tech@tech.fr', 'c95ee47689a0aaec70c3eb950244657722c69b1f', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '3', NULL, '2018-06-23 17:41:05');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

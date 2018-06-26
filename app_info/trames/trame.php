@@ -145,7 +145,7 @@ if(isset($_POST['actu'])) {
                     $checksum,
                     $timestamp
                 ));
-                var_dump($req);
+                var_dump($timestamp);
             }
         }
     }
@@ -160,12 +160,17 @@ if(isset($_POST['init'])) {
     $_SESSION['last_size'] = 0;
 }
 if(isset($_POST['envoi'])) {
+    include '../model/send_trame.php';
+    $id_capteur = "009DA04";
+    $num = substr($id_capteur, 5);
+    $etat = "1";
+    $type = type_translate("presence");
     /* Récupération du timestamp */
     date_default_timezone_set('Europe/Paris');
     $time = date("YmdHis");
-    
     /* Ecriture de la trame */
-    $trame = "1009D2A0200010LEC50".$time;
+    $trame = "1009D2".$type.$num.'000'.$etat."0LEC50".$time;
+    var_dump($trame);
     
     /* Envoie de la trame vers le serveur */
     $url = 'projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=009D&TRAME='.$trame;
@@ -174,11 +179,5 @@ if(isset($_POST['envoi'])) {
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_exec($ch);
     curl_close($ch);
-    
-    var_dump($trame);
 }
-
-$id_capteur = "009DA02";
-$num = substr($id_capteur, 5);
-var_dump($num);
 ?>  
