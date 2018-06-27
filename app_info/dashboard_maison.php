@@ -140,24 +140,60 @@ try {
 				<div class="informations_valeur">
 					<div id="eau" onclick="eau()">
 						<div class="case31111">Luminosité</div>
-						<div class="case31112"></div>
+						<div class="case31112">
+                            <?php
+                            $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE type="luminosite"');
+                            $req->execute();
+                            $count=1;
+                            $sum=0;
+                            while ($donnees = $req->fetch()) {
+                                $sum=$sum+hexdec($donnees['valeur'])*100;
+                                $count++;
+                            }
+                            $valeur= $sum/($count-1);
+                            $valeur=number_format ( $valeur, $decimals = 0);
+                            echo $valeur." lux";
+                            if ($count==1){ echo "?";}
+                            ?>
+                        </div>
 					</div>
 					<div id="temperature" onclick="temperature()">
 						<div class="case31121">Température</div>
-						<div class="case31122"></div>
+						<div class="case31122">
+                            <?php
+                            $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE type="temperature"');
+                            $req->execute();
+                            $count=1;
+                            $sum=0;
+                            while ($donnees = $req->fetch()) {
+                                $sum=$sum+hexdec($donnees['valeur']);
+                                $count++;
+                            }
+                            $valeur= $sum/($count-1);
+                            $valeur=number_format ( $valeur, $decimals = 1);
+                            echo $valeur."°C";
+                            if ($count==0){ echo "?";}
+                            ?>
+
+                        </div>
 					</div>
 					<div id="consommation" onclick="consommation()">
 						<div class="case31131">Utilisation</div>
 						<div class="case31132">
 
                             <?php
-                            $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE id=?');
-                            $req->execute(array(
-                                $_GET['id']
-                            ));
+                            $req = $bdd->prepare('SELECT etat FROM capteurs');
+                            $req->execute();
+                            $count=1;
+                            $nb_capteur=0;
                             while ($donnees = $req->fetch()) {
-                                echo $donnees["valeur"];
+                                if ($donnees['etat']==1) {
+                                    $count++;
+                                }
+                                $nb_capteur++;
                             }
+                            echo $count-1 ."/".$nb_capteur;
+
                             ?>
 
                         </div>

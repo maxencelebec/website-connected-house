@@ -22,7 +22,12 @@
 
     $regex = preg_match($check_mail,$mail1);
     if ($regex==0){
-        header("location:inscription_habitant_1.php");
+        if ($_SESSION['type'] == 2) {
+            header("location:inscription_habitant_1.php");
+        }
+        else if ($_SESSION['type'] == 3) {
+            header("location:inscription_technicien_1.php");
+        }
     }
     else {
         
