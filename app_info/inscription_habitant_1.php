@@ -53,8 +53,9 @@
 
         <div class="captcha">
 
-            <div><input type="checkbox"> J'accepte les termes et conditions d'utilisation</div>
-            <input class="valider" type="submit" value="Valider">
+            <div><input type="checkbox" id="check" onclick="control(this.id)"> J'accepte les termes et conditions générales d'utilisation</div>
+            <div id="erreur"></div>
+            <input class="valider" type="submit" value="Valider" id="envoie">
 
 
         </div>
@@ -66,5 +67,6 @@
 </div>
 
 </body>
+<script src="inscription_1.js"></script>
 
 </html>
