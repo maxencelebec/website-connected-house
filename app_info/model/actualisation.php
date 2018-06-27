@@ -1,0 +1,13 @@
+<script>
+setInterval(function(){
+$.ajax({
+    url:"fetch_trame.php",
+    method:"POST",
+    /*
+    success:function(data){
+        $('.result').html(data);
+    }
+    */
+  });
+},3000);
+</script>
