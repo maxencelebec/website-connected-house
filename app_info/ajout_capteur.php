@@ -21,6 +21,7 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
         $etat = $donnees['etat'];
         $nom=$donnees['nom'];
         if ($capteur_actionneur=="led"){echo "- ".$nom." -";};
+        if ($capteur_actionneur=="ventilateur"){echo "- ".$nom." -";};
         $req = $connect->prepare('SELECT id_capteur, valeur FROM logs WHERE id_capteur=?
                           ORDER BY timestamp DESC LIMIT 1');
         $req->execute(array($donnees['id_capteur']));
@@ -49,7 +50,7 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
 
                 echo "- ".$nom." -<br>";
                 if ($etat == 1){
-                    echo $valeur . " lux";
+                    echo hexdec($valeur) . "00 lux";
                 }
             }
 

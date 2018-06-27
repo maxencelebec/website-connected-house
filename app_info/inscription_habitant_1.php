@@ -53,11 +53,9 @@
 
         <div class="captcha">
 
-            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-            <br/>
+            <div><input type="checkbox"> J'accepte les termes et conditions d'utilisation</div>
             <input class="valider" type="submit" value="Valider">
 
-            <a class="lien" href="inscription_habitant_2.php"><p>Next Page Debug</p></a>
 
         </div>
 

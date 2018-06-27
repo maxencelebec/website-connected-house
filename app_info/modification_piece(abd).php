@@ -162,6 +162,7 @@
                         <option value="humidite"> Humidité </option>
                         <option value="fenetre"> Fenêtre </option>
                         <option value="sonore"> Sonore </option>
+                        <option value="ventilateur"> Ventilateur </option>
                     </select></div>
                     <br/>
                     <div>Nommer votre capteur

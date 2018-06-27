@@ -51,10 +51,10 @@ function ajout_piece($piece,$id)
                             $counter=0;
                             while ($donnees = $ask->fetch())
                             {
-                                echo $donnees['valeur']."°C";
+                                echo hexdec($donnees['valeur'])."°C";
                                 $counter=1;
                             }
-
+                            if ($counter==0){echo "?";}
 
                             ?>
                         </div>
