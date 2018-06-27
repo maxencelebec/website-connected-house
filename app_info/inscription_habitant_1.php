@@ -54,7 +54,7 @@
         <div class="captcha">
 
             <div><input type="checkbox" id="check" onclick="control(this.id)"> J'accepte les termes et conditions générales d'utilisation</div>
-            <div id="erreur"></div>
+            <div id="erreur" style="color: red"></div>
             <input class="valider" type="submit" value="Valider" id="envoie">
 
 

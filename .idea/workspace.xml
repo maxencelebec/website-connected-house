@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="141312a6-da42-4010-bdc4-6d60c53f3d55" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app_info/Inscription_1.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app_info/Inscription_1.js" afterPath="$PROJECT_DIR$/app_info/Inscription_1.js" />
       <change beforePath="$PROJECT_DIR$/app_info/inscription_habitant_1.php" afterPath="$PROJECT_DIR$/app_info/inscription_habitant_1.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,21 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="inscription_habitant_1.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="inscription_habitant_1.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="265">
+              <caret line="56" column="43" lean-forward="true" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Inscription_1.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Inscription_1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/Inscription_1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            <state relative-caret-position="130">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -115,8 +114,8 @@
         <option value="$PROJECT_DIR$/app_info/ajout_piece.php" />
         <option value="$PROJECT_DIR$/app_info/modification_piece(abd).php" />
         <option value="$PROJECT_DIR$/app_info/ajout_capteur.php" />
-        <option value="$PROJECT_DIR$/app_info/inscription_habitant_1.php" />
         <option value="$PROJECT_DIR$/app_info/Inscription_1.js" />
+        <option value="$PROJECT_DIR$/app_info/inscription_habitant_1.php" />
       </list>
     </option>
   </component>
@@ -345,7 +344,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171896000" />
+    <option name="totallyTimeSpent" value="172634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -846,18 +845,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_1.php">
+    <entry file="file://$PROJECT_DIR$/app_info/Inscription_1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="130">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/Inscription_1.js">
+    <entry file="file://$PROJECT_DIR$/app_info/inscription_habitant_1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        <state relative-caret-position="265">
+          <caret line="56" column="43" lean-forward="true" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
           <folding />
         </state>
       </provider>

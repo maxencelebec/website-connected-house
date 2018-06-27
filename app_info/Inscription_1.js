@@ -2,8 +2,8 @@ var valid_check=false;
 
 //fonction qui effectue des controles sur le nom et le mail
 function control(control) {
-    var test = document.getElementById(control).value;
-        if (test==1) {
+    var test = document.getElementById(control).checked;
+        if (test==false) {
             valid_check = false;
         }
         else {
