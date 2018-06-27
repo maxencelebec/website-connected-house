@@ -70,4 +70,7 @@ for ($i = 0, $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
         }
     }
 }
+
+$id = $_GET['id'];
+header("Location: ../dashboard_maison.php?id=$id");
 ?>

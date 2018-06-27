@@ -125,7 +125,7 @@ try {
                             ?>
                         </div>
                 <div class="refresh_bdd">
-                	<a class="deconnexion" href="model/fetch_trame.php">
+                	<a class="deconnexion" href="model/fetch_trame.php?id=<?php echo $_SESSION['id_habitation']; ?>">
                 		<button> Actualiser BDD </button>
                 	</a>
                 </div>
