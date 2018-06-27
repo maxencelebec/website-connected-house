@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="141312a6-da42-4010-bdc4-6d60c53f3d55" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app_info/dashboard_maison.php" afterPath="$PROJECT_DIR$/app_info/dashboard_maison.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/inscription_1_post.php" afterPath="$PROJECT_DIR$/app_info/inscription_1_post.php" />
-      <change beforePath="$PROJECT_DIR$/app_info/inscription_technicien_1.php" afterPath="$PROJECT_DIR$/app_info/inscription_technicien_1.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app_info/ajout_capteur.css" afterPath="$PROJECT_DIR$/app_info/ajout_capteur.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="728">
@@ -31,6 +30,58 @@
                 <marker date="1530130689118" expanded="true" signature="7277:7311" ph="SELECT id FR... users" />
                 <marker date="1530130689118" expanded="true" signature="7705:7755" ph="SELECT type,... pieces" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajout_piece.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/ajout_piece.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
+              <folding>
+                <marker date="1530138060145" expanded="true" signature="366:411" ph="SELECT valeu... capteurs" />
+                <marker date="1530138060145" expanded="true" signature="772:806" ph="SELECT nom F... pieces" />
+                <marker date="1530138060145" expanded="true" signature="1310:1355" ph="SELECT valeu... capteurs" />
+                <marker date="1530138060145" expanded="true" signature="1310:1376" ph="SELECT valeu... capteurs" />
+                <marker date="1530138060145" expanded="true" signature="2969:3016" ph="SELECT id, t... capteurs" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajout_piece.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/ajout_piece.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="143" column="20" lean-forward="false" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajout_capteur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+              <folding>
+                <marker date="1530117840658" expanded="true" signature="376:437" ph="SELECT etat,... capteurs" />
+                <marker date="1530117840658" expanded="true" signature="766:878" ph="SELECT id_ca... logs" />
+                <marker date="1530117840658" expanded="true" signature="1231:1270" ph="UPDATE capteurs... " />
+                <marker date="1530117840658" expanded="true" signature="1693:1732" ph="UPDATE capteurs... " />
+                <marker date="1530117840658" expanded="true" signature="2141:2180" ph="UPDATE capteurs... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajout_capteur.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app_info/inscription_habitant_5_post.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_habitant_5.php" />
         <option value="$PROJECT_DIR$/app_info/modification_piece.php" />
         <option value="$PROJECT_DIR$/app_info/Graph_Display.js" />
@@ -108,8 +158,6 @@
         <option value="$PROJECT_DIR$/app_info/parametres_administrateur.php" />
         <option value="$PROJECT_DIR$/app_info/parametres_administrateur.css" />
         <option value="$PROJECT_DIR$/app_info/modification_piece_post.php" />
-        <option value="$PROJECT_DIR$/app_info/ajout_piece.css" />
-        <option value="$PROJECT_DIR$/app_info/ajout_piece.php" />
         <option value="$PROJECT_DIR$/app_info/modification_piece(abd).php" />
         <option value="$PROJECT_DIR$/app_info/ajout_capteur.php" />
         <option value="$PROJECT_DIR$/app_info/Inscription_1.js" />
@@ -117,6 +165,9 @@
         <option value="$PROJECT_DIR$/app_info/inscription_technicien_1.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_1_post.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_maison.php" />
+        <option value="$PROJECT_DIR$/app_info/ajout_piece.css" />
+        <option value="$PROJECT_DIR$/app_info/ajout_piece.php" />
+        <option value="$PROJECT_DIR$/app_info/ajout_capteur.css" />
       </list>
     </option>
   </component>
@@ -345,7 +396,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174670000" />
+    <option name="totallyTimeSpent" value="176850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -393,13 +444,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app_info/footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/creation_dashboard_simple.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3614">
@@ -578,14 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="26" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/parametres.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -725,14 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/ajout_piece.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="73" column="38" lean-forward="false" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/modification_piece_post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
@@ -755,20 +783,6 @@
             <marker date="1526031654886" expanded="true" signature="2518:2556" ph="SELECT surfa... pieces" />
             <marker date="1526031654886" expanded="true" signature="2919:2960" ph="SELECT * FRO... capteurs" />
             <marker date="1526031654886" expanded="true" signature="3586:3638" ph="SELECT type,... capteurs" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/ajout_piece.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="56" column="54" lean-forward="false" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
-          <folding>
-            <marker date="1530110278254" expanded="true" signature="366:411" ph="SELECT valeu... capteurs" />
-            <marker date="1530110278254" expanded="true" signature="772:806" ph="SELECT nom F... pieces" />
-            <marker date="1530110278254" expanded="true" signature="1310:1355" ph="SELECT valeu... capteurs" />
-            <marker date="1530110278254" expanded="true" signature="1310:1376" ph="SELECT valeu... capteurs" />
-            <marker date="1530110278254" expanded="true" signature="2969:3016" ph="SELECT id, t... capteurs" />
           </folding>
         </state>
       </provider>
@@ -829,24 +843,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <marker date="1530117840658" expanded="true" signature="376:437" ph="SELECT etat,... capteurs" />
-            <marker date="1530117840658" expanded="true" signature="766:878" ph="SELECT id_ca... logs" />
-            <marker date="1530117840658" expanded="true" signature="1231:1270" ph="UPDATE capteurs... " />
-            <marker date="1530117840658" expanded="true" signature="1693:1732" ph="UPDATE capteurs... " />
-            <marker date="1530117840658" expanded="true" signature="2141:2180" ph="UPDATE capteurs... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_simple.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/dashboard_administrateur.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -866,6 +874,50 @@
             <marker date="1530130689118" expanded="true" signature="7277:7311" ph="SELECT id FR... users" />
             <marker date="1530130689118" expanded="true" signature="7705:7755" ph="SELECT type,... pieces" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/ajout_piece.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
+          <folding>
+            <marker date="1530138060145" expanded="true" signature="366:411" ph="SELECT valeu... capteurs" />
+            <marker date="1530138060145" expanded="true" signature="772:806" ph="SELECT nom F... pieces" />
+            <marker date="1530138060145" expanded="true" signature="1310:1355" ph="SELECT valeu... capteurs" />
+            <marker date="1530138060145" expanded="true" signature="1310:1376" ph="SELECT valeu... capteurs" />
+            <marker date="1530138060145" expanded="true" signature="2969:3016" ph="SELECT id, t... capteurs" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <marker date="1530117840658" expanded="true" signature="376:437" ph="SELECT etat,... capteurs" />
+            <marker date="1530117840658" expanded="true" signature="766:878" ph="SELECT id_ca... logs" />
+            <marker date="1530117840658" expanded="true" signature="1231:1270" ph="UPDATE capteurs... " />
+            <marker date="1530117840658" expanded="true" signature="1693:1732" ph="UPDATE capteurs... " />
+            <marker date="1530117840658" expanded="true" signature="2141:2180" ph="UPDATE capteurs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/ajout_piece.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="143" column="20" lean-forward="false" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
