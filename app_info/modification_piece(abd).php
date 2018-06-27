@@ -64,19 +64,17 @@
             <br>
 
             <div class="piece">
-                
-                <img class="image" src="image/<?php echo"$piece"?>.jpg"/>
-                <div class="nom_piece">
-                    <?php
+                <img class="image" src="image/<?php
                     $req = $bdd->prepare('SELECT type FROM pieces WHERE id= ? ');
                     $req->execute(array($link));
 
                     while ($donnees = $req->fetch())
                     {
                         $piece = $donnees['type'];
+                        echo $piece;
                     }
-                    ?>
-
+                    ?>.jpg"/>
+                <div class="nom_piece">
                     <?php
                         echo $piece;
                     ?>

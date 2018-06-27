@@ -24,22 +24,37 @@ function ajout_piece($piece,$id)
         while ($donnees = $req->fetch())
         {
             $valeur = $donnees['valeur'];
-        }   
+        }
+
         ?>
 
         <div class="type_piece">
             <div class="piece_titre_donnees">
-                <div class="photo_<?php echo $piece ?>"><?php echo $piece ?></div>
+                <div class="photo_<?php echo $piece ?>">
+                    <?php
+                    $req = $bdd->prepare('SELECT nom FROM pieces WHERE id= ? ');
+                    $req->execute(array($id));
+
+                    while ($donnees = $req->fetch())
+                    {
+                        echo $donnees['nom'];
+                    }
+                    ?>
+                </div>
                 <div class ="donnees">
                     <div class="temp">
                         <div class="temp_img"></div>
                         <div class="temp_txt">
                             <?php
+                            $ask = $bdd->prepare('SELECT valeur FROM capteurs WHERE id_piece=? && type="temperature"');
+                            $ask->execute(array($id));
+                            $counter=0;
+                            while ($donnees = $ask->fetch())
+                            {
+                                echo $donnees['valeur']."°C";
+                                $counter=1;
+                            }
 
-                            if (isset($valeur)==false) {echo "?";}
-
-
-                            elseif (isset($valeur)==true) {echo "$valeur" ;}
 
                             ?>
                         </div>

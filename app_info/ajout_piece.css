@@ -60,6 +60,26 @@
     background-size: cover;
     background-position: center;
 }
+.photo_entree{
+    border-right: lightgrey solid 2px;
+    font-size:  1.5vw;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: grey;
+    background-image: url("image/door.png");
+    background-size: cover;
+    background-position: center;
+}
+.photo_grenier{
+    border-right: lightgrey solid 2px;
+    font-size:  1.5vw;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: grey;
+    background-image: url("image/grenier.png");
+    background-size: cover;
+    background-position: center;
+}
 
 .donnees{
     display: grid;
