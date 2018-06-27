@@ -149,14 +149,14 @@
             </div>
 
             <div class="case_ajout">
-                <div class="case_ajout1">definir un capteur <hr></div>
+                <div class="case_ajout1">Definir un capteur <hr></div>
                 <div class="case_ajout2">
                     
 
                 <form action ="modification_piece_post.php?id=<?php echo $link;?>&id2=<?php echo $id_habitation; ?>" method="post" class="nommage">
                     <br/>
                     <div > Choisir un capteur
-                    <select name="type"  style="height: 30px; width: 220px;">
+                    <select name="type"  style="height: 30px; width: 210px;margin-left: 55px">
                         <option value="temperature"> Température </option>
                         <option value="luminosite"> Luminosité </option>
                         <option value="presence"> Présence </option>
@@ -167,12 +167,12 @@
                     </select></div>
                     <br/>
                     <div>Nommer votre capteur
-                    <input type="text" name="nom" size="27" maxlength="15" style="height: 30px; text-align: center; margin-left: 10px" /></div>
+                    <input type="text" name="nom" size="27" maxlength="15" style="height: 30px; text-align: center; margin-left: 20px" /></div>
                     <br/>
                     <div>Entrer l'ID du capteur                 
                     <input class="idcapteur" type="text" name="IDcapteur" size="27" maxlength="20" style="height: 30px; text-align: center; margin-left: 35px" /></div> 
                     <br/>
-                    <input type="submit" class="boutonAjout" name="valider" value="Ajouter" style="margin-left: 365px; width:220px" />
+                    <input type="submit" class="boutonAjout" name="valider" value="Ajouter" style="margin-left: 200px; width:220px" />
                 </form>
               </div>
             </div>
