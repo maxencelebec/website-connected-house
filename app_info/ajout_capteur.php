@@ -3,7 +3,6 @@
 
 
 <?php
-
 function ajout_capteur($capteur_actionneur, $id, $id_capteur)
 {
     ?>
@@ -38,7 +37,7 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
                 
                 echo "- ".$nom." -<br>";
                 if ($etat == 1){
-                    echo $valeur . "°C";
+                    echo hexdec($valeur) . "°C";
                 }
             }
 
@@ -80,7 +79,8 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
         }
         
     }
-  
+
+    
 
 
 ?>

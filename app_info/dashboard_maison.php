@@ -52,41 +52,45 @@ try {
 
 
                     <style>
-                        .photomaison {
-                            background-image:url("<?php echo $path; ?>");
-                            background-size: cover;
-                            background-position: center;
-                            grid-row: 1/11;
-                            grid-column: 1/3;
-                        }
-                    </style>
-                    
-                </div>
+.photomaison {
+	background-image: url("<?php echo $path; ?>");
+	background-size: cover;
+	background-position: center;
+	grid-row: 1/11;
+	grid-column: 1/3;
+}
+</style>
+
+				</div>
 				<div class="nommaison">
                     <?php
                     
                     $req = $bdd->prepare('SELECT nom FROM habitation WHERE id=?');
-                    $req->execute(array($id_habitation));
+                    $req->execute(array(
+                        $id_habitation
+                    ));
                     while ($donnees = $req->fetch()) {
                         echo $donnees["nom"];
                     }
-
+                    
                     ?>
 
                 </div>
 
-                <div class="changephoto">
-                    <button class="gears" onclick="selectimage()"></button>
-                    <div id="selectphoto">
-                        <button id="close" data-ido="56" onclick="fermerselectimage()">x</button>
-                        <form action="image_post.php" method="post" enctype="multipart/form-data">
-                            <input class="file" type="file" name="fileToUpload" id="fileToUpload">
-                            <input class="upload" type="submit" value="Upload Image" name="submit">
-                        </form>
-                    </div>
-                </div>
+				<div class="changephoto">
+					<button class="gears" onclick="selectimage()"></button>
+					<div id="selectphoto">
+						<button id="close" data-ido="56" onclick="fermerselectimage()">x</button>
+						<form action="image_post.php" method="post"
+							enctype="multipart/form-data">
+							<input class="file" type="file" name="fileToUpload"
+								id="fileToUpload"> <input class="upload" type="submit"
+								value="Upload Image" name="submit">
+						</form>
+					</div>
+				</div>
 
-            </div>
+			</div>
 
 
 
@@ -120,6 +124,11 @@ try {
                             }
                             ?>
                         </div>
+                <div class="refresh_bdd">
+                	<a class="deconnexion" href="model/fetch_trame.php">
+                		<button> Actualiser BDD </button>
+                	</a>
+                </div>
 			</div>
 		</div>
 
@@ -143,7 +152,9 @@ try {
 
                             <?php
                             $req = $bdd->prepare('SELECT valeur FROM capteurs WHERE id=?');
-                            $req->execute(array($_GET['id']));
+                            $req->execute(array(
+                                $_GET['id']
+                            ));
                             while ($donnees = $req->fetch()) {
                                 echo $donnees["valeur"];
                             }
@@ -158,9 +169,9 @@ try {
 				<div class="fond_triangle">
 
                     <?php
-
+                    
                     require ('./views/graphics_ctlr/graphdashboard.php');
-
+                    
                     ?>
 
                 </div>
@@ -171,7 +182,6 @@ try {
                         
                         include_once "ajout_piece.php";
                         
-                       
                         $req = $bdd->prepare('SELECT id FROM users WHERE mail= ? ');
                         $req->execute(array(
                             $_SESSION["mail"]
@@ -196,9 +206,10 @@ try {
                         ?>
                         
                 <div class="boutton1">
-                    <a href="inscription_habitant_5.php?id=<?php echo $_SESSION["id_habitation"]; ?>"
-						class="ajouterpiece"> + ajouter pièce </a>
-                    <a href="choix_piece.php?id=<?php echo $id_habitation; ?>"
+					<a
+						href="inscription_habitant_5.php?id=<?php echo $_SESSION["id_habitation"]; ?>"
+						class="ajouterpiece"> + ajouter pièce </a> <a
+						href="choix_piece.php?id=<?php echo $id_habitation; ?>"
 						class="ajouterpiece"> modifier pièce </a>
 				</div>
 
