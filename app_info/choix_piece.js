@@ -35,3 +35,5 @@ document.getElementById("tablink4").addEventListener("click", function(){
 document.getElementById("tablink5").addEventListener("click", function(){
 	openTab(event, "Chambre");
 });
+
+document.getElementById("tablink1").click();
