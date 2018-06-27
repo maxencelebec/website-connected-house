@@ -1,4 +1,5 @@
 <?php
+session_start();
 /* Récupération des données sur le site fourni */
 $url = 'projets-tomcat:8080/appService?ACTION=GETLOG&TEAM=009D';
 
@@ -8,6 +9,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HEADER, 0);
 $data = curl_exec($ch);
 curl_close($ch);
+
 
 /* Stockage des trames dans un array */
 $data_tab = preg_split("/([0-9]009D)/", $data, - 1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
@@ -20,7 +22,11 @@ try {
     die('Erreur : ' . $e->getMessage());
 }
 
-for ($i = 0, $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
+if(is_null($_SESSION['previousSize'])) {
+    $SESSION_['previousSize'] = 0;
+}
+
+for ($i = $_SESSION['previousSize'], $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
     
     /* Récupération de la trame dans data_tab */
     $j = 2 * $i;
@@ -70,6 +76,7 @@ for ($i = 0, $size_demi = round(count($data_tab) / 2); $i < $size_demi; $i ++) {
         }
     }
 }
+$_SESSION['previousSize'] = $size_demi;
 
 $id = $_GET['id'];
 header("Location: ../dashboard_maison.php?id=$id");
