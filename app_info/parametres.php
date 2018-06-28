@@ -47,7 +47,7 @@ session_start();
 			
 				<!-- Boutons des tabs (tableau horizontal) -->
 				<div class="tab">
-				<button class="tablinks" id="tablink1">Profile</button>		<!-- Le bouton "Profile" est ouvert par d�fault (voir JS) -->
+				<button class="tablinks" id="tablink1">Profil</button>		<!-- Le bouton "Profile" est ouvert par d�fault (voir JS) -->
 				<button class="tablinks" id="tablink2">Compte</button>
 				<button class="tablinks" id="tablink3">Confidentialit&eacute;</button>
 				<button class="tablinks" id="tablink4">Notifications</button>

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="image_post.css"/>
+
 <?php
 session_start();
 $target_dir = "image/uploads/";
@@ -18,10 +20,6 @@ if(isset($_POST["submit"])) {
     $uploadOk = 1;
 }
 
-// Check if file already exists
-if (file_exists($target_file)) {
-    $uploadOk = 0;
-}
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000) {
     echo "Sorry, your file is too large.";
@@ -33,18 +31,18 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;
 }
+
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     ?>
     <p>
         Sorry, your file was not uploaded.<br>
         That's because of one of these reasons :<br><br>
-            - You had already uploaded this file ;<br>
-            - It was too large (maximum is 5 MB) ;<br>
-            - It was not in one of these formats : JPG JPEG, PNG or GIF.<br>
+            - It was too large (maximum size is 5 MB) ;<br>
+            - It was not in one of these formats : JPG, JPEG, PNG or GIF.<br>
     </p>
 
-    <a href="dashboard_maison.php"><button>Back to main menu</button></a>
+    <a href="dashboard_maison.php"><button class="upload">Back to main menu</button></a>
 
     <?php
 

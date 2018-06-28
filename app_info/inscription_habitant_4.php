@@ -59,7 +59,6 @@
             <br/>
             <input class="valider" type="submit" value="Valider">
 
-            <a class="lien" href="inscription_habitant_5.php"><p>Next Page Debug</p></a>
 
         </div>
 
