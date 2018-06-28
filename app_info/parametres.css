@@ -114,3 +114,9 @@ body
 	width: 100px;
 	height: 30px;
 }
+
+#compte,#confidentialite,#notifications {
+	margin-top: 30px;
+	color: #2cc872;
+	font-weight: bold;
+}

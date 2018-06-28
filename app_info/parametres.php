@@ -106,13 +106,13 @@ session_start();
 				</div>			
 				<!-- ---------------------------------------------------- -->
 				<!-- Tab 2 : Compte -->
-				<div class="tabcontent" id="compte"> Test2 </div>		
+				<div class="tabcontent" id="compte"> En construction </div>
 				<!-- ---------------------------------------------------- -->		
 				<!-- Tab 3 : Confidentialit� -->
-				<div class="tabcontent" id="confidentialite"> Test3 </div>		
+				<div class="tabcontent" id="confidentialite"> En construction </div>
 				<!-- ---------------------------------------------------- -->		
 				<!-- Tab 4 : Notifications -->
-				<div class="tabcontent" id="notifications"> Test4 </div>
+				<div class="tabcontent" id="notifications"> En construction </div>
 			<?php
 				include "footer.php";
 			?>

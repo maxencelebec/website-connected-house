@@ -41,11 +41,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_post.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="image_post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/image_post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="43" selection-start-column="43" selection-end-column="43" />
+            <state relative-caret-position="-85">
+              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parametres.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_info/parametres.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="114" column="57" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parametres.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_info/parametres.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="120" column="22" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -111,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app_info/graphtest.php" />
         <option value="$PROJECT_DIR$/app_info/views/layout/graph.php" />
         <option value="$PROJECT_DIR$/app_info/controllers/graphics_ctlr.php" />
         <option value="$PROJECT_DIR$/app_info/dashboard_simple.css" />
@@ -157,11 +174,12 @@
         <option value="$PROJECT_DIR$/app_info/ajout_piece.php" />
         <option value="$PROJECT_DIR$/app_info/ajout_capteur.css" />
         <option value="$PROJECT_DIR$/app_info/inscription_habitant_4.php" />
-        <option value="$PROJECT_DIR$/app_info/parametres.php" />
         <option value="$PROJECT_DIR$/app_info/inscription_habitant_2.php" />
         <option value="$PROJECT_DIR$/app_info/creation_dashboard_simple.php" />
         <option value="$PROJECT_DIR$/app_info/image_post.css" />
         <option value="$PROJECT_DIR$/app_info/image_post.php" />
+        <option value="$PROJECT_DIR$/app_info/parametres.php" />
+        <option value="$PROJECT_DIR$/app_info/parametres.css" />
       </list>
     </option>
   </component>
@@ -183,7 +201,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-335" />
     <option name="y" value="-25" />
     <option name="width" value="1750" />
@@ -373,12 +391,12 @@
       <workItem from="1529061515740" duration="5147000" />
       <workItem from="1530138664364" duration="1646000" />
       <workItem from="1530140438623" duration="122000" />
-      <workItem from="1530167752205" duration="871000" />
+      <workItem from="1530167752205" duration="1660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179489000" />
+    <option name="totallyTimeSpent" value="180278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -459,13 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/parametres.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -608,13 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/parametres.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/ajout_capteur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
@@ -749,8 +753,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/image_post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        <state relative-caret-position="-85">
+          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/parametres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="114" column="57" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/parametres.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="120" column="22" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
         </state>
       </provider>
     </entry>
