@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="image_post.css"/>
+
 <?php
 session_start();
 $target_dir = "image/uploads/";
@@ -29,6 +31,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;
 }
+
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     ?>
@@ -39,7 +42,7 @@ if ($uploadOk == 0) {
             - It was not in one of these formats : JPG, JPEG, PNG or GIF.<br>
     </p>
 
-    <a href="dashboard_maison.php"><button>Back to main menu</button></a>
+    <a href="dashboard_maison.php"><button class="upload">Back to main menu</button></a>
 
     <?php
 
