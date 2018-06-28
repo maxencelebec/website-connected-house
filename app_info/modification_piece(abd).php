@@ -118,11 +118,7 @@
                         echo 'Nombre de capteurs : ' . $counter;
                     ?>
 
-                    </br>
-                    <?php
-                        $nbCapteursActifs=2;
-                        echo ' Capteurs actifs : ' ;
-                    ?>
+                   
 
                     </div>
                 
