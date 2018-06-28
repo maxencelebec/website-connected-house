@@ -47,7 +47,7 @@ session_start();
 			
 				<!-- Boutons des tabs (tableau horizontal) -->
 				<div class="tab">
-				<button class="tablinks" id="tablink1">Profile</button>		<!-- Le bouton "Profile" est ouvert par d�fault (voir JS) -->
+				<button class="tablinks" id="tablink1">Profil</button>		<!-- Le bouton "Profile" est ouvert par d�fault (voir JS) -->
 				<button class="tablinks" id="tablink2">Compte</button>
 				<button class="tablinks" id="tablink3">Confidentialit&eacute;</button>
 				<button class="tablinks" id="tablink4">Notifications</button>
@@ -106,13 +106,13 @@ session_start();
 				</div>			
 				<!-- ---------------------------------------------------- -->
 				<!-- Tab 2 : Compte -->
-				<div class="tabcontent" id="compte"> Test2 </div>		
+				<div class="tabcontent" id="compte"> En construction </div>
 				<!-- ---------------------------------------------------- -->		
 				<!-- Tab 3 : Confidentialit� -->
-				<div class="tabcontent" id="confidentialite"> Test3 </div>		
+				<div class="tabcontent" id="confidentialite"> En construction </div>
 				<!-- ---------------------------------------------------- -->		
 				<!-- Tab 4 : Notifications -->
-				<div class="tabcontent" id="notifications"> Test4 </div>
+				<div class="tabcontent" id="notifications"> En construction </div>
 			<?php
 				include "footer.php";
 			?>

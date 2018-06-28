@@ -1,8 +1,9 @@
 .capteur{
     background-color: #8c9ca4;
     border-radius: 10px;
-    min-width: 32%;
-    margin-right: 10px;
-    text-align: center;	
+    min-width: 15vw;
+    text-align: center;
     font-size: 20px;
+    margin-left: 2.8vw;
+    height: 18vh;
 }

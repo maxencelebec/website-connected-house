@@ -41,22 +41,23 @@
 
             <div class="titre"><h1>Entrez vos informations</h1></div>
 
-            <div>Adresse email :</div>
-            <input type="text" name="mail" id="email" style="text-align: center"/>
-            <div>Confirmez votre addresse email :</div>
-            <input type="text" name="mail_confirm" id="email_confirm" style="text-align: center"/>
-            <div>Mot de passe :</div>
-            <input type="password" name="password" id="mdp" style="text-align: center"/>
-            <div>Confirmez votre mot de passe :</div>
-            <input type="password" name="password_confirm" id="mdp_confirm" style="text-align: center"/>
+            <label>Adresse email :</label>
+            <input type="email" name="mail" maxlenght="255" style="text-align: center" required/>
+            <label>Confirmez votre addresse email :</label>
+            <input type="email" name="mail_confirm" maxlenght="255" style="text-align: center" required/>
+            <label>Mot de passe :</label>
+            <input type="password" name="password" minlenght="6" maxlenght="255" style="text-align: center" required/>
+            <label>Confirmez votre mot de passe :</label>
+            <input type="password" name="password_confirm" minlenght="6" maxlenght="255" style="text-align: center" required/>
 
         </div>
 
         <div class="captcha">
 
-            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-            <br/>
-            <input class="valider" type="submit" value="Valider">
+            <div><input type="checkbox" id="check" onclick="control(this.id)"> J'accepte les termes et conditions générales d'utilisation</div>
+            <div id="erreur" style="color: red"></div>
+            <input class="valider" type="submit" value="Valider" id="envoie">
+
 
         </div>
 
@@ -67,5 +68,6 @@
 </div>
 
 </body>
+<script src="inscription_1.js"></script>
 
 </html>

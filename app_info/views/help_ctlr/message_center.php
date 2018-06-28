@@ -5,18 +5,23 @@
         <tr>
         
                     <?php //print_r($d);?>
-                   <?php foreach($d[0] as $key=>$value){?>
-                   <?php if($key=='id'){?>
-                     
-                      <th class="fixed-side" id="top" scope="col">Numéro <br>Message </th>
-
-                    <?php }else{?>
-                <th id="top" scope="col"><?php 
-                
-                if($key=="contenu_msg"){echo "Contenu du Message";}
-                if($key=="Date_Heure"){echo "Date/Heure";}
-                if($key=="id_type_msg"){ echo "Type Requête";}?> </th>
-            <?php }  }?>
+                   <?php
+                   if($d==null) {
+                       ?> <th class="fixed-side"><?php echo "Pas de requêtes." ;?> </th><?php 
+                   }
+                   else {
+                       foreach($d[0] as $key=>$value){?>
+                       <?php if($key=='id'){?>
+                         
+                          <th class="fixed-side" id="top" scope="col">Numéro <br>Message </th>
+    
+                        <?php }else{?>
+                    <th id="top" scope="col"><?php 
+                    
+                    if($key=="contenu_msg"){echo "Contenu du Message";}
+                    if($key=="Date_Heure"){echo "Date/Heure";}
+                    if($key=="id_type_msg"){ echo "Type Requête";}?> </th>
+            <?php }  } }?>
           
           
         </tr>

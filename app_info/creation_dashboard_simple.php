@@ -120,7 +120,17 @@ catch(Exception $e)
                                 </div>
                             </a>
                         </div>
-                        <div class="securite">Sécurité</div>
+                        <div class="securite">Sécurité
+
+                            <div class="boutton_onoff">
+                                <?php
+                                $boutton = 2;
+                                include "boutton.php";
+                                ?>
+                                <br>ON/OFF
+                            </div>
+
+                        </div>
                     </div>
                     <div class="capteurs">
                         <div class="titre">Capteurs</div>

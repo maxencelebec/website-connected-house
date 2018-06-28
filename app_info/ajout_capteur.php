@@ -3,40 +3,25 @@
 
 
 <?php
-
 function ajout_capteur($capteur_actionneur, $id, $id_capteur)
 {
     ?>
 <div class="capteur">
-
-        <?php
-    if ($capteur_actionneur == "luminosite") {
-        echo "Luminosité";
-    } elseif ($capteur_actionneur == "temperature") {
-        echo "Température";
-    } elseif ($capteur_actionneur == "presence") {
-        echo "Présence";
-    } elseif ($capteur_actionneur == "humidite") {
-        echo "Humidité";
-    } elseif ($capteur_actionneur == "led") {
-        echo "Led";
-    }
-    ?>
-
-        <br />
 	<div class="result">
         <?php
     
     $connect = new PDO("mysql:host=localapp;dbname=virifocus", "root", "");
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $req = $connect->prepare("SELECT etat, valeur, id_capteur FROM capteurs WHERE id=? ");
+    $req = $connect->prepare("SELECT etat, nom, valeur, id_capteur FROM capteurs WHERE id=? ");
     $req->execute(array(
         $id_capteur
     ));
     while ($donnees = $req->fetch()) {
         $etat = $donnees['etat'];
-        
+        $nom=$donnees['nom'];
+        if ($capteur_actionneur=="led"){echo "- ".$nom." -";};
+        if ($capteur_actionneur=="ventilateur"){echo "- ".$nom." -";};
         $req = $connect->prepare('SELECT id_capteur, valeur FROM logs WHERE id_capteur=?
                           ORDER BY timestamp DESC LIMIT 1');
         $req->execute(array($donnees['id_capteur']));
@@ -44,41 +29,59 @@ function ajout_capteur($capteur_actionneur, $id, $id_capteur)
             $valeur = $recup['valeur'];
             
             $id_capteur_logs = $recup['id_capteur'];
-            
-            if ($etat == 1 && $capteur_actionneur == "temperature" && $id_capteur_logs == $donnees['id_capteur']) {
-                $update = $connect->prepare("UPDATE capteurs set valeur=0001 WHERE id=?");
-                $update->execute(array(
+
+            if ($capteur_actionneur == "temperature" && $id_capteur_logs == $donnees['id_capteur']) {
+                $update = $connect->prepare("UPDATE capteurs set valeur=? WHERE id=?");
+                $update->execute(array($valeur,
                     $id_capteur
                 ));
                 
-                echo $valeur . "°C";
+                echo "- ".$nom." -<br>";
+                if ($etat == 1){
+                    echo hexdec($valeur) . "°C";
+                }
             }
-            if ($etat == 1 && $capteur_actionneur == "luminosite" && $id_capteur_logs == $donnees['id_capteur']) {
-                $update = $connect->prepare("UPDATE capteurs set valeur=0001 WHERE id=?");
-                $update->execute(array(
+
+            if ($capteur_actionneur == "luminosite" && $id_capteur_logs == $donnees['id_capteur']) {
+                $update = $connect->prepare("UPDATE capteurs set valeur=? WHERE id=?");
+                $update->execute(array($valeur,
                     $id_capteur
                 ));
-                
-                echo $valeur . " lux";
+
+                echo "- ".$nom." -<br>";
+                if ($etat == 1){
+                    echo hexdec($valeur) . "00 lux";
+                }
             }
-            if ($etat == 1 && $capteur_actionneur == "presence" && $id_capteur_logs == $donnees['id_capteur']) {
-                $update = $connect->prepare("UPDATE capteurs set valeur=0001 WHERE id=?");
-                $update->execute(array(
+
+            if ($capteur_actionneur == "presence" && $id_capteur_logs == $donnees['id_capteur']) {
+                $update = $connect->prepare("UPDATE capteurs set valeur=? WHERE id=?");
+                $update->execute(array($valeur,
                     $id_capteur
                 ));
-                
-                echo $valeur . " cm";
+
+                echo "- ".$nom." -<br>";
+                if ($etat == 1){
+                    echo $valeur . " cm";
+                }
             }
-            if ($etat == 1 && $capteur_actionneur == "humidite") {
-                echo "30%";
+
+            if ($capteur_actionneur == "humidite") {
+                echo "- ".$nom." -<br>";
+                if ($etat == 1){
+                    echo $valeur . "";
+                }
             }
+
             if ($etat == 0) {
                 echo "";
             }
+
         }
         
     }
-  
+
+    
 
 
 ?>

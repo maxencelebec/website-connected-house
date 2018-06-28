@@ -41,9 +41,9 @@
             <div class="titre"><h1>Entrez vos informations</h1></div>
 
             <label>Adresse email :</label>
-            <input type="text" name="mail" maxlenght="255" style="text-align: center" required/>
+            <input type="email" name="mail" maxlenght="255" style="text-align: center" required/>
             <label>Confirmez votre addresse email :</label>
-            <input type="text" name="mail_confirm" maxlenght="255" style="text-align: center" required/>
+            <input type="email" name="mail_confirm" maxlenght="255" style="text-align: center" required/>
             <label>Mot de passe :</label>
             <input type="password" name="password" minlenght="6" maxlenght="255" style="text-align: center" required/>
             <label>Confirmez votre mot de passe :</label>
@@ -53,11 +53,10 @@
 
         <div class="captcha">
 
-            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-            <br/>
-            <input class="valider" type="submit" value="Valider">
+            <div><input type="checkbox" id="check" onclick="control(this.id)"> J'accepte les termes et conditions générales d'utilisation</div>
+            <div id="erreur" style="color: red"></div>
+            <input class="valider" type="submit" value="Valider" id="envoie">
 
-            <a class="lien" href="inscription_habitant_2.php"><p>Next Page Debug</p></a>
 
         </div>
 
@@ -68,5 +67,6 @@
 </div>
 
 </body>
+<script src="inscription_1.js"></script>
 
 </html>
