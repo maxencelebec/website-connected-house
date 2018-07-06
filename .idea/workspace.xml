@@ -14,11 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="inscription_gerant_1.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_info/inscription_gerant_1.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="dashboard_simple_ajouter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_simple_ajouter.php">
           <provider selected="true" editor-type-id="text-editor" />
@@ -34,9 +29,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-column="61" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +36,8 @@
       <file leaf-file-name="image_post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/image_post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state relative-caret-position="51">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -53,17 +45,26 @@
       <file leaf-file-name="parametres.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/parametres.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
+            <state relative-caret-position="1938">
               <caret line="114" column="57" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parametres.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parametres.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/parametres.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
+            <state relative-caret-position="2040">
               <caret line="120" column="22" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geocode.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_info/geocode.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="92" column="23" lean-forward="true" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -80,11 +81,8 @@
       <file leaf-file-name="dashboard_maison.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
+            <state relative-caret-position="1496">
               <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -92,7 +90,7 @@
       <file leaf-file-name="dashboard_maison.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="7922">
               <caret line="466" column="12" lean-forward="true" selection-start-line="466" selection-start-column="12" selection-end-line="466" selection-end-column="12" />
             </state>
           </provider>
@@ -119,6 +117,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -201,7 +200,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-335" />
     <option name="y" value="-25" />
     <option name="width" value="1750" />
@@ -212,7 +211,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,17 +227,18 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/victo/Documents/GitHub/website-connected-house/app_info/dashboard_maison.php&#10;file_upload&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;file_upload&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/wamp/www/Examen" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -391,12 +390,16 @@
       <workItem from="1529061515740" duration="5147000" />
       <workItem from="1530138664364" duration="1646000" />
       <workItem from="1530140438623" duration="122000" />
-      <workItem from="1530167752205" duration="1660000" />
+      <workItem from="1530167752205" duration="2904000" />
+      <workItem from="1530273908061" duration="129000" />
+      <workItem from="1530525915990" duration="18000" />
+      <workItem from="1530533638335" duration="595000" />
+      <workItem from="1530881931632" duration="518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180278000" />
+    <option name="totallyTimeSpent" value="182782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -633,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_info/geocode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_info/inscription_technicien_1.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -719,17 +715,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
+        <state relative-caret-position="1496">
           <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/dashboard_maison.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="7922">
           <caret line="466" column="12" lean-forward="true" selection-start-line="466" selection-start-column="12" selection-end-line="466" selection-end-column="12" />
         </state>
       </provider>
@@ -745,30 +738,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/image_post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/parametres.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
+        <state relative-caret-position="1938">
           <caret line="114" column="57" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_info/parametres.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
+        <state relative-caret-position="2040">
           <caret line="120" column="22" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_info/geocode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="92" column="23" lean-forward="true" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
         </state>
       </provider>
     </entry>
