@@ -3,13 +3,13 @@
 #define LED 34
  
 /// Define pins for multiplexor (The light on the board)
-#define pin0 11
-#define pin1 12
-#define pin2 13
+#define pin0 PD_6//PA_5//11
+#define pin1 PD_7//PA_6//12
+#define pin2 PF_4//PA_7//13
 const int d = 0; // for delaying the pins
  
  
-bool ledVal[] = {false,false,false,false,false,false};
+bool ledVal[] = {false,false,false,false,true,false};
 int count=0;
  
 /// Variable for alarm
@@ -35,7 +35,7 @@ bool RIR=true;
 int LIRsensorPin = 25;    // Pin for the right IR Sensor
 float LIRsensorValue = 0;  // variable to store the value coming from the sensor
 int LIRdistance = 0; // distance for the right sensor
-bool LIR; // not working properly
+bool LIR=false; // not working properly
  
 ////
  
@@ -43,15 +43,15 @@ bool LIR; // not working properly
  
 int TEMP1sensorPin = PE_3;    // Pin for the 1 Temp sensor
 float TEMP1sensorValue = 0;  // variable to store the value coming from the sensor
-bool TEMP1;
+bool TEMP1=true;
  
 int TEMP2sensorPin = PB_5;    // Pin for the 2 Temp sensor
 float TEMP2sensorValue = 0;  // variable to store the value coming from the sensor
-bool TEMP2;
+bool TEMP2=true;
  
 int TEMP3sensorPin = PE_0;    // Pin for the 3 Temp sensor
 float TEMP3sensorValue = 0;  // variable to store the value coming from the sensor
-bool TEMP3;
+bool TEMP3=true;
  
 int TEMP4sensorPin = PD_0;    // Pin for the 4 Temp sensor
 float TEMP4sensorValue = 0;  // variable to store the value coming from the sensor
@@ -63,20 +63,20 @@ bool TEMP4; // not working properly
  
 int L1sensorPin = PE_1;    // Pin for the 1 L sensor
 float L1sensorValue = 0;  // variable to store the value coming from the sensor
-bool L1;
+bool L1=true;
 int L2sensorPin = 5;//PE_4;    // Pin for the 2 L sensor
 float L2sensorValue = 0;  // variable to store the value coming from the sensor
-bool L2;
+bool L2=true;
 int L3sensorPin = PD_3;    // Pin for the 3 L sensor
 float L3sensorValue = 0;  // variable to store the value coming from the sensor
-bool L3;
+bool L3=true;
 int L4sensorPin = PE_5;    // Pin for the 4 L sensor
 float L4sensorValue = 0;  // variable to store the value coming from the sensor
-bool L4;
+bool L4=true;
 
  
 Servo myvolet;
-bool alarmonoff=true;
+bool alarmonoff=false;
  
 void setup() {
  
@@ -84,13 +84,17 @@ void setup() {
   pinMode(pin0, OUTPUT);
   pinMode(pin1, OUTPUT);
   pinMode(pin2, OUTPUT);
+  pinMode(14,OUTPUT);
+  pinMode(15,OUTPUT);
   Serial.begin(9600);
   Serial1.begin(9600);
   
   ledVal[5]=true;
+  digitalWrite(15,LOW);
+  digitalWrite(14,HIGH);
   
-  
-  myvolet.attach(PF_3); // pin 39 ceci est pour le volet.
+  //myvolet.attach(14);//PF_3); // pin 39 ceci est pour le volet.
+  //myvolet.write(0);
  
   //turnLedOn(7); // alume la 7 `eme LED ( qui n'existe pas et donc 'ca 'eteint les leds)
 }
@@ -99,25 +103,71 @@ void loop()
 {
   float timess=micros();
   //readIRsensor();
+  //myvolet.writeMicroseconds(100);
   
-  turnLed(650000); // turn on the leds for 2 seconds
+  
+  turnLed(950000); // turn on the leds for 2 seconds
   
   capteur_push(LIR,'0x0001','1'); // proximité gauche
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
   capteur_push(RIR,'0x0002','1'); // proximité droit
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
 
-  turnLed(650000); // turn on the leds for 2 seconds
+  turnLed(95000); // turn on the leds for 2 seconds
   
   capteur_push(TEMP1,'0x0001','3'); // température 1
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
   capteur_push(TEMP2,'0x0002','3'); // température 2
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
   capteur_push(TEMP3,'0x0003','3'); // température 3
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
   capteur_push(TEMP4,'0x0004','3'); // température 2
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
 
-  turnLed(650000); // turn on the leds for 2 seconds
+  turnLed(95000); // turn on the leds for 2 seconds
 
   capteur_push(L1,'0x0001','5'); // Lumière 1
-  capteur_push(L2,'0x0002','5'); // Lumière 2 
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
+  capteur_push(L2,'0x0002','5'); // Lumière 2
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
   capteur_push(L3,'0x0003','5'); // Lumière 3 
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
   capteur_push(L4,'0x0004','5'); // Lumière 4 
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
 
   float finalloop=micros()-timess;
   //Serial.println(finalloop);
@@ -143,19 +193,17 @@ void capteur_push(bool STATE,char NUM,char TYP){
         switch (TYP) 
         {
           
-          
-    
           case 1:
             
             sendTrame(valueIR,NUM, '1');
             Serial.println("Sensor IR n0 " + String(NUM) + " Sensor value " +valueIR);
             break;
           case 3:
-            sendTrame(readTempSensor(NUM),NUM, '2');
+            sendTrame(readTempSensor(NUM),NUM, '3');
             Serial.println("Sensor TEMP n0 " + String(NUM) + " Sensor value " +String(valueTEMP));
             break;
           case 5:
-            sendTrame(readLSensor(NUM),NUM, '3');
+            sendTrame(readLSensor(NUM),NUM, '5');
             Serial.println("Sensor Light n0 " + String(NUM) + " Sensor value " +valueL);
             break;
 
@@ -390,11 +438,12 @@ void scoutTrame(){
   
   for(int i=0; i<19; i++) {
     trame[i] = Serial1.read();    // Lecture de la trame
+    Serial.print(trame[i]);
   }
-  //Serial.print(trame);    //Copie dans la console
+  Serial.println("scout");    //Copie dans la console
 if(trame[5]=='2'){    //Si requête en lecture (l'objet reçoit l'info)
     String TYP = String(trame[6]);
-    
+    Serial.println("here");
  
     
     String NUM = String(trame[7]) + String(trame[8]);
@@ -415,12 +464,27 @@ void action(String TYP, String NUM, String VAL) {
   if(TYP=="A" && VAL=="0001") { // for leds
     
     ledVal[x]=true;
-    Serial.println("imhere");
+    
+    Serial.println(x);
     //LOW
   }
   else if(TYP=="A" && VAL=="0000") {
     //HIGH
     ledVal[x]=false;
+  }
+
+  if(TYP=="B" && VAL=="0001") { // for leds
+    
+    
+    digitalWrite(14,HIGH);
+    Serial.println("im in the high");
+    
+    //LOW
+  }
+  else if(TYP=="B" && VAL=="0000") {
+    //HIGH
+    Serial.println("im in the");
+    digitalWrite(14,LOW);
   }
   
   else if(TYP == "1"){
@@ -503,6 +567,24 @@ void sendTrame(int VAL, int NUM, char TYP) {
     Serial.println("Switch(pot) is OFF!");
   }
   Serial.println();
+
+  
+  int time1=micros();
+  int time2=0;
+  
+  
+  while(Serial1.available()<=0 && time2<5000000){
+    //Serial.println("Waiting for the response trame");
+    turnLed(2);
+    time2=micros()-time1;
+    
+    
+  }
+  if(Serial1.available()>0){
+    Serial.println("i have receive something");
+    scoutTrame();
+  }
+  
 }
  
 /*
